@@ -1,0 +1,61 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "AS91946: Interpret and Apply Mathematical and Statistical Information"
+  subtitle: "NCEA Level 1 Statistics — Year 11"
+  author: "Anthony R Davidson"
+  date: today
+  date-format: "MMMM YYYY"
+  description: |
+    A comprehensive resource for the New Zealand Achievement Standard 91946
+    (Level 1, 4 credits). This book covers interpreting and applying
+    mathematical and statistical information in real-world contexts.
+  chapters:
+    - index.qmd
+    - chapters/01-intro.qmd
+    - chapters/02-data-types.qmd
+    - chapters/03-graphs.qmd
+    - chapters/04-measures.qmd
+    - chapters/05-probability.qmd
+    - chapters/06-inference.qmd
+    - chapters/07-practice.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: true
+    code-summary: "Show R code"
+    highlight-style: github
+    fig-align: center
+    fig-width: 7
+    fig-height: 5
+  pdf:
+    documentclass: scrbook
+    classoption: [oneside]
+    toc: true
+    number-sections: true
+    colorlinks: true
+    fig-align: center
+    fig-width: 6
+    fig-height: 4
+
+execute:
+  echo: true
+  warning: false
+  message: false
+  cache: false
+
+knitr:
+  opts_chunk:
+    comment: "#>"
+    collapse: true

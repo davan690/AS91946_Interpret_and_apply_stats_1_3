@@ -1,0 +1,126 @@
+---
+title: "What is Statistics?"
+---
+
+# What is Statistics? {#sec-intro}
+
+## Why statistics matters
+
+Every day we are surrounded by data. News headlines cite poll results, sports
+commentators compare player averages, health campaigns report risk percentages,
+and social media shows us trending topics. **Statistics** is the science that
+helps us make sense of all this information.
+
+::: {.callout-note}
+## Key definition
+**Statistics** is the practice of collecting, organising, summarising,
+analysing, and interpreting data in order to draw conclusions and make
+decisions.
+:::
+
+## The statistical enquiry cycle (PPDAC)
+
+New Zealand's statistics curriculum uses the **PPDAC cycle** as a framework
+for carrying out a statistical investigation:
+
+| Stage | What you do |
+|-------|-------------|
+| **P**roblem | Pose a statistical question |
+| **P**lan | Plan how to collect data |
+| **D**ata | Collect and record data |
+| **A**nalysis | Explore and summarise the data |
+| **C**onclusion | Interpret results and answer the question |
+
+```{r}
+#| label: ppdac-diagram
+#| fig-cap: "The PPDAC cycle — a framework for statistical investigations."
+#| echo: false
+
+# Draw a simple PPDAC cycle diagram using base R graphics
+stages <- c("Problem", "Plan", "Data", "Analysis", "Conclusion")
+n <- length(stages)
+angles <- seq(pi / 2, pi / 2 - 2 * pi, length.out = n + 1)[-(n + 1)]
+x <- cos(angles)
+y <- sin(angles)
+
+plot(0, 0, type = "n", xlim = c(-1.6, 1.6), ylim = c(-1.6, 1.6),
+     asp = 1, axes = FALSE, xlab = "", ylab = "",
+     main = "The PPDAC Cycle")
+
+# Draw arrows between stages
+cols <- c("#4dac26", "#b8e186", "#f1b6da", "#d01c8b", "#0571b0")
+for (i in seq_len(n)) {
+  j <- (i %% n) + 1
+  arrows(x[i] * 0.75, y[i] * 0.75, x[j] * 0.75, y[j] * 0.75,
+         col = cols[i], lwd = 2, length = 0.12)
+}
+
+# Stage labels
+text(x * 1.2, y * 1.2, stages, font = 2, cex = 1.1)
+```
+
+## Types of statistical questions
+
+Not all questions are statistical questions. A statistical question expects
+**variability** in the answers.
+
+::: {.callout-tip}
+**Statistical question:** "How tall are the students in Year 11?"  
+*(Heights will vary — this is statistical!)*
+
+**Not a statistical question:** "How tall is Ms Smith?"  
+*(Only one answer — not statistical.)*
+:::
+
+### Practice identifying statistical questions
+
+Which of the following are statistical questions?
+
+1. How many pages are in Harry Potter and the Philosopher's Stone?
+2. How many hours per week do Year 11 students spend on homework?
+3. What is the population of New Zealand?
+4. What are the most popular music genres among teenagers in Auckland?
+5. What colour is the school uniform?
+
+::: {.callout-note collapse="true"}
+## Answers
+1. ❌ Not statistical — there is one fixed answer.
+2. ✅ Statistical — different students spend different amounts of time.
+3. ❌ Not statistical — there is one (changing but definite) answer.
+4. ✅ Statistical — different teenagers have different preferences.
+5. ❌ Not statistical — the uniform colour is fixed.
+:::
+
+## Why context matters
+
+In AS91946, **context** is central. You will always work with data that
+relates to real situations. When interpreting statistics, you must:
+
+- **Name the variable** being measured
+- **State the units** (e.g. centimetres, dollars, minutes)
+- **Refer to the population** the data came from
+- **Relate findings back** to the real-world situation
+
+::: {.callout-warning}
+## Common mistake
+Saying "the mean is 24" is not enough. Say  
+*"The mean age of survey respondents was 24 years."*
+:::
+
+## Glossary
+
+| Term | Meaning |
+|------|---------|
+| **Data** | Values collected by observation or measurement |
+| **Variable** | A characteristic that can take different values |
+| **Population** | The entire group of interest |
+| **Sample** | A subset of the population selected for study |
+| **Statistic** | A numerical summary calculated from a sample |
+| **Parameter** | A numerical summary of a whole population |
+
+## Check your understanding
+
+1. In your own words, explain what the PPDAC cycle is.
+2. Give two examples of statistical questions you could investigate at your school.
+3. A student says "the average score is 65". What is missing from this statement?
+4. What is the difference between a population and a sample?

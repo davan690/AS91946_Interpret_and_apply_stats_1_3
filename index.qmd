@@ -1,0 +1,73 @@
+---
+title: "Welcome"
+---
+
+# Welcome {.unnumbered}
+
+This resource has been developed to support Year 11 students preparing for
+**NCEA Level 1 Achievement Standard 91946**: *Interpret and apply mathematical
+and statistical information in context* (4 credits).
+
+## What this standard is about
+
+In this standard you will learn to:
+
+- **Read and interpret** statistical displays, tables, and graphs
+- **Apply** mathematical and statistical ideas to real-world problems
+- **Communicate** findings clearly using statistical language
+- **Evaluate** statistical claims made in media and everyday life
+
+## How to use this book
+
+Each chapter builds on the previous one. You will find:
+
+- Clear explanations of key concepts with New Zealand examples
+- Interactive R code blocks showing how statistics is done with real data
+- Practice questions at Achievement, Merit, and Excellence levels
+- Glossary boxes highlighting important vocabulary
+
+::: {.callout-tip}
+## Achievement Standard at a Glance
+
+| Grade | What you need to do |
+|-------|---------------------|
+| **Achieved** | Interpret and apply statistical information |
+| **Merit** | Interpret and apply statistical information with justification |
+| **Excellence** | Interpret and apply statistical information with statistical insight |
+:::
+
+## Tools we use
+
+All data visualisations and calculations in this book are produced using **R** and
+rendered with **Quarto**. You do not need to be able to write R code to succeed
+in this standard — the code blocks are provided so your teacher can demonstrate
+concepts live and so you can explore data yourself if you choose.
+
+```{r}
+#| label: welcome-plot
+#| fig-cap: "An example of the kind of visualisations we will create in this book."
+#| echo: false
+
+# A motivating example: NZ weather data (simulated for illustration)
+set.seed(42)
+months <- factor(month.abb, levels = month.abb)
+avg_temp <- c(17, 17, 15, 12, 9, 7, 6, 8, 10, 13, 14, 16)
+
+barplot(
+  avg_temp,
+  names.arg = months,
+  col = "#2c7bb6",
+  border = "white",
+  main = "Average Monthly Temperature — Wellington, NZ (°C)",
+  ylab = "Temperature (°C)",
+  xlab = "Month",
+  las = 1
+)
+abline(h = mean(avg_temp), col = "#d7191c", lwd = 2, lty = 2)
+legend("topright", legend = paste0("Mean = ", round(mean(avg_temp), 1), "°C"),
+       col = "#d7191c", lwd = 2, lty = 2, bty = "n")
+```
+
+## Getting started
+
+Head to @sec-intro to begin your statistics journey!

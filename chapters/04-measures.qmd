@@ -1,0 +1,298 @@
+---
+title: "Measures of Centre and Spread"
+---
+
+# Measures of Centre and Spread {#sec-measures}
+
+Once you have a graph, you need **numerical summaries** to describe and
+compare distributions precisely. The two key things to describe are:
+
+- **Centre** — where is the "middle" of the data?
+- **Spread** — how variable is the data?
+
+## Measures of centre
+
+### The mean
+
+The **mean** (average) is calculated by adding all values and dividing by
+the number of values:
+
+$$\bar{x} = \frac{\sum x_i}{n}$$
+
+```{r}
+#| label: setup-scores
+
+set.seed(2024)
+scores <- c(55, 62, 68, 70, 72, 75, 78, 80, 83, 85,
+            88, 60, 91, 74, 66, 79, 52, 95, 73, 71)
+n <- length(scores)
+
+cat("Scores:", sort(scores), "\n")
+cat("Mean:  ", round(mean(scores), 2), "\n")
+cat("n =    ", n, "\n")
+```
+
+### The median
+
+The **median** is the middle value when data is sorted from smallest to
+largest. It is not affected by outliers.
+
+- If *n* is **odd**: median = middle value
+- If *n* is **even**: median = average of the two middle values
+
+```{r}
+#| label: median-demo
+
+sorted_scores <- sort(scores)
+cat("Sorted scores:\n", sorted_scores, "\n\n")
+cat("n = 20 (even) → median = mean of 10th and 11th values\n")
+cat("10th value:", sorted_scores[10], "\n")
+cat("11th value:", sorted_scores[11], "\n")
+cat("Median =", median(scores), "\n")
+```
+
+### The mode
+
+The **mode** is the most frequently occurring value. Data can have:
+- **No mode** (all values appear once)
+- **One mode** (unimodal)
+- **Two modes** (bimodal)
+- **More than two modes** (multimodal)
+
+```{r}
+#| label: mode-demo
+
+# Custom mode function (base R has no built-in mode for numeric)
+stat_mode <- function(x) {
+  tbl <- table(x)
+  as.numeric(names(tbl)[tbl == max(tbl)])
+}
+
+test_data <- c(4, 7, 2, 7, 9, 7, 3, 4, 5, 4)
+cat("Data:", test_data, "\n")
+cat("Mode(s):", stat_mode(test_data), "\n")
+```
+
+### When to use each measure of centre
+
+| Measure | Best used when... | Affected by outliers? |
+|---------|------------------|-----------------------|
+| **Mean** | Data is roughly symmetric, no outliers | Yes |
+| **Median** | Data is skewed or has outliers | No |
+| **Mode** | Data is categorical; or finding most common value | No |
+
+```{r}
+#| label: fig-mean-vs-median
+#| fig-cap: "Effect of outliers on mean vs median."
+
+par(mfrow = c(1, 2))
+
+# Without outlier
+x1 <- c(10, 12, 13, 14, 15, 16, 17, 18, 19, 20)
+hist(x1, col = "#4dac26", border = "white", main = "No Outlier",
+     xlab = "Value", ylab = "Frequency", xlim = c(0, 80), breaks = 5)
+abline(v = mean(x1),   col = "#d7191c", lwd = 2, lty = 1)
+abline(v = median(x1), col = "#0571b0", lwd = 2, lty = 2)
+legend("topright", c(paste("Mean =", mean(x1)),
+                     paste("Median =", median(x1))),
+       col = c("#d7191c", "#0571b0"), lwd = 2, lty = c(1, 2), bty = "n")
+
+# With outlier
+x2 <- c(x1, 75)
+hist(x2, col = "#f4a582", border = "white", main = "With Outlier (75)",
+     xlab = "Value", ylab = "", xlim = c(0, 80), breaks = 8)
+abline(v = mean(x2),   col = "#d7191c", lwd = 2, lty = 1)
+abline(v = median(x2), col = "#0571b0", lwd = 2, lty = 2)
+legend("topright", c(paste("Mean =", round(mean(x2), 1)),
+                     paste("Median =", median(x2))),
+       col = c("#d7191c", "#0571b0"), lwd = 2, lty = c(1, 2), bty = "n")
+
+par(mfrow = c(1, 1))
+```
+
+## Measures of spread
+
+### Range
+
+The **range** is the simplest measure of spread:
+
+$$\text{Range} = \text{Maximum} - \text{Minimum}$$
+
+```{r}
+#| label: range-demo
+
+cat("Range of scores:", max(scores) - min(scores), "\n")
+cat("  (Max =", max(scores), ", Min =", min(scores), ")\n")
+```
+
+### Quartiles and the interquartile range (IQR)
+
+**Quartiles** divide sorted data into four equal groups:
+
+| Quartile | Description |
+|----------|-------------|
+| **Q1** (lower quartile) | 25% of data falls below this value |
+| **Q2** (median) | 50% of data falls below this value |
+| **Q3** (upper quartile) | 75% of data falls below this value |
+
+The **interquartile range (IQR)** is the spread of the middle 50% of data:
+
+$$\text{IQR} = Q3 - Q1$$
+
+```{r}
+#| label: quartiles-demo
+
+q <- quantile(scores)
+cat("Five-number summary:\n")
+cat("  Minimum:", q[1], "\n")
+cat("  Q1:     ", q[2], "\n")
+cat("  Median: ", q[3], "\n")
+cat("  Q3:     ", q[4], "\n")
+cat("  Maximum:", q[5], "\n")
+cat("  IQR =", q[4] - q[2], "\n")
+```
+
+### Standard deviation
+
+The **standard deviation** measures how spread out data values are from the
+mean. A larger standard deviation means more variability.
+
+$$s = \sqrt{\frac{\sum (x_i - \bar{x})^2}{n - 1}}$$
+
+```{r}
+#| label: sd-demo
+
+cat("Mean:", round(mean(scores), 2), "\n")
+cat("Standard deviation:", round(sd(scores), 2), "\n")
+```
+
+::: {.callout-tip}
+## Rule of thumb
+For roughly symmetric distributions, about **68%** of data falls within
+one standard deviation of the mean, and **95%** falls within two standard
+deviations (the empirical rule / 68-95-99.7 rule).
+:::
+
+### Choosing the right measure of spread
+
+| Measure | Use with... | Advantage |
+|---------|------------|-----------|
+| **Range** | Quick overview | Easy to calculate |
+| **IQR** | Skewed data or when outliers present | Resistant to outliers |
+| **Standard deviation** | Symmetric data, no outliers | Uses all data values |
+
+## Comparing groups
+
+A common task in AS91946 is to **compare two or more groups**. Always compare
+both centre AND spread.
+
+```{r}
+#| label: comparing-groups-setup
+
+set.seed(42)
+group_a <- round(rnorm(30, mean = 65, sd = 10))
+group_b <- round(rnorm(30, mean = 72, sd = 15))
+```
+
+```{r}
+#| label: fig-compare-boxplot
+#| fig-cap: "Comparing maths scores between Group A and Group B."
+
+boxplot(
+  list("Group A" = group_a, "Group B" = group_b),
+  col    = c("#4dac26", "#0571b0"),
+  border = "#333333",
+  main   = "Maths Scores: Group A vs Group B",
+  ylab   = "Score",
+  las    = 1
+)
+```
+
+```{r}
+#| label: summary-table
+
+summary_stats <- data.frame(
+  Group    = c("Group A", "Group B"),
+  n        = c(length(group_a), length(group_b)),
+  Mean     = round(c(mean(group_a), mean(group_b)), 1),
+  Median   = c(median(group_a), median(group_b)),
+  SD       = round(c(sd(group_a), sd(group_b)), 1),
+  IQR      = c(IQR(group_a), IQR(group_b)),
+  Min      = c(min(group_a), min(group_b)),
+  Max      = c(max(group_a), max(group_b))
+)
+
+knitr::kable(summary_stats, caption = "Summary statistics for Groups A and B")
+```
+
+### Model comparison paragraph (Merit level)
+
+> "Group B has a higher median score (72) than Group A (65), suggesting that
+> Group B performed better overall. However, Group B also has a larger IQR
+> (approximately 20 vs 14) and standard deviation (15.1 vs 9.8), indicating
+> their scores were more variable. Group A's performance was more consistent.
+> Both groups appear to have roughly symmetric distributions with no obvious
+> outliers."
+
+## Identifying outliers
+
+A value is often flagged as an **outlier** if it falls more than 1.5 × IQR
+below Q1 or above Q3:
+
+$$\text{Lower fence} = Q1 - 1.5 \times \text{IQR}$$
+$$\text{Upper fence} = Q3 + 1.5 \times \text{IQR}$$
+
+```{r}
+#| label: outlier-detection
+
+Q1  <- quantile(scores, 0.25)
+Q3  <- quantile(scores, 0.75)
+iqr <- Q3 - Q1
+
+lower_fence <- Q1 - 1.5 * iqr
+upper_fence <- Q3 + 1.5 * iqr
+
+cat("Q1 =", Q1, "\n")
+cat("Q3 =", Q3, "\n")
+cat("IQR =", iqr, "\n")
+cat("Lower fence:", lower_fence, "\n")
+cat("Upper fence:", upper_fence, "\n")
+cat("Outliers:", scores[scores < lower_fence | scores > upper_fence], "\n")
+```
+
+## Glossary
+
+| Term | Meaning |
+|------|---------|
+| **Mean** | Sum of all values divided by the count |
+| **Median** | Middle value when data is sorted |
+| **Mode** | Most frequently occurring value |
+| **Range** | Maximum − Minimum |
+| **IQR** | Q3 − Q1; spread of the middle 50% |
+| **Standard deviation** | Average distance of values from the mean |
+| **Outlier** | A value that lies far from the rest of the data |
+| **Five-number summary** | Min, Q1, Median, Q3, Max |
+
+## Check your understanding
+
+Use the dataset: **12, 15, 18, 18, 20, 22, 25, 25, 28, 100**
+
+1. Calculate the mean and median. Which is more appropriate as a measure of
+   centre for this data? Why?
+2. Find Q1, Q3, and the IQR.
+3. Calculate the range.
+4. Is 100 an outlier? Use the 1.5 × IQR rule to justify your answer.
+5. Sketch a box plot of this data.
+
+::: {.callout-note collapse="true"}
+## Answers
+1. Mean = (12+15+18+18+20+22+25+25+28+100)/10 = 283/10 = 28.3;
+   Median = (20+22)/2 = 21. The **median** is more appropriate because of the
+   outlier (100) which pulls the mean up.
+2. Q1 = 18, Q3 = 25, IQR = 7.
+3. Range = 100 − 12 = 88.
+4. Upper fence = 25 + 1.5 × 7 = 25 + 10.5 = 35.5.
+   Since 100 > 35.5, **yes**, 100 is an outlier.
+5. Sketch: whiskers from 12 to 35.5, box from 18 to 25, median line at 21,
+   and a dot at 100 representing the outlier.
+:::
