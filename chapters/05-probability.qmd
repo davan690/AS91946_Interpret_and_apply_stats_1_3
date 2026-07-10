@@ -275,7 +275,7 @@ cat("(A negative expected gain means this is not a good investment!)\n")
 | **Event** | One or more outcomes |
 | **Complement** | All outcomes NOT in the event |
 | **Relative frequency** | Experimental estimate of probability |
-| **Conditional probability** | P(A\|B): probability of A given B occurred |
+| **Conditional probability** | P(A given B): probability of A given B occurred |
 | **Two-way table** | Table showing two categorical variables together |
 | **Tree diagram** | Diagram showing sequential outcomes and probabilities |
 
