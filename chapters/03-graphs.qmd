@@ -1,0 +1,289 @@
+---
+title: "Statistical Graphs and Displays"
+---
+
+# Statistical Graphs and Displays {#sec-graphs}
+
+A well-chosen graph makes patterns in data immediately visible. In this
+chapter you will learn to **create**, **read**, and **critically interpret**
+the most common statistical displays.
+
+## Setting up our data
+
+Throughout this chapter we use a simulated survey of 60 Year 11 students
+across a New Zealand school. The data includes variables on transport,
+height, study time, and maths scores.
+
+```{r}
+#| label: setup-data
+
+set.seed(2024)
+n <- 60
+
+students <- data.frame(
+  transport  = sample(c("Bus", "Car", "Walk", "Bike"), n,
+                      replace = TRUE, prob = c(0.4, 0.25, 0.25, 0.1)),
+  height_cm  = round(rnorm(n, mean = 167, sd = 9), 1),
+  study_hrs  = round(pmax(0, rnorm(n, mean = 2.5, sd = 1.2)), 1),
+  maths_score = round(pmin(100, pmax(0, rnorm(n, mean = 65, sd = 15))))
+)
+```
+
+## Bar charts
+
+Bar charts display the **frequency** (count) or **relative frequency**
+(proportion) of categorical data.
+
+```{r}
+#| label: fig-bar-transport
+#| fig-cap: "Bar chart showing how Year 11 students travel to school."
+
+transport_counts <- table(students$transport)
+
+barplot(
+  sort(transport_counts, decreasing = TRUE),
+  col  = c("#4dac26", "#b8e186", "#f1b6da", "#d7191c"),
+  main = "How Year 11 Students Travel to School",
+  xlab = "Mode of Transport",
+  ylab = "Number of Students",
+  border = "white",
+  las = 1
+)
+```
+
+### Reading a bar chart
+
+::: {.callout-tip}
+When describing a bar chart, always comment on:
+
+1. **The most and least common** categories
+2. **The overall pattern** (are categories roughly equal, or is one dominant?)
+3. **The context** — what does this tell us about the group?
+:::
+
+**Sample answer:** "Bus is the most common way students travel to school,
+with over 20 students using this method. Bike is the least common. More
+students use public or active transport (bus, walk, bike) than passive
+transport (car)."
+
+## Dot plots
+
+Dot plots are useful for **small numerical datasets**. Each data point is
+shown as a dot above a number line.
+
+```{r}
+#| label: fig-dotplot-study
+#| fig-cap: "Dot plot of daily study hours for Year 11 students."
+
+# Rounded to nearest 0.5 for clearer dot plot
+study_rounded <- round(students$study_hrs * 2) / 2
+
+stripchart(
+  study_rounded,
+  method = "stack",
+  pch    = 19,
+  col    = "#0571b0",
+  cex    = 1.4,
+  xlab   = "Daily Study Hours",
+  main   = "Daily Study Hours — Year 11 Students",
+  offset = 0.4
+)
+```
+
+## Histograms
+
+A histogram shows the **distribution of continuous numerical data** by
+grouping values into intervals (bins).
+
+```{r}
+#| label: fig-histogram-height
+#| fig-cap: "Histogram of student heights (cm)."
+
+hist(
+  students$height_cm,
+  breaks = 10,
+  col    = "#2c7bb6",
+  border = "white",
+  main   = "Distribution of Student Heights",
+  xlab   = "Height (cm)",
+  ylab   = "Frequency",
+  las    = 1
+)
+```
+
+### Describing a histogram — SOCS
+
+Use **SOCS** to describe a distribution:
+
+| Letter | What to describe |
+|--------|-----------------|
+| **S**hape | Symmetric, skewed left, skewed right, uniform, bimodal |
+| **O**utliers | Any unusual values far from the main group |
+| **C**entre | Where the middle of the data is (mean or median) |
+| **S**pread | How variable the data is (range, IQR, standard deviation) |
+
+```{r}
+#| label: fig-shape-examples
+#| fig-cap: "Examples of different distribution shapes."
+#| fig-height: 3
+
+par(mfrow = c(1, 3))
+
+# Symmetric
+set.seed(1)
+hist(rnorm(500, 50, 10), breaks = 15, col = "#4dac26", border = "white",
+     main = "Symmetric", xlab = "", ylab = "Frequency", las = 1)
+
+# Right-skewed
+hist(rexp(500, 0.1), breaks = 15, col = "#f4a582", border = "white",
+     main = "Right (positive) skew", xlab = "", ylab = "", las = 1)
+
+# Left-skewed
+hist(100 - rexp(500, 0.1), breaks = 15, col = "#92c5de", border = "white",
+     main = "Left (negative) skew", xlab = "", ylab = "", las = 1)
+
+par(mfrow = c(1, 1))
+```
+
+## Box plots (box-and-whisker plots)
+
+A box plot summarises a **five-number summary**:
+Minimum, Q1, Median, Q3, Maximum.
+
+```{r}
+#| label: fig-boxplot
+#| fig-cap: "Box plot of maths scores by transport type."
+
+boxplot(
+  maths_score ~ transport,
+  data   = students,
+  col    = c("#4dac26", "#f4a582", "#92c5de", "#d7191c"),
+  border = "#333333",
+  main   = "Maths Scores by Transport Mode",
+  xlab   = "Mode of Transport",
+  ylab   = "Maths Score",
+  las    = 1
+)
+```
+
+### Parts of a box plot
+
+```{r}
+#| label: fig-boxplot-anatomy
+#| fig-cap: "Anatomy of a box plot."
+#| echo: false
+
+set.seed(5)
+x <- rnorm(100, 70, 12)
+bp <- boxplot(x, horizontal = TRUE, col = "#2c7bb6", border = "#333",
+              main = "Parts of a Box Plot", xlab = "Value",
+              axes = TRUE)
+
+q <- quantile(x)
+text(q[1], 1.3, "Minimum", cex = 0.85, col = "#d7191c")
+text(q[2], 1.3, "Q1", cex = 0.85, col = "#d7191c")
+text(q[3], 0.7, "Median", cex = 0.85, col = "#d7191c")
+text(q[4], 1.3, "Q3", cex = 0.85, col = "#d7191c")
+text(q[5], 1.3, "Maximum", cex = 0.85, col = "#d7191c")
+```
+
+## Stem-and-leaf plots
+
+Stem-and-leaf plots show the actual data values and the shape of the
+distribution simultaneously. They work well for **small datasets** (up to
+~50 values).
+
+```{r}
+#| label: stem-leaf-scores
+
+# Show a stem-and-leaf for a subset of maths scores
+cat("Stem-and-leaf plot of maths scores (first 30 students):\n\n")
+stem(students$maths_score[1:30])
+```
+
+## Scatter plots
+
+Scatter plots show the **relationship between two numerical variables**.
+
+```{r}
+#| label: fig-scatter
+#| fig-cap: "Scatter plot of study hours vs maths score."
+
+plot(
+  students$study_hrs, students$maths_score,
+  pch  = 19,
+  col  = adjustcolor("#0571b0", alpha.f = 0.7),
+  xlab = "Daily Study Hours",
+  ylab = "Maths Score",
+  main = "Study Hours vs Maths Score — Year 11 Students"
+)
+abline(lm(maths_score ~ study_hrs, data = students),
+       col = "#d7191c", lwd = 2)
+```
+
+### Describing a scatter plot
+
+Comment on:
+
+1. **Direction** — positive, negative, or no association
+2. **Form** — linear or non-linear
+3. **Strength** — strong, moderate, or weak
+4. **Outliers** — any unusual points
+
+::: {.callout-warning}
+## Correlation ≠ Causation
+Just because two variables are related **does not** mean one causes the other.
+Always think about whether an association makes sense in context.
+:::
+
+## Pie charts
+
+Pie charts show **proportions** of categorical data. Use them carefully —
+bar charts are usually easier to read precisely.
+
+```{r}
+#| label: fig-pie
+#| fig-cap: "Pie chart of transport modes."
+
+pie(
+  transport_counts,
+  col    = c("#4dac26", "#f4a582", "#92c5de", "#d7191c"),
+  main   = "Transport Modes — Year 11 Students",
+  labels = paste0(names(transport_counts), "\n(",
+                  round(100 * transport_counts / sum(transport_counts)), "%)")
+)
+```
+
+## Choosing the right graph
+
+| Situation | Best graph |
+|-----------|-----------|
+| One categorical variable | Bar chart, pie chart |
+| One numerical variable (small n) | Dot plot, stem-and-leaf |
+| One numerical variable (large n) | Histogram, box plot |
+| Comparing groups numerically | Side-by-side box plots, back-to-back stem-and-leaf |
+| Two numerical variables | Scatter plot |
+
+## Check your understanding
+
+1. A student recorded the heights of 25 classmates. Which graph type is most
+   appropriate to display this data? Explain your choice.
+
+2. Describe the scatter plot in @fig-scatter using the four features
+   (direction, form, strength, outliers).
+
+3. A bar chart shows the following transport counts: Bus = 24, Car = 15,
+   Walk = 15, Bike = 6. What percentage of students walk to school?
+
+4. True or false: "A right-skewed distribution has a longer tail on the left."
+   Explain.
+
+::: {.callout-note collapse="true"}
+## Answers
+1. A histogram or dot plot — height is numerical and continuous.
+2. Positive direction (more study → higher score), roughly linear form,
+   moderate strength, possibly one or two outliers.
+3. Walk = 15/60 = 25%.
+4. False — a right-skewed (positively skewed) distribution has a longer tail
+   on the RIGHT.
+:::

@@ -1,0 +1,303 @@
+---
+title: "Probability"
+---
+
+# Probability {#sec-probability}
+
+**Probability** is a measure of how likely an event is to occur. It is
+expressed as a number between 0 (impossible) and 1 (certain), or as a
+percentage.
+
+$$P(\text{event}) = \frac{\text{number of favourable outcomes}}{\text{total number of possible outcomes}}$$
+
+## Probability scale
+
+```{r}
+#| label: fig-prob-scale
+#| fig-cap: "The probability scale from impossible (0) to certain (1)."
+#| echo: false
+#| fig-height: 2
+
+par(mar = c(3, 1, 2, 1))
+plot(0, 0, xlim = c(-0.05, 1.05), ylim = c(-0.5, 0.5),
+     type = "n", axes = FALSE, xlab = "", ylab = "",
+     main = "Probability Scale")
+
+# Draw scale
+arrows(-0.02, 0, 1.02, 0, lwd = 2, code = 2, length = 0.1)
+segments(c(0, 0.25, 0.5, 0.75, 1), -0.1, c(0, 0.25, 0.5, 0.75, 1), 0.1,
+         lwd = 1.5)
+text(c(0, 0.25, 0.5, 0.75, 1), -0.3,
+     c("0\nImpossible", "0.25\nUnlikely", "0.5\nEven chance",
+       "0.75\nLikely", "1\nCertain"),
+     cex = 0.8)
+
+# Colour gradient
+for (i in seq(0, 1, by = 0.01)) {
+  rect(i, 0.15, i + 0.01, 0.35,
+       col = rgb(1 - i, 0, i, alpha = 0.6), border = NA)
+}
+```
+
+## Key vocabulary
+
+| Term | Definition |
+|------|------------|
+| **Experiment** | A process with uncertain outcomes |
+| **Outcome** | A single possible result |
+| **Event** | One or more outcomes grouped together |
+| **Sample space** | The set of all possible outcomes |
+| **Complementary event** | All outcomes that are NOT in the event |
+
+## Simple probability — equally likely outcomes
+
+When all outcomes are **equally likely**, we can use the classical definition.
+
+### Example: rolling a die
+
+```{r}
+#| label: die-probability
+
+sample_space <- 1:6
+cat("Sample space:", sample_space, "\n")
+
+# P(rolling a 4)
+p_four <- sum(sample_space == 4) / length(sample_space)
+cat("P(rolling a 4) =", p_four, "\n")
+
+# P(rolling an even number)
+p_even <- sum(sample_space %% 2 == 0) / length(sample_space)
+cat("P(even number) =", p_even, "\n")
+
+# P(rolling > 4)
+p_gt4 <- sum(sample_space > 4) / length(sample_space)
+cat("P(> 4) =", p_gt4, "\n")
+```
+
+## Complementary events
+
+The **complement** of event A (written A' or $\bar{A}$) contains all
+outcomes NOT in A.
+
+$$P(A') = 1 - P(A)$$
+
+**Example:** If the probability of rain tomorrow is 0.3, then:
+
+$$P(\text{no rain}) = 1 - 0.3 = 0.7$$
+
+```{r}
+#| label: complement-example
+
+p_rain <- 0.3
+p_no_rain <- 1 - p_rain
+cat("P(rain) =", p_rain, "\n")
+cat("P(no rain) = 1 -", p_rain, "=", p_no_rain, "\n")
+```
+
+## Experimental (relative frequency) probability
+
+When we cannot calculate probability theoretically, we **estimate** it by
+repeating an experiment many times:
+
+$$P(\text{event}) \approx \frac{\text{number of times event occurred}}{\text{total number of trials}}$$
+
+### Simulating coin flips
+
+```{r}
+#| label: fig-coin-simulation
+#| fig-cap: "Relative frequency of heads approaches 0.5 as the number of flips increases (the law of large numbers)."
+
+set.seed(99)
+flips  <- sample(c("Heads", "Tails"), 1000, replace = TRUE)
+cumulative_heads <- cumsum(flips == "Heads") / seq_along(flips)
+
+plot(
+  cumulative_heads,
+  type = "l",
+  col  = "#0571b0",
+  lwd  = 1.5,
+  xlab = "Number of Flips",
+  ylab = "Relative Frequency of Heads",
+  main = "Simulated Coin Flips",
+  ylim = c(0, 1),
+  las  = 1
+)
+abline(h = 0.5, col = "#d7191c", lwd = 2, lty = 2)
+legend("topright", c("Relative frequency", "True probability (0.5)"),
+       col = c("#0571b0", "#d7191c"), lwd = 2, lty = c(1, 2), bty = "n")
+```
+
+::: {.callout-note}
+## Law of Large Numbers
+As the number of trials increases, the **relative frequency** (experimental
+probability) gets closer and closer to the **true probability**. This is
+why surveys and experiments need large samples.
+:::
+
+## Two-way tables
+
+A **two-way table** (contingency table) organises data by two categorical
+variables and is very useful for calculating probabilities.
+
+```{r}
+#| label: two-way-table
+
+# Simulated data: 120 students, sport preference by gender
+set.seed(7)
+n_students <- 120
+sport_data <- data.frame(
+  Gender = sample(c("Male", "Female"), n_students, replace = TRUE,
+                  prob = c(0.5, 0.5)),
+  Sport  = sample(c("Rugby", "Netball", "Football", "Basketball"),
+                  n_students, replace = TRUE, prob = c(0.3, 0.25, 0.25, 0.2))
+)
+
+tbl <- table(sport_data$Sport, sport_data$Gender)
+tbl_with_total <- addmargins(tbl)
+knitr::kable(tbl_with_total, caption = "Sport preference by gender (n = 120)")
+```
+
+### Reading probabilities from a two-way table
+
+Using the table above:
+
+```{r}
+#| label: two-way-probs
+
+total <- sum(tbl)
+
+cat("P(Male) =", sum(tbl[, "Male"]), "/", total, "=",
+    round(sum(tbl[, "Male"]) / total, 3), "\n")
+
+cat("P(Rugby) =", sum(tbl["Rugby", ]), "/", total, "=",
+    round(sum(tbl["Rugby", ]) / total, 3), "\n")
+
+cat("P(Male AND Rugby) =", tbl["Rugby", "Male"], "/", total, "=",
+    round(tbl["Rugby", "Male"] / total, 3), "\n")
+
+cat("P(Rugby | Male) =", tbl["Rugby", "Male"], "/",
+    sum(tbl[, "Male"]), "=",
+    round(tbl["Rugby", "Male"] / sum(tbl[, "Male"]), 3), "\n")
+```
+
+The last probability — P(Rugby | Male) — is a **conditional probability**:
+the probability of preferring rugby, **given** the student is male.
+
+## Tree diagrams
+
+Tree diagrams help calculate probabilities for **sequential events**.
+
+```{r}
+#| label: fig-tree-diagram
+#| fig-cap: "Tree diagram for drawing two balls from a bag (with replacement)."
+#| echo: false
+
+# Simple tree diagram using base R
+plot(0, 0, xlim = c(0, 4), ylim = c(0, 4), type = "n",
+     axes = FALSE, xlab = "", ylab = "",
+     main = "Tree Diagram: Drawing 2 Balls (Red/Blue, with replacement)")
+
+# First branches
+segments(0.5, 2, 1.5, 3.2, lwd = 1.5)  # Red
+segments(0.5, 2, 1.5, 0.8, lwd = 1.5)  # Blue
+
+# Second branches from Red
+segments(1.5, 3.2, 2.8, 3.8, lwd = 1.5)
+segments(1.5, 3.2, 2.8, 2.6, lwd = 1.5)
+
+# Second branches from Blue
+segments(1.5, 0.8, 2.8, 1.4, lwd = 1.5)
+segments(1.5, 0.8, 2.8, 0.2, lwd = 1.5)
+
+# Labels — first draw
+text(0.9, 2.7, "P = 3/5", cex = 0.8, col = "#d7191c")
+text(0.9, 1.3, "P = 2/5", cex = 0.8, col = "#0571b0")
+
+# Node labels
+text(1.5, 3.5, "Red", font = 2, col = "#d7191c")
+text(1.5, 0.5, "Blue", font = 2, col = "#0571b0")
+
+# Labels — second draw (from Red)
+text(2.1, 3.7, "P=3/5", cex = 0.75, col = "#d7191c")
+text(2.1, 2.8, "P=2/5", cex = 0.75, col = "#0571b0")
+
+# Labels — second draw (from Blue)
+text(2.1, 1.3, "P=3/5", cex = 0.75, col = "#d7191c")
+text(2.1, 0.4, "P=2/5", cex = 0.75, col = "#0571b0")
+
+# Outcome labels
+text(3.6, 3.8, "RR: 9/25", cex = 0.8, font = 2)
+text(3.6, 2.6, "RB: 6/25", cex = 0.8, font = 2)
+text(3.6, 1.4, "BR: 6/25", cex = 0.8, font = 2)
+text(3.6, 0.2, "BB: 4/25", cex = 0.8, font = 2)
+
+# End nodes
+text(2.8, 4.0, "Red", cex = 0.8, col = "#d7191c")
+text(2.8, 2.4, "Blue", cex = 0.8, col = "#0571b0")
+text(2.8, 1.6, "Red", cex = 0.8, col = "#d7191c")
+text(2.8, 0.0, "Blue", cex = 0.8, col = "#0571b0")
+```
+
+**Key rule:** Multiply probabilities along each branch, add probabilities
+for different paths leading to the same outcome.
+
+## Expected value (extension)
+
+For a simple scenario, the **expected value** is the long-run average outcome:
+
+$$E(X) = \sum x \cdot P(x)$$
+
+**Example:** A raffle has 200 tickets at $2 each. First prize is $100, second
+prize is $50. What is the expected gain per ticket?
+
+```{r}
+#| label: expected-value
+
+outcomes  <- c(100, 50, 0)         # winnings
+probs     <- c(1/200, 1/200, 198/200)
+cost      <- 2
+
+expected_win  <- sum(outcomes * probs)
+expected_gain <- expected_win - cost
+
+cat("Expected winnings:", expected_win, "\n")
+cat("Ticket cost:      ", cost, "\n")
+cat("Expected net gain:", expected_gain, "\n")
+cat("(A negative expected gain means this is not a good investment!)\n")
+```
+
+## Glossary
+
+| Term | Definition |
+|------|------------|
+| **Probability** | Likelihood of an event, from 0 to 1 |
+| **Sample space** | All possible outcomes |
+| **Event** | One or more outcomes |
+| **Complement** | All outcomes NOT in the event |
+| **Relative frequency** | Experimental estimate of probability |
+| **Conditional probability** | P(A given B): probability of A given B occurred |
+| **Two-way table** | Table showing two categorical variables together |
+| **Tree diagram** | Diagram showing sequential outcomes and probabilities |
+
+## Check your understanding
+
+1. A bag contains 4 red, 3 blue, and 3 yellow marbles. A marble is drawn at
+   random. Find:
+   a. P(red)
+   b. P(not red)
+   c. P(blue or yellow)
+
+2. A class of 30 students was surveyed: 18 play sport, 12 play an instrument,
+   and 6 do both.
+   a. Draw a Venn diagram.
+   b. Find P(plays sport but not instrument).
+   c. Find P(neither sport nor instrument).
+
+3. If P(A) = 0.4 and P(B) = 0.3 and A and B are independent, find P(A and B).
+
+::: {.callout-note collapse="true"}
+## Answers
+1. a. 4/10 = 0.4; b. 6/10 = 0.6; c. 6/10 = 0.6
+2. b. 12/30 = 0.4; c. (30 − 18 − 12 + 6)/30 = 6/30 = 0.2
+3. P(A and B) = 0.4 × 0.3 = 0.12 (for independent events)
+:::

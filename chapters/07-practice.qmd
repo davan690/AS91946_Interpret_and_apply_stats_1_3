@@ -1,0 +1,275 @@
+---
+title: "Practice Questions and Exam Tips"
+---
+
+# Practice Questions and Achievement Standard Tips {#sec-practice}
+
+This chapter brings everything together with practice questions at each
+grade level, and advice on how to approach the AS91946 assessment.
+
+## About the achievement standard
+
+| Detail | Information |
+|--------|-------------|
+| **Standard number** | AS91946 |
+| **Title** | Interpret and apply mathematical and statistical information in context |
+| **Level** | NCEA Level 1 |
+| **Credits** | 4 |
+| **Assessment** | External (end-of-year exam) |
+| **Strands** | Statistics and Probability |
+
+## What each grade requires
+
+### Achieved
+
+- Correctly read values from graphs and tables
+- Calculate basic statistics (mean, median, mode, range)
+- State probabilities from given information
+- Identify variable types
+- Make simple statements about data in context
+
+### Merit
+
+- **Justify** your answers with reasons
+- Compare and contrast groups using both centre AND spread
+- Identify potential sources of bias
+- Explain the difference between correlation and causation
+- Interpret probabilities and relate them to real-world context
+
+### Excellence
+
+- Show **statistical insight** — go beyond the obvious
+- Consider alternative explanations or limitations
+- Make connections between different parts of the data
+- Critically evaluate statistical claims
+- Use appropriate statistical language precisely
+
+## Writing tips for the exam
+
+::: {.callout-tip}
+## The golden rule
+**Always refer back to the context.** Every answer should mention:
+- The **variable** being described
+- The **units** of measurement
+- The **group** being described (population/sample)
+
+❌ "The mean is 65."  
+✅ "The mean maths score for Year 11 students was 65 out of 100."
+:::
+
+### Comparison sentence starters
+
+| Purpose | Sentence starters |
+|---------|------------------|
+| Centre | "On average…"; "The typical…"; "The median…is higher/lower than…" |
+| Spread | "The scores are more/less variable…"; "The IQR is larger, suggesting…" |
+| Shape | "The distribution is roughly symmetric / right-skewed…" |
+| Outliers | "There appears to be an outlier at…which may indicate…" |
+| Causation | "However, this may be due to…rather than a direct causal relationship" |
+
+## Practice set 1 — Achieved level
+
+```{r}
+#| label: practice-data-achieved
+#| echo: false
+
+set.seed(111)
+heights <- round(rnorm(20, 168, 9), 1)
+cat("Heights (cm) of 20 Year 11 students:\n")
+cat(sort(heights), "\n")
+```
+
+**Questions:**
+
+1. What type of data is height? Give a reason.
+2. Calculate the mean height. Round to one decimal place.
+3. Find the median height.
+4. Find the range.
+5. A student drew a histogram of this data. Circle the most appropriate
+   description: **symmetric / right-skewed / left-skewed**
+
+::: {.callout-note collapse="true"}
+## Worked solutions
+
+```{r}
+#| label: practice-solutions-achieved
+
+set.seed(111)
+heights <- round(rnorm(20, 168, 9), 1)
+
+cat("1. Numerical, continuous — height can take any value within a range.\n\n")
+cat("2. Mean:", round(mean(heights), 1), "cm\n\n")
+cat("3. Median:", median(heights), "cm\n\n")
+cat("4. Range:", max(heights) - min(heights), "cm\n\n")
+cat("5. Likely symmetric (heights tend to be normally distributed).\n")
+```
+:::
+
+## Practice set 2 — Merit level
+
+A local council surveyed 80 residents about their weekly exercise hours.
+The results were:
+
+```{r}
+#| label: practice-data-merit
+
+set.seed(222)
+adults    <- round(pmax(0, rnorm(40, mean = 4.5, sd = 2.2)), 1)
+teenagers <- round(pmax(0, rnorm(40, mean = 6.2, sd = 3.1)), 1)
+
+summary_tbl <- data.frame(
+  Group      = c("Adults", "Teenagers"),
+  n          = 40,
+  Mean       = round(c(mean(adults), mean(teenagers)), 2),
+  Median     = c(median(adults), median(teenagers)),
+  SD         = round(c(sd(adults), sd(teenagers)), 2),
+  IQR        = round(c(IQR(adults), IQR(teenagers)), 2),
+  Min        = c(min(adults), min(teenagers)),
+  Max        = c(max(adults), max(teenagers))
+)
+
+knitr::kable(summary_tbl, caption = "Weekly exercise hours: adults vs teenagers")
+```
+
+```{r}
+#| label: fig-merit-boxplot
+#| fig-cap: "Weekly exercise hours for adults and teenagers."
+
+boxplot(
+  list(Adults = adults, Teenagers = teenagers),
+  col    = c("#4dac26", "#0571b0"),
+  border = "#333",
+  main   = "Weekly Exercise Hours",
+  ylab   = "Hours per week",
+  las    = 1
+)
+```
+
+**Questions:**
+
+1. Compare the centre of the two distributions. What does this tell us about
+   exercise habits in context?
+2. Compare the spread. What does this tell us?
+3. The council used a telephone survey conducted at 2 pm on weekdays. Identify
+   one source of bias and explain how it might affect the results.
+4. Can we conclude from this data that teenagers exercise more because they
+   are younger? Explain.
+
+::: {.callout-note collapse="true"}
+## Model answers
+
+**1. Centre:** The median exercise hours for teenagers (approx.
+`r median(teenagers)` hrs) is higher than for adults (`r median(adults)` hrs).
+This suggests teenagers in this sample tend to do more weekly exercise than
+adults.
+
+**2. Spread:** The IQR and standard deviation are larger for teenagers
+(`r round(IQR(teenagers),1)` hrs vs `r round(IQR(adults),1)` hrs). This means
+teenagers' exercise habits are more variable — some exercise a lot while others
+exercise very little. Adults' exercise habits are more consistent.
+
+**3. Bias:** Calling at 2 pm on weekdays means working adults are unlikely to
+answer (they are at work). This leads to **non-response bias** — the adult
+sample may over-represent retired or part-time workers, who may exercise more
+than the general adult population.
+
+**4. Causation:** No — we cannot conclude that age *causes* the difference in
+exercise. Teenagers may exercise more because they participate in school sport,
+not because of their age per se. Age and exercise are *correlated* in this
+sample, but there may be confounding variables such as school PE requirements,
+free time, or lifestyle factors.
+:::
+
+## Practice set 3 — Excellence level
+
+A researcher claims: *"A study of 50 Auckland households found that households
+with more bookshelves have higher household income. Therefore, buying more
+bookshelves will increase your income."*
+
+**Questions:**
+
+1. Identify the two variables and their types.
+2. Explain why this conclusion is flawed. Use statistical language.
+3. Suggest one confounding variable that could explain the relationship.
+4. What would the researcher need to do to properly establish causation?
+5. The sample was 50 Auckland households selected by going door-to-door in
+   Remuera (a wealthy suburb). Evaluate the reliability of generalising these
+   findings to all New Zealand households.
+
+::: {.callout-note collapse="true"}
+## Model answers
+
+**1.** Number of bookshelves: numerical, discrete. Household income:
+numerical, continuous.
+
+**2.** The conclusion confuses **correlation with causation**. Even if the
+two variables are positively correlated, this does not mean bookshelves
+cause higher income. The relationship could be due to a third variable,
+and correlation studies cannot establish cause-and-effect without
+experimental control.
+
+**3.** **Wealth/education level** — wealthier, more educated households are
+more likely to own books/bookshelves AND to have higher income. Both
+variables are driven by a common factor.
+
+**4.** To establish causation, the researcher would need a **controlled
+experiment** — randomly assigning households to receive bookshelves or not,
+holding all other variables constant, and measuring income change over time.
+This would be impractical.
+
+**5.** The sample has significant **sampling bias**. Remuera is one of
+Auckland's wealthiest suburbs. The sample does not represent the diversity
+of New Zealand households in terms of income, region, or ethnicity. Results
+cannot be reliably generalised to all New Zealand households. A
+**stratified random sample** from across New Zealand would be needed.
+:::
+
+## Key formulas summary
+
+```{r}
+#| label: formulas-table
+#| echo: false
+
+formulas <- data.frame(
+  Formula        = c("Mean", "Range", "IQR", "Probability", "Complement",
+                     "Lower outlier fence", "Upper outlier fence"),
+  Expression     = c(
+    "x̄ = Σxᵢ / n",
+    "Max − Min",
+    "Q3 − Q1",
+    "P(A) = favourable outcomes / total outcomes",
+    "P(A') = 1 − P(A)",
+    "Q1 − 1.5 × IQR",
+    "Q3 + 1.5 × IQR"
+  )
+)
+
+knitr::kable(formulas, col.names = c("Measure", "Formula"))
+```
+
+## Exam strategy checklist
+
+Before the exam, make sure you can:
+
+- [ ] Identify variable types (categorical/numerical, nominal/ordinal,
+      discrete/continuous)
+- [ ] Read values accurately from bar charts, histograms, box plots, and
+      scatter plots
+- [ ] Calculate mean, median, mode, range, IQR
+- [ ] Describe distributions using SOCS (Shape, Outliers, Centre, Spread)
+- [ ] Compare two groups using both centre and spread in context
+- [ ] Calculate simple probabilities and use complementary events
+- [ ] Read and calculate from two-way tables
+- [ ] Identify bias in data collection methods
+- [ ] Distinguish correlation from causation
+- [ ] Critically evaluate statistical claims in media
+
+## Useful resources
+
+| Resource | Description | URL |
+|----------|-------------|-----|
+| NZQA | Official achievement standard information | [nzqa.govt.nz](https://www.nzqa.govt.nz) |
+| CensusAtSchool | Real NZ student data for practice | [new.censusatschool.org.nz](https://new.censusatschool.org.nz) |
+| iNZight | Free NZ-made statistics software | [inzight.nz](https://inzight.nz) |
+| Stats NZ | Official NZ statistics and data | [stats.govt.nz](https://www.stats.govt.nz) |
+| Khan Academy | Free video lessons on statistics | [khanacademy.org](https://www.khanacademy.org) |

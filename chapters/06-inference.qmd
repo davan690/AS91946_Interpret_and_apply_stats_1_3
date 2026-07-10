@@ -1,0 +1,257 @@
+---
+title: "Interpreting Statistical Information"
+---
+
+# Interpreting Statistical Information {#sec-inference}
+
+A major focus of AS91946 is the ability to **critically read and interpret**
+statistical information from a variety of sources — including newspapers,
+websites, government reports, and scientific studies.
+
+## Reading statistical claims
+
+Statistical claims appear everywhere in everyday life. As a critical consumer
+of information, you need to ask:
+
+1. **Who** collected the data and why?
+2. **How** was the data collected (survey, experiment, census)?
+3. **How many** people or things were measured (sample size)?
+4. **Who** was sampled — does the sample represent the population?
+5. **What** do the numbers actually mean in context?
+
+## Sources of bias
+
+**Bias** is a systematic error that causes results to be unrepresentative.
+
+| Type of bias | Description | Example |
+|--------------|-------------|---------|
+| **Sampling bias** | Sample does not represent population | Surveying only Year 11s about a school-wide issue |
+| **Response bias** | People don't answer truthfully | "Do you cheat on tests?" |
+| **Non-response bias** | Certain groups are less likely to respond | Online survey misses those without internet |
+| **Leading question bias** | Question wording influences the answer | "Don't you agree that homework is too much?" |
+| **Volunteer bias** | Only motivated people respond | Self-selected online polls |
+
+```{r}
+#| label: fig-bias-types
+#| fig-cap: "Different types of bias and how they affect results."
+#| echo: false
+
+bias_types  <- c("Sampling", "Response", "Non-response", "Leading Q", "Volunteer")
+bias_impact <- c(0.8, 0.6, 0.7, 0.9, 0.75)
+
+barplot(
+  bias_impact,
+  names.arg = bias_types,
+  col    = c("#d7191c", "#f4a582", "#fdae61", "#abdda4", "#2b83ba"),
+  border = "white",
+  main   = "Relative Impact of Bias Types (illustrative)",
+  ylab   = "Severity (0 = low, 1 = high)",
+  ylim   = c(0, 1),
+  las    = 1
+)
+```
+
+## Sample size and reliability
+
+Larger samples generally give more **reliable** results — but size alone is
+not enough if the sample is biased.
+
+```{r}
+#| label: fig-sample-size
+#| fig-cap: "Variability in sample estimates decreases as sample size increases."
+
+set.seed(42)
+true_prop <- 0.55  # True proportion in population
+sample_sizes <- c(10, 30, 50, 100, 200, 500, 1000)
+n_simulations <- 1000
+
+set.seed(321)
+variability <- sapply(sample_sizes, function(n) {
+  estimates <- replicate(n_simulations, mean(sample(c(TRUE, FALSE), n,
+                                                    replace = TRUE,
+                                                    prob = c(true_prop,
+                                                             1 - true_prop))))
+  sd(estimates)
+})
+
+plot(
+  sample_sizes, variability,
+  type = "b",
+  pch  = 19,
+  col  = "#0571b0",
+  lwd  = 2,
+  xlab = "Sample Size (n)",
+  ylab = "Standard Deviation of Estimates",
+  main = "Sample Size vs Variability of Estimates",
+  las  = 1
+)
+abline(h = 0, col = "#d7191c", lty = 2)
+```
+
+## Correlation and causation
+
+One of the most important concepts in statistical literacy is understanding
+the difference between **correlation** and **causation**.
+
+::: {.callout-warning}
+## Correlation ≠ Causation
+Two variables can be **correlated** (move together) without one causing
+the other. There may be a **confounding variable** responsible for both.
+:::
+
+### Famous spurious correlations
+
+- Ice cream sales and shark attacks both increase in summer → they are both
+  caused by **hot weather**, not each other.
+- Countries with more TVs have longer life expectancy → both are driven by
+  **wealth**, not TVs causing people to live longer.
+
+```{r}
+#| label: fig-spurious
+#| fig-cap: "A spurious correlation: ice cream sales and drownings both increase in summer."
+#| echo: false
+
+months <- 1:12
+ice_cream <- c(30, 35, 50, 70, 90, 110, 120, 115, 85, 60, 40, 32)
+drownings <- c(5, 6, 8, 12, 16, 20, 22, 21, 15, 10, 7, 5)
+
+par(mar = c(5, 4, 4, 5))
+plot(months, ice_cream, type = "b", pch = 19, col = "#d7191c", lwd = 2,
+     xlab = "Month", ylab = "Ice Cream Sales (units)",
+     main = "Ice Cream Sales and Drownings by Month",
+     xaxt = "n", ylim = c(0, 140), las = 1)
+axis(1, at = 1:12, labels = month.abb)
+
+par(new = TRUE)
+plot(months, drownings, type = "b", pch = 17, col = "#0571b0", lwd = 2,
+     axes = FALSE, xlab = "", ylab = "", ylim = c(0, 25))
+axis(4, las = 1, col.axis = "#0571b0")
+mtext("Drownings", side = 4, line = 3, col = "#0571b0")
+
+legend("topleft",
+       c("Ice Cream Sales", "Drownings"),
+       col = c("#d7191c", "#0571b0"), pch = c(19, 17), lwd = 2, bty = "n")
+```
+
+## Interpreting graphs critically
+
+When reading statistical graphs, watch out for:
+
+### Misleading y-axis
+
+A y-axis that doesn't start at zero can make small differences look huge.
+
+```{r}
+#| label: fig-misleading-axis
+#| fig-cap: "The same data displayed with a truncated y-axis (left) vs starting at zero (right)."
+
+par(mfrow = c(1, 2))
+
+years   <- 2020:2024
+revenue <- c(980, 990, 995, 1005, 1010)
+
+# Misleading
+plot(years, revenue, type = "b", pch = 19, col = "#d7191c", lwd = 2,
+     ylim = c(975, 1015), xlab = "Year", ylab = "Revenue ($M)",
+     main = "Misleading: Truncated Axis", las = 1)
+
+# Honest
+plot(years, revenue, type = "b", pch = 19, col = "#4dac26", lwd = 2,
+     ylim = c(0, 1100), xlab = "Year", ylab = "Revenue ($M)",
+     main = "Honest: Starting at Zero", las = 1)
+
+par(mfrow = c(1, 1))
+```
+
+### Percentage vs absolute numbers
+
+::: {.callout-tip}
+## Be careful with percentages
+"Crime increased by 100%" sounds alarming — but if there were only 2 crimes
+last year and 4 this year, the absolute increase is tiny.
+
+Always ask: **100% of what?**
+:::
+
+### Averages without context
+
+The **mean** can be pulled by extreme values, making it misleading if used
+alone. Always ask what **measure of centre** was used and whether it is
+appropriate.
+
+## Reading media reports — a framework
+
+Use these questions when evaluating a statistical claim in the media:
+
+1. **What is being measured?** (the variable and its units)
+2. **Who was studied?** (the population and sample)
+3. **How was data collected?** (method and potential biases)
+4. **How large was the sample?**
+5. **What is the source?** (government, independent researcher, company with
+   a vested interest?)
+6. **Are conclusions supported by the evidence?** Or is the claim overstated?
+7. **Are comparisons fair?** Are groups being compared actually comparable?
+
+## A worked example
+
+::: {.callout-note}
+## News headline
+*"Study shows eating chocolate improves exam scores by 15%"*
+:::
+
+**Critical analysis:**
+
+- **What was measured?** Exam scores before and after eating chocolate.
+- **Who was studied?** Not stated — red flag!
+- **Sample size?** Not given — could be only 10 students.
+- **Confounding variables?** Students who eat chocolate may be from wealthier
+  families with better study resources.
+- **Causation or correlation?** This is a correlational study; chocolate
+  doesn't necessarily *cause* better scores.
+- **Who funded it?** If a chocolate company funded it, there is a conflict of
+  interest.
+
+**Conclusion:** The headline is likely exaggerated or misleading. We would
+need much more information before accepting this claim.
+
+## Glossary
+
+| Term | Definition |
+|------|------------|
+| **Bias** | Systematic error that distorts results |
+| **Confounding variable** | A hidden variable that explains an apparent relationship |
+| **Correlation** | A statistical relationship between two variables |
+| **Causation** | One variable directly causes a change in another |
+| **Reliable** | Consistent results if repeated |
+| **Valid** | Measuring what it claims to measure |
+| **Population** | The full group of interest |
+| **Sample** | A subset of the population |
+
+## Check your understanding
+
+1. A newspaper article claims: "People who eat breakfast earn more money than
+   those who skip it." Identify a possible confounding variable.
+
+2. A survey found that 80% of students support a longer lunch break. The
+   survey was conducted by standing outside the school canteen. What type of
+   bias is this? How might it affect results?
+
+3. A graph shows the number of electric vehicles sold in New Zealand, with the
+   y-axis starting at 45,000 rather than 0. Sales increased from 47,000 to
+   51,000. On the graph, this looks like a 400% increase. Calculate the true
+   percentage increase.
+
+4. Explain the difference between correlation and causation using your own
+   example.
+
+::: {.callout-note collapse="true"}
+## Answers
+1. Wealthier people are more likely to eat breakfast (they can afford food)
+   and also earn more — wealth is the confounding variable.
+2. Sampling bias / volunteer bias — students near the canteen are more likely
+   to want a longer lunch break. Results will overestimate support.
+3. True % increase = (51,000 − 47,000) / 47,000 × 100 ≈ 8.5%.
+4. Accept any reasonable example, e.g., "Countries with more hospitals have
+   higher death rates — hospitals don't cause death; both are linked to
+   population size."
+:::
