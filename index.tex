@@ -1,0 +1,2878 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  11pt,
+  a4paper,
+  oneside,
+  open=any]{scrbook}
+\usepackage{xcolor}
+\usepackage[top=25mm,bottom=28mm,left=28mm,right=22mm,headsep=8mm]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Latin Modern Roman}
+  \setsansfont[]{Latin Modern Sans}
+  \setmonofont[]{Latin Modern Mono}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+% Professional textbook-style refinements for Quarto PDF output
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{caption}
+
+% Improve body text rhythm
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0.3em}
+
+% Cleaner heading hierarchy
+\setkomafont{disposition}{\bfseries}
+\setkomafont{chapter}{\Huge\bfseries}
+\setkomafont{section}{\Large\bfseries}
+\setkomafont{subsection}{\large\bfseries}
+
+% Better table and figure captions
+\captionsetup{font=small,labelfont=bf}
+
+% Subtle running header/footer for print-like structure
+\KOMAoptions{headings=normal}
+\pagestyle{headings}
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
+\@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={AS91946: Interpret and Apply Mathematical and Statistical Information},
+  pdfauthor={Anthony R Davidson},
+  colorlinks=true,
+  linkcolor={Maroon},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{AS91946: Interpret and Apply Mathematical and Statistical
+Information}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{NCEA Level 1 Statistics --- Year 11}
+\author{Anthony R Davidson}
+\date{July 2026}
+\begin{document}
+\frontmatter
+\maketitle
+
+\renewcommand*\contentsname{Table of contents}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\listoffigures
+\listoftables
+
+\mainmatter
+\bookmarksetup{startatroot}
+
+\chapter{Welcome}\label{welcome}
+
+\bookmarksetup{startatroot}
+
+\chapter*{Welcome}\label{welcome-1}
+\addcontentsline{toc}{chapter}{Welcome}
+
+\markboth{Welcome}{Welcome}
+
+This resource has been developed to support Year 11 students preparing
+for \textbf{NCEA Level 1 Achievement Standard 91946}: \emph{Interpret
+and apply mathematical and statistical information in context} (4
+credits).
+
+\section{What this standard is about}\label{what-this-standard-is-about}
+
+In this standard you will learn to:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Read and interpret} statistical displays, tables, and graphs
+\item
+  \textbf{Apply} mathematical and statistical ideas to real-world
+  problems
+\item
+  \textbf{Communicate} findings clearly using statistical language
+\item
+  \textbf{Evaluate} statistical claims made in media and everyday life
+\end{itemize}
+
+\section{How to use this book}\label{how-to-use-this-book}
+
+Each chapter builds on the previous one. You will find:
+
+\begin{itemize}
+\tightlist
+\item
+  Clear explanations of key concepts with New Zealand examples
+\item
+  Interactive R code blocks showing how statistics is done with real
+  data
+\item
+  Practice questions at Achievement, Merit, and Excellence levels
+\item
+  Glossary boxes highlighting important vocabulary
+\end{itemize}
+
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Achievement Standard at a Glance}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.7500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Grade
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+What you need to do
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Achieved} & Interpret and apply statistical information \\
+\textbf{Merit} & Interpret and apply statistical information with
+justification \\
+\textbf{Excellence} & Interpret and apply statistical information with
+statistical insight \\
+\end{longtable}
+
+\end{tcolorbox}
+
+\section{Tools we use}\label{tools-we-use}
+
+All data visualisations and calculations in this book are produced using
+\textbf{R} and rendered with \textbf{Quarto}. You do not need to be able
+to write R code to succeed in this standard --- the code blocks are
+provided so your teacher can demonstrate concepts live and so you can
+explore data yourself if you choose.
+
+\begin{figure}[H]
+
+{\centering \pandocbounded{\includegraphics[keepaspectratio]{index_files/figure-latex/welcome-plot-1.pdf}}
+
+}
+
+\caption{An example of the kind of visualisations we will create in this
+book.}
+
+\end{figure}%
+
+\section{Getting started}\label{getting-started}
+
+Head to Chapter~\ref{sec-intro} to begin your statistics journey!
+
+\bookmarksetup{startatroot}
+
+\chapter{What is Statistics?}\label{what-is-statistics}
+
+\bookmarksetup{startatroot}
+
+\chapter{What is Statistics?}\label{sec-intro}
+
+\section{Why statistics matters}\label{why-statistics-matters}
+
+Every day we are surrounded by data. News headlines cite poll results,
+sports commentators compare player averages, health campaigns report
+risk percentages, and social media shows us trending topics.
+\textbf{Statistics} is the science that helps us make sense of all this
+information.
+
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Key definition}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+
+\textbf{Statistics} is the practice of collecting, organising,
+summarising, analysing, and interpreting data in order to draw
+conclusions and make decisions.
+
+\end{tcolorbox}
+
+\section{The statistical enquiry cycle
+(PPDAC)}\label{the-statistical-enquiry-cycle-ppdac}
+
+New Zealand's statistics curriculum uses the \textbf{PPDAC cycle} as a
+framework for carrying out a statistical investigation:
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Stage & What you do \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{P}roblem & Pose a statistical question \\
+\textbf{P}lan & Plan how to collect data \\
+\textbf{D}ata & Collect and record data \\
+\textbf{A}nalysis & Explore and summarise the data \\
+\textbf{C}onclusion & Interpret results and answer the question \\
+\end{longtable}
+
+\begin{figure}[H]
+
+{\centering \pandocbounded{\includegraphics[keepaspectratio]{chapters/01-intro_files/figure-latex/ppdac-diagram-1.pdf}}
+
+}
+
+\caption{The PPDAC cycle --- a framework for statistical
+investigations.}
+
+\end{figure}%
+
+\section{Types of statistical
+questions}\label{types-of-statistical-questions}
+
+Not all questions are statistical questions. A statistical question
+expects \textbf{variability} in the answers.
+
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+
+\textbf{Statistical question:} ``How tall are the students in Year
+11?''\\
+\emph{(Heights will vary --- this is statistical!)}
+
+\textbf{Not a statistical question:} ``How tall is Ms Smith?''\\
+\emph{(Only one answer --- not statistical.)}
+
+\end{tcolorbox}
+
+\subsection{Practice identifying statistical
+questions}\label{practice-identifying-statistical-questions}
+
+Which of the following are statistical questions?
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  How many pages are in Harry Potter and the Philosopher's Stone?
+\item
+  How many hours per week do Year 11 students spend on homework?
+\item
+  What is the population of New Zealand?
+\item
+  What are the most popular music genres among teenagers in Auckland?
+\item
+  What colour is the school uniform?
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Answers}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  ❌ Not statistical --- there is one fixed answer.
+\item
+  ✅ Statistical --- different students spend different amounts of time.
+\item
+  ❌ Not statistical --- there is one (changing but definite) answer.
+\item
+  ✅ Statistical --- different teenagers have different preferences.
+\item
+  ❌ Not statistical --- the uniform colour is fixed.
+\end{enumerate}
+
+\end{tcolorbox}
+
+\section{Why context matters}\label{why-context-matters}
+
+In AS91946, \textbf{context} is central. You will always work with data
+that relates to real situations. When interpreting statistics, you must:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Name the variable} being measured
+\item
+  \textbf{State the units} (e.g.~centimetres, dollars, minutes)
+\item
+  \textbf{Refer to the population} the data came from
+\item
+  \textbf{Relate findings back} to the real-world situation
+\end{itemize}
+
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-warning-color!10!white, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Common mistake}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-warning-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+
+Saying ``the mean is 24'' is not enough. Say\\
+\emph{``The mean age of survey respondents was 24 years.''}
+
+\end{tcolorbox}
+
+\section{Glossary}\label{glossary}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Term & Meaning \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Data} & Values collected by observation or measurement \\
+\textbf{Variable} & A characteristic that can take different values \\
+\textbf{Population} & The entire group of interest \\
+\textbf{Sample} & A subset of the population selected for study \\
+\textbf{Statistic} & A numerical summary calculated from a sample \\
+\textbf{Parameter} & A numerical summary of a whole population \\
+\end{longtable}
+
+\section{Check your understanding}\label{check-your-understanding}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  In your own words, explain what the PPDAC cycle is.
+\item
+  Give two examples of statistical questions you could investigate at
+  your school.
+\item
+  A student says ``the average score is 65''. What is missing from this
+  statement?
+\item
+  What is the difference between a population and a sample?
+\end{enumerate}
+
+\bookmarksetup{startatroot}
+
+\chapter{Types of Data and Variables}\label{types-of-data-and-variables}
+
+\bookmarksetup{startatroot}
+
+\chapter{Types of Data and Variables}\label{sec-data-types}
+
+Understanding the \textbf{type of data} you have is the first step in
+choosing the right graph or summary statistic. The wrong choice can make
+data hard to understand --- or even misleading.
+
+\section{Categorical vs numerical
+data}\label{categorical-vs-numerical-data}
+
+\begin{figure}[H]
+
+{\centering \pandocbounded{\includegraphics[keepaspectratio]{chapters/02-data-types_files/figure-latex/data-types-tree-1.pdf}}
+
+}
+
+\caption{Classification of data types.}
+
+\end{figure}%
+
+\section{Categorical data}\label{categorical-data}
+
+\textbf{Categorical (qualitative) data} describes qualities or
+categories. The values are labels, not numbers.
+
+\subsection{Nominal data}\label{nominal-data}
+
+Nominal data has \textbf{no natural order}. Categories are just names.
+
+\textbf{Examples:} - Eye colour (brown, blue, green, grey) - Favourite
+sport (rugby, netball, football, basketball) - Type of transport to
+school (bus, car, walk, bike)
+
+\subsection{Ordinal data}\label{ordinal-data}
+
+Ordinal data has a \textbf{natural order}, but the gaps between
+categories are not equal.
+
+\textbf{Examples:} - Survey ratings (strongly disagree → disagree →
+neutral → agree → strongly agree) - Year group (Year 9, Year 10, Year
+11, Year 12, Year 13) - Clothing size (XS, S, M, L, XL)
+
+\section{Numerical data}\label{numerical-data}
+
+\textbf{Numerical (quantitative) data} represents quantities that can be
+measured or counted.
+
+\subsection{Discrete data}\label{discrete-data}
+
+Discrete data can only take \textbf{specific, separate values} (usually
+whole numbers from counting).
+
+\textbf{Examples:} - Number of siblings - Number of text messages sent
+per day - Goals scored in a rugby match
+
+\subsection{Continuous data}\label{continuous-data}
+
+Continuous data can take \textbf{any value within a range} (usually from
+measuring).
+
+\textbf{Examples:} - Height (cm) - Weight (kg) - Time to complete a race
+(seconds) - Temperature (°C)
+
+\section{Real data example}\label{real-data-example}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Simulated class survey data}
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{7}\NormalTok{)}
+\NormalTok{n }\OtherTok{\textless{}{-}} \DecValTok{10}
+\NormalTok{survey }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}
+  \AttributeTok{Student   =} \FunctionTok{paste0}\NormalTok{(}\StringTok{"S"}\NormalTok{, }\DecValTok{1}\SpecialCharTok{:}\NormalTok{n),}
+  \AttributeTok{Gender    =} \FunctionTok{sample}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\StringTok{"Male"}\NormalTok{, }\StringTok{"Female"}\NormalTok{, }\StringTok{"Non{-}binary"}\NormalTok{), n, }\AttributeTok{replace =} \ConstantTok{TRUE}\NormalTok{),}
+  \AttributeTok{Height\_cm =} \FunctionTok{round}\NormalTok{(}\FunctionTok{rnorm}\NormalTok{(n, }\DecValTok{168}\NormalTok{, }\DecValTok{10}\NormalTok{), }\DecValTok{1}\NormalTok{),}
+  \AttributeTok{Siblings  =} \FunctionTok{sample}\NormalTok{(}\DecValTok{0}\SpecialCharTok{:}\DecValTok{4}\NormalTok{, n, }\AttributeTok{replace =} \ConstantTok{TRUE}\NormalTok{),}
+  \AttributeTok{Transport =} \FunctionTok{sample}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\StringTok{"Bus"}\NormalTok{, }\StringTok{"Car"}\NormalTok{, }\StringTok{"Walk"}\NormalTok{, }\StringTok{"Bike"}\NormalTok{), n, }\AttributeTok{replace =} \ConstantTok{TRUE}\NormalTok{),}
+  \AttributeTok{Rating    =} \FunctionTok{sample}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\StringTok{"Poor"}\NormalTok{, }\StringTok{"Fair"}\NormalTok{, }\StringTok{"Good"}\NormalTok{, }\StringTok{"Excellent"}\NormalTok{), n, }\AttributeTok{replace =} \ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{)}
+
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(survey, }\AttributeTok{align =} \StringTok{"c"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{longtable}[]{@{}cccccc@{}}
+\caption{Example student survey data --- identify the type of each
+variable.}\tabularnewline
+\toprule\noalign{}
+Student & Gender & Height\_cm & Siblings & Transport & Rating \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Student & Gender & Height\_cm & Siblings & Transport & Rating \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+S1 & Female & 154.3 & 1 & Bus & Fair \\
+S2 & Non-binary & 144.2 & 3 & Bike & Excellent \\
+S3 & Non-binary & 163.2 & 2 & Bus & Excellent \\
+S4 & Non-binary & 162.6 & 3 & Bus & Poor \\
+S5 & Female & 181.2 & 0 & Car & Excellent \\
+S6 & Non-binary & 152.9 & 2 & Bike & Fair \\
+S7 & Female & 167.8 & 3 & Bus & Good \\
+S8 & Female & 164.5 & 0 & Walk & Excellent \\
+S9 & Non-binary & 161.7 & 2 & Bus & Fair \\
+S10 & Female & 159.0 & 4 & Walk & Fair \\
+\end{longtable}
+
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Identify the variable types}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Gender} → Categorical, Nominal
+\item
+  \textbf{Height\_cm} → Numerical, Continuous
+\item
+  \textbf{Siblings} → Numerical, Discrete
+\item
+  \textbf{Transport} → Categorical, Nominal
+\item
+  \textbf{Rating} → Categorical, Ordinal
+\end{itemize}
+
+\end{tcolorbox}
+
+\section{Choosing the right display}\label{choosing-the-right-display}
+
+The type of data determines the best graph to use:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3793}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6207}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Data type
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Suitable displays
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Categorical (nominal/ordinal) & Bar chart, pie chart, dot plot \\
+Numerical (discrete) & Dot plot, bar chart, stem-and-leaf \\
+Numerical (continuous) & Histogram, box plot, dot plot, stem-and-leaf \\
+Two numerical variables & Scatter plot \\
+\end{longtable}
+
+\section{Glossary}\label{glossary-1}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Term & Meaning \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Variable} & A characteristic that varies between individuals \\
+\textbf{Categorical} & Data that falls into named groups or
+categories \\
+\textbf{Nominal} & Categorical with no natural order \\
+\textbf{Ordinal} & Categorical with a natural order \\
+\textbf{Numerical} & Data that can be measured or counted \\
+\textbf{Discrete} & Numerical data that can only take specific values \\
+\textbf{Continuous} & Numerical data that can take any value in a
+range \\
+\end{longtable}
+
+\section{Check your understanding}\label{check-your-understanding-1}
+
+Classify each variable as \textbf{categorical (nominal/ordinal)} or
+\textbf{numerical (discrete/continuous)}:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Shoe size
+\item
+  Favourite subject at school
+\item
+  Time spent sleeping (hours per night)
+\item
+  Number of books read last month
+\item
+  Blood type
+\item
+  Temperature in a classroom
+\item
+  Year level
+\item
+  Distance from home to school (km)
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Answers}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Numerical, discrete (or ordinal --- shoe sizes have a natural order
+  but are not continuous)
+\item
+  Categorical, nominal
+\item
+  Numerical, continuous
+\item
+  Numerical, discrete
+\item
+  Categorical, nominal
+\item
+  Numerical, continuous
+\item
+  Categorical, ordinal (or numerical discrete depending on context)
+\item
+  Numerical, continuous
+\end{enumerate}
+
+\end{tcolorbox}
+
+\bookmarksetup{startatroot}
+
+\chapter{Statistical Graphs and
+Displays}\label{statistical-graphs-and-displays}
+
+\bookmarksetup{startatroot}
+
+\chapter{Statistical Graphs and Displays}\label{sec-graphs}
+
+A well-chosen graph makes patterns in data immediately visible. In this
+chapter you will learn to \textbf{create}, \textbf{read}, and
+\textbf{critically interpret} the most common statistical displays.
+
+\section{Setting up our data}\label{setting-up-our-data}
+
+Throughout this chapter we use a simulated survey of 60 Year 11 students
+across a New Zealand school. The data includes variables on transport,
+height, study time, and maths scores.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{2024}\NormalTok{)}
+\NormalTok{n }\OtherTok{\textless{}{-}} \DecValTok{60}
+
+\NormalTok{students }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}
+  \AttributeTok{transport  =} \FunctionTok{sample}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\StringTok{"Bus"}\NormalTok{, }\StringTok{"Car"}\NormalTok{, }\StringTok{"Walk"}\NormalTok{, }\StringTok{"Bike"}\NormalTok{), n,}
+                      \AttributeTok{replace =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{prob =} \FunctionTok{c}\NormalTok{(}\FloatTok{0.4}\NormalTok{, }\FloatTok{0.25}\NormalTok{, }\FloatTok{0.25}\NormalTok{, }\FloatTok{0.1}\NormalTok{)),}
+  \AttributeTok{height\_cm  =} \FunctionTok{round}\NormalTok{(}\FunctionTok{rnorm}\NormalTok{(n, }\AttributeTok{mean =} \DecValTok{167}\NormalTok{, }\AttributeTok{sd =} \DecValTok{9}\NormalTok{), }\DecValTok{1}\NormalTok{),}
+  \AttributeTok{study\_hrs  =} \FunctionTok{round}\NormalTok{(}\FunctionTok{pmax}\NormalTok{(}\DecValTok{0}\NormalTok{, }\FunctionTok{rnorm}\NormalTok{(n, }\AttributeTok{mean =} \FloatTok{2.5}\NormalTok{, }\AttributeTok{sd =} \FloatTok{1.2}\NormalTok{)), }\DecValTok{1}\NormalTok{),}
+  \AttributeTok{maths\_score =} \FunctionTok{round}\NormalTok{(}\FunctionTok{pmin}\NormalTok{(}\DecValTok{100}\NormalTok{, }\FunctionTok{pmax}\NormalTok{(}\DecValTok{0}\NormalTok{, }\FunctionTok{rnorm}\NormalTok{(n, }\AttributeTok{mean =} \DecValTok{65}\NormalTok{, }\AttributeTok{sd =} \DecValTok{15}\NormalTok{))))}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Bar charts}\label{bar-charts}
+
+Bar charts display the \textbf{frequency} (count) or \textbf{relative
+frequency} (proportion) of categorical data.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{transport\_counts }\OtherTok{\textless{}{-}} \FunctionTok{table}\NormalTok{(students}\SpecialCharTok{$}\NormalTok{transport)}
+
+\FunctionTok{barplot}\NormalTok{(}
+  \FunctionTok{sort}\NormalTok{(transport\_counts, }\AttributeTok{decreasing =} \ConstantTok{TRUE}\NormalTok{),}
+  \AttributeTok{col  =} \FunctionTok{c}\NormalTok{(}\StringTok{"\#4dac26"}\NormalTok{, }\StringTok{"\#b8e186"}\NormalTok{, }\StringTok{"\#f1b6da"}\NormalTok{, }\StringTok{"\#d7191c"}\NormalTok{),}
+  \AttributeTok{main =} \StringTok{"How Year 11 Students Travel to School"}\NormalTok{,}
+  \AttributeTok{xlab =} \StringTok{"Mode of Transport"}\NormalTok{,}
+  \AttributeTok{ylab =} \StringTok{"Number of Students"}\NormalTok{,}
+  \AttributeTok{border =} \StringTok{"white"}\NormalTok{,}
+  \AttributeTok{las =} \DecValTok{1}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-latex/fig-bar-transport-1.pdf}}
+
+}
+
+\caption{\label{fig-bar-transport}Bar chart showing how Year 11 students
+travel to school.}
+
+\end{figure}%
+
+\subsection{Reading a bar chart}\label{reading-a-bar-chart}
+
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+
+When describing a bar chart, always comment on:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{The most and least common} categories
+\item
+  \textbf{The overall pattern} (are categories roughly equal, or is one
+  dominant?)
+\item
+  \textbf{The context} --- what does this tell us about the group?
+\end{enumerate}
+
+\end{tcolorbox}
+
+\textbf{Sample answer:} ``Bus is the most common way students travel to
+school, with over 20 students using this method. Bike is the least
+common. More students use public or active transport (bus, walk, bike)
+than passive transport (car).''
+
+\section{Dot plots}\label{dot-plots}
+
+Dot plots are useful for \textbf{small numerical datasets}. Each data
+point is shown as a dot above a number line.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Rounded to nearest 0.5 for clearer dot plot}
+\NormalTok{study\_rounded }\OtherTok{\textless{}{-}} \FunctionTok{round}\NormalTok{(students}\SpecialCharTok{$}\NormalTok{study\_hrs }\SpecialCharTok{*} \DecValTok{2}\NormalTok{) }\SpecialCharTok{/} \DecValTok{2}
+
+\FunctionTok{stripchart}\NormalTok{(}
+\NormalTok{  study\_rounded,}
+  \AttributeTok{method =} \StringTok{"stack"}\NormalTok{,}
+  \AttributeTok{pch    =} \DecValTok{19}\NormalTok{,}
+  \AttributeTok{col    =} \StringTok{"\#0571b0"}\NormalTok{,}
+  \AttributeTok{cex    =} \FloatTok{1.4}\NormalTok{,}
+  \AttributeTok{xlab   =} \StringTok{"Daily Study Hours"}\NormalTok{,}
+  \AttributeTok{main   =} \StringTok{"Daily Study Hours — Year 11 Students"}\NormalTok{,}
+  \AttributeTok{offset =} \FloatTok{0.4}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-latex/fig-dotplot-study-1.pdf}}
+
+}
+
+\caption{\label{fig-dotplot-study}Dot plot of daily study hours for Year
+11 students.}
+
+\end{figure}%
+
+\section{Histograms}\label{histograms}
+
+A histogram shows the \textbf{distribution of continuous numerical data}
+by grouping values into intervals (bins).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{hist}\NormalTok{(}
+\NormalTok{  students}\SpecialCharTok{$}\NormalTok{height\_cm,}
+  \AttributeTok{breaks =} \DecValTok{10}\NormalTok{,}
+  \AttributeTok{col    =} \StringTok{"\#2c7bb6"}\NormalTok{,}
+  \AttributeTok{border =} \StringTok{"white"}\NormalTok{,}
+  \AttributeTok{main   =} \StringTok{"Distribution of Student Heights"}\NormalTok{,}
+  \AttributeTok{xlab   =} \StringTok{"Height (cm)"}\NormalTok{,}
+  \AttributeTok{ylab   =} \StringTok{"Frequency"}\NormalTok{,}
+  \AttributeTok{las    =} \DecValTok{1}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-latex/fig-histogram-height-1.pdf}}
+
+}
+
+\caption{\label{fig-histogram-height}Histogram of student heights (cm).}
+
+\end{figure}%
+
+\subsection{Describing a histogram ---
+SOCS}\label{describing-a-histogram-socs}
+
+Use \textbf{SOCS} to describe a distribution:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3200}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6800}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Letter
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+What to describe
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{S}hape & Symmetric, skewed left, skewed right, uniform,
+bimodal \\
+\textbf{O}utliers & Any unusual values far from the main group \\
+\textbf{C}entre & Where the middle of the data is (mean or median) \\
+\textbf{S}pread & How variable the data is (range, IQR, standard
+deviation) \\
+\end{longtable}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mfrow =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{3}\NormalTok{))}
+
+\CommentTok{\# Symmetric}
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{1}\NormalTok{)}
+\FunctionTok{hist}\NormalTok{(}\FunctionTok{rnorm}\NormalTok{(}\DecValTok{500}\NormalTok{, }\DecValTok{50}\NormalTok{, }\DecValTok{10}\NormalTok{), }\AttributeTok{breaks =} \DecValTok{15}\NormalTok{, }\AttributeTok{col =} \StringTok{"\#4dac26"}\NormalTok{, }\AttributeTok{border =} \StringTok{"white"}\NormalTok{,}
+     \AttributeTok{main =} \StringTok{"Symmetric"}\NormalTok{, }\AttributeTok{xlab =} \StringTok{""}\NormalTok{, }\AttributeTok{ylab =} \StringTok{"Frequency"}\NormalTok{, }\AttributeTok{las =} \DecValTok{1}\NormalTok{)}
+
+\CommentTok{\# Right{-}skewed}
+\FunctionTok{hist}\NormalTok{(}\FunctionTok{rexp}\NormalTok{(}\DecValTok{500}\NormalTok{, }\FloatTok{0.1}\NormalTok{), }\AttributeTok{breaks =} \DecValTok{15}\NormalTok{, }\AttributeTok{col =} \StringTok{"\#f4a582"}\NormalTok{, }\AttributeTok{border =} \StringTok{"white"}\NormalTok{,}
+     \AttributeTok{main =} \StringTok{"Right (positive) skew"}\NormalTok{, }\AttributeTok{xlab =} \StringTok{""}\NormalTok{, }\AttributeTok{ylab =} \StringTok{""}\NormalTok{, }\AttributeTok{las =} \DecValTok{1}\NormalTok{)}
+
+\CommentTok{\# Left{-}skewed}
+\FunctionTok{hist}\NormalTok{(}\DecValTok{100} \SpecialCharTok{{-}} \FunctionTok{rexp}\NormalTok{(}\DecValTok{500}\NormalTok{, }\FloatTok{0.1}\NormalTok{), }\AttributeTok{breaks =} \DecValTok{15}\NormalTok{, }\AttributeTok{col =} \StringTok{"\#92c5de"}\NormalTok{, }\AttributeTok{border =} \StringTok{"white"}\NormalTok{,}
+     \AttributeTok{main =} \StringTok{"Left (negative) skew"}\NormalTok{, }\AttributeTok{xlab =} \StringTok{""}\NormalTok{, }\AttributeTok{ylab =} \StringTok{""}\NormalTok{, }\AttributeTok{las =} \DecValTok{1}\NormalTok{)}
+
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mfrow =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{1}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-latex/fig-shape-examples-1.pdf}}
+
+}
+
+\caption{\label{fig-shape-examples}Examples of different distribution
+shapes.}
+
+\end{figure}%
+
+\section{Box plots (box-and-whisker
+plots)}\label{box-plots-box-and-whisker-plots}
+
+A box plot summarises a \textbf{five-number summary}: Minimum, Q1,
+Median, Q3, Maximum.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{boxplot}\NormalTok{(}
+\NormalTok{  maths\_score }\SpecialCharTok{\textasciitilde{}}\NormalTok{ transport,}
+  \AttributeTok{data   =}\NormalTok{ students,}
+  \AttributeTok{col    =} \FunctionTok{c}\NormalTok{(}\StringTok{"\#4dac26"}\NormalTok{, }\StringTok{"\#f4a582"}\NormalTok{, }\StringTok{"\#92c5de"}\NormalTok{, }\StringTok{"\#d7191c"}\NormalTok{),}
+  \AttributeTok{border =} \StringTok{"\#333333"}\NormalTok{,}
+  \AttributeTok{main   =} \StringTok{"Maths Scores by Transport Mode"}\NormalTok{,}
+  \AttributeTok{xlab   =} \StringTok{"Mode of Transport"}\NormalTok{,}
+  \AttributeTok{ylab   =} \StringTok{"Maths Score"}\NormalTok{,}
+  \AttributeTok{las    =} \DecValTok{1}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-latex/fig-boxplot-1.pdf}}
+
+}
+
+\caption{\label{fig-boxplot}Box plot of maths scores by transport type.}
+
+\end{figure}%
+
+\subsection{Parts of a box plot}\label{parts-of-a-box-plot}
+
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-latex/fig-boxplot-anatomy-1.pdf}}
+
+}
+
+\caption{\label{fig-boxplot-anatomy}Anatomy of a box plot.}
+
+\end{figure}%
+
+\section{Stem-and-leaf plots}\label{stem-and-leaf-plots}
+
+Stem-and-leaf plots show the actual data values and the shape of the
+distribution simultaneously. They work well for \textbf{small datasets}
+(up to \textasciitilde50 values).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Show a stem{-}and{-}leaf for a subset of maths scores}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"Stem{-}and{-}leaf plot of maths scores (first 30 students):}\SpecialCharTok{\textbackslash{}n\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} Stem{-}and{-}leaf plot of maths scores (first 30 students):}
+\FunctionTok{stem}\NormalTok{(students}\SpecialCharTok{$}\NormalTok{maths\_score[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{30}\NormalTok{])}
+\CommentTok{\#\textgreater{} }
+\CommentTok{\#\textgreater{}   The decimal point is 1 digit(s) to the right of the |}
+\CommentTok{\#\textgreater{} }
+\CommentTok{\#\textgreater{}    2 | 1}
+\CommentTok{\#\textgreater{}    3 | 9}
+\CommentTok{\#\textgreater{}    4 | 8}
+\CommentTok{\#\textgreater{}    5 | 3468999}
+\CommentTok{\#\textgreater{}    6 | 04557789}
+\CommentTok{\#\textgreater{}    7 | 0169}
+\CommentTok{\#\textgreater{}    8 | 23448}
+\CommentTok{\#\textgreater{}    9 | 18}
+\CommentTok{\#\textgreater{}   10 | 0}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Scatter plots}\label{scatter-plots}
+
+Scatter plots show the \textbf{relationship between two numerical
+variables}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(}
+\NormalTok{  students}\SpecialCharTok{$}\NormalTok{study\_hrs, students}\SpecialCharTok{$}\NormalTok{maths\_score,}
+  \AttributeTok{pch  =} \DecValTok{19}\NormalTok{,}
+  \AttributeTok{col  =} \FunctionTok{adjustcolor}\NormalTok{(}\StringTok{"\#0571b0"}\NormalTok{, }\AttributeTok{alpha.f =} \FloatTok{0.7}\NormalTok{),}
+  \AttributeTok{xlab =} \StringTok{"Daily Study Hours"}\NormalTok{,}
+  \AttributeTok{ylab =} \StringTok{"Maths Score"}\NormalTok{,}
+  \AttributeTok{main =} \StringTok{"Study Hours vs Maths Score — Year 11 Students"}
+\NormalTok{)}
+\FunctionTok{abline}\NormalTok{(}\FunctionTok{lm}\NormalTok{(maths\_score }\SpecialCharTok{\textasciitilde{}}\NormalTok{ study\_hrs, }\AttributeTok{data =}\NormalTok{ students),}
+       \AttributeTok{col =} \StringTok{"\#d7191c"}\NormalTok{, }\AttributeTok{lwd =} \DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-latex/fig-scatter-1.pdf}}
+
+}
+
+\caption{\label{fig-scatter}Scatter plot of study hours vs maths score.}
+
+\end{figure}%
+
+\subsection{Describing a scatter plot}\label{describing-a-scatter-plot}
+
+Comment on:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Direction} --- positive, negative, or no association
+\item
+  \textbf{Form} --- linear or non-linear
+\item
+  \textbf{Strength} --- strong, moderate, or weak
+\item
+  \textbf{Outliers} --- any unusual points
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-warning-color!10!white, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Correlation ≠ Causation}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-warning-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+
+Just because two variables are related \textbf{does not} mean one causes
+the other. Always think about whether an association makes sense in
+context.
+
+\end{tcolorbox}
+
+\section{Pie charts}\label{pie-charts}
+
+Pie charts show \textbf{proportions} of categorical data. Use them
+carefully --- bar charts are usually easier to read precisely.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{pie}\NormalTok{(}
+\NormalTok{  transport\_counts,}
+  \AttributeTok{col    =} \FunctionTok{c}\NormalTok{(}\StringTok{"\#4dac26"}\NormalTok{, }\StringTok{"\#f4a582"}\NormalTok{, }\StringTok{"\#92c5de"}\NormalTok{, }\StringTok{"\#d7191c"}\NormalTok{),}
+  \AttributeTok{main   =} \StringTok{"Transport Modes — Year 11 Students"}\NormalTok{,}
+  \AttributeTok{labels =} \FunctionTok{paste0}\NormalTok{(}\FunctionTok{names}\NormalTok{(transport\_counts), }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{("}\NormalTok{,}
+                  \FunctionTok{round}\NormalTok{(}\DecValTok{100} \SpecialCharTok{*}\NormalTok{ transport\_counts }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(transport\_counts)), }\StringTok{"\%)"}\NormalTok{)}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-latex/fig-pie-1.pdf}}
+
+}
+
+\caption{\label{fig-pie}Pie chart of transport modes.}
+
+\end{figure}%
+
+\section{Choosing the right graph}\label{choosing-the-right-graph}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Situation
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Best graph
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+One categorical variable & Bar chart, pie chart \\
+One numerical variable (small n) & Dot plot, stem-and-leaf \\
+One numerical variable (large n) & Histogram, box plot \\
+Comparing groups numerically & Side-by-side box plots, back-to-back
+stem-and-leaf \\
+Two numerical variables & Scatter plot \\
+\end{longtable}
+
+\section{Check your understanding}\label{check-your-understanding-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  A student recorded the heights of 25 classmates. Which graph type is
+  most appropriate to display this data? Explain your choice.
+\item
+  Describe the scatter plot in Figure~\ref{fig-scatter} using the four
+  features (direction, form, strength, outliers).
+\item
+  A bar chart shows the following transport counts: Bus = 24, Car = 15,
+  Walk = 15, Bike = 6. What percentage of students walk to school?
+\item
+  True or false: ``A right-skewed distribution has a longer tail on the
+  left.'' Explain.
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Answers}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  A histogram or dot plot --- height is numerical and continuous.
+\item
+  Positive direction (more study → higher score), roughly linear form,
+  moderate strength, possibly one or two outliers.
+\item
+  Walk = 15/60 = 25\%.
+\item
+  False --- a right-skewed (positively skewed) distribution has a longer
+  tail on the RIGHT.
+\end{enumerate}
+
+\end{tcolorbox}
+
+\bookmarksetup{startatroot}
+
+\chapter{Measures of Centre and
+Spread}\label{measures-of-centre-and-spread}
+
+\bookmarksetup{startatroot}
+
+\chapter{Measures of Centre and Spread}\label{sec-measures}
+
+Once you have a graph, you need \textbf{numerical summaries} to describe
+and compare distributions precisely. The two key things to describe are:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Centre} --- where is the ``middle'' of the data?
+\item
+  \textbf{Spread} --- how variable is the data?
+\end{itemize}
+
+\section{Measures of centre}\label{measures-of-centre}
+
+\subsection{The mean}\label{the-mean}
+
+The \textbf{mean} (average) is calculated by adding all values and
+dividing by the number of values:
+
+\[\bar{x} = \frac{\sum x_i}{n}\]
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{2024}\NormalTok{)}
+\NormalTok{scores }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{55}\NormalTok{, }\DecValTok{62}\NormalTok{, }\DecValTok{68}\NormalTok{, }\DecValTok{70}\NormalTok{, }\DecValTok{72}\NormalTok{, }\DecValTok{75}\NormalTok{, }\DecValTok{78}\NormalTok{, }\DecValTok{80}\NormalTok{, }\DecValTok{83}\NormalTok{, }\DecValTok{85}\NormalTok{,}
+            \DecValTok{88}\NormalTok{, }\DecValTok{60}\NormalTok{, }\DecValTok{91}\NormalTok{, }\DecValTok{74}\NormalTok{, }\DecValTok{66}\NormalTok{, }\DecValTok{79}\NormalTok{, }\DecValTok{52}\NormalTok{, }\DecValTok{95}\NormalTok{, }\DecValTok{73}\NormalTok{, }\DecValTok{71}\NormalTok{)}
+\NormalTok{n }\OtherTok{\textless{}{-}} \FunctionTok{length}\NormalTok{(scores)}
+
+\FunctionTok{cat}\NormalTok{(}\StringTok{"Scores:"}\NormalTok{, }\FunctionTok{sort}\NormalTok{(scores), }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} Scores: 52 55 60 62 66 68 70 71 72 73 74 75 78 79 80 83 85 88 91 95}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"Mean:  "}\NormalTok{, }\FunctionTok{round}\NormalTok{(}\FunctionTok{mean}\NormalTok{(scores), }\DecValTok{2}\NormalTok{), }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} Mean:   73.85}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"n =    "}\NormalTok{, n, }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} n =     20}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{The median}\label{the-median}
+
+The \textbf{median} is the middle value when data is sorted from
+smallest to largest. It is not affected by outliers.
+
+\begin{itemize}
+\tightlist
+\item
+  If \emph{n} is \textbf{odd}: median = middle value
+\item
+  If \emph{n} is \textbf{even}: median = average of the two middle
+  values
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sorted\_scores }\OtherTok{\textless{}{-}} \FunctionTok{sort}\NormalTok{(scores)}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"Sorted scores:}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{, sorted\_scores, }\StringTok{"}\SpecialCharTok{\textbackslash{}n\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} Sorted scores:}
+\CommentTok{\#\textgreater{}  52 55 60 62 66 68 70 71 72 73 74 75 78 79 80 83 85 88 91 95}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"n = 20 (even) → median = mean of 10th and 11th values}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} n = 20 (even) → median = mean of 10th and 11th values}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"10th value:"}\NormalTok{, sorted\_scores[}\DecValTok{10}\NormalTok{], }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} 10th value: 73}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"11th value:"}\NormalTok{, sorted\_scores[}\DecValTok{11}\NormalTok{], }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} 11th value: 74}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"Median ="}\NormalTok{, }\FunctionTok{median}\NormalTok{(scores), }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} Median = 73.5}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{The mode}\label{the-mode}
+
+The \textbf{mode} is the most frequently occurring value. Data can have:
+- \textbf{No mode} (all values appear once) - \textbf{One mode}
+(unimodal) - \textbf{Two modes} (bimodal) - \textbf{More than two modes}
+(multimodal)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Custom mode function (base R has no built{-}in mode for numeric)}
+\NormalTok{stat\_mode }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(x) \{}
+\NormalTok{  tbl }\OtherTok{\textless{}{-}} \FunctionTok{table}\NormalTok{(x)}
+  \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{names}\NormalTok{(tbl)[tbl }\SpecialCharTok{==} \FunctionTok{max}\NormalTok{(tbl)])}
+\NormalTok{\}}
+
+\NormalTok{test\_data }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{7}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{7}\NormalTok{, }\DecValTok{9}\NormalTok{, }\DecValTok{7}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{4}\NormalTok{)}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"Data:"}\NormalTok{, test\_data, }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} Data: 4 7 2 7 9 7 3 4 5 4}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"Mode(s):"}\NormalTok{, }\FunctionTok{stat\_mode}\NormalTok{(test\_data), }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} Mode(s): 4 7}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{When to use each measure of
+centre}\label{when-to-use-each-measure-of-centre}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Measure & Best used when\ldots{} & Affected by outliers? \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Mean} & Data is roughly symmetric, no outliers & Yes \\
+\textbf{Median} & Data is skewed or has outliers & No \\
+\textbf{Mode} & Data is categorical; or finding most common value &
+No \\
+\end{longtable}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mfrow =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{))}
+
+\CommentTok{\# Without outlier}
+\NormalTok{x1 }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{10}\NormalTok{, }\DecValTok{12}\NormalTok{, }\DecValTok{13}\NormalTok{, }\DecValTok{14}\NormalTok{, }\DecValTok{15}\NormalTok{, }\DecValTok{16}\NormalTok{, }\DecValTok{17}\NormalTok{, }\DecValTok{18}\NormalTok{, }\DecValTok{19}\NormalTok{, }\DecValTok{20}\NormalTok{)}
+\FunctionTok{hist}\NormalTok{(x1, }\AttributeTok{col =} \StringTok{"\#4dac26"}\NormalTok{, }\AttributeTok{border =} \StringTok{"white"}\NormalTok{, }\AttributeTok{main =} \StringTok{"No Outlier"}\NormalTok{,}
+     \AttributeTok{xlab =} \StringTok{"Value"}\NormalTok{, }\AttributeTok{ylab =} \StringTok{"Frequency"}\NormalTok{, }\AttributeTok{xlim =} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{80}\NormalTok{), }\AttributeTok{breaks =} \DecValTok{5}\NormalTok{)}
+\FunctionTok{abline}\NormalTok{(}\AttributeTok{v =} \FunctionTok{mean}\NormalTok{(x1),   }\AttributeTok{col =} \StringTok{"\#d7191c"}\NormalTok{, }\AttributeTok{lwd =} \DecValTok{2}\NormalTok{, }\AttributeTok{lty =} \DecValTok{1}\NormalTok{)}
+\FunctionTok{abline}\NormalTok{(}\AttributeTok{v =} \FunctionTok{median}\NormalTok{(x1), }\AttributeTok{col =} \StringTok{"\#0571b0"}\NormalTok{, }\AttributeTok{lwd =} \DecValTok{2}\NormalTok{, }\AttributeTok{lty =} \DecValTok{2}\NormalTok{)}
+\FunctionTok{legend}\NormalTok{(}\StringTok{"topright"}\NormalTok{, }\FunctionTok{c}\NormalTok{(}\FunctionTok{paste}\NormalTok{(}\StringTok{"Mean ="}\NormalTok{, }\FunctionTok{mean}\NormalTok{(x1)),}
+                     \FunctionTok{paste}\NormalTok{(}\StringTok{"Median ="}\NormalTok{, }\FunctionTok{median}\NormalTok{(x1))),}
+       \AttributeTok{col =} \FunctionTok{c}\NormalTok{(}\StringTok{"\#d7191c"}\NormalTok{, }\StringTok{"\#0571b0"}\NormalTok{), }\AttributeTok{lwd =} \DecValTok{2}\NormalTok{, }\AttributeTok{lty =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{), }\AttributeTok{bty =} \StringTok{"n"}\NormalTok{)}
+
+\CommentTok{\# With outlier}
+\NormalTok{x2 }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(x1, }\DecValTok{75}\NormalTok{)}
+\FunctionTok{hist}\NormalTok{(x2, }\AttributeTok{col =} \StringTok{"\#f4a582"}\NormalTok{, }\AttributeTok{border =} \StringTok{"white"}\NormalTok{, }\AttributeTok{main =} \StringTok{"With Outlier (75)"}\NormalTok{,}
+     \AttributeTok{xlab =} \StringTok{"Value"}\NormalTok{, }\AttributeTok{ylab =} \StringTok{""}\NormalTok{, }\AttributeTok{xlim =} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{80}\NormalTok{), }\AttributeTok{breaks =} \DecValTok{8}\NormalTok{)}
+\FunctionTok{abline}\NormalTok{(}\AttributeTok{v =} \FunctionTok{mean}\NormalTok{(x2),   }\AttributeTok{col =} \StringTok{"\#d7191c"}\NormalTok{, }\AttributeTok{lwd =} \DecValTok{2}\NormalTok{, }\AttributeTok{lty =} \DecValTok{1}\NormalTok{)}
+\FunctionTok{abline}\NormalTok{(}\AttributeTok{v =} \FunctionTok{median}\NormalTok{(x2), }\AttributeTok{col =} \StringTok{"\#0571b0"}\NormalTok{, }\AttributeTok{lwd =} \DecValTok{2}\NormalTok{, }\AttributeTok{lty =} \DecValTok{2}\NormalTok{)}
+\FunctionTok{legend}\NormalTok{(}\StringTok{"topright"}\NormalTok{, }\FunctionTok{c}\NormalTok{(}\FunctionTok{paste}\NormalTok{(}\StringTok{"Mean ="}\NormalTok{, }\FunctionTok{round}\NormalTok{(}\FunctionTok{mean}\NormalTok{(x2), }\DecValTok{1}\NormalTok{)),}
+                     \FunctionTok{paste}\NormalTok{(}\StringTok{"Median ="}\NormalTok{, }\FunctionTok{median}\NormalTok{(x2))),}
+       \AttributeTok{col =} \FunctionTok{c}\NormalTok{(}\StringTok{"\#d7191c"}\NormalTok{, }\StringTok{"\#0571b0"}\NormalTok{), }\AttributeTok{lwd =} \DecValTok{2}\NormalTok{, }\AttributeTok{lty =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{), }\AttributeTok{bty =} \StringTok{"n"}\NormalTok{)}
+
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mfrow =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{1}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/04-measures_files/figure-latex/fig-mean-vs-median-1.pdf}}
+
+}
+
+\caption{\label{fig-mean-vs-median}Effect of outliers on mean vs
+median.}
+
+\end{figure}%
+
+\section{Measures of spread}\label{measures-of-spread}
+
+\subsection{Range}\label{range}
+
+The \textbf{range} is the simplest measure of spread:
+
+\[\text{Range} = \text{Maximum} - \text{Minimum}\]
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{cat}\NormalTok{(}\StringTok{"Range of scores:"}\NormalTok{, }\FunctionTok{max}\NormalTok{(scores) }\SpecialCharTok{{-}} \FunctionTok{min}\NormalTok{(scores), }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} Range of scores: 43}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"  (Max ="}\NormalTok{, }\FunctionTok{max}\NormalTok{(scores), }\StringTok{", Min ="}\NormalTok{, }\FunctionTok{min}\NormalTok{(scores), }\StringTok{")}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{}   (Max = 95 , Min = 52 )}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Quartiles and the interquartile range
+(IQR)}\label{quartiles-and-the-interquartile-range-iqr}
+
+\textbf{Quartiles} divide sorted data into four equal groups:
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Quartile & Description \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Q1} (lower quartile) & 25\% of data falls below this value \\
+\textbf{Q2} (median) & 50\% of data falls below this value \\
+\textbf{Q3} (upper quartile) & 75\% of data falls below this value \\
+\end{longtable}
+
+The \textbf{interquartile range (IQR)} is the spread of the middle 50\%
+of data:
+
+\[\text{IQR} = Q3 - Q1\]
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{q }\OtherTok{\textless{}{-}} \FunctionTok{quantile}\NormalTok{(scores)}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"Five{-}number summary:}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} Five{-}number summary:}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"  Minimum:"}\NormalTok{, q[}\DecValTok{1}\NormalTok{], }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{}   Minimum: 52}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"  Q1:     "}\NormalTok{, q[}\DecValTok{2}\NormalTok{], }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{}   Q1:      67.5}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"  Median: "}\NormalTok{, q[}\DecValTok{3}\NormalTok{], }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{}   Median:  73.5}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"  Q3:     "}\NormalTok{, q[}\DecValTok{4}\NormalTok{], }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{}   Q3:      80.75}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"  Maximum:"}\NormalTok{, q[}\DecValTok{5}\NormalTok{], }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{}   Maximum: 95}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"  IQR ="}\NormalTok{, q[}\DecValTok{4}\NormalTok{] }\SpecialCharTok{{-}}\NormalTok{ q[}\DecValTok{2}\NormalTok{], }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{}   IQR = 13.25}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Standard deviation}\label{standard-deviation}
+
+The \textbf{standard deviation} measures how spread out data values are
+from the mean. A larger standard deviation means more variability.
+
+\[s = \sqrt{\frac{\sum (x_i - \bar{x})^2}{n - 1}}\]
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{cat}\NormalTok{(}\StringTok{"Mean:"}\NormalTok{, }\FunctionTok{round}\NormalTok{(}\FunctionTok{mean}\NormalTok{(scores), }\DecValTok{2}\NormalTok{), }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} Mean: 73.85}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"Standard deviation:"}\NormalTok{, }\FunctionTok{round}\NormalTok{(}\FunctionTok{sd}\NormalTok{(scores), }\DecValTok{2}\NormalTok{), }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} Standard deviation: 11.52}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Rule of thumb}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+
+For roughly symmetric distributions, about \textbf{68\%} of data falls
+within one standard deviation of the mean, and \textbf{95\%} falls
+within two standard deviations (the empirical rule / 68-95-99.7 rule).
+
+\end{tcolorbox}
+
+\subsection{Choosing the right measure of
+spread}\label{choosing-the-right-measure-of-spread}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2812}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3750}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3438}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Measure
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Use with\ldots{}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Advantage
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Range} & Quick overview & Easy to calculate \\
+\textbf{IQR} & Skewed data or when outliers present & Resistant to
+outliers \\
+\textbf{Standard deviation} & Symmetric data, no outliers & Uses all
+data values \\
+\end{longtable}
+
+\section{Comparing groups}\label{comparing-groups}
+
+A common task in AS91946 is to \textbf{compare two or more groups}.
+Always compare both centre AND spread.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{42}\NormalTok{)}
+\NormalTok{group\_a }\OtherTok{\textless{}{-}} \FunctionTok{round}\NormalTok{(}\FunctionTok{rnorm}\NormalTok{(}\DecValTok{30}\NormalTok{, }\AttributeTok{mean =} \DecValTok{65}\NormalTok{, }\AttributeTok{sd =} \DecValTok{10}\NormalTok{))}
+\NormalTok{group\_b }\OtherTok{\textless{}{-}} \FunctionTok{round}\NormalTok{(}\FunctionTok{rnorm}\NormalTok{(}\DecValTok{30}\NormalTok{, }\AttributeTok{mean =} \DecValTok{72}\NormalTok{, }\AttributeTok{sd =} \DecValTok{15}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{boxplot}\NormalTok{(}
+  \FunctionTok{list}\NormalTok{(}\StringTok{"Group A"} \OtherTok{=}\NormalTok{ group\_a, }\StringTok{"Group B"} \OtherTok{=}\NormalTok{ group\_b),}
+  \AttributeTok{col    =} \FunctionTok{c}\NormalTok{(}\StringTok{"\#4dac26"}\NormalTok{, }\StringTok{"\#0571b0"}\NormalTok{),}
+  \AttributeTok{border =} \StringTok{"\#333333"}\NormalTok{,}
+  \AttributeTok{main   =} \StringTok{"Maths Scores: Group A vs Group B"}\NormalTok{,}
+  \AttributeTok{ylab   =} \StringTok{"Score"}\NormalTok{,}
+  \AttributeTok{las    =} \DecValTok{1}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/04-measures_files/figure-latex/fig-compare-boxplot-1.pdf}}
+
+}
+
+\caption{\label{fig-compare-boxplot}Comparing maths scores between Group
+A and Group B.}
+
+\end{figure}%
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{summary\_stats }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}
+  \AttributeTok{Group    =} \FunctionTok{c}\NormalTok{(}\StringTok{"Group A"}\NormalTok{, }\StringTok{"Group B"}\NormalTok{),}
+  \AttributeTok{n        =} \FunctionTok{c}\NormalTok{(}\FunctionTok{length}\NormalTok{(group\_a), }\FunctionTok{length}\NormalTok{(group\_b)),}
+  \AttributeTok{Mean     =} \FunctionTok{round}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\FunctionTok{mean}\NormalTok{(group\_a), }\FunctionTok{mean}\NormalTok{(group\_b)), }\DecValTok{1}\NormalTok{),}
+  \AttributeTok{Median   =} \FunctionTok{c}\NormalTok{(}\FunctionTok{median}\NormalTok{(group\_a), }\FunctionTok{median}\NormalTok{(group\_b)),}
+  \AttributeTok{SD       =} \FunctionTok{round}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\FunctionTok{sd}\NormalTok{(group\_a), }\FunctionTok{sd}\NormalTok{(group\_b)), }\DecValTok{1}\NormalTok{),}
+  \AttributeTok{IQR      =} \FunctionTok{c}\NormalTok{(}\FunctionTok{IQR}\NormalTok{(group\_a), }\FunctionTok{IQR}\NormalTok{(group\_b)),}
+  \AttributeTok{Min      =} \FunctionTok{c}\NormalTok{(}\FunctionTok{min}\NormalTok{(group\_a), }\FunctionTok{min}\NormalTok{(group\_b)),}
+  \AttributeTok{Max      =} \FunctionTok{c}\NormalTok{(}\FunctionTok{max}\NormalTok{(group\_a), }\FunctionTok{max}\NormalTok{(group\_b))}
+\NormalTok{)}
+
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(summary\_stats, }\AttributeTok{caption =} \StringTok{"Summary statistics for Groups A and B"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{longtable}[]{@{}lrrrrrrr@{}}
+\caption{Summary statistics for Groups A and B}\tabularnewline
+\toprule\noalign{}
+Group & n & Mean & Median & SD & IQR & Min & Max \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Group & n & Mean & Median & SD & IQR & Min & Max \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Group A & 30 & 65.6 & 64 & 12.6 & 14.25 & 38 & 88 \\
+Group B & 30 & 70.2 & 74 & 15.8 & 21.25 & 27 & 96 \\
+\end{longtable}
+
+\subsection{Model comparison paragraph (Merit
+level)}\label{model-comparison-paragraph-merit-level}
+
+\begin{quote}
+``Group B has a higher median score (72) than Group A (65), suggesting
+that Group B performed better overall. However, Group B also has a
+larger IQR (approximately 20 vs 14) and standard deviation (15.1 vs
+9.8), indicating their scores were more variable. Group A's performance
+was more consistent. Both groups appear to have roughly symmetric
+distributions with no obvious outliers.''
+\end{quote}
+
+\section{Identifying outliers}\label{identifying-outliers}
+
+A value is often flagged as an \textbf{outlier} if it falls more than
+1.5 × IQR below Q1 or above Q3:
+
+\[\text{Lower fence} = Q1 - 1.5 \times \text{IQR}\]
+\[\text{Upper fence} = Q3 + 1.5 \times \text{IQR}\]
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Q1  }\OtherTok{\textless{}{-}} \FunctionTok{quantile}\NormalTok{(scores, }\FloatTok{0.25}\NormalTok{)}
+\NormalTok{Q3  }\OtherTok{\textless{}{-}} \FunctionTok{quantile}\NormalTok{(scores, }\FloatTok{0.75}\NormalTok{)}
+\NormalTok{iqr }\OtherTok{\textless{}{-}}\NormalTok{ Q3 }\SpecialCharTok{{-}}\NormalTok{ Q1}
+
+\NormalTok{lower\_fence }\OtherTok{\textless{}{-}}\NormalTok{ Q1 }\SpecialCharTok{{-}} \FloatTok{1.5} \SpecialCharTok{*}\NormalTok{ iqr}
+\NormalTok{upper\_fence }\OtherTok{\textless{}{-}}\NormalTok{ Q3 }\SpecialCharTok{+} \FloatTok{1.5} \SpecialCharTok{*}\NormalTok{ iqr}
+
+\FunctionTok{cat}\NormalTok{(}\StringTok{"Q1 ="}\NormalTok{, Q1, }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} Q1 = 67.5}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"Q3 ="}\NormalTok{, Q3, }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} Q3 = 80.75}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"IQR ="}\NormalTok{, iqr, }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} IQR = 13.25}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"Lower fence:"}\NormalTok{, lower\_fence, }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} Lower fence: 47.625}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"Upper fence:"}\NormalTok{, upper\_fence, }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} Upper fence: 100.625}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"Outliers:"}\NormalTok{, scores[scores }\SpecialCharTok{\textless{}}\NormalTok{ lower\_fence }\SpecialCharTok{|}\NormalTok{ scores }\SpecialCharTok{\textgreater{}}\NormalTok{ upper\_fence], }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} Outliers:}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Glossary}\label{glossary-2}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Term & Meaning \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Mean} & Sum of all values divided by the count \\
+\textbf{Median} & Middle value when data is sorted \\
+\textbf{Mode} & Most frequently occurring value \\
+\textbf{Range} & Maximum − Minimum \\
+\textbf{IQR} & Q3 − Q1; spread of the middle 50\% \\
+\textbf{Standard deviation} & Average distance of values from the
+mean \\
+\textbf{Outlier} & A value that lies far from the rest of the data \\
+\textbf{Five-number summary} & Min, Q1, Median, Q3, Max \\
+\end{longtable}
+
+\section{Check your understanding}\label{check-your-understanding-3}
+
+Use the dataset: \textbf{12, 15, 18, 18, 20, 22, 25, 25, 28, 100}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Calculate the mean and median. Which is more appropriate as a measure
+  of centre for this data? Why?
+\item
+  Find Q1, Q3, and the IQR.
+\item
+  Calculate the range.
+\item
+  Is 100 an outlier? Use the 1.5 × IQR rule to justify your answer.
+\item
+  Sketch a box plot of this data.
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Answers}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Mean = (12+15+18+18+20+22+25+25+28+100)/10 = 283/10 = 28.3; Median =
+  (20+22)/2 = 21. The \textbf{median} is more appropriate because of the
+  outlier (100) which pulls the mean up.
+\item
+  Q1 = 18, Q3 = 25, IQR = 7.
+\item
+  Range = 100 − 12 = 88.
+\item
+  Upper fence = 25 + 1.5 × 7 = 25 + 10.5 = 35.5. Since 100
+  \textgreater{} 35.5, \textbf{yes}, 100 is an outlier.
+\item
+  Sketch: whiskers from 12 to 35.5, box from 18 to 25, median line at
+  21, and a dot at 100 representing the outlier.
+\end{enumerate}
+
+\end{tcolorbox}
+
+\bookmarksetup{startatroot}
+
+\chapter{Probability}\label{probability}
+
+\bookmarksetup{startatroot}
+
+\chapter{Probability}\label{sec-probability}
+
+\textbf{Probability} is a measure of how likely an event is to occur. It
+is expressed as a number between 0 (impossible) and 1 (certain), or as a
+percentage.
+
+\[P(\text{event}) = \frac{\text{number of favourable outcomes}}{\text{total number of possible outcomes}}\]
+
+\section{Probability scale}\label{probability-scale}
+
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/05-probability_files/figure-latex/fig-prob-scale-1.pdf}}
+
+}
+
+\caption{\label{fig-prob-scale}The probability scale from impossible (0)
+to certain (1).}
+
+\end{figure}%
+
+\section{Key vocabulary}\label{key-vocabulary}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Term & Definition \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Experiment} & A process with uncertain outcomes \\
+\textbf{Outcome} & A single possible result \\
+\textbf{Event} & One or more outcomes grouped together \\
+\textbf{Sample space} & The set of all possible outcomes \\
+\textbf{Complementary event} & All outcomes that are NOT in the event \\
+\end{longtable}
+
+\section{Simple probability --- equally likely
+outcomes}\label{simple-probability-equally-likely-outcomes}
+
+When all outcomes are \textbf{equally likely}, we can use the classical
+definition.
+
+\subsection{Example: rolling a die}\label{example-rolling-a-die}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sample\_space }\OtherTok{\textless{}{-}} \DecValTok{1}\SpecialCharTok{:}\DecValTok{6}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"Sample space:"}\NormalTok{, sample\_space, }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} Sample space: 1 2 3 4 5 6}
+
+\CommentTok{\# P(rolling a 4)}
+\NormalTok{p\_four }\OtherTok{\textless{}{-}} \FunctionTok{sum}\NormalTok{(sample\_space }\SpecialCharTok{==} \DecValTok{4}\NormalTok{) }\SpecialCharTok{/} \FunctionTok{length}\NormalTok{(sample\_space)}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"P(rolling a 4) ="}\NormalTok{, p\_four, }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} P(rolling a 4) = 0.1666667}
+
+\CommentTok{\# P(rolling an even number)}
+\NormalTok{p\_even }\OtherTok{\textless{}{-}} \FunctionTok{sum}\NormalTok{(sample\_space }\SpecialCharTok{\%\%} \DecValTok{2} \SpecialCharTok{==} \DecValTok{0}\NormalTok{) }\SpecialCharTok{/} \FunctionTok{length}\NormalTok{(sample\_space)}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"P(even number) ="}\NormalTok{, p\_even, }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} P(even number) = 0.5}
+
+\CommentTok{\# P(rolling \textgreater{} 4)}
+\NormalTok{p\_gt4 }\OtherTok{\textless{}{-}} \FunctionTok{sum}\NormalTok{(sample\_space }\SpecialCharTok{\textgreater{}} \DecValTok{4}\NormalTok{) }\SpecialCharTok{/} \FunctionTok{length}\NormalTok{(sample\_space)}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"P(\textgreater{} 4) ="}\NormalTok{, p\_gt4, }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} P(\textgreater{} 4) = 0.3333333}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Complementary events}\label{complementary-events}
+
+The \textbf{complement} of event A (written A' or \(\bar{A}\)) contains
+all outcomes NOT in A.
+
+\[P(A') = 1 - P(A)\]
+
+\textbf{Example:} If the probability of rain tomorrow is 0.3, then:
+
+\[P(\text{no rain}) = 1 - 0.3 = 0.7\]
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{p\_rain }\OtherTok{\textless{}{-}} \FloatTok{0.3}
+\NormalTok{p\_no\_rain }\OtherTok{\textless{}{-}} \DecValTok{1} \SpecialCharTok{{-}}\NormalTok{ p\_rain}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"P(rain) ="}\NormalTok{, p\_rain, }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} P(rain) = 0.3}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"P(no rain) = 1 {-}"}\NormalTok{, p\_rain, }\StringTok{"="}\NormalTok{, p\_no\_rain, }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} P(no rain) = 1 {-} 0.3 = 0.7}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Experimental (relative frequency)
+probability}\label{experimental-relative-frequency-probability}
+
+When we cannot calculate probability theoretically, we \textbf{estimate}
+it by repeating an experiment many times:
+
+\[P(\text{event}) \approx \frac{\text{number of times event occurred}}{\text{total number of trials}}\]
+
+\subsection{Simulating coin flips}\label{simulating-coin-flips}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{99}\NormalTok{)}
+\NormalTok{flips  }\OtherTok{\textless{}{-}} \FunctionTok{sample}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\StringTok{"Heads"}\NormalTok{, }\StringTok{"Tails"}\NormalTok{), }\DecValTok{1000}\NormalTok{, }\AttributeTok{replace =} \ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{cumulative\_heads }\OtherTok{\textless{}{-}} \FunctionTok{cumsum}\NormalTok{(flips }\SpecialCharTok{==} \StringTok{"Heads"}\NormalTok{) }\SpecialCharTok{/} \FunctionTok{seq\_along}\NormalTok{(flips)}
+
+\FunctionTok{plot}\NormalTok{(}
+\NormalTok{  cumulative\_heads,}
+  \AttributeTok{type =} \StringTok{"l"}\NormalTok{,}
+  \AttributeTok{col  =} \StringTok{"\#0571b0"}\NormalTok{,}
+  \AttributeTok{lwd  =} \FloatTok{1.5}\NormalTok{,}
+  \AttributeTok{xlab =} \StringTok{"Number of Flips"}\NormalTok{,}
+  \AttributeTok{ylab =} \StringTok{"Relative Frequency of Heads"}\NormalTok{,}
+  \AttributeTok{main =} \StringTok{"Simulated Coin Flips"}\NormalTok{,}
+  \AttributeTok{ylim =} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{),}
+  \AttributeTok{las  =} \DecValTok{1}
+\NormalTok{)}
+\FunctionTok{abline}\NormalTok{(}\AttributeTok{h =} \FloatTok{0.5}\NormalTok{, }\AttributeTok{col =} \StringTok{"\#d7191c"}\NormalTok{, }\AttributeTok{lwd =} \DecValTok{2}\NormalTok{, }\AttributeTok{lty =} \DecValTok{2}\NormalTok{)}
+\FunctionTok{legend}\NormalTok{(}\StringTok{"topright"}\NormalTok{, }\FunctionTok{c}\NormalTok{(}\StringTok{"Relative frequency"}\NormalTok{, }\StringTok{"True probability (0.5)"}\NormalTok{),}
+       \AttributeTok{col =} \FunctionTok{c}\NormalTok{(}\StringTok{"\#0571b0"}\NormalTok{, }\StringTok{"\#d7191c"}\NormalTok{), }\AttributeTok{lwd =} \DecValTok{2}\NormalTok{, }\AttributeTok{lty =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{), }\AttributeTok{bty =} \StringTok{"n"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/05-probability_files/figure-latex/fig-coin-simulation-1.pdf}}
+
+}
+
+\caption{\label{fig-coin-simulation}Relative frequency of heads
+approaches 0.5 as the number of flips increases (the law of large
+numbers).}
+
+\end{figure}%
+
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Law of Large Numbers}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+
+As the number of trials increases, the \textbf{relative frequency}
+(experimental probability) gets closer and closer to the \textbf{true
+probability}. This is why surveys and experiments need large samples.
+
+\end{tcolorbox}
+
+\section{Two-way tables}\label{two-way-tables}
+
+A \textbf{two-way table} (contingency table) organises data by two
+categorical variables and is very useful for calculating probabilities.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Simulated data: 120 students, sport preference by gender}
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{7}\NormalTok{)}
+\NormalTok{n\_students }\OtherTok{\textless{}{-}} \DecValTok{120}
+\NormalTok{sport\_data }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}
+  \AttributeTok{Gender =} \FunctionTok{sample}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\StringTok{"Male"}\NormalTok{, }\StringTok{"Female"}\NormalTok{), n\_students, }\AttributeTok{replace =} \ConstantTok{TRUE}\NormalTok{,}
+                  \AttributeTok{prob =} \FunctionTok{c}\NormalTok{(}\FloatTok{0.5}\NormalTok{, }\FloatTok{0.5}\NormalTok{)),}
+  \AttributeTok{Sport  =} \FunctionTok{sample}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\StringTok{"Rugby"}\NormalTok{, }\StringTok{"Netball"}\NormalTok{, }\StringTok{"Football"}\NormalTok{, }\StringTok{"Basketball"}\NormalTok{),}
+\NormalTok{                  n\_students, }\AttributeTok{replace =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{prob =} \FunctionTok{c}\NormalTok{(}\FloatTok{0.3}\NormalTok{, }\FloatTok{0.25}\NormalTok{, }\FloatTok{0.25}\NormalTok{, }\FloatTok{0.2}\NormalTok{))}
+\NormalTok{)}
+
+\NormalTok{tbl }\OtherTok{\textless{}{-}} \FunctionTok{table}\NormalTok{(sport\_data}\SpecialCharTok{$}\NormalTok{Sport, sport\_data}\SpecialCharTok{$}\NormalTok{Gender)}
+\NormalTok{tbl\_with\_total }\OtherTok{\textless{}{-}} \FunctionTok{addmargins}\NormalTok{(tbl)}
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(tbl\_with\_total, }\AttributeTok{caption =} \StringTok{"Sport preference by gender (n = 120)"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{longtable}[]{@{}lrrr@{}}
+\caption{Sport preference by gender (n = 120)}\tabularnewline
+\toprule\noalign{}
+& Female & Male & Sum \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+& Female & Male & Sum \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Basketball & 16 & 11 & 27 \\
+Football & 13 & 17 & 30 \\
+Netball & 18 & 17 & 35 \\
+Rugby & 16 & 12 & 28 \\
+Sum & 63 & 57 & 120 \\
+\end{longtable}
+
+\subsection{Reading probabilities from a two-way
+table}\label{reading-probabilities-from-a-two-way-table}
+
+Using the table above:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{total }\OtherTok{\textless{}{-}} \FunctionTok{sum}\NormalTok{(tbl)}
+
+\FunctionTok{cat}\NormalTok{(}\StringTok{"P(Male) ="}\NormalTok{, }\FunctionTok{sum}\NormalTok{(tbl[, }\StringTok{"Male"}\NormalTok{]), }\StringTok{"/"}\NormalTok{, total, }\StringTok{"="}\NormalTok{,}
+    \FunctionTok{round}\NormalTok{(}\FunctionTok{sum}\NormalTok{(tbl[, }\StringTok{"Male"}\NormalTok{]) }\SpecialCharTok{/}\NormalTok{ total, }\DecValTok{3}\NormalTok{), }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} P(Male) = 57 / 120 = 0.475}
+
+\FunctionTok{cat}\NormalTok{(}\StringTok{"P(Rugby) ="}\NormalTok{, }\FunctionTok{sum}\NormalTok{(tbl[}\StringTok{"Rugby"}\NormalTok{, ]), }\StringTok{"/"}\NormalTok{, total, }\StringTok{"="}\NormalTok{,}
+    \FunctionTok{round}\NormalTok{(}\FunctionTok{sum}\NormalTok{(tbl[}\StringTok{"Rugby"}\NormalTok{, ]) }\SpecialCharTok{/}\NormalTok{ total, }\DecValTok{3}\NormalTok{), }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} P(Rugby) = 28 / 120 = 0.233}
+
+\FunctionTok{cat}\NormalTok{(}\StringTok{"P(Male AND Rugby) ="}\NormalTok{, tbl[}\StringTok{"Rugby"}\NormalTok{, }\StringTok{"Male"}\NormalTok{], }\StringTok{"/"}\NormalTok{, total, }\StringTok{"="}\NormalTok{,}
+    \FunctionTok{round}\NormalTok{(tbl[}\StringTok{"Rugby"}\NormalTok{, }\StringTok{"Male"}\NormalTok{] }\SpecialCharTok{/}\NormalTok{ total, }\DecValTok{3}\NormalTok{), }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} P(Male AND Rugby) = 12 / 120 = 0.1}
+
+\FunctionTok{cat}\NormalTok{(}\StringTok{"P(Rugby | Male) ="}\NormalTok{, tbl[}\StringTok{"Rugby"}\NormalTok{, }\StringTok{"Male"}\NormalTok{], }\StringTok{"/"}\NormalTok{,}
+    \FunctionTok{sum}\NormalTok{(tbl[, }\StringTok{"Male"}\NormalTok{]), }\StringTok{"="}\NormalTok{,}
+    \FunctionTok{round}\NormalTok{(tbl[}\StringTok{"Rugby"}\NormalTok{, }\StringTok{"Male"}\NormalTok{] }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(tbl[, }\StringTok{"Male"}\NormalTok{]), }\DecValTok{3}\NormalTok{), }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} P(Rugby | Male) = 12 / 57 = 0.211}
+\end{Highlighting}
+\end{Shaded}
+
+The last probability --- P(Rugby \textbar{} Male) --- is a
+\textbf{conditional probability}: the probability of preferring rugby,
+\textbf{given} the student is male.
+
+\section{Tree diagrams}\label{tree-diagrams}
+
+Tree diagrams help calculate probabilities for \textbf{sequential
+events}.
+
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/05-probability_files/figure-latex/fig-tree-diagram-1.pdf}}
+
+}
+
+\caption{\label{fig-tree-diagram}Tree diagram for drawing two balls from
+a bag (with replacement).}
+
+\end{figure}%
+
+\textbf{Key rule:} Multiply probabilities along each branch, add
+probabilities for different paths leading to the same outcome.
+
+\section{Expected value (extension)}\label{expected-value-extension}
+
+For a simple scenario, the \textbf{expected value} is the long-run
+average outcome:
+
+\[E(X) = \sum x \cdot P(x)\]
+
+\textbf{Example:} A raffle has 200 tickets at \$2 each. First prize is
+\$100, second prize is \$50. What is the expected gain per ticket?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{outcomes  }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{100}\NormalTok{, }\DecValTok{50}\NormalTok{, }\DecValTok{0}\NormalTok{)         }\CommentTok{\# winnings}
+\NormalTok{probs     }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\SpecialCharTok{/}\DecValTok{200}\NormalTok{, }\DecValTok{1}\SpecialCharTok{/}\DecValTok{200}\NormalTok{, }\DecValTok{198}\SpecialCharTok{/}\DecValTok{200}\NormalTok{)}
+\NormalTok{cost      }\OtherTok{\textless{}{-}} \DecValTok{2}
+
+\NormalTok{expected\_win  }\OtherTok{\textless{}{-}} \FunctionTok{sum}\NormalTok{(outcomes }\SpecialCharTok{*}\NormalTok{ probs)}
+\NormalTok{expected\_gain }\OtherTok{\textless{}{-}}\NormalTok{ expected\_win }\SpecialCharTok{{-}}\NormalTok{ cost}
+
+\FunctionTok{cat}\NormalTok{(}\StringTok{"Expected winnings:"}\NormalTok{, expected\_win, }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} Expected winnings: 0.75}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"Ticket cost:      "}\NormalTok{, cost, }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} Ticket cost:       2}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"Expected net gain:"}\NormalTok{, expected\_gain, }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} Expected net gain: {-}1.25}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"(A negative expected gain means this is not a good investment!)}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} (A negative expected gain means this is not a good investment!)}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Glossary}\label{glossary-3}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6667}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Term
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Definition
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Probability} & Likelihood of an event, from 0 to 1 \\
+\textbf{Sample space} & All possible outcomes \\
+\textbf{Event} & One or more outcomes \\
+\textbf{Complement} & All outcomes NOT in the event \\
+\textbf{Relative frequency} & Experimental estimate of probability \\
+\textbf{Conditional probability} & P(A given B): probability of A given
+B occurred \\
+\textbf{Two-way table} & Table showing two categorical variables
+together \\
+\textbf{Tree diagram} & Diagram showing sequential outcomes and
+probabilities \\
+\end{longtable}
+
+\section{Check your understanding}\label{check-your-understanding-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  A bag contains 4 red, 3 blue, and 3 yellow marbles. A marble is drawn
+  at random. Find:
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    P(red)
+  \item
+    P(not red)
+  \item
+    P(blue or yellow)
+  \end{enumerate}
+\item
+  A class of 30 students was surveyed: 18 play sport, 12 play an
+  instrument, and 6 do both.
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    Draw a Venn diagram.
+  \item
+    Find P(plays sport but not instrument).
+  \item
+    Find P(neither sport nor instrument).
+  \end{enumerate}
+\item
+  If P(A) = 0.4 and P(B) = 0.3 and A and B are independent, find P(A and
+  B).
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Answers}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    4/10 = 0.4; b. 6/10 = 0.6; c.~6/10 = 0.6
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \setcounter{enumii}{1}
+  \tightlist
+  \item
+    12/30 = 0.4; c.~(30 − 18 − 12 + 6)/30 = 6/30 = 0.2
+  \end{enumerate}
+\item
+  P(A and B) = 0.4 × 0.3 = 0.12 (for independent events)
+\end{enumerate}
+
+\end{tcolorbox}
+
+\bookmarksetup{startatroot}
+
+\chapter{Interpreting Statistical
+Information}\label{interpreting-statistical-information}
+
+\bookmarksetup{startatroot}
+
+\chapter{Interpreting Statistical Information}\label{sec-inference}
+
+A major focus of AS91946 is the ability to \textbf{critically read and
+interpret} statistical information from a variety of sources ---
+including newspapers, websites, government reports, and scientific
+studies.
+
+\section{Reading statistical claims}\label{reading-statistical-claims}
+
+Statistical claims appear everywhere in everyday life. As a critical
+consumer of information, you need to ask:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Who} collected the data and why?
+\item
+  \textbf{How} was the data collected (survey, experiment, census)?
+\item
+  \textbf{How many} people or things were measured (sample size)?
+\item
+  \textbf{Who} was sampled --- does the sample represent the population?
+\item
+  \textbf{What} do the numbers actually mean in context?
+\end{enumerate}
+
+\section{Sources of bias}\label{sources-of-bias}
+
+\textbf{Bias} is a systematic error that causes results to be
+unrepresentative.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3889}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3611}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Type of bias
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Description
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Example
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Sampling bias} & Sample does not represent population &
+Surveying only Year 11s about a school-wide issue \\
+\textbf{Response bias} & People don't answer truthfully & ``Do you cheat
+on tests?'' \\
+\textbf{Non-response bias} & Certain groups are less likely to respond &
+Online survey misses those without internet \\
+\textbf{Leading question bias} & Question wording influences the answer
+& ``Don't you agree that homework is too much?'' \\
+\textbf{Volunteer bias} & Only motivated people respond & Self-selected
+online polls \\
+\end{longtable}
+
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/06-inference_files/figure-latex/fig-bias-types-1.pdf}}
+
+}
+
+\caption{\label{fig-bias-types}Different types of bias and how they
+affect results.}
+
+\end{figure}%
+
+\section{Sample size and reliability}\label{sample-size-and-reliability}
+
+Larger samples generally give more \textbf{reliable} results --- but
+size alone is not enough if the sample is biased.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{42}\NormalTok{)}
+\NormalTok{true\_prop }\OtherTok{\textless{}{-}} \FloatTok{0.55}  \CommentTok{\# True proportion in population}
+\NormalTok{sample\_sizes }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{10}\NormalTok{, }\DecValTok{30}\NormalTok{, }\DecValTok{50}\NormalTok{, }\DecValTok{100}\NormalTok{, }\DecValTok{200}\NormalTok{, }\DecValTok{500}\NormalTok{, }\DecValTok{1000}\NormalTok{)}
+\NormalTok{n\_simulations }\OtherTok{\textless{}{-}} \DecValTok{1000}
+
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{321}\NormalTok{)}
+\NormalTok{variability }\OtherTok{\textless{}{-}} \FunctionTok{sapply}\NormalTok{(sample\_sizes, }\ControlFlowTok{function}\NormalTok{(n) \{}
+\NormalTok{  estimates }\OtherTok{\textless{}{-}} \FunctionTok{replicate}\NormalTok{(n\_simulations, }\FunctionTok{mean}\NormalTok{(}\FunctionTok{sample}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\ConstantTok{TRUE}\NormalTok{, }\ConstantTok{FALSE}\NormalTok{), n,}
+                                                    \AttributeTok{replace =} \ConstantTok{TRUE}\NormalTok{,}
+                                                    \AttributeTok{prob =} \FunctionTok{c}\NormalTok{(true\_prop,}
+                                                             \DecValTok{1} \SpecialCharTok{{-}}\NormalTok{ true\_prop))))}
+  \FunctionTok{sd}\NormalTok{(estimates)}
+\NormalTok{\})}
+
+\FunctionTok{plot}\NormalTok{(}
+\NormalTok{  sample\_sizes, variability,}
+  \AttributeTok{type =} \StringTok{"b"}\NormalTok{,}
+  \AttributeTok{pch  =} \DecValTok{19}\NormalTok{,}
+  \AttributeTok{col  =} \StringTok{"\#0571b0"}\NormalTok{,}
+  \AttributeTok{lwd  =} \DecValTok{2}\NormalTok{,}
+  \AttributeTok{xlab =} \StringTok{"Sample Size (n)"}\NormalTok{,}
+  \AttributeTok{ylab =} \StringTok{"Standard Deviation of Estimates"}\NormalTok{,}
+  \AttributeTok{main =} \StringTok{"Sample Size vs Variability of Estimates"}\NormalTok{,}
+  \AttributeTok{las  =} \DecValTok{1}
+\NormalTok{)}
+\FunctionTok{abline}\NormalTok{(}\AttributeTok{h =} \DecValTok{0}\NormalTok{, }\AttributeTok{col =} \StringTok{"\#d7191c"}\NormalTok{, }\AttributeTok{lty =} \DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/06-inference_files/figure-latex/fig-sample-size-1.pdf}}
+
+}
+
+\caption{\label{fig-sample-size}Variability in sample estimates
+decreases as sample size increases.}
+
+\end{figure}%
+
+\section{Correlation and causation}\label{correlation-and-causation}
+
+One of the most important concepts in statistical literacy is
+understanding the difference between \textbf{correlation} and
+\textbf{causation}.
+
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-warning-color!10!white, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Correlation ≠ Causation}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-warning-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+
+Two variables can be \textbf{correlated} (move together) without one
+causing the other. There may be a \textbf{confounding variable}
+responsible for both.
+
+\end{tcolorbox}
+
+\subsection{Famous spurious
+correlations}\label{famous-spurious-correlations}
+
+\begin{itemize}
+\tightlist
+\item
+  Ice cream sales and shark attacks both increase in summer → they are
+  both caused by \textbf{hot weather}, not each other.
+\item
+  Countries with more TVs have longer life expectancy → both are driven
+  by \textbf{wealth}, not TVs causing people to live longer.
+\end{itemize}
+
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/06-inference_files/figure-latex/fig-spurious-1.pdf}}
+
+}
+
+\caption{\label{fig-spurious}A spurious correlation: ice cream sales and
+drownings both increase in summer.}
+
+\end{figure}%
+
+\section{Interpreting graphs
+critically}\label{interpreting-graphs-critically}
+
+When reading statistical graphs, watch out for:
+
+\subsection{Misleading y-axis}\label{misleading-y-axis}
+
+A y-axis that doesn't start at zero can make small differences look
+huge.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mfrow =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{))}
+
+\NormalTok{years   }\OtherTok{\textless{}{-}} \DecValTok{2020}\SpecialCharTok{:}\DecValTok{2024}
+\NormalTok{revenue }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{980}\NormalTok{, }\DecValTok{990}\NormalTok{, }\DecValTok{995}\NormalTok{, }\DecValTok{1005}\NormalTok{, }\DecValTok{1010}\NormalTok{)}
+
+\CommentTok{\# Misleading}
+\FunctionTok{plot}\NormalTok{(years, revenue, }\AttributeTok{type =} \StringTok{"b"}\NormalTok{, }\AttributeTok{pch =} \DecValTok{19}\NormalTok{, }\AttributeTok{col =} \StringTok{"\#d7191c"}\NormalTok{, }\AttributeTok{lwd =} \DecValTok{2}\NormalTok{,}
+     \AttributeTok{ylim =} \FunctionTok{c}\NormalTok{(}\DecValTok{975}\NormalTok{, }\DecValTok{1015}\NormalTok{), }\AttributeTok{xlab =} \StringTok{"Year"}\NormalTok{, }\AttributeTok{ylab =} \StringTok{"Revenue ($M)"}\NormalTok{,}
+     \AttributeTok{main =} \StringTok{"Misleading: Truncated Axis"}\NormalTok{, }\AttributeTok{las =} \DecValTok{1}\NormalTok{)}
+
+\CommentTok{\# Honest}
+\FunctionTok{plot}\NormalTok{(years, revenue, }\AttributeTok{type =} \StringTok{"b"}\NormalTok{, }\AttributeTok{pch =} \DecValTok{19}\NormalTok{, }\AttributeTok{col =} \StringTok{"\#4dac26"}\NormalTok{, }\AttributeTok{lwd =} \DecValTok{2}\NormalTok{,}
+     \AttributeTok{ylim =} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{1100}\NormalTok{), }\AttributeTok{xlab =} \StringTok{"Year"}\NormalTok{, }\AttributeTok{ylab =} \StringTok{"Revenue ($M)"}\NormalTok{,}
+     \AttributeTok{main =} \StringTok{"Honest: Starting at Zero"}\NormalTok{, }\AttributeTok{las =} \DecValTok{1}\NormalTok{)}
+
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mfrow =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{1}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/06-inference_files/figure-latex/fig-misleading-axis-1.pdf}}
+
+}
+
+\caption{\label{fig-misleading-axis}The same data displayed with a
+truncated y-axis (left) vs starting at zero (right).}
+
+\end{figure}%
+
+\subsection{Percentage vs absolute
+numbers}\label{percentage-vs-absolute-numbers}
+
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Be careful with percentages}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+
+``Crime increased by 100\%'' sounds alarming --- but if there were only
+2 crimes last year and 4 this year, the absolute increase is tiny.
+
+Always ask: \textbf{100\% of what?}
+
+\end{tcolorbox}
+
+\subsection{Averages without context}\label{averages-without-context}
+
+The \textbf{mean} can be pulled by extreme values, making it misleading
+if used alone. Always ask what \textbf{measure of centre} was used and
+whether it is appropriate.
+
+\section{Reading media reports --- a
+framework}\label{reading-media-reports-a-framework}
+
+Use these questions when evaluating a statistical claim in the media:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{What is being measured?} (the variable and its units)
+\item
+  \textbf{Who was studied?} (the population and sample)
+\item
+  \textbf{How was data collected?} (method and potential biases)
+\item
+  \textbf{How large was the sample?}
+\item
+  \textbf{What is the source?} (government, independent researcher,
+  company with a vested interest?)
+\item
+  \textbf{Are conclusions supported by the evidence?} Or is the claim
+  overstated?
+\item
+  \textbf{Are comparisons fair?} Are groups being compared actually
+  comparable?
+\end{enumerate}
+
+\section{A worked example}\label{a-worked-example}
+
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{News headline}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+
+\emph{``Study shows eating chocolate improves exam scores by 15\%''}
+
+\end{tcolorbox}
+
+\textbf{Critical analysis:}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{What was measured?} Exam scores before and after eating
+  chocolate.
+\item
+  \textbf{Who was studied?} Not stated --- red flag!
+\item
+  \textbf{Sample size?} Not given --- could be only 10 students.
+\item
+  \textbf{Confounding variables?} Students who eat chocolate may be from
+  wealthier families with better study resources.
+\item
+  \textbf{Causation or correlation?} This is a correlational study;
+  chocolate doesn't necessarily \emph{cause} better scores.
+\item
+  \textbf{Who funded it?} If a chocolate company funded it, there is a
+  conflict of interest.
+\end{itemize}
+
+\textbf{Conclusion:} The headline is likely exaggerated or misleading.
+We would need much more information before accepting this claim.
+
+\section{Glossary}\label{glossary-4}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6667}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Term
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Definition
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Bias} & Systematic error that distorts results \\
+\textbf{Confounding variable} & A hidden variable that explains an
+apparent relationship \\
+\textbf{Correlation} & A statistical relationship between two
+variables \\
+\textbf{Causation} & One variable directly causes a change in another \\
+\textbf{Reliable} & Consistent results if repeated \\
+\textbf{Valid} & Measuring what it claims to measure \\
+\textbf{Population} & The full group of interest \\
+\textbf{Sample} & A subset of the population \\
+\end{longtable}
+
+\section{Check your understanding}\label{check-your-understanding-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  A newspaper article claims: ``People who eat breakfast earn more money
+  than those who skip it.'' Identify a possible confounding variable.
+\item
+  A survey found that 80\% of students support a longer lunch break. The
+  survey was conducted by standing outside the school canteen. What type
+  of bias is this? How might it affect results?
+\item
+  A graph shows the number of electric vehicles sold in New Zealand,
+  with the y-axis starting at 45,000 rather than 0. Sales increased from
+  47,000 to 51,000. On the graph, this looks like a 400\% increase.
+  Calculate the true percentage increase.
+\item
+  Explain the difference between correlation and causation using your
+  own example.
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Answers}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Wealthier people are more likely to eat breakfast (they can afford
+  food) and also earn more --- wealth is the confounding variable.
+\item
+  Sampling bias / volunteer bias --- students near the canteen are more
+  likely to want a longer lunch break. Results will overestimate
+  support.
+\item
+  True \% increase = (51,000 − 47,000) / 47,000 × 100 ≈ 8.5\%.
+\item
+  Accept any reasonable example, e.g., ``Countries with more hospitals
+  have higher death rates --- hospitals don't cause death; both are
+  linked to population size.''
+\end{enumerate}
+
+\end{tcolorbox}
+
+\bookmarksetup{startatroot}
+
+\chapter{Practice Questions and Exam
+Tips}\label{practice-questions-and-exam-tips}
+
+\bookmarksetup{startatroot}
+
+\chapter{Practice Questions and Achievement Standard
+Tips}\label{sec-practice}
+
+This chapter brings everything together with practice questions at each
+grade level, and advice on how to approach the AS91946 assessment.
+
+\section{About the achievement
+standard}\label{about-the-achievement-standard}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3810}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6190}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Detail
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Information
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Standard number} & AS91946 \\
+\textbf{Title} & Interpret and apply mathematical and statistical
+information in context \\
+\textbf{Level} & NCEA Level 1 \\
+\textbf{Credits} & 4 \\
+\textbf{Assessment} & External (end-of-year exam) \\
+\textbf{Strands} & Statistics and Probability \\
+\end{longtable}
+
+\section{What each grade requires}\label{what-each-grade-requires}
+
+\subsection{Achieved}\label{achieved}
+
+\begin{itemize}
+\tightlist
+\item
+  Correctly read values from graphs and tables
+\item
+  Calculate basic statistics (mean, median, mode, range)
+\item
+  State probabilities from given information
+\item
+  Identify variable types
+\item
+  Make simple statements about data in context
+\end{itemize}
+
+\subsection{Merit}\label{merit}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Justify} your answers with reasons
+\item
+  Compare and contrast groups using both centre AND spread
+\item
+  Identify potential sources of bias
+\item
+  Explain the difference between correlation and causation
+\item
+  Interpret probabilities and relate them to real-world context
+\end{itemize}
+
+\subsection{Excellence}\label{excellence}
+
+\begin{itemize}
+\tightlist
+\item
+  Show \textbf{statistical insight} --- go beyond the obvious
+\item
+  Consider alternative explanations or limitations
+\item
+  Make connections between different parts of the data
+\item
+  Critically evaluate statistical claims
+\item
+  Use appropriate statistical language precisely
+\end{itemize}
+
+\section{Writing tips for the exam}\label{writing-tips-for-the-exam}
+
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{The golden rule}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+
+\textbf{Always refer back to the context.} Every answer should mention:
+- The \textbf{variable} being described - The \textbf{units} of
+measurement - The \textbf{group} being described (population/sample)
+
+❌ ``The mean is 65.''\\
+✅ ``The mean maths score for Year 11 students was 65 out of 100.''
+
+\end{tcolorbox}
+
+\subsection{Comparison sentence
+starters}\label{comparison-sentence-starters}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6667}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Purpose
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Sentence starters
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Centre & ``On average\ldots{}''; ``The typical\ldots{}''; ``The
+median\ldots is higher/lower than\ldots{}'' \\
+Spread & ``The scores are more/less variable\ldots{}''; ``The IQR is
+larger, suggesting\ldots{}'' \\
+Shape & ``The distribution is roughly symmetric /
+right-skewed\ldots{}'' \\
+Outliers & ``There appears to be an outlier at\ldots which may
+indicate\ldots{}'' \\
+Causation & ``However, this may be due to\ldots rather than a direct
+causal relationship'' \\
+\end{longtable}
+
+\section{Practice set 1 --- Achieved
+level}\label{practice-set-1-achieved-level}
+
+\begin{verbatim}
+#> Heights (cm) of 20 Year 11 students:
+#> 147.3 153.9 154.5 157.3 158.9 159.5 163.6 164.3 164.8 165 165.2 166.4 166.5 167.2 169.3 170.1 171.3 171.5 175.2 184.6
+\end{verbatim}
+
+\textbf{Questions:}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  What type of data is height? Give a reason.
+\item
+  Calculate the mean height. Round to one decimal place.
+\item
+  Find the median height.
+\item
+  Find the range.
+\item
+  A student drew a histogram of this data. Circle the most appropriate
+  description: \textbf{symmetric / right-skewed / left-skewed}
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Worked solutions}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{111}\NormalTok{)}
+\NormalTok{heights }\OtherTok{\textless{}{-}} \FunctionTok{round}\NormalTok{(}\FunctionTok{rnorm}\NormalTok{(}\DecValTok{20}\NormalTok{, }\DecValTok{168}\NormalTok{, }\DecValTok{9}\NormalTok{), }\DecValTok{1}\NormalTok{)}
+
+\FunctionTok{cat}\NormalTok{(}\StringTok{"1. Numerical, continuous — height can take any value within a range.}\SpecialCharTok{\textbackslash{}n\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} 1. Numerical, continuous — height can take any value within a range.}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"2. Mean:"}\NormalTok{, }\FunctionTok{round}\NormalTok{(}\FunctionTok{mean}\NormalTok{(heights), }\DecValTok{1}\NormalTok{), }\StringTok{"cm}\SpecialCharTok{\textbackslash{}n\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} 2. Mean: 164.8 cm}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"3. Median:"}\NormalTok{, }\FunctionTok{median}\NormalTok{(heights), }\StringTok{"cm}\SpecialCharTok{\textbackslash{}n\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} 3. Median: 165.1 cm}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"4. Range:"}\NormalTok{, }\FunctionTok{max}\NormalTok{(heights) }\SpecialCharTok{{-}} \FunctionTok{min}\NormalTok{(heights), }\StringTok{"cm}\SpecialCharTok{\textbackslash{}n\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} 4. Range: 37.3 cm}
+\FunctionTok{cat}\NormalTok{(}\StringTok{"5. Likely symmetric (heights tend to be normally distributed).}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\CommentTok{\#\textgreater{} 5. Likely symmetric (heights tend to be normally distributed).}
+\end{Highlighting}
+\end{Shaded}
+
+\end{tcolorbox}
+
+\section{Practice set 2 --- Merit
+level}\label{practice-set-2-merit-level}
+
+A local council surveyed 80 residents about their weekly exercise hours.
+The results were:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{222}\NormalTok{)}
+\NormalTok{adults    }\OtherTok{\textless{}{-}} \FunctionTok{round}\NormalTok{(}\FunctionTok{pmax}\NormalTok{(}\DecValTok{0}\NormalTok{, }\FunctionTok{rnorm}\NormalTok{(}\DecValTok{40}\NormalTok{, }\AttributeTok{mean =} \FloatTok{4.5}\NormalTok{, }\AttributeTok{sd =} \FloatTok{2.2}\NormalTok{)), }\DecValTok{1}\NormalTok{)}
+\NormalTok{teenagers }\OtherTok{\textless{}{-}} \FunctionTok{round}\NormalTok{(}\FunctionTok{pmax}\NormalTok{(}\DecValTok{0}\NormalTok{, }\FunctionTok{rnorm}\NormalTok{(}\DecValTok{40}\NormalTok{, }\AttributeTok{mean =} \FloatTok{6.2}\NormalTok{, }\AttributeTok{sd =} \FloatTok{3.1}\NormalTok{)), }\DecValTok{1}\NormalTok{)}
+
+\NormalTok{summary\_tbl }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}
+  \AttributeTok{Group      =} \FunctionTok{c}\NormalTok{(}\StringTok{"Adults"}\NormalTok{, }\StringTok{"Teenagers"}\NormalTok{),}
+  \AttributeTok{n          =} \DecValTok{40}\NormalTok{,}
+  \AttributeTok{Mean       =} \FunctionTok{round}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\FunctionTok{mean}\NormalTok{(adults), }\FunctionTok{mean}\NormalTok{(teenagers)), }\DecValTok{2}\NormalTok{),}
+  \AttributeTok{Median     =} \FunctionTok{c}\NormalTok{(}\FunctionTok{median}\NormalTok{(adults), }\FunctionTok{median}\NormalTok{(teenagers)),}
+  \AttributeTok{SD         =} \FunctionTok{round}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\FunctionTok{sd}\NormalTok{(adults), }\FunctionTok{sd}\NormalTok{(teenagers)), }\DecValTok{2}\NormalTok{),}
+  \AttributeTok{IQR        =} \FunctionTok{round}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\FunctionTok{IQR}\NormalTok{(adults), }\FunctionTok{IQR}\NormalTok{(teenagers)), }\DecValTok{2}\NormalTok{),}
+  \AttributeTok{Min        =} \FunctionTok{c}\NormalTok{(}\FunctionTok{min}\NormalTok{(adults), }\FunctionTok{min}\NormalTok{(teenagers)),}
+  \AttributeTok{Max        =} \FunctionTok{c}\NormalTok{(}\FunctionTok{max}\NormalTok{(adults), }\FunctionTok{max}\NormalTok{(teenagers))}
+\NormalTok{)}
+
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(summary\_tbl, }\AttributeTok{caption =} \StringTok{"Weekly exercise hours: adults vs teenagers"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{longtable}[]{@{}lrrrrrrr@{}}
+\caption{Weekly exercise hours: adults vs teenagers}\tabularnewline
+\toprule\noalign{}
+Group & n & Mean & Median & SD & IQR & Min & Max \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Group & n & Mean & Median & SD & IQR & Min & Max \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Adults & 40 & 4.45 & 4.35 & 2.07 & 2.85 & 0 & 7.9 \\
+Teenagers & 40 & 6.58 & 7.10 & 2.85 & 3.58 & 0 & 13.0 \\
+\end{longtable}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{boxplot}\NormalTok{(}
+  \FunctionTok{list}\NormalTok{(}\AttributeTok{Adults =}\NormalTok{ adults, }\AttributeTok{Teenagers =}\NormalTok{ teenagers),}
+  \AttributeTok{col    =} \FunctionTok{c}\NormalTok{(}\StringTok{"\#4dac26"}\NormalTok{, }\StringTok{"\#0571b0"}\NormalTok{),}
+   \AttributeTok{border =} \StringTok{"\#333333"}\NormalTok{,}
+  \AttributeTok{main   =} \StringTok{"Weekly Exercise Hours"}\NormalTok{,}
+  \AttributeTok{ylab   =} \StringTok{"Hours per week"}\NormalTok{,}
+  \AttributeTok{las    =} \DecValTok{1}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/07-practice_files/figure-latex/fig-merit-boxplot-1.pdf}}
+
+}
+
+\caption{\label{fig-merit-boxplot}Weekly exercise hours for adults and
+teenagers.}
+
+\end{figure}%
+
+\textbf{Questions:}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Compare the centre of the two distributions. What does this tell us
+  about exercise habits in context?
+\item
+  Compare the spread. What does this tell us?
+\item
+  The council used a telephone survey conducted at 2 pm on weekdays.
+  Identify one source of bias and explain how it might affect the
+  results.
+\item
+  Can we conclude from this data that teenagers exercise more because
+  they are younger? Explain.
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Model answers}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+
+\textbf{1. Centre:} The median exercise hours for teenagers (approx. 7.1
+hrs) is higher than for adults (4.35 hrs). This suggests teenagers in
+this sample tend to do more weekly exercise than adults.
+
+\textbf{2. Spread:} The IQR and standard deviation are larger for
+teenagers (3.6 hrs vs 2.9 hrs). This means teenagers' exercise habits
+are more variable --- some exercise a lot while others exercise very
+little. Adults' exercise habits are more consistent.
+
+\textbf{3. Bias:} Calling at 2 pm on weekdays means working adults are
+unlikely to answer (they are at work). This leads to
+\textbf{non-response bias} --- the adult sample may over-represent
+retired or part-time workers, who may exercise more than the general
+adult population.
+
+\textbf{4. Causation:} No --- we cannot conclude that age \emph{causes}
+the difference in exercise. Teenagers may exercise more because they
+participate in school sport, not because of their age per se. Age and
+exercise are \emph{correlated} in this sample, but there may be
+confounding variables such as school PE requirements, free time, or
+lifestyle factors.
+
+\end{tcolorbox}
+
+\section{Practice set 3 --- Excellence
+level}\label{practice-set-3-excellence-level}
+
+A researcher claims: \emph{``A study of 50 Auckland households found
+that households with more bookshelves have higher household income.
+Therefore, buying more bookshelves will increase your income.''}
+
+\textbf{Questions:}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Identify the two variables and their types.
+\item
+  Explain why this conclusion is flawed. Use statistical language.
+\item
+  Suggest one confounding variable that could explain the relationship.
+\item
+  What would the researcher need to do to properly establish causation?
+\item
+  The sample was 50 Auckland households selected by going door-to-door
+  in Remuera (a wealthy suburb). Evaluate the reliability of
+  generalising these findings to all New Zealand households.
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Model answers}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+
+\textbf{1.} Number of bookshelves: numerical, discrete. Household
+income: numerical, continuous.
+
+\textbf{2.} The conclusion confuses \textbf{correlation with causation}.
+Even if the two variables are positively correlated, this does not mean
+bookshelves cause higher income. The relationship could be due to a
+third variable, and correlation studies cannot establish
+cause-and-effect without experimental control.
+
+\textbf{3.} \textbf{Wealth/education level} --- wealthier, more educated
+households are more likely to own books/bookshelves AND to have higher
+income. Both variables are driven by a common factor.
+
+\textbf{4.} To establish causation, the researcher would need a
+\textbf{controlled experiment} --- randomly assigning households to
+receive bookshelves or not, holding all other variables constant, and
+measuring income change over time. This would be impractical.
+
+\textbf{5.} The sample has significant \textbf{sampling bias}. Remuera
+is one of Auckland's wealthiest suburbs. The sample does not represent
+the diversity of New Zealand households in terms of income, region, or
+ethnicity. Results cannot be reliably generalised to all New Zealand
+households. A \textbf{stratified random sample} from across New Zealand
+would be needed.
+
+\end{tcolorbox}
+
+\section{Key formulas summary}\label{key-formulas-summary}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Measure & Formula \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Mean & x̄ = Σxᵢ / n \\
+Range & Max − Min \\
+IQR & Q3 − Q1 \\
+Probability & P(A) = favourable outcomes / total outcomes \\
+Complement & P(A') = 1 − P(A) \\
+Lower outlier fence & Q1 − 1.5 × IQR \\
+Upper outlier fence & Q3 + 1.5 × IQR \\
+\end{longtable}
+
+\section{Exam strategy checklist}\label{exam-strategy-checklist}
+
+Before the exam, make sure you can:
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Identify variable types (categorical/numerical, nominal/ordinal,
+  discrete/continuous)
+\item[$\square$]
+  Read values accurately from bar charts, histograms, box plots, and
+  scatter plots
+\item[$\square$]
+  Calculate mean, median, mode, range, IQR
+\item[$\square$]
+  Describe distributions using SOCS (Shape, Outliers, Centre, Spread)
+\item[$\square$]
+  Compare two groups using both centre and spread in context
+\item[$\square$]
+  Calculate simple probabilities and use complementary events
+\item[$\square$]
+  Read and calculate from two-way tables
+\item[$\square$]
+  Identify bias in data collection methods
+\item[$\square$]
+  Distinguish correlation from causation
+\item[$\square$]
+  Critically evaluate statistical claims in media
+\end{itemize}
+
+\section{Useful resources}\label{useful-resources}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3571}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4643}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1786}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Resource
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Description
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+URL
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+NZQA & Official achievement standard information &
+\href{https://www.nzqa.govt.nz}{nzqa.govt.nz} \\
+CensusAtSchool & Real NZ student data for practice &
+\href{https://new.censusatschool.org.nz}{new.censusatschool.org.nz} \\
+iNZight & Free NZ-made statistics software &
+\href{https://inzight.nz}{inzight.nz} \\
+Stats NZ & Official NZ statistics and data &
+\href{https://www.stats.govt.nz}{stats.govt.nz} \\
+Khan Academy & Free video lessons on statistics &
+\href{https://www.khanacademy.org}{khanacademy.org} \\
+\end{longtable}
+
+\bookmarksetup{startatroot}
+
+\chapter{References}\label{references}
+
+\bookmarksetup{startatroot}
+
+\chapter*{References}\label{references-1}
+\addcontentsline{toc}{chapter}{References}
+
+\markboth{References}{References}
+
+\section{Achievement Standard}\label{achievement-standard}
+
+New Zealand Qualifications Authority (NZQA). (2024). \emph{Achievement
+Standard 91946: Interpret and apply mathematical and statistical
+information in context.} NZQA.
+\url{https://www.nzqa.govt.nz/nqfdocs/ncea-resource/achievements/2024/as91946.pdf}
+
+\section{New Zealand Statistics
+Curriculum}\label{new-zealand-statistics-curriculum}
+
+Ministry of Education New Zealand. (2007). \emph{The New Zealand
+Curriculum.} Learning Media. \url{https://nzcurriculum.tki.org.nz}
+
+Ministry of Education New Zealand. (2023). \emph{Mathematics and
+Statistics --- Achievement Objectives.}
+\url{https://nzcurriculum.tki.org.nz/The-New-Zealand-Curriculum/Mathematics-and-statistics}
+
+\section{Textbooks and Teaching
+Resources}\label{textbooks-and-teaching-resources}
+
+Wild, C. J., \& Seber, G. A. F. (2000). \emph{Chance Encounters: A First
+Course in Data Analysis and Inference.} Wiley.
+
+Pfannkuch, M., \& Wild, C. J. (2004). Towards an understanding of
+statistical thinking. In D. Ben-Zvi \& J. Garfield (Eds.), \emph{The
+Challenge of Developing Statistical Literacy, Reasoning and Thinking}
+(pp.~17--46). Kluwer Academic.
+
+\section{Data Sources}\label{data-sources}
+
+Statistics New Zealand (Stats NZ). (2024). \emph{Household Economic
+Survey.} \url{https://www.stats.govt.nz}
+
+CensusAtSchool New Zealand. (2024). \emph{CensusAtSchool data.}
+University of Auckland. \url{https://new.censusatschool.org.nz}
+
+\section{Software}\label{software}
+
+R Core Team. (2024). \emph{R: A Language and Environment for Statistical
+Computing.} R Foundation for Statistical Computing.
+\url{https://www.r-project.org}
+
+Allaire, J. J., Teague, C., Scheidegger, C., Xie, Y., \& Dervieux, C.
+(2024). \emph{Quarto} (Version 1.5). \url{https://quarto.org}
+
+Wickham, H., et al.~(2023). \emph{ggplot2: Elegant Graphics for Data
+Analysis} (3rd ed.). Springer. \url{https://ggplot2-book.org}
+
+\section{Statistical Literacy}\label{statistical-literacy}
+
+Huff, D. (1954). \emph{How to Lie with Statistics.} W. W. Norton \&
+Company.
+
+Wheelan, C. (2013). \emph{Naked Statistics: Stripping the Dread from the
+Data.} W. W. Norton \& Company.
+
+
+\backmatter
+
+
+\end{document}

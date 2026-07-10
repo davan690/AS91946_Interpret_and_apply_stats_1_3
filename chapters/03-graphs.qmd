@@ -175,7 +175,7 @@ boxplot(
 
 set.seed(5)
 x <- rnorm(100, 70, 12)
-bp <- boxplot(x, horizontal = TRUE, col = "#2c7bb6", border = "#333",
+bp <- boxplot(x, horizontal = TRUE, col = "#2c7bb6", border = "#333333",
               main = "Parts of a Box Plot", xlab = "Value",
               axes = TRUE)
 

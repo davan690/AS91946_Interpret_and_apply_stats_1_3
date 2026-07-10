@@ -1,0 +1,77 @@
+[1/9] index.qmd
+[2/9] chapters\01-intro.qmd
+[3/9] chapters\02-data-types.qmd
+[4/9] chapters\03-graphs.qmd
+[5/9] chapters\04-measures.qmd
+[6/9] chapters\05-probability.qmd
+
+
+processing file: 05-probability.qmd
+1/17                      
+2/17 [fig-prob-scale]     
+3/17                      
+4/17 [die-probability]    
+5/17                      
+6/17 [complement-example] 
+7/17                      
+8/17 [fig-coin-simulation]
+9/17                      
+10/17 [two-way-table]      
+11/17                      
+12/17 [two-way-probs]      
+13/17                      
+14/17 [fig-tree-diagram]   
+15/17                      
+16/17 [expected-value]     
+17/17                      
+output file: 05-probability.knit.md
+
+
+
+processing file: 05-probability.qmd
+1/17                      
+2/17 [fig-prob-scale]     
+3/17                      
+4/17 [die-probability]    
+5/17                      
+6/17 [complement-example] 
+7/17                      
+8/17 [fig-coin-simulation]
+9/17                      
+10/17 [two-way-table]      
+11/17                      
+12/17 [two-way-probs]      
+13/17                      
+14/17 [fig-tree-diagram]   
+15/17                      
+16/17 [expected-value]     
+17/17                      
+output file: 05-probability.knit.md
+
+[7/9] chapters\06-inference.qmd
+[8/9] chapters\07-practice.qmd
+
+
+processing file: 07-practice.qmd
+1/11                              
+2/11 [practice-data-achieved]     
+3/11                              
+4/11 [practice-solutions-achieved]
+5/11                              
+6/11 [practice-data-merit]        
+7/11                              
+8/11 [fig-merit-boxplot]          
+Error in `xysegments()`:
+! invalid RGB specification
+Backtrace:
+    ▆
+ 1. ├─graphics::boxplot(...)
+ 2. └─graphics::boxplot.default(...)
+ 3.   ├─base::do.call(...)
+ 4.   └─graphics (local) `<fn>`(...)
+ 5.     └─graphics (local) bplt(...)
+ 6.       └─graphics (local) xysegments(...)
+
+Quitting from 07-practice.qmd:134-146 [fig-merit-boxplot]
+Execution halted
+WARN: Error encountered when rendering files

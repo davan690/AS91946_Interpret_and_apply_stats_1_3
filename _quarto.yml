@@ -21,6 +21,7 @@ book:
     - chapters/05-probability.qmd
     - chapters/06-inference.qmd
     - chapters/07-practice.qmd
+    - resources/resource-library.qmd
     - references.qmd
 
 bibliography: references.bib
@@ -41,13 +42,30 @@ format:
     fig-height: 5
   pdf:
     documentclass: scrbook
-    classoption: [oneside]
+    classoption: [oneside, open=any]
+    papersize: a4
+    fontsize: 11pt
+    geometry:
+      - top=25mm
+      - bottom=28mm
+      - left=28mm
+      - right=22mm
+      - headsep=8mm
+    mainfont: "Latin Modern Roman"
+    sansfont: "Latin Modern Sans"
+    monofont: "Latin Modern Mono"
+    pdf-engine: xelatex
     toc: true
+    toc-depth: 2
+    lof: true
+    lot: true
     number-sections: true
     colorlinks: true
     fig-align: center
     fig-width: 6
     fig-height: 4
+    include-in-header:
+      - tex/book-pdf-header.tex
 
 execute:
   echo: true

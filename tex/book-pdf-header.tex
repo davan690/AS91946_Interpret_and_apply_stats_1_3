@@ -1,0 +1,19 @@
+% Professional textbook-style refinements for Quarto PDF output
+\usepackage{caption}
+
+% Improve body text rhythm
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0.3em}
+
+% Cleaner heading hierarchy
+\setkomafont{disposition}{\bfseries}
+\setkomafont{chapter}{\Huge\bfseries}
+\setkomafont{section}{\Large\bfseries}
+\setkomafont{subsection}{\large\bfseries}
+
+% Better table and figure captions
+\captionsetup{font=small,labelfont=bf}
+
+% Subtle running header/footer for print-like structure
+\KOMAoptions{headings=normal}
+\pagestyle{headings}

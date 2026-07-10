@@ -1,0 +1,38 @@
+---
+title: "Resource Library"
+---
+
+This section consolidates the most valuable external resources used across this book.
+Each item includes a direct link and its bibliography citation key.
+
+## Assessment And Standard Documents
+
+- [Achievement Standard 91946 (NZQA PDF)](https://www.nzqa.govt.nz/nqfdocs/ncea-resource/achievements/2024/as91946.pdf) [@nzqa-as91946-pdf]
+- [NZQA Main Site](https://www.nzqa.govt.nz) [@nzqa-as91946]
+
+## New Zealand Curriculum Resources
+
+- [The New Zealand Curriculum](https://nzcurriculum.tki.org.nz) [@nz-curriculum-2007]
+- [Mathematics And Statistics Achievement Objectives](https://nzcurriculum.tki.org.nz/The-New-Zealand-Curriculum/Mathematics-and-statistics) [@moe-maths-stats-2023]
+
+## Official Data Sources
+
+- [Stats NZ](https://www.stats.govt.nz) [@statsnz-2024]
+- [CensusAtSchool New Zealand](https://new.censusatschool.org.nz) [@censusatschool-2024]
+
+## Software And Technical Resources
+
+- [R Project](https://www.r-project.org) [@r-core-2024]
+- [Quarto](https://quarto.org) [@quarto-2024]
+- [ggplot2 Book](https://ggplot2-book.org) [@wickham-ggplot2-2023]
+
+## Statistical Thinking And Literacy Texts
+
+- Chance Encounters: A First Course in Data Analysis and Inference [@wild-seber-2000]
+- Towards an understanding of statistical thinking [@pfannkuch-wild-2004]
+- How to Lie with Statistics [@huff-1954]
+- Naked Statistics: Stripping the Dread from the Data [@wheelan-2013]
+
+## Citation Notes
+
+The full bibliographic records for this section are maintained in [references.bib](../references.bib).
