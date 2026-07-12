@@ -46,6 +46,9 @@ docs/
 _book/
 .quarto/
 *_files/
+*.fdb_latexmk
+*.fls
+*.synctex.gz
 
 # translation temp files
 po/*~
