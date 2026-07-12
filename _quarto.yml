@@ -17,6 +17,7 @@ book:
     - chapters/01-intro.qmd
     - chapters/02-data-types.qmd
     - chapters/03-graphs.qmd
+    - chapters/04-1-koura-example.qmd
     - chapters/04-measures.qmd
     - chapters/05-probability.qmd
     - chapters/06-inference.qmd

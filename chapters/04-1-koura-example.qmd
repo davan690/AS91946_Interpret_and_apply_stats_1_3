@@ -1,0 +1,62 @@
+---
+title: "Chapter 4: Bivariate Data in Ecology"
+subtitle: "Investigating Kōura Habitats using the PPDAC Cycle"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: show
+  pdf:
+    documentclass: scrreprt
+    number-sections: true
+---
+
+# Introduction to Bivariate Data
+
+In this chapter, we apply the PPDAC (Problem, Plan, Data, Analysis, Conclusion) statistical enquiry cycle to a real-world ecological context. Understanding how two numerical variables interact is a core component of NCEA Level 1 Statistics.
+
+## Exercise: Project Kōura
+
+**Context:** 
+A group of students—Jack, Trishav, and Levi—are conducting a local ecological survey, which they have named "Project Kōura". They are investigating the populations of native freshwater crayfish (kōura) across several local catchments, including the Kaikorai Stream and the Water of Leith. They want to know if the physical environment of the stream affects the growth of the kōura. They have accessed an open dataset from the New Zealand Freshwater Fish Database (NZFFD) containing recent survey results. 
+
+### 1. Problem
+Before looking at the data, the group needs to define a clear investigative question. Jack suggests they look at the relationship between the water temperature of the stream and the size of the kōura.
+
+**Task A:** Write a suitable investigative question for this survey. Ensure you specify the variables, the population, and the direction of your investigation.
+
+**Task B:** Write a hypothesis. Based on what you know about freshwater biology, what kind of relationship do you expect to see between water temperature and kōura carapace length? 
+
+### 2. Plan
+The students isolate two numerical variables from the NZFFD dataset:
+
+*   **Explanatory Variable:** Stream Temperature (°C)
+*   **Response Variable:** Carapace Length (mm)
+
+**Task C:** Why is Stream Temperature the explanatory variable and Carapace Length the response variable, rather than the other way around?
+
+### 3. Data
+
+We will simulate importing the NZFFD dataset directly into R to prepare it for analysis. 
+
+```{r}
+#| label: load-data
+#| warning: false
+#| message: false
+
+# Load necessary libraries
+library(tidyverse)
+
+# Simulate importing the NZFFD dataset 
+# In a real scenario, you would use: read_csv("koura_data.csv")
+set.seed(123)
+koura_data <- tibble(
+  catchment = sample(c("Water of Leith", "Kaikorai Stream", "Taieri River"), 100, replace = TRUE),
+  temp_c = runif(100, 8, 16),
+  # Simulating a negative correlation: cooler water tends to support larger kōura
+  carapace_length_mm = 60 - (1.5 * temp_c) + rnorm(100, mean = 0, sd = 4) 
+)
+
+# Preview the data structure
+head(koura_data)
+```
