@@ -138,6 +138,39 @@
 \makeatother
 
 
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 
 
@@ -152,9 +185,6 @@
 
 
 % Professional textbook-style refinements for Quarto PDF output
-\usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{array}
 \usepackage{caption}
 
 % Improve body text rhythm
@@ -283,14 +313,134 @@ Information}
 
 \markboth{Welcome}{Welcome}
 
-This resource has been developed to support Year 11 students preparing
-for \textbf{NCEA Level 1 Achievement Standard 91946}: \emph{Interpret
-and apply mathematical and statistical information in context} (4
-credits).
+This resource now integrates teaching for:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{AS1.1 (Internal)} - statistical investigation in context
+\item
+  \textbf{AS1.3 (External / 91946)} - interpret and apply mathematical
+  and statistical information in context
+\end{itemize}
+
+The aim is to make the shared learning explicit, avoid duplication, and
+show students exactly where each idea is assessed.
+
+\section{Overlap and difference (first-page
+map)}\label{overlap-and-difference-first-page-map}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1071}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2857}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.4286}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1786}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Area
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+AS1.1 Internal
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+AS1.3 External (91946)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Overlap?
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Statistical enquiry cycle (PPDAC) & Core assessed process & Used for
+interpretation and critique & \textbf{Both} \\
+Designing and carrying out an investigation & Strong focus & Not the
+primary assessment focus & \textbf{Mostly 1.1} \\
+Reading graphs/tables in context & Required & Required &
+\textbf{Both} \\
+Numerical summaries (mean, median, IQR, spread) & Used for evidence in
+investigation & Directly assessed in interpretation questions &
+\textbf{Both} \\
+Probability, two-way tables, expected value & Limited/indirect &
+Directly assessed & \textbf{Mostly 1.3} \\
+Justification and statistical reasoning & Required in conclusion and
+evaluation & Required in written responses & \textbf{Both} \\
+Exam-style interpretation under time pressure & Not the main format &
+Core format & \textbf{Mostly 1.3} \\
+\end{longtable}
+
+\section{Assessment tags used in this
+book}\label{assessment-tags-used-in-this-book}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{{[}1.1{]}} mainly assessed in the internal
+\item
+  \textbf{{[}1.3{]}} mainly assessed in the external
+\item
+  \textbf{{[}Both{]}} directly useful for both standards
+\end{itemize}
+
+\section{Logical learning order and where it is
+tested}\label{logical-learning-order-and-where-it-is-tested}
+
+Follow this sequence from start to finish:
+
+\begin{longtable}[]{@{}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1296}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2963}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3704}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2037}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedleft
+Order
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Learning focus
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Where in this book
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Tested in
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & Statistical questions, context language, PPDAC foundations & Chapter
+1 - What is Statistics? & \textbf{{[}Both{]}} \\
+2 & Variables and data types, choosing suitable displays & Chapter 2 -
+Data types & \textbf{{[}Both{]}} \\
+3 & Graph interpretation and comparison language & Chapter 3 - Graphs &
+\textbf{{[}Both{]}} \\
+4 & Centre and spread for comparison and conclusions & Chapter 4 -
+Measures & \textbf{{[}Both{]}} \\
+5 & Probability tools and table-based reasoning & Chapter 5 -
+Probability & \textbf{{[}1.3{]}} \\
+6 & Sampling quality, bias, inference, critique & Chapter 6 - Inference
+& \textbf{{[}Both{]}} \\
+7 & Applied tasks and mixed practice with response scaffolds & Chapter 7
+- Practice & \textbf{{[}Both{]}} \\
+8 & Extension reading and source material & Resource Library &
+\textbf{{[}Both{]}} \\
+\end{longtable}
+
+\section{How to use this pathway for dual
+preparation}\label{how-to-use-this-pathway-for-dual-preparation}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Build investigation capability first (Chapters 1-4) for strong
+  \textbf{AS1.1} evidence.
+\item
+  Add probability and fast interpretation skills (Chapters 5-7) for
+  \textbf{AS1.3}.
+\item
+  In every written response, include context, comparison, and
+  justification language.
+\end{enumerate}
 
 \section{What this standard is about}\label{what-this-standard-is-about}
 
-In this standard you will learn to:
+In AS1.3 (91946), you will learn to:
 
 \begin{itemize}
 \tightlist
@@ -322,7 +472,7 @@ Each chapter builds on the previous one. You will find:
   Glossary boxes highlighting important vocabulary
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Achievement Standard at a Glance}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{At a Glance: AS1.3 (External)}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-tip-color-frame, opacityback=0]
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2500}}
@@ -346,6 +496,14 @@ statistical insight \\
 
 \end{tcolorbox}
 
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Internal/External connection}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, opacityback=0]
+
+If you can explain findings from your own investigation clearly and in
+context (AS1.1), you are building the same reasoning needed for
+interpretation and justification in AS1.3.
+
+\end{tcolorbox}
+
 \section{Tools we use}\label{tools-we-use}
 
 All data visualisations and calculations in this book are produced using
@@ -356,7 +514,7 @@ explore data yourself if you choose.
 
 \begin{figure}[H]
 
-{\centering \pandocbounded{\includegraphics[keepaspectratio]{index_files/figure-latex/welcome-plot-1.pdf}}
+{\centering \pandocbounded{\includegraphics[keepaspectratio]{index_files/figure-pdf/welcome-plot-1.pdf}}
 
 }
 
@@ -367,7 +525,7 @@ book.}
 
 \section{Getting started}\label{getting-started}
 
-Head to Chapter~\ref{sec-intro} to begin your statistics journey!
+Head to Chapter~\ref{sec-intro} to begin the combined 1.1 + 1.3 pathway.
 
 \bookmarksetup{startatroot}
 
@@ -385,7 +543,7 @@ risk percentages, and social media shows us trending topics.
 \textbf{Statistics} is the science that helps us make sense of all this
 information.
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Key definition}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Key definition}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, opacityback=0]
 
 \textbf{Statistics} is the practice of collecting, organising,
 summarising, analysing, and interpreting data in order to draw
@@ -415,7 +573,7 @@ Stage & What you do \\
 
 \begin{figure}[H]
 
-{\centering \pandocbounded{\includegraphics[keepaspectratio]{chapters/01-intro_files/figure-latex/ppdac-diagram-1.pdf}}
+{\centering \pandocbounded{\includegraphics[keepaspectratio]{chapters/01-intro_files/figure-pdf/ppdac-diagram-1.pdf}}
 
 }
 
@@ -430,7 +588,7 @@ questions}\label{types-of-statistical-questions}
 Not all questions are statistical questions. A statistical question
 expects \textbf{variability} in the answers.
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-tip-color-frame, opacityback=0]
 
 \textbf{Statistical question:} ``How tall are the students in Year
 11?''\\
@@ -461,7 +619,7 @@ Which of the following are statistical questions?
   What colour is the school uniform?
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Answers}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Answers}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, opacityback=0]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -497,7 +655,7 @@ that relates to real situations. When interpreting statistics, you must:
   \textbf{Relate findings back} to the real-world situation
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-warning-color!10!white, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Common mistake}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-warning-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-warning-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Common mistake}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-warning-color-frame, opacityback=0]
 
 Saying ``the mean is 24'' is not enough. Say\\
 \emph{``The mean age of survey respondents was 24 years.''}
@@ -555,7 +713,7 @@ data}\label{categorical-vs-numerical-data}
 
 \begin{figure}[H]
 
-{\centering \pandocbounded{\includegraphics[keepaspectratio]{chapters/02-data-types_files/figure-latex/data-types-tree-1.pdf}}
+{\centering \pandocbounded{\includegraphics[keepaspectratio]{chapters/02-data-types_files/figure-pdf/data-types-tree-1.pdf}}
 
 }
 
@@ -651,7 +809,7 @@ S9 & Non-binary & 161.7 & 2 & Bus & Fair \\
 S10 & Female & 159.0 & 4 & Walk & Fair \\
 \end{longtable}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Identify the variable types}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Identify the variable types}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-tip-color-frame, opacityback=0]
 
 \begin{itemize}
 \tightlist
@@ -738,7 +896,7 @@ Classify each variable as \textbf{categorical (nominal/ordinal)} or
   Distance from home to school (km)
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Answers}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Answers}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, opacityback=0]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -823,7 +981,7 @@ frequency} (proportion) of categorical data.
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-latex/fig-bar-transport-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-pdf/fig-bar-transport-1.pdf}}
 
 }
 
@@ -834,7 +992,7 @@ travel to school.}
 
 \subsection{Reading a bar chart}\label{reading-a-bar-chart}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-tip-color-frame, opacityback=0]
 
 When describing a bar chart, always comment on:
 
@@ -884,7 +1042,7 @@ point is shown as a dot above a number line.
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-latex/fig-dotplot-study-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-pdf/fig-dotplot-study-1.pdf}}
 
 }
 
@@ -917,7 +1075,7 @@ by grouping values into intervals (bins).
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-latex/fig-histogram-height-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-pdf/fig-histogram-height-1.pdf}}
 
 }
 
@@ -976,7 +1134,7 @@ deviation) \\
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-latex/fig-shape-examples-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-pdf/fig-shape-examples-1.pdf}}
 
 }
 
@@ -1010,7 +1168,7 @@ Median, Q3, Maximum.
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-latex/fig-boxplot-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-pdf/fig-boxplot-1.pdf}}
 
 }
 
@@ -1024,7 +1182,7 @@ Median, Q3, Maximum.
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-latex/fig-boxplot-anatomy-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-pdf/fig-boxplot-anatomy-1.pdf}}
 
 }
 
@@ -1083,7 +1241,7 @@ variables}.
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-latex/fig-scatter-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-pdf/fig-scatter-1.pdf}}
 
 }
 
@@ -1108,7 +1266,7 @@ Comment on:
   \textbf{Outliers} --- any unusual points
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-warning-color!10!white, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Correlation ≠ Causation}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-warning-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-warning-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Correlation ≠ Causation}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-warning-color-frame, opacityback=0]
 
 Just because two variables are related \textbf{does not} mean one causes
 the other. Always think about whether an association makes sense in
@@ -1137,7 +1295,7 @@ carefully --- bar charts are usually easier to read precisely.
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-latex/fig-pie-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/03-graphs_files/figure-pdf/fig-pie-1.pdf}}
 
 }
 
@@ -1186,7 +1344,7 @@ Two numerical variables & Scatter plot \\
   left.'' Explain.
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Answers}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Answers}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, opacityback=0]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1204,6 +1362,99 @@ Two numerical variables & Scatter plot \\
 \end{enumerate}
 
 \end{tcolorbox}
+
+\bookmarksetup{startatroot}
+
+\chapter{Chapter 4: Bivariate Data in
+Ecology}\label{chapter-4-bivariate-data-in-ecology}
+
+Investigating Kōura Habitats using the PPDAC Cycle
+
+\hfill\break
+
+\bookmarksetup{startatroot}
+
+\chapter{Introduction to Bivariate
+Data}\label{introduction-to-bivariate-data}
+
+In this chapter, we apply the PPDAC (Problem, Plan, Data, Analysis,
+Conclusion) statistical enquiry cycle to a real-world ecological
+context. Understanding how two numerical variables interact is a core
+component of NCEA Level 1 Statistics.
+
+\section{Exercise: Project Kōura}\label{exercise-project-kux14dura}
+
+\textbf{Context:} A group of students---Jack, Trishav, and Levi---are
+conducting a local ecological survey, which they have named ``Project
+Kōura''. They are investigating the populations of native freshwater
+crayfish (kōura) across several local catchments, including the Kaikorai
+Stream and the Water of Leith. They want to know if the physical
+environment of the stream affects the growth of the kōura. They have
+accessed an open dataset from the New Zealand Freshwater Fish Database
+(NZFFD) containing recent survey results.
+
+\subsection{1. Problem}\label{problem}
+
+Before looking at the data, the group needs to define a clear
+investigative question. Jack suggests they look at the relationship
+between the water temperature of the stream and the size of the kōura.
+
+\textbf{Task A:} Write a suitable investigative question for this
+survey. Ensure you specify the variables, the population, and the
+direction of your investigation.
+
+\textbf{Task B:} Write a hypothesis. Based on what you know about
+freshwater biology, what kind of relationship do you expect to see
+between water temperature and kōura carapace length?
+
+\subsection{2. Plan}\label{plan}
+
+The students isolate two numerical variables from the NZFFD dataset:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Explanatory Variable:} Stream Temperature (°C)
+\item
+  \textbf{Response Variable:} Carapace Length (mm)
+\end{itemize}
+
+\textbf{Task C:} Why is Stream Temperature the explanatory variable and
+Carapace Length the response variable, rather than the other way around?
+
+\subsection{3. Data}\label{data}
+
+We will simulate importing the NZFFD dataset directly into R to prepare
+it for analysis.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Load necessary libraries}
+\FunctionTok{library}\NormalTok{(tidyverse)}
+
+\CommentTok{\# Simulate importing the NZFFD dataset }
+\CommentTok{\# In a real scenario, you would use: read\_csv("koura\_data.csv")}
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{123}\NormalTok{)}
+\NormalTok{koura\_data }\OtherTok{\textless{}{-}} \FunctionTok{tibble}\NormalTok{(}
+  \AttributeTok{catchment =} \FunctionTok{sample}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\StringTok{"Water of Leith"}\NormalTok{, }\StringTok{"Kaikorai Stream"}\NormalTok{, }\StringTok{"Taieri River"}\NormalTok{), }\DecValTok{100}\NormalTok{, }\AttributeTok{replace =} \ConstantTok{TRUE}\NormalTok{),}
+  \AttributeTok{temp\_c =} \FunctionTok{runif}\NormalTok{(}\DecValTok{100}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{16}\NormalTok{),}
+  \CommentTok{\# Simulating a negative correlation: cooler water tends to support larger kōura}
+  \AttributeTok{carapace\_length\_mm =} \DecValTok{60} \SpecialCharTok{{-}}\NormalTok{ (}\FloatTok{1.5} \SpecialCharTok{*}\NormalTok{ temp\_c) }\SpecialCharTok{+} \FunctionTok{rnorm}\NormalTok{(}\DecValTok{100}\NormalTok{, }\AttributeTok{mean =} \DecValTok{0}\NormalTok{, }\AttributeTok{sd =} \DecValTok{4}\NormalTok{) }
+\NormalTok{)}
+
+\CommentTok{\# Preview the data structure}
+\FunctionTok{head}\NormalTok{(koura\_data)}
+\CommentTok{\#\textgreater{} \# A tibble: 6 x 3}
+\CommentTok{\#\textgreater{}   catchment       temp\_c carapace\_length\_mm}
+\CommentTok{\#\textgreater{}   \textless{}chr\textgreater{}            \textless{}dbl\textgreater{}              \textless{}dbl\textgreater{}}
+\CommentTok{\#\textgreater{} 1 Taieri River     11.0                37.1}
+\CommentTok{\#\textgreater{} 2 Taieri River     15.9                36.0}
+\CommentTok{\#\textgreater{} 3 Taieri River      9.23               48.2}
+\CommentTok{\#\textgreater{} 4 Kaikorai Stream   8.73               48.1}
+\CommentTok{\#\textgreater{} 5 Taieri River      9.14               46.7}
+\CommentTok{\#\textgreater{} 6 Kaikorai Stream  13.5                37.2}
+\end{Highlighting}
+\end{Shaded}
 
 \bookmarksetup{startatroot}
 
@@ -1352,7 +1603,7 @@ No \\
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{chapters/04-measures_files/figure-latex/fig-mean-vs-median-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/04-measures_files/figure-pdf/fig-mean-vs-median-1.pdf}}
 
 }
 
@@ -1436,7 +1687,7 @@ from the mean. A larger standard deviation means more variability.
 \end{Highlighting}
 \end{Shaded}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Rule of thumb}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Rule of thumb}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-tip-color-frame, opacityback=0]
 
 For roughly symmetric distributions, about \textbf{68\%} of data falls
 within one standard deviation of the mean, and \textbf{95\%} falls
@@ -1500,7 +1751,7 @@ Always compare both centre AND spread.
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{chapters/04-measures_files/figure-latex/fig-compare-boxplot-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/04-measures_files/figure-pdf/fig-compare-boxplot-1.pdf}}
 
 }
 
@@ -1626,7 +1877,7 @@ Use the dataset: \textbf{12, 15, 18, 18, 20, 22, 25, 25, 28, 100}
   Sketch a box plot of this data.
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Answers}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Answers}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, opacityback=0]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1669,7 +1920,7 @@ percentage.
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{chapters/05-probability_files/figure-latex/fig-prob-scale-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/05-probability_files/figure-pdf/fig-prob-scale-1.pdf}}
 
 }
 
@@ -1784,7 +2035,7 @@ it by repeating an experiment many times:
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{chapters/05-probability_files/figure-latex/fig-coin-simulation-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/05-probability_files/figure-pdf/fig-coin-simulation-1.pdf}}
 
 }
 
@@ -1794,7 +2045,7 @@ numbers).}
 
 \end{figure}%
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Law of Large Numbers}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Law of Large Numbers}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, opacityback=0]
 
 As the number of trials increases, the \textbf{relative frequency}
 (experimental probability) gets closer and closer to the \textbf{true
@@ -1885,7 +2136,7 @@ events}.
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{chapters/05-probability_files/figure-latex/fig-tree-diagram-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/05-probability_files/figure-pdf/fig-tree-diagram-1.pdf}}
 
 }
 
@@ -1993,7 +2244,7 @@ probabilities \\
   B).
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Answers}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Answers}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, opacityback=0]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2090,7 +2341,7 @@ online polls \\
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{chapters/06-inference_files/figure-latex/fig-bias-types-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/06-inference_files/figure-pdf/fig-bias-types-1.pdf}}
 
 }
 
@@ -2139,7 +2390,7 @@ size alone is not enough if the sample is biased.
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{chapters/06-inference_files/figure-latex/fig-sample-size-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/06-inference_files/figure-pdf/fig-sample-size-1.pdf}}
 
 }
 
@@ -2154,7 +2405,7 @@ One of the most important concepts in statistical literacy is
 understanding the difference between \textbf{correlation} and
 \textbf{causation}.
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-warning-color!10!white, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Correlation ≠ Causation}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-warning-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-warning-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Correlation ≠ Causation}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-warning-color-frame, opacityback=0]
 
 Two variables can be \textbf{correlated} (move together) without one
 causing the other. There may be a \textbf{confounding variable}
@@ -2179,7 +2430,7 @@ correlations}\label{famous-spurious-correlations}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{chapters/06-inference_files/figure-latex/fig-spurious-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/06-inference_files/figure-pdf/fig-spurious-1.pdf}}
 
 }
 
@@ -2223,7 +2474,7 @@ huge.
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{chapters/06-inference_files/figure-latex/fig-misleading-axis-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/06-inference_files/figure-pdf/fig-misleading-axis-1.pdf}}
 
 }
 
@@ -2235,7 +2486,7 @@ truncated y-axis (left) vs starting at zero (right).}
 \subsection{Percentage vs absolute
 numbers}\label{percentage-vs-absolute-numbers}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Be careful with percentages}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Be careful with percentages}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-tip-color-frame, opacityback=0]
 
 ``Crime increased by 100\%'' sounds alarming --- but if there were only
 2 crimes last year and 4 this year, the absolute increase is tiny.
@@ -2279,7 +2530,7 @@ Use these questions when evaluating a statistical claim in the media:
 
 \section{A worked example}\label{a-worked-example}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{News headline}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{News headline}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, opacityback=0]
 
 \emph{``Study shows eating chocolate improves exam scores by 15\%''}
 
@@ -2358,7 +2609,7 @@ variables \\
   own example.
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Answers}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Answers}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, opacityback=0]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2470,7 +2721,7 @@ information in context \\
 
 \section{Writing tips for the exam}\label{writing-tips-for-the-exam}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{The golden rule}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{The golden rule}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-tip-color-frame, opacityback=0]
 
 \textbf{Always refer back to the context.} Every answer should mention:
 - The \textbf{variable} being described - The \textbf{units} of
@@ -2535,7 +2786,7 @@ level}\label{practice-set-1-achieved-level}
   description: \textbf{symmetric / right-skewed / left-skewed}
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Worked solutions}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Worked solutions}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, opacityback=0]
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2617,7 +2868,7 @@ Teenagers & 40 & 6.58 & 7.10 & 2.85 & 3.58 & 0 & 13.0 \\
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{chapters/07-practice_files/figure-latex/fig-merit-boxplot-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/07-practice_files/figure-pdf/fig-merit-boxplot-1.pdf}}
 
 }
 
@@ -2645,7 +2896,7 @@ teenagers.}
   they are younger? Explain.
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Model answers}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Model answers}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, opacityback=0]
 
 \textbf{1. Centre:} The median exercise hours for teenagers (approx. 7.1
 hrs) is higher than for adults (4.35 hrs). This suggests teenagers in
@@ -2697,7 +2948,7 @@ Therefore, buying more bookshelves will increase your income.''}
   generalising these findings to all New Zealand households.
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, titlerule=0mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Model answers}, left=2mm, rightrule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, breakable, arc=.35mm, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, breakable, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, titlerule=0mm, left=2mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Model answers}, toptitle=1mm, arc=.35mm, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, opacityback=0]
 
 \textbf{1.} Number of bookshelves: numerical, discrete. Household
 income: numerical, continuous.
@@ -2806,6 +3057,90 @@ Khan Academy & Free video lessons on statistics &
 
 \bookmarksetup{startatroot}
 
+\chapter{Resource Library}\label{resource-library}
+
+This section consolidates the most valuable external resources used
+across this book. Each item includes a direct link and its bibliography
+citation key.
+
+\section{Assessment And Standard
+Documents}\label{assessment-and-standard-documents}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://www.nzqa.govt.nz/nqfdocs/ncea-resource/achievements/2024/as91946.pdf}{Achievement
+  Standard 91946 (NZQA PDF)} (New Zealand Qualifications Authority
+  2024a)
+\item
+  \href{https://www.nzqa.govt.nz}{NZQA Main Site} (New Zealand
+  Qualifications Authority 2024b)
+\end{itemize}
+
+\section{New Zealand Curriculum
+Resources}\label{new-zealand-curriculum-resources}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://nzcurriculum.tki.org.nz}{The New Zealand Curriculum}
+  (Ministry of Education New Zealand 2007)
+\item
+  \href{https://nzcurriculum.tki.org.nz/The-New-Zealand-Curriculum/Mathematics-and-statistics}{Mathematics
+  And Statistics Achievement Objectives} (Ministry of Education New
+  Zealand 2023)
+\end{itemize}
+
+\section{Official Data Sources}\label{official-data-sources}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://www.stats.govt.nz}{Stats NZ} (Statistics New Zealand
+  2024)
+\item
+  \href{https://new.censusatschool.org.nz}{CensusAtSchool New Zealand}
+  (University of Auckland 2024)
+\end{itemize}
+
+\section{Software And Technical
+Resources}\label{software-and-technical-resources}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://www.r-project.org}{R Project} (R Core Team 2024)
+\item
+  \href{https://quarto.org}{Quarto} (Allaire et al. 2024)
+\item
+  \href{https://ggplot2-book.org}{ggplot2 Book} (Wickham, Navarro, and
+  Pedersen 2023)
+\end{itemize}
+
+\section{Statistical Thinking And Literacy
+Texts}\label{statistical-thinking-and-literacy-texts}
+
+\begin{itemize}
+\tightlist
+\item
+  Chance Encounters: A First Course in Data Analysis and Inference (Wild
+  and Seber 2000)
+\item
+  Towards an understanding of statistical thinking (Pfannkuch and Wild
+  2004)
+\item
+  How to Lie with Statistics (Huff 1954)
+\item
+  Naked Statistics: Stripping the Dread from the Data (Wheelan 2013)
+\end{itemize}
+
+\section{Citation Notes}\label{citation-notes}
+
+The full bibliographic records for this section are maintained in
+\href{../references.bib}{references.bib}.
+
+\bookmarksetup{startatroot}
+
 \chapter{References}\label{references}
 
 \bookmarksetup{startatroot}
@@ -2870,6 +3205,69 @@ Company.
 
 Wheelan, C. (2013). \emph{Naked Statistics: Stripping the Dread from the
 Data.} W. W. Norton \& Company.
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-quarto-2024}
+Allaire, J. J., C. Teague, C. Scheidegger, Y. Xie, and C. Dervieux.
+2024. {``Quarto.''} \url{https://quarto.org}.
+
+\bibitem[\citeproctext]{ref-huff-1954}
+Huff, Darrell. 1954. \emph{How to Lie with Statistics}. New York: W. W.
+Norton \& Company.
+
+\bibitem[\citeproctext]{ref-nz-curriculum-2007}
+Ministry of Education New Zealand. 2007. {``The New Zealand
+Curriculum.''} Learning Media. \url{https://nzcurriculum.tki.org.nz}.
+
+\bibitem[\citeproctext]{ref-moe-maths-stats-2023}
+---------. 2023. {``Mathematics and Statistics - Achievement
+Objectives.''}
+\url{https://nzcurriculum.tki.org.nz/The-New-Zealand-Curriculum/Mathematics-and-statistics}.
+
+\bibitem[\citeproctext]{ref-nzqa-as91946-pdf}
+New Zealand Qualifications Authority. 2024a. {``Achievement Standard
+91946 (Official PDF).''} NZQA.
+\url{https://www.nzqa.govt.nz/nqfdocs/ncea-resource/achievements/2024/as91946.pdf}.
+
+\bibitem[\citeproctext]{ref-nzqa-as91946}
+---------. 2024b. {``Achievement Standard 91946: Interpret and Apply
+Mathematical and Statistical Information in Context.''} NZQA.
+\url{https://www.nzqa.govt.nz}.
+
+\bibitem[\citeproctext]{ref-pfannkuch-wild-2004}
+Pfannkuch, M., and C. J. Wild. 2004. {``Towards an Understanding of
+Statistical Thinking.''} In \emph{The Challenge of Developing
+Statistical Literacy, Reasoning and Thinking}, edited by D. Ben-Zvi and
+J. Garfield, 17--46. Dordrecht: Kluwer Academic.
+
+\bibitem[\citeproctext]{ref-r-core-2024}
+R Core Team. 2024. \emph{{R}: A Language and Environment for Statistical
+Computing}. Vienna, Austria: R Foundation for Statistical Computing.
+\url{https://www.r-project.org}.
+
+\bibitem[\citeproctext]{ref-statsnz-2024}
+Statistics New Zealand. 2024. {``Stats NZ --- Official Statistics.''}
+\url{https://www.stats.govt.nz}.
+
+\bibitem[\citeproctext]{ref-censusatschool-2024}
+University of Auckland. 2024. {``CensusAtSchool New Zealand.''}
+\url{https://new.censusatschool.org.nz}.
+
+\bibitem[\citeproctext]{ref-wheelan-2013}
+Wheelan, Charles. 2013. \emph{Naked Statistics: Stripping the Dread from
+the Data}. New York: W. W. Norton \& Company.
+
+\bibitem[\citeproctext]{ref-wickham-ggplot2-2023}
+Wickham, Hadley, Danielle Navarro, and Thomas Lin Pedersen. 2023.
+\emph{Ggplot2: Elegant Graphics for Data Analysis}. 3rd ed. Springer.
+\url{https://ggplot2-book.org}.
+
+\bibitem[\citeproctext]{ref-wild-seber-2000}
+Wild, C. J., and G. A. F. Seber. 2000. \emph{Chance Encounters: A First
+Course in Data Analysis and Inference}. New York: Wiley.
+
+\end{CSLReferences}
 
 
 \backmatter

@@ -1,38 +1,41 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces An example of the kind of visualisations we will create in this book.}}{3}{figure.caption.5}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces An example of the kind of visualisations we will create in this book.}}{5}{figure.caption.5}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces The PPDAC cycle --- a framework for statistical investigations.}}{6}{figure.caption.6}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces The PPDAC cycle --- a framework for statistical investigations.}}{7}{figure.caption.6}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Classification of data types.}}{9}{figure.caption.7}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Classification of data types.}}{11}{figure.caption.7}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {7.1}{\ignorespaces Bar chart showing how Year 11 students travel to school.}}{15}{figure.caption.8}%
 \contentsline {figure}{\numberline {7.2}{\ignorespaces Dot plot of daily study hours for Year 11 students.}}{16}{figure.caption.9}%
 \contentsline {figure}{\numberline {7.3}{\ignorespaces Histogram of student heights (cm).}}{17}{figure.caption.10}%
 \contentsline {figure}{\numberline {7.4}{\ignorespaces Examples of different distribution shapes.}}{18}{figure.caption.11}%
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Box plot of maths scores by transport type.}}{19}{figure.caption.12}%
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Anatomy of a box plot.}}{19}{figure.caption.13}%
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Scatter plot of study hours vs maths score.}}{21}{figure.caption.14}%
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Pie chart of transport modes.}}{22}{figure.caption.15}%
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Box plot of maths scores by transport type.}}{18}{figure.caption.12}%
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Anatomy of a box plot.}}{18}{figure.caption.13}%
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Scatter plot of study hours vs maths score.}}{19}{figure.caption.14}%
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Pie chart of transport modes.}}{20}{figure.caption.15}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Effect of outliers on mean vs median.}}{27}{figure.caption.16}%
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Comparing maths scores between Group A and Group B.}}{29}{figure.caption.17}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {11.1}{\ignorespaces The probability scale from impossible (0) to certain (1).}}{33}{figure.caption.18}%
-\contentsline {figure}{\numberline {11.2}{\ignorespaces Relative frequency of heads approaches 0.5 as the number of flips increases (the law of large numbers).}}{35}{figure.caption.19}%
-\contentsline {figure}{\numberline {11.3}{\ignorespaces Tree diagram for drawing two balls from a bag (with replacement).}}{37}{figure.caption.20}%
+\contentsline {figure}{\numberline {11.1}{\ignorespaces Effect of outliers on mean vs median.}}{28}{figure.caption.16}%
+\contentsline {figure}{\numberline {11.2}{\ignorespaces Comparing maths scores between Group A and Group B.}}{30}{figure.caption.17}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {13.1}{\ignorespaces Different types of bias and how they affect results.}}{41}{figure.caption.21}%
-\contentsline {figure}{\numberline {13.2}{\ignorespaces Variability in sample estimates decreases as sample size increases.}}{42}{figure.caption.22}%
-\contentsline {figure}{\numberline {13.3}{\ignorespaces A spurious correlation: ice cream sales and drownings both increase in summer.}}{43}{figure.caption.23}%
-\contentsline {figure}{\numberline {13.4}{\ignorespaces The same data displayed with a truncated y-axis (left) vs starting at zero (right).}}{44}{figure.caption.24}%
+\contentsline {figure}{\numberline {13.1}{\ignorespaces The probability scale from impossible (0) to certain (1).}}{34}{figure.caption.18}%
+\contentsline {figure}{\numberline {13.2}{\ignorespaces Relative frequency of heads approaches 0.5 as the number of flips increases (the law of large numbers).}}{36}{figure.caption.19}%
+\contentsline {figure}{\numberline {13.3}{\ignorespaces Tree diagram for drawing two balls from a bag (with replacement).}}{37}{figure.caption.20}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {15.1}{\ignorespaces Weekly exercise hours for adults and teenagers.}}{51}{figure.caption.25}%
+\contentsline {figure}{\numberline {15.1}{\ignorespaces Different types of bias and how they affect results.}}{41}{figure.caption.21}%
+\contentsline {figure}{\numberline {15.2}{\ignorespaces Variability in sample estimates decreases as sample size increases.}}{42}{figure.caption.22}%
+\contentsline {figure}{\numberline {15.3}{\ignorespaces A spurious correlation: ice cream sales and drownings both increase in summer.}}{43}{figure.caption.23}%
+\contentsline {figure}{\numberline {15.4}{\ignorespaces The same data displayed with a truncated y-axis (left) vs starting at zero (right).}}{43}{figure.caption.24}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {17.1}{\ignorespaces Weekly exercise hours for adults and teenagers.}}{50}{figure.caption.25}%
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
