@@ -1,7 +1,3 @@
----
-title: "Interpreting Statistical Information"
----
-
 # Interpreting Statistical Information {#sec-inference}
 
 A major focus of AS91946 is the ability to **critically read and interpret**
@@ -244,7 +240,7 @@ need much more information before accepting this claim.
 4. Explain the difference between correlation and causation using your own
    example.
 
-::: {.callout-note collapse="true"}
+::: {.callout-note .content-visible collapse="true" when-format="html"}
 ## Answers
 1. Wealthier people are more likely to eat breakfast (they can afford food)
    and also earn more — wealth is the confounding variable.

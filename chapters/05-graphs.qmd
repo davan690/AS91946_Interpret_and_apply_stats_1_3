@@ -1,7 +1,3 @@
----
-title: "Statistical Graphs and Displays"
----
-
 # Statistical Graphs and Displays {#sec-graphs}
 
 A well-chosen graph makes patterns in data immediately visible. In this
@@ -278,7 +274,7 @@ pie(
 4. True or false: "A right-skewed distribution has a longer tail on the left."
    Explain.
 
-::: {.callout-note collapse="true"}
+::: {.callout-note .content-visible collapse="true" when-format="html"}
 ## Answers
 1. A histogram or dot plot — height is numerical and continuous.
 2. Positive direction (more study → higher score), roughly linear form,

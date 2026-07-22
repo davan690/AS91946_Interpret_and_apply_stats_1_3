@@ -7,15 +7,18 @@ credits, external exam). Designed for Year 11 students in New Zealand.
 ## Contents
 
 | Chapter | Topic |
-|---------|-------|
+| ------- | ----- |
 | Welcome | Introduction and overview of the standard |
-| 1 | What is Statistics? (PPDAC cycle, statistical questions) |
-| 2 | Types of Data and Variables (categorical, numerical, ordinal, etc.) |
-| 3 | Statistical Graphs and Displays (bar charts, histograms, box plots, scatter plots) |
-| 4 | Measures of Centre and Spread (mean, median, IQR, standard deviation) |
-| 5 | Probability (classical, experimental, two-way tables, tree diagrams) |
-| 6 | Interpreting Statistical Information (bias, correlation vs causation, critical reading) |
-| 7 | Practice Questions and Exam Tips (Achieved / Merit / Excellence) |
+| 1 | Combined AS1.1 and AS1.3 approach |
+| 2 | What is Statistics? (statistical questions, context, core terms) |
+| 3 | The PPDAC enquiry cycle |
+| 4 | Types of Data and Variables (categorical, numerical, ordinal, etc.) |
+| 5 | Statistical Graphs and Displays (bar charts, histograms, box plots, scatter plots) |
+| 6 | Bivariate Data in Ecology (koura example) |
+| 7 | Measures of Centre and Spread (mean, median, IQR, standard deviation) |
+| 8 | Practice Questions and Exam Tips (Achieved / Merit / Excellence) |
+| 9 | Probability (classical, experimental, two-way tables, tree diagrams) |
+| 10 | Interpreting Statistical Information (bias, correlation vs causation, critical reading) |
 
 ## Rendering the book
 
@@ -56,18 +59,21 @@ quarto render --to pdf
 
 ## Repository structure
 
-```
+```text
 .
 ├── _quarto.yml          # Quarto book configuration
 ├── index.qmd            # Welcome page
 ├── chapters/
-│   ├── 01-intro.qmd     # What is Statistics?
-│   ├── 02-data-types.qmd
-│   ├── 03-graphs.qmd
-│   ├── 04-measures.qmd
-│   ├── 05-probability.qmd
-│   ├── 06-inference.qmd
-│   └── 07-practice.qmd
+│   ├── 01-intro.qmd                # Combined AS1.1 and AS1.3 approach
+│   ├── 02-what-is-statistics.qmd
+│   ├── 03-ppdac.qmd
+│   ├── 04-data-types.qmd
+│   ├── 05-graphs.qmd
+│   ├── 06-1-koura-example.qmd
+│   ├── 07-measures.qmd
+│   ├── 08-practice.qmd
+│   ├── 09-probability.qmd
+│   └── 10-inference.qmd
 ├── references.qmd       # References page
 ├── references.bib       # BibTeX bibliography
 ├── setup.R              # R package installer

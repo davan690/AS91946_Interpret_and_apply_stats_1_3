@@ -1,7 +1,3 @@
----
-title: "Practice Questions and Exam Tips"
----
-
 # Practice Questions and Achievement Standard Tips {#sec-practice}
 
 This chapter brings everything together with practice questions at each
@@ -88,21 +84,18 @@ cat(sort(heights), "\n")
 5. A student drew a histogram of this data. Circle the most appropriate
    description: **symmetric / right-skewed / left-skewed**
 
-::: {.callout-note collapse="true"}
+::: {.callout-note .content-visible collapse="true" when-format="html"}
 ## Worked solutions
 
-```{r}
-#| label: practice-solutions-achieved
+1. Numerical, continuous — height can take any value within a range.
 
-set.seed(111)
-heights <- round(rnorm(20, 168, 9), 1)
+2. Mean: 164.8 cm
 
-cat("1. Numerical, continuous — height can take any value within a range.\n\n")
-cat("2. Mean:", round(mean(heights), 1), "cm\n\n")
-cat("3. Median:", median(heights), "cm\n\n")
-cat("4. Range:", max(heights) - min(heights), "cm\n\n")
-cat("5. Likely symmetric (heights tend to be normally distributed).\n")
-```
+3. Median: 165.1 cm
+
+4. Range: 37.3 cm
+
+5. Likely symmetric (heights tend to be normally distributed).
 :::
 
 ## Practice set 2 — Merit level
@@ -135,13 +128,19 @@ knitr::kable(summary_tbl, caption = "Weekly exercise hours: adults vs teenagers"
 #| label: fig-merit-boxplot
 #| fig-cap: "Weekly exercise hours for adults and teenagers."
 
+exercise_df <- data.frame(
+   group = rep(c("Adults", "Teenagers"), each = 40),
+   hours = c(adults, teenagers)
+)
+
 boxplot(
-  list(Adults = adults, Teenagers = teenagers),
-  col    = c("#4dac26", "#0571b0"),
+   hours ~ group,
+   data   = exercise_df,
+   col    = c("#4dac26", "#0571b0"),
    border = "#333333",
-  main   = "Weekly Exercise Hours",
-  ylab   = "Hours per week",
-  las    = 1
+   main   = "Weekly Exercise Hours",
+   ylab   = "Hours per week",
+   las    = 1
 )
 ```
 
@@ -155,7 +154,7 @@ boxplot(
 4. Can we conclude from this data that teenagers exercise more because they
    are younger? Explain.
 
-::: {.callout-note collapse="true"}
+::: {.callout-note .content-visible collapse="true" when-format="html"}
 ## Model answers
 
 **1. Centre:** The median exercise hours for teenagers (approx.
@@ -196,7 +195,7 @@ bookshelves will increase your income."*
    Remuera (a wealthy suburb). Evaluate the reliability of generalising these
    findings to all New Zealand households.
 
-::: {.callout-note collapse="true"}
+::: {.callout-note .content-visible collapse="true" when-format="html"}
 ## Model answers
 
 **1.** Number of bookshelves: numerical, discrete. Household income:

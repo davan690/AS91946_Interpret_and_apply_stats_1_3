@@ -1,7 +1,3 @@
----
-title: "Types of Data and Variables"
----
-
 # Types of Data and Variables {#sec-data-types}
 
 Understanding the **type of data** you have is the first step in choosing the
@@ -172,7 +168,7 @@ Classify each variable as **categorical (nominal/ordinal)** or **numerical
 7. Year level
 8. Distance from home to school (km)
 
-::: {.callout-note collapse="true"}
+::: {.callout-note .content-visible collapse="true" when-format="html"}
 ## Answers
 1. Numerical, discrete (or ordinal — shoe sizes have a natural order but are
    not continuous)

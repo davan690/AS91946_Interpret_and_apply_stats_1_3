@@ -14,14 +14,20 @@ book:
     mathematical and statistical information in real-world contexts.
   chapters:
     - index.qmd
-    - chapters/01-intro.qmd
-    - chapters/02-data-types.qmd
-    - chapters/03-graphs.qmd
-    - chapters/04-1-koura-example.qmd
-    - chapters/04-measures.qmd
-    - chapters/05-probability.qmd
-    - chapters/06-inference.qmd
-    - chapters/07-practice.qmd
+    - part: "Part 1: Core Statistical Thinking"
+      chapters:
+        - chapters/01-intro.qmd
+        - chapters/02-what-is-statistics.qmd
+        - chapters/03-ppdac.qmd
+        - chapters/04-data-types.qmd
+        - chapters/05-graphs.qmd
+        - chapters/06-1-koura-example.qmd
+        - chapters/07-measures.qmd
+        - chapters/08-practice.qmd
+    - part: "Part 2: Probability and Critical Reading"
+      chapters:
+        - chapters/09-probability.qmd
+        - chapters/10-inference.qmd
     - resources/resource-library.qmd
     - references.qmd
 
@@ -58,13 +64,13 @@ format:
     pdf-engine: xelatex
     toc: true
     toc-depth: 2
-    lof: true
-    lot: true
     number-sections: true
     colorlinks: true
     fig-align: center
     fig-width: 6
     fig-height: 4
+    execute:
+      echo: false
     include-in-header:
       - tex/book-pdf-header.tex
 

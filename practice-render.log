@@ -1,0 +1,56 @@
+
+
+processing file: 07-practice.qmd
+1/9                         
+2/9 [practice-data-achieved]
+3/9                         
+4/9 [practice-data-merit]   
+5/9                         
+6/9 [fig-merit-boxplot]     
+7/9                         
+8/9 [formulas-table]        
+9/9                         
+output file: 07-practice.knit.md
+
+pandoc 
+  to: html
+  output-file: 07-practice.html
+  standalone: true
+  toc: true
+  number-sections: true
+  title-prefix: 'AS91946: Interpret and Apply Mathematical and Statistical Information'
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc-depth: 3
+  number-offset:
+    - 7
+  variables: {}
+  
+metadata
+  crossref:
+    chapters: true
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  bibliography:
+    - ../references.bib
+  knitr:
+    opts_chunk:
+      comment: '#>'
+      collapse: true
+  theme:
+    light: flatly
+    dark: darkly
+  code-summary: Show R code
+  hide-description: true
+  title: "[[7]{.chapter-number}\_ [Practice Questions and Achievement Standard Tips]{.chapter-title}]{#sec-practice .quarto-section-identifier}"
+  description: |
+    A comprehensive resource for the New Zealand Achievement Standard 91946
+    (Level 1, 4 credits). This book covers interpreting and applying
+    mathematical and statistical information in real-world contexts.
+  
+Output created: ..\_book\chapters\07-practice.html
+

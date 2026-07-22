@@ -1,0 +1,165 @@
+# What is Statistics? {#sec-intro}
+
+```{r}
+#| label: intro-setup
+#| include: false
+
+source("../book-support.R")
+```
+
+```{r}
+#| label: fig-statistics-poster
+#| fig-cap: "Statistics connects questions, data, and decisions in real contexts."
+#| echo: false
+
+plot_statistics_poster()
+```
+
+## Why statistics matters
+
+Every day we are surrounded by data. News headlines cite poll results, sports
+commentators compare player averages, health campaigns report risk percentages,
+and social media shows us trending topics. **Statistics** is the science that
+helps us make sense of all this information.
+
+At school, statistics helps you ask better questions, decide what evidence is
+relevant, and explain what the data does or does not support. Outside school,
+it helps you read media claims critically instead of accepting every graph or
+headline at face value.
+
+::: {.callout-note}
+## Key definition
+**Statistics** is the practice of collecting, organising, summarising,
+analysing, and interpreting data in order to draw conclusions and make
+decisions.
+:::
+
+## Statistical questions and variability
+
+Not all questions are statistical questions. A statistical question expects
+**variability** in the answers.
+
+::: {.callout-tip}
+**Statistical question:** "How tall are the students in Year 11?"  
+*(Heights will vary - this is statistical.)*
+
+**Not a statistical question:** "How tall is Ms Smith?"  
+*(Only one answer - not statistical.)*
+:::
+
+### Practice identifying statistical questions
+
+Which of the following are statistical questions?
+
+1. How many pages are in Harry Potter and the Philosopher's Stone?
+2. How many hours per week do Year 11 students spend on homework?
+3. What is the population of New Zealand?
+4. What are the most popular music genres among teenagers in Auckland?
+5. What colour is the school uniform?
+6. How long does it take students in our class to get to school?
+7. Which lunch option is chosen most often in the canteen each Friday?
+8. How many goals did the first XI football team score this season?
+9. What is the average screen time for Year 11 students on a school night?
+10. How many desks are in Room 12?
+
+::: {.callout-note .content-visible collapse="true" when-format="html"}
+## Answer key
+1. Not statistical - there is one fixed answer.
+2. Statistical - different students spend different amounts of time.
+3. Not statistical - there is one (changing but definite) answer.
+4. Statistical - different teenagers have different preferences.
+5. Not statistical - the uniform colour is fixed.
+6. Statistical - travel times will vary between students.
+7. Statistical - different students make different choices.
+8. Not statistical - the season total is one fixed value.
+9. Statistical - students will report different screen times.
+10. Not statistical - there is one fixed count for that room.
+:::
+
+### A template for writing your own statistical question
+
+Use this sentence frame when you are stuck:
+
+> What is the distribution of **[variable]** for **[population]** in **[context]**?
+
+For example:
+
+- What is the distribution of weekly study time for Year 11 students at our school?
+- How does travel time to school differ for students who take the bus compared with students who walk?
+
+## Population, sample, and variable
+
+These three ideas appear constantly in both the internal and the external.
+
+| Idea | What it means | School-based example |
+|------|----------------|----------------------|
+| **Population** | The full group you want to know about | All Year 11 students at the school |
+| **Sample** | The smaller group you actually collect data from | The 30 Year 11 students surveyed in form time |
+| **Variable** | What you measure or record | Height, travel time, or favourite sport |
+
+::: {.callout-warning}
+## Common trap
+A large sample is not automatically a good sample. If the sample is biased,
+the conclusion can still be misleading.
+:::
+
+## Why context matters
+
+In AS91946, **context** is central. You will always work with data that
+relates to real situations. When interpreting statistics, you must:
+
+- **Name the variable** being measured
+- **State the units** (e.g. centimetres, dollars, minutes)
+- **Refer to the population** the data came from
+- **Relate findings back** to the real-world situation
+
+The strongest answers do more than quote a number. They explain what that
+number means for the people, objects, or events being studied.
+
+::: {.callout-warning}
+## Common mistake
+Saying "the mean is 24" is not enough. Say  
+*"The mean age of survey respondents was 24 years."*
+:::
+
+### Population vs sample in context
+
+Suppose a school wants to know how much sleep Year 11 students get on a normal
+school night.
+
+- The **population** is all Year 11 students at the school.
+- A **sample** might be one statistics class or 40 students chosen at random.
+- The **variable** is hours of sleep on a school night.
+
+If the sample only comes from one extension class, the results might not
+represent the whole year level. That is why context and sampling always matter
+when you interpret a summary or graph.
+
+## Glossary
+
+| Term | Meaning |
+|------|---------|
+| **Data** | Values collected by observation or measurement |
+| **Variable** | A characteristic that can take different values |
+| **Population** | The entire group of interest |
+| **Sample** | A subset of the population selected for study |
+| **Statistic** | A numerical summary calculated from a sample |
+| **Parameter** | A numerical summary of a whole population |
+| **Context** | The real-world situation that gives meaning to the data |
+
+## Exit ticket
+
+1. Give two examples of statistical questions you could investigate at your school.
+2. A student says "the average score is 65". What is missing from this statement?
+3. What is the difference between a population and a sample?
+4. Write one sentence that uses a summary statistic in full context.
+5. Explain why a sample could be large but still poor quality.
+
+::: {.callout-note .content-visible collapse="true" when-format="html"}
+## Exit ticket answers
+1. Any valid examples should expect variation, such as study time, travel time, or sleep.
+2. The variable, the units, and the group being described are missing.
+3. The population is the whole group of interest; the sample is the smaller group actually measured.
+4. Example: "The median travel time for Year 11 students in our survey was 18 minutes."
+5. A large sample can still be biased if it leaves out important groups or is collected unfairly.
+:::

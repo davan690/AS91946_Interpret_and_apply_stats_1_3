@@ -1,7 +1,3 @@
----
-title: "Probability"
----
-
 # Probability {#sec-probability}
 
 **Probability** is a measure of how likely an event is to occur. It is
@@ -295,7 +291,7 @@ cat("(A negative expected gain means this is not a good investment!)\n")
 
 3. If P(A) = 0.4 and P(B) = 0.3 and A and B are independent, find P(A and B).
 
-::: {.callout-note collapse="true"}
+::: {.callout-note .content-visible collapse="true" when-format="html"}
 ## Answers
 1. a. 4/10 = 0.4; b. 6/10 = 0.6; c. 6/10 = 0.6
 2. b. 12/30 = 0.4; c. (30 − 18 − 12 + 6)/30 = 6/30 = 0.2

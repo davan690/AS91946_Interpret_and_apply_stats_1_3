@@ -1,18 +1,24 @@
----
-title: "Welcome"
----
+# Welcome
 
-# Welcome {.unnumbered}
+This resource combines the shared teaching for **AS1.1** (statistical
+investigation) and **AS1.3 / 91946** (interpret and apply statistical
+information). The goal is to make the overlap explicit, reduce duplication,
+and show students how the same statistical thinking is used in both standards.
 
-This resource now integrates teaching for:
+## One toolkit, two assessments
+
+You are not learning two separate subjects. The same toolkit appears in both
+courses:
 
 - **AS1.1 (Internal)** - statistical investigation in context
-- **AS1.3 (External / 91946)** - interpret and apply mathematical and statistical information in context
+- **AS1.3 (External / 91946)** - interpret and apply statistical information in context
 
-The aim is to make the shared learning explicit, avoid duplication, and show
-students exactly where each idea is assessed.
+In the internal assessment, you use that toolkit to plan an investigation,
+collect data, analyse it, and write a conclusion. In the external assessment,
+you use the same ideas to read graphs, interpret tables, question claims, and
+justify your reasoning under exam conditions.
 
-## Overlap and difference (first-page map)
+## Where the standards overlap
 
 | Area | AS1.1 Internal | AS1.3 External (91946) | Overlap? |
 |------|----------------|------------------------|----------|
@@ -20,9 +26,19 @@ students exactly where each idea is assessed.
 | Designing and carrying out an investigation | Strong focus | Not the primary assessment focus | **Mostly 1.1** |
 | Reading graphs/tables in context | Required | Required | **Both** |
 | Numerical summaries (mean, median, IQR, spread) | Used for evidence in investigation | Directly assessed in interpretation questions | **Both** |
-| Probability, two-way tables, expected value | Limited/indirect | Directly assessed | **Mostly 1.3** |
+| Probability, two-way tables, expected value | Limited or indirect | Directly assessed | **Mostly 1.3** |
 | Justification and statistical reasoning | Required in conclusion and evaluation | Required in written responses | **Both** |
 | Exam-style interpretation under time pressure | Not the main format | Core format | **Mostly 1.3** |
+
+## How this book is organised
+
+This draft keeps the shared statistical foundation together first, then moves
+probability and critical reading into a second part.
+
+| Part | Main focus | Why it comes here |
+|------|------------|-------------------|
+| **Part 1** | Statistical questions, data types, displays, comparison, and practice | These chapters support both standards immediately. |
+| **Part 2** | Probability and critical reading of statistical information | These ideas matter for AS1.3, but they can sit after the core foundation. |
 
 ## Assessment tags used in this book
 
@@ -30,26 +46,29 @@ students exactly where each idea is assessed.
 - **[1.3]** mainly assessed in the external
 - **[Both]** directly useful for both standards
 
-## Logical learning order and where it is tested
+## Suggested learning pathway
 
 Follow this sequence from start to finish:
 
 | Order | Learning focus | Where in this book | Tested in |
 |------:|----------------|--------------------|-----------|
-| 1 | Statistical questions, context language, PPDAC foundations | Chapter 1 - What is Statistics? | **[Both]** |
-| 2 | Variables and data types, choosing suitable displays | Chapter 2 - Data types | **[Both]** |
-| 3 | Graph interpretation and comparison language | Chapter 3 - Graphs | **[Both]** |
-| 4 | Centre and spread for comparison and conclusions | Chapter 4 - Measures | **[Both]** |
-| 5 | Probability tools and table-based reasoning | Chapter 5 - Probability | **[1.3]** |
-| 6 | Sampling quality, bias, inference, critique | Chapter 6 - Inference | **[Both]** |
+| 1 | Combined overview of AS1.1 and AS1.3 expectations | Chapter 1 - Combined approach | **[Both]** |
+| 2 | Statistical questions, context language, core terms | Chapter 2 - What is Statistics? | **[Both]** |
+| 3 | Statistical enquiry cycle and investigation flow | Chapter 3 - PPDAC | **[Both]** |
+| 4 | Variables and data types, choosing suitable displays | Chapter 4 - Data types | **[Both]** |
+| 5 | Graph interpretation and comparison language | Chapter 5 - Graphs | **[Both]** |
+| 6 | Centre and spread for comparison and conclusions | Chapter 6 - Measures | **[Both]** |
 | 7 | Applied tasks and mixed practice with response scaffolds | Chapter 7 - Practice | **[Both]** |
-| 8 | Extension reading and source material | Resource Library | **[Both]** |
+| 8 | Probability tools and table-based reasoning | Part 2 - Probability | **[1.3]** |
+| 9 | Sampling quality, bias, inference, critique | Part 2 - Critical reading | **[Both]** |
+| 10 | Extension reading and source material | Resource Library | **[Both]** |
 
 ## How to use this pathway for dual preparation
 
 1. Build investigation capability first (Chapters 1-4) for strong **AS1.1** evidence.
-2. Add probability and fast interpretation skills (Chapters 5-7) for **AS1.3**.
-3. In every written response, include context, comparison, and justification language.
+2. Use the practice chapter to consolidate comparison and communication.
+3. Add the Part 2 extension chapters for explicit **AS1.3** preparation.
+4. In every written response, include context, comparison, and justification language.
 
 ## What this standard is about
 
@@ -65,9 +84,13 @@ In AS1.3 (91946), you will learn to:
 Each chapter builds on the previous one. You will find:
 
 - Clear explanations of key concepts with New Zealand examples
-- Interactive R code blocks showing how statistics is done with real data
+- Interactive R code blocks in the HTML version showing how statistics is done with real data
 - Practice questions at Achievement, Merit, and Excellence levels
 - Glossary boxes highlighting important vocabulary
+
+In the PDF version, the working code is hidden so the focus stays on the
+mathematics and interpretation. In the HTML version, the code can still be
+opened for teaching, demonstration, or extension.
 
 ::: {.callout-tip}
 ## At a Glance: AS1.3 (External)
@@ -90,33 +113,33 @@ justification in AS1.3.
 
 All data visualisations and calculations in this book are produced using **R** and
 rendered with **Quarto**. You do not need to be able to write R code to succeed
-in this standard — the code blocks are provided so your teacher can demonstrate
-concepts live and so you can explore data yourself if you choose.
+in this standard. The code is there so your teacher can demonstrate the
+analysis live, and so students who want extension material can inspect how the
+graphs and summaries were built.
+
+```{r}
+#| label: welcome-setup
+#| include: false
+
+source("book-support.R")
+```
 
 ```{r}
 #| label: welcome-plot
 #| fig-cap: "An example of the kind of visualisations we will create in this book."
 #| echo: false
 
-# A motivating example: NZ weather data (simulated for illustration)
-set.seed(42)
-months <- factor(month.abb, levels = month.abb)
-avg_temp <- c(17, 17, 15, 12, 9, 7, 6, 8, 10, 13, 14, 16)
-
-barplot(
-  avg_temp,
-  names.arg = months,
-  col = "#2c7bb6",
-  border = "white",
-  main = "Average Monthly Temperature — Wellington, NZ (°C)",
-  ylab = "Temperature (°C)",
-  xlab = "Month",
-  las = 1
-)
-abline(h = mean(avg_temp), col = "#d7191c", lwd = 2, lty = 2)
-legend("topright", legend = paste0("Mean = ", round(mean(avg_temp), 1), "°C"),
-       col = "#d7191c", lwd = 2, lty = 2, bty = "n")
+plot_welcome_weather()
 ```
+
+## If statistics feels new
+
+Start with the core chapters and keep a small set of support resources nearby:
+
+- Khan Academy for quick refreshers on averages, graphs, and probability
+- CensusAtSchool New Zealand for local student data examples
+- Stats NZ for authentic graphs, tables, and media-style summaries
+- The Resource Library at the end of this book for curriculum and standard documents
 
 ## Getting started
 

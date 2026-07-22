@@ -1,17 +1,6 @@
----
-title: "Chapter 4: Bivariate Data in Ecology"
-subtitle: "Investigating Kōura Habitats using the PPDAC Cycle"
-format:
-  html:
-    theme: cosmo
-    toc: true
-    code-fold: show
-  pdf:
-    documentclass: scrreprt
-    number-sections: true
----
+# Bivariate Data in Ecology {#sec-koura}
 
-# Introduction to Bivariate Data
+*Investigating koura habitats using the PPDAC cycle*
 
 In this chapter, we apply the PPDAC (Problem, Plan, Data, Analysis, Conclusion) statistical enquiry cycle to a real-world ecological context. Understanding how two numerical variables interact is a core component of NCEA Level 1 Statistics.
 
