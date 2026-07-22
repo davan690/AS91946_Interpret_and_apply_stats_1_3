@@ -7,6 +7,8 @@
 source("../book-support.R")
 ```
 
+![Statistical enquiry cycle. Fill in the blanks and colour away your worries.](../images/enquiry_solutions.png)
+
 New Zealand's statistics curriculum uses the **PPDAC cycle** as the framework
 for carrying out statistical investigations and interpreting statistical
 information.

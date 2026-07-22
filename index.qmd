@@ -1,9 +1,6 @@
 # Welcome
 
-This resource combines the shared teaching for **AS1.1** (statistical
-investigation) and **AS1.3 / 91946** (interpret and apply statistical
-information). The goal is to make the overlap explicit, reduce duplication,
-and show students how the same statistical thinking is used in both standards.
+This guide combines the learning for both *AS 1.1* (91944: Explore data using a statistical enquiry process) and *AS 1.3* (91946: Interpret and apply statistical information). By highlighting where these two standards overlap, this resource eliminates unnecessary duplication and shows you how core statistical thinking connects the data you collect with the data you evaluate in everyday life.
 
 ## One toolkit, two assessments
 

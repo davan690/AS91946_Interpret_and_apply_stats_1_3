@@ -1,0 +1,76 @@
+---
+title: "Exit_ticket_1"
+author: "Anthony Davidson"
+format: html
+editor: visual
+---
+
+## **Mathematics & Statistics**
+
+### **Homework Sheet: Statistical Investigations & Interpretation**
+
+**Name:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ $\quad$ **Class:** \_\_\_\_\_\_\_\_\_\_ $\quad$ **Due Date:** \_\_\_\_\_\_\_\_\_\_
+
+### **Part A: Designing Enquiries**
+
+#### **Question 1: Exit Ticket Focus**
+
+Give **two** examples of statistical questions you could investigate using data gathered at your school.
+
+> *Tip: Make sure your questions have a clear group, a variable to measure, and can be answered using data.*
+
+-   **Question 1:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+-   **Question 2:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+### **Part B: Evaluating Statistical Claims**
+
+#### **Question 2**
+
+A student reads a news headline and says: **“The average score is 65.”**
+
+What crucial information is missing from this statement? List at least **three** details needed to make this stat meaningful.
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+### **Part C: Population vs. Sample**
+
+#### **Question 3**
+
+In your own words, explain the difference between a **population** and a **sample**.
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+### **Part D: Sampling Quality**
+
+#### **Question 4**
+
+Explain why a sample could be **very large** but still **poor quality**. Give a practical example of how this might happen.
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+## **Teacher Answer Key / Marking Guide**
+
+-   **Q1 (Statistical Questions):** Answers should be investigative rather than single-value facts.
+
+    -   *Good:* "Do Year 11 students spend more hours on screens per week than Year 9 students?"
+
+    -   *Poor:* "How many students are at our school?"
+
+-   **Q2 (Missing Info):** Needs:
+
+    1.  *Type of average* (Mean or Median?).
+
+    2.  *Units/Scale* (65 out of 100? 65%? 65 points?).
+
+    3.  *Group/Context* (Who scored 65? Which test/year level?).
+
+-   **Q3 (Population vs Sample):** A **population** is the entire group you want to draw conclusions about. A **sample** is the smaller subset chosen from that population to actually collect data from.
+
+-   **Q4 (Large but Poor Sample):** Focuses on **sampling bias**. If a sample is large but non-random or self-selected (e.g., surveying 1,000 students, but all of them are standing outside the gym at lunch), it will not represent the whole population regardless of sample size.
