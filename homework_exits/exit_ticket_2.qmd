@@ -1,0 +1,68 @@
+---
+title: "Exit_ticket_2"
+author: "Anthony Davidson"
+format: html
+editor: visual
+---
+
+## **Mathematics & Statistics**
+
+### **Homework Sheet: Data, Variables & Graphs**
+
+**Name:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ $\quad$ **Class:** \_\_\_\_\_\_\_\_\_\_ $\quad$ **Due Date:** \_\_\_\_\_\_\_\_\_\_
+
+### **Part A: Types of Variables**
+
+#### **Question 1: Identifying Variable Types**
+
+For each variable below, identify whether it is **Categorical** or **Numerical**.
+
+-   Eye colour: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+-   Height (in cm): \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+-   Favourite sport: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+-   Time to run 100m (in seconds): \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+### **Part B: Choosing Graphs**
+
+#### **Question 2: Bivariate Data**
+
+What type of graph is most suitable for displaying the relationship between two **numerical** variables (e.g., a person's height vs. their arm span)?
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+#### **Question 3: Categorical Data**
+
+You have collected data on the favourite music genre of 50 students. Name **one** suitable graph to show the number of students for each genre.
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+### **Part C: Data Sources**
+
+#### **Question 4: Primary vs. Secondary**
+
+In your own words, explain the difference between a **primary data source** and a **secondary data source**. Give one practical example of each.
+
+-   **Primary Source:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+-   **Secondary Source:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+## **Teacher Answer Key / Marking Guide**
+
+-   **Q1 (Variable Types):**
+
+    -   Eye colour: **Categorical**
+    -   Height (in cm): **Numerical**
+    -   Favourite sport: **Categorical**
+    -   Time to run 100m (in seconds): **Numerical**
+
+-   **Q2 (Bivariate Data):** A **scatter plot** (or scatter graph) is the best choice to show the relationship between two numerical variables.
+
+-   **Q3 (Categorical Data):** A **bar chart** or a **pie chart**.
+
+-   **Q4 (Data Sources):**
+
+    -   *Primary Source:* Data you collect yourself for your specific investigation. Example: surveying classmates, measuring plant growth, timing a race.
+    -   *Secondary Source:* Data collected by someone else for a different purpose, which you then use. Example: using data from Stats NZ, CensusAtSchool, a news article, or a scientific paper.
