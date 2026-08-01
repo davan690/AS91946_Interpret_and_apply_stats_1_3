@@ -1,0 +1,70 @@
+---
+title: "Exit_ticket_4"
+author: "Anthony Davidson"
+format: html
+editor: visual
+---
+
+## **Mathematics & Statistics**
+
+### **Homework Sheet: Understanding Variation**
+
+**Name:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ $\quad$ **Class:** \_\_\_\_\_\_\_\_\_\_ $\quad$ **Due Date:** \_\_\_\_\_\_\_\_\_\_
+
+**Instructions:** For each of the following scenarios, identify the specific type of variation and explain how it could be managed in a statistical investigation.
+
+### **Context 1: Project Kōura (Primary Data)**
+
+Your class is conducting an investigation into the average mass of kōura (freshwater crayfish) in a local stream. You are catching, weighing, and releasing them.
+
+| What could cause variation? | Type of Variation | How could it be managed? |
+|:---|:---|:---|
+| The kōura keeps flicking its tail and moving while on the electronic scales. | \_\_\_\-
+| Some kōura were caught immediately after feeding, while others hadn't eaten yet. | \_\_\_\-
+| A student accidentally writes down $45\text{ g}$ on the clipboard instead of $54\text{ g}$. | \_\_\_\-
+| You only caught 4 kōura, and they all happened to be juveniles. | \_\_\_\-
+
+### **Context 2: Extreme Sports Group (Secondary Data)**
+
+You have been given a dataset containing the completion times (in seconds) of students navigating a new downhill mountain bike track. The data was collected by parent volunteers over a whole weekend.
+
+#### **Question 1: Identifying Variation**
+
+-   A parent volunteer started their stopwatch late for several riders because they were distracted. What type of variation is this?
+    \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+-   Some students rode the track on Saturday morning when it was dry, while others rode on Sunday afternoon after heavy rain made the track muddy. What type of variation is this?
+    \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+#### **Question 2: Assumptions with Secondary Data**
+
+Because this is secondary data, you were not there to manage the variation yourself. Describe **two assumptions** regarding variation that you have to make about how this data was collected.
+
+-   **Assumption 1:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+-   **Assumption 2:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+## **Teacher Answer Key / Marking Guide**
+
+-   **Context 1 (Project Kōura):**
+    -   **Kōura moving:**
+        -   *Type:* **Measurement Variation/Error**.
+        -   *Management:* Standardise the process. E.g., wait for the kōura to settle, use a container, or take multiple readings and find the average.
+    -   **Kōura feeding:**
+        -   *Type:* **Natural/Inherent Variation**.
+        -   *Management:* Take a large and random sample to ensure these natural differences are represented proportionally and don't bias the overall average.
+    -   **Writing 45g for 54g:**
+        -   *Type:* **Transcribing/Recording Error**.
+        -   *Management:* Double-check data entry, have a second person verify, and review data for obvious mistakes after collection.
+    -   **Only 4 juveniles:**
+        -   *Type:* **Sampling Variation/Error**.
+        -   *Management:* Increase the sample size and use a random sampling method to ensure a more representative mix of the population is captured.
+
+-   **Context 2 (Extreme Sports):**
+    -   **Late stopwatch:** **Systematic Variation** (or systematic error/bias). It consistently makes the recorded times shorter than they actually were.
+    -   **Dry vs. Muddy:** **Induced Variation** (or a confounding/lurking variable). The weather conditions introduce an external factor that systematically affects completion times.
+    -   **Assumptions (any two):**
+        -   Assume the volunteers were trained and used a consistent timing method.
+        -   Assume the timing equipment was accurate and functioned correctly.
+        -   Assume any obvious recording errors were identified and corrected.
+        -   Assume the sample of riders was representative of the intended population.

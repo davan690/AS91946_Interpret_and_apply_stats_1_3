@@ -1,0 +1,179 @@
+---
+title: "Worksheet: Measures of Spread"
+subtitle: "Range, Quartiles, and Interquartile Range (IQR)"
+author: "Year 11 Statistics"
+date: "today"
+format:
+  pdf:
+    documentclass: article
+    papersize: a4
+    fontsize: 11pt
+    geometry:
+      - margin=2.5cm
+    linestretch: 1.3
+    header-includes: |
+      \usepackage{fancyhdr}
+      \pagestyle{fancy}
+      \fancyhf{}
+      \lhead{Worksheet: Measures of Spread}
+      \rhead{Year 11 Statistics}
+      \cfoot{Page \thepage}
+      \renewcommand{\headrulewidth}{0.4pt}
+      \renewcommand{\footrulewidth}{0.4pt}
+      \newcommand{\workingspace}[1]{\vspace{#1}}
+  docx: default
+---
+
+```{=latex}
+\noindent\textbf{Name:} \underline{\hspace{8cm}} \hfill \textbf{Date:} \underline{\hspace{3cm}}
+```
+
+## Section 1: Key Concepts & Formula Review
+
+### Key Terms
+
+Rawa (Data/Information)
+: Collected values or measurements.
+
+Range
+: The total spread of the data, from the lowest value to the highest value.
+
+Median ($Q_2$)
+: The exact middle value of an **ordered** data set.
+
+Lower Quartile ($Q_1$)
+: The middle value of the lower half of the data (the 25th percentile).
+
+Upper Quartile ($Q_3$)
+: The middle value of the upper half of the data (the 75th percentile).
+
+Interquartile Range (IQR)
+: The spread of the middle 50% of the data. It is a measure of consistency.
+
+### Core Formulas
+
+$$ \text{Range} = \text{Maximum Value} - \text{Minimum Value} $$
+
+$$ \text{Interquartile Range (IQR)} = Q_3 - Q_1 $$
+
+---
+
+---
+
+## Section 2: Guided Practice
+
+### Example Problem
+
+A group of students recorded their paddle times in a Waka Ama sprint session. The times, in seconds, are:
+
+**Data Set:** `[3, 5, 6, 8, 10, 12, 15]`
+
+**1. Find the Minimum and Maximum:**
+
+- Minimum = 3
+- Maximum = 15
+
+**2. Calculate the Range:**
+
+- $\text{Range} = 15 - 3 = 12$
+
+**3. Find the Quartiles:**
+
+- The data is already ordered.
+- **Median ($Q_2$)**: The middle number is **8**.
+- **Lower Half**: `[3, 5, 6]` $\longrightarrow$ The middle of this half is **5**. So, $Q_1 = 5$.
+- **Upper Half**: `[10, 12, 15]` $\longrightarrow$ The middle of this half is **12**. So, $Q_3 = 12$.
+
+**4. Calculate the IQR:**
+
+$$
+\begin{aligned}
+\text{IQR} &= Q_3 - Q_1 \\
+           &= 12 - 5 \\
+           &= 7
+\end{aligned}
+$$
+
+---
+
+## Section 3: Independent Practice
+
+### Exercise: Kapa Haka Performance Scores
+
+Two Kapa Haka groups recorded their judges' scores across 7 rounds.
+
+- **Group A:** `[12, 14, 15, 16, 18, 20, 22]`
+- **Group B:** `[4, 8, 15, 16, 18, 28, 35]`
+
+#### Task 1: Analyze Group A
+
+- **Minimum:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+- **Maximum:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+- **Range:** $\text{Maximum} - \text{Minimum} =$ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+- **Median ($Q_2$):** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+- **Lower Quartile ($Q_1$):** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+- **Upper Quartile ($Q_3$):** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+- **IQR:** $Q_3 - Q_1 =$ \_\_\_\_\_\_\_\_ $-$ \_\_\_\_\_\_\_\_ $=$ \_\_\_\_\_\_\_\_
+
+#### Task 2: Analyze Group B
+
+- **Minimum:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+- **Maximum:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+- **Range:** $\text{Maximum} - \text{Minimum} =$ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+- **Median ($Q_2$):** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+- **Lower Quartile ($Q_1$):** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+- **Upper Quartile ($Q_3$):** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+- **IQR:** $Q_3 - Q_1 =$ \_\_\_\_\_\_\_\_ $-$ \_\_\_\_\_\_\_\_ $=$ \_\_\_\_\_\_\_\_
+
+#### Task 3: Contextual Comparison (Literacy Focus)
+
+Write 2–3 full sentences comparing the spread and consistency of Group A and Group B. Which group performed more consistently? Use values from your calculations (Range or IQR) to justify your answer.
+
+```{=latex}
+\workingspace{5cm}
+```
+
+---
+
+---
+
+## Section 4: Extension & Challenge
+
+Consider the following score set from a secondary athletics meet. Note that the data set has an even number of values.
+
+**Data Set:** `[2, 4, 7, 9, 12, 15, 18, 42]`
+
+**1. Calculate the Range and IQR for this data set:**
+
+- Range = \_\_\_\_\_\_\_\_
+- IQR = \_\_\_\_\_\_\_\_
+
+*Hint: For an even-numbered data set, the median ($Q_2$) is the average of the two middle numbers. The lower half and upper half will then each have 4 numbers. $Q_1$ and $Q_3$ will also be averages.*
+
+**2. Critical Reflection Question:**
+
+The score `42` is much higher than the others and could be considered an outlier.
+
+a) How did this outlier affect the **Range** versus the **IQR**?
+```{=latex}
+\workingspace{3cm}
+```
+
+b) Why is the IQR often a better measure of spread (consistency) than the Range when a data set contains extreme outliers?
+```{=latex}
+\workingspace{4cm}
+```
+
+---
+
+---
+
+## Section 5: Summary Task
+
+Given the ordered data set: `[2, 4, 7, 9, 12, 15, 18]`
+
+Calculate the following:
+
+- **Range:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+- **Median ($Q_2$):** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+- **IQR ($Q_3 - Q_1$):** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
