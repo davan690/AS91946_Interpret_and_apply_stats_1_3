@@ -1,6 +1,8 @@
 project:
   type: book
-  output-dir: _book
+  output-dir: docs
+  resources:
+    - .nojekyll
 
 book:
   title: "AS91946: Interpret and Apply Mathematical and Statistical Information"
