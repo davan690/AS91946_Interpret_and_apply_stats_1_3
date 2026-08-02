@@ -1,23 +1,37 @@
 # Combined AS1.1 and AS1.3 Approach {#sec-combined}
 
 This chapter explains how this book combines the shared teaching for
-**AS1.1** (statistical investigation) and **AS1.3 / 91946** (interpret and
-apply statistical information). The aim is to make overlap explicit, reduce
-duplication, and show how one set of statistical ideas supports both
+**AS91944/1.1 (Internal)**---*Explore data using a statistical enquiry process*---and **AS91946/1.3 (External)**---*Interpret and apply mathematical and statistical information*.
+
+The aim is to make overlap explicit, reduce duplication, and show how one set of statistical ideas supports both
 assessments.
 
 ## One toolkit, two assessments
 
-You are not learning two separate subjects. The same toolkit appears in both
-courses:
+You are not learning two separate subjects. The same toolkit appears in both courses:
 
-- **AS1.1 (Internal)** - statistical investigation in context
-- **AS1.3 (External / 91946)** - interpret and apply statistical information in context
+- **AS91944/1.1 (Internal)**
 
+| Grade      | What you need to do                                                  |
+|------------|----------------------------------------------------------------------|
+| Achieved   | Explore data using a statistical enquiry process.                    |
+| Merit      | Explore data using a statistical enquiry process, with justification. |
+| Excellence | Explore data using a statistical enquiry process, with statistical insight. |
+
+- **AS91946/1.3 (External)**
+
+| Grade      | What you need to do                                              |
+|------------|------------------------------------------------------------------|
+| Achieved   | Interpret and apply statistical information.                     |
+| Merit      | Interpret and apply statistical information with justification.  |
+| Excellence | Interpret and apply statistical information with statistical insight. |
+
+::: {.callout-note}
 In AS1.1, you use that toolkit to plan an investigation, collect data, analyse
 it, and write a conclusion. In AS1.3, you use the same ideas to read graphs,
 interpret tables, question claims, and justify reasoning under exam
 conditions.
+:::
 
 ## Where the standards overlap
 
@@ -40,18 +54,24 @@ preparation:
 |---------|--------------------|----------------|
 | @sec-intro | General foundations: statistical language, context, population/sample/variable | **Both** |
 | @sec-ppdac | Statistical enquiry cycle and investigation logic | **Both** (especially AS1.1 process) |
-| @sec-data-types | Variable classification and choosing appropriate representations | **Both** |
+| @sec-data-types | Variable classification and choosing appropriate displays | **Both** |
 | @sec-graphs | Interpreting and comparing displays in context | **Both** |
-| Chapter on measures | Centre, spread, and comparison statements | **Both** |
+| @sec-measures | Centre, spread, and comparison statements | **Both** |
 | Part 2 chapters | Probability and critical reading under assessment-style conditions | **Mostly 1.3** |
 
-## Suggested learning pathway
+## Getting started
 
-1. Build statistical language and context first (@sec-intro).
-2. Learn the enquiry process (@sec-ppdac) before writing conclusions.
-3. Strengthen representation and interpretation through data types and graphs.
-4. Consolidate with measures and practice.
-5. Extend to probability and critical reading for explicit AS1.3 preparation.
+Continue to @sec-intro for the general introduction to statistics, then move
+to @sec-ppdac for the dedicated enquiry-cycle chapter.
+
+### Suggested learning pathway
+
+1.  Build statistical language and context first (@sec-intro).
+2.  Learn the enquiry process (@sec-ppdac) before writing conclusions.
+3.  Strengthen representation by understanding data types (@sec-data-types) and choosing appropriate graphs (@sec-graphs).
+4.  Use measures of centre and spread to compare distributions and justify findings (@sec-measures).
+5.  Consolidate all core skills with mixed practice questions (@sec-practice).
+6.  Extend to probability tools (@sec-probability) and critical reading of statistical claims (@sec-inference) for explicit AS1.3 preparation.
 
 ::: {.callout-note}
 ## Internal and external connection
@@ -60,7 +80,3 @@ If you can explain findings from your own investigation clearly and in context
 justification in AS1.3.
 :::
 
-## Getting started
-
-Continue to @sec-intro for the general introduction to statistics, then move
-to @sec-ppdac for the dedicated enquiry-cycle chapter.

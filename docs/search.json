@@ -124,7 +124,7 @@
     "href": "chapters/01-intro.html",
     "title": "2  Combined AS1.1 and AS1.3 Approach",
     "section": "",
-    "text": "2.1 One toolkit, two assessments\nThis chapter explains how this book combines the shared teaching for AS1.1 (statistical investigation) and AS1.3 / 91946 (interpret and apply statistical information). The aim is to make overlap explicit, reduce duplication, and show how one set of statistical ideas supports both assessments.\nYou are not learning two separate subjects. The same toolkit appears in both courses:\nIn AS1.1, you use that toolkit to plan an investigation, collect data, analyse it, and write a conclusion. In AS1.3, you use the same ideas to read graphs, interpret tables, question claims, and justify reasoning under exam conditions.",
+    "text": "2.1 One toolkit, two assessments\nThis chapter explains how this book combines the shared teaching for AS91944/1.1 (Internal)—Explore data using a statistical enquiry process—and AS91946/1.3 (External)—Interpret and apply mathematical and statistical information.\nThe aim is to make overlap explicit, reduce duplication, and show how one set of statistical ideas supports both assessments.\nYou are not learning two separate subjects. The same toolkit appears in both courses:",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Combined AS1.1 and AS1.3 Approach</span>"
@@ -135,7 +135,7 @@
     "href": "chapters/01-intro.html#one-toolkit-two-assessments",
     "title": "2  Combined AS1.1 and AS1.3 Approach",
     "section": "",
-    "text": "AS1.1 (Internal) - statistical investigation in context\nAS1.3 (External / 91946) - interpret and apply statistical information in context",
+    "text": "AS91944/1.1 (Internal)\n\n\n\n\n\n\n\n\nGrade\nWhat you need to do\n\n\n\n\nAchieved\nExplore data using a statistical enquiry process.\n\n\nMerit\nExplore data using a statistical enquiry process, with justification.\n\n\nExcellence\nExplore data using a statistical enquiry process, with statistical insight.\n\n\n\n\nAS91946/1.3 (External)\n\n\n\n\n\n\n\n\nGrade\nWhat you need to do\n\n\n\n\nAchieved\nInterpret and apply statistical information.\n\n\nMerit\nInterpret and apply statistical information with justification.\n\n\nExcellence\nInterpret and apply statistical information with statistical insight.\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nIn AS1.1, you use that toolkit to plan an investigation, collect data, analyse it, and write a conclusion. In AS1.3, you use the same ideas to read graphs, interpret tables, question claims, and justify reasoning under exam conditions.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Combined AS1.1 and AS1.3 Approach</span>"
@@ -157,18 +157,7 @@
     "href": "chapters/01-intro.html#links-to-the-rest-of-this-text",
     "title": "2  Combined AS1.1 and AS1.3 Approach",
     "section": "2.3 Links to the rest of this text",
-    "text": "2.3 Links to the rest of this text\nUse this chapter as the map for what each section contributes to dual preparation:\n\n\n\n\n\n\n\n\nSection\nMain learning link\nStandards link\n\n\n\n\nChapter 3\nGeneral foundations: statistical language, context, population/sample/variable\nBoth\n\n\nChapter 4\nStatistical enquiry cycle and investigation logic\nBoth (especially AS1.1 process)\n\n\nChapter 5\nVariable classification and choosing appropriate representations\nBoth\n\n\nChapter 6\nInterpreting and comparing displays in context\nBoth\n\n\nChapter on measures\nCentre, spread, and comparison statements\nBoth\n\n\nPart 2 chapters\nProbability and critical reading under assessment-style conditions\nMostly 1.3",
-    "crumbs": [
-      "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Combined AS1.1 and AS1.3 Approach</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/01-intro.html#suggested-learning-pathway",
-    "href": "chapters/01-intro.html#suggested-learning-pathway",
-    "title": "2  Combined AS1.1 and AS1.3 Approach",
-    "section": "2.4 Suggested learning pathway",
-    "text": "2.4 Suggested learning pathway\n\nBuild statistical language and context first (Chapter 3).\nLearn the enquiry process (Chapter 4) before writing conclusions.\nStrengthen representation and interpretation through data types and graphs.\nConsolidate with measures and practice.\nExtend to probability and critical reading for explicit AS1.3 preparation.\n\n\n\n\n\n\n\nNoteInternal and external connection\n\n\n\nIf you can explain findings from your own investigation clearly and in context (AS1.1), you are building the same reasoning needed for interpretation and justification in AS1.3.",
+    "text": "2.3 Links to the rest of this text\nUse this chapter as the map for what each section contributes to dual preparation:\n\n\n\n\n\n\n\n\nSection\nMain learning link\nStandards link\n\n\n\n\nChapter 3\nGeneral foundations: statistical language, context, population/sample/variable\nBoth\n\n\nChapter 4\nStatistical enquiry cycle and investigation logic\nBoth (especially AS1.1 process)\n\n\nChapter 5\nVariable classification and choosing appropriate displays\nBoth\n\n\nChapter 6\nInterpreting and comparing displays in context\nBoth\n\n\nChapter 8\nCentre, spread, and comparison statements\nBoth\n\n\nPart 2 chapters\nProbability and critical reading under assessment-style conditions\nMostly 1.3",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Combined AS1.1 and AS1.3 Approach</span>"
@@ -178,8 +167,8 @@
     "objectID": "chapters/01-intro.html#getting-started",
     "href": "chapters/01-intro.html#getting-started",
     "title": "2  Combined AS1.1 and AS1.3 Approach",
-    "section": "2.5 Getting started",
-    "text": "2.5 Getting started\nContinue to Chapter 3 for the general introduction to statistics, then move to Chapter 4 for the dedicated enquiry-cycle chapter.",
+    "section": "2.4 Getting started",
+    "text": "2.4 Getting started\nContinue to Chapter 3 for the general introduction to statistics, then move to Chapter 4 for the dedicated enquiry-cycle chapter.\n\n2.4.1 Suggested learning pathway\n\nBuild statistical language and context first (Chapter 3).\nLearn the enquiry process (Chapter 4) before writing conclusions.\nStrengthen representation by understanding data types (Chapter 5) and choosing appropriate graphs (Chapter 6).\nUse measures of centre and spread to compare distributions and justify findings (Chapter 8).\nConsolidate all core skills with mixed practice questions (Chapter 9).\nExtend to probability tools (Chapter 10) and critical reading of statistical claims (Chapter 11) for explicit AS1.3 preparation.\n\n\n\n\n\n\n\nNoteInternal and external connection\n\n\n\nIf you can explain findings from your own investigation clearly and in context (AS1.1), you are building the same reasoning needed for interpretation and justification in AS1.3.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Combined AS1.1 and AS1.3 Approach</span>"
