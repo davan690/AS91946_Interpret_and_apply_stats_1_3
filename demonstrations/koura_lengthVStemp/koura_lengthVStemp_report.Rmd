@@ -1,0 +1,563 @@
+---
+title: "Koura Length vs Water Temperature"
+author: "Anthony Davidson: worked excellence example"
+date: "2026-08-07"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  fig.width = 9,
+  fig.height = 6
+)
+
+library(tidyverse)
+library(broom)
+library(scales)
+```
+
+# Statistical Enquiry Report (PPDAC)
+
+## Context and Purpose
+
+Freshwater crayfish (koura, *Paranephrops* spp.) are a taonga species in Aotearoa New Zealand and an important indicator of stream habitat quality. This enquiry uses a real secondary dataset downloaded from the New Zealand Freshwater Fish Database (NZFFD) records in this project folder. The report is written as a full Year 11 Level 1 statistical investigation that aims for Excellence by showing deep statistical thinking, careful critique, and clear communication in context.
+
+The specific context here is ecological monitoring: stream surveys have measured both water conditions and fish/crayfish biological measurements over many years and across many catchments. In this report, we focus on one question students can investigate with bivariate methods:
+
+"Is there evidence of a relationship between stream water temperature and minimum observed koura length in the NZFFD records we have available?"
+
+This is a meaningful question for two reasons.
+
+1. Ecologically, temperature affects freshwater metabolism, oxygen levels, and habitat suitability.
+2. Statistically, both variables are numerical and continuous, so we can use scatterplots, correlation, and linear modelling.
+
+At the same time, a high-quality report must avoid overclaiming. This is observational secondary data, not a controlled experiment. That means we can discuss association patterns, but we cannot claim direct cause-and-effect from this dataset alone.
+
+## Context Images and Attribution
+
+To support classroom presentation and report context, open-license image options are listed in `image_sources.md` in this same folder. These include koura close-up images and Otago/Kaikorai stream context images with licensing details and suggested captions.
+
+## PPDAC Cycle
+
+## Problem
+
+### Investigative question
+
+For koura records in this NZFFD dataset where both variables are available, what is the relationship between water temperature ($^\circ C$) and minimum observed koura length (mm), and how strong is that relationship?
+
+### Population and sample
+
+- Population of interest: all potential koura observations in New Zealand freshwater habitats relevant to this monitoring context.
+- Available sample: the NZFFD rows in this file, restricted to rows where both `waterTemperature` and `minLength` are present.
+
+### Variables
+
+- Explanatory variable: `waterTemperature` ($^\circ C$)
+- Response variable: `minLength` (mm)
+
+The explanatory/response direction is justified because stream temperature is an environmental condition and length is a biological outcome measured on the organisms. It is much more plausible to think temperature may influence size patterns than size influencing stream temperature.
+
+### Hypothesis before analysis
+
+A reasonable prior hypothesis is that temperature may show some relationship with length, but the direction may not be simple in real ecological data because age structure, habitat quality, predation, seasonal timing, and sampling method can all affect measured size. Therefore we expect either:
+
+- a weak trend overall, or
+- a trend that becomes clearer only when controlling for confounding variables.
+
+## Plan
+
+To answer the question, we will:
+
+1. Import and inspect the raw data.
+2. Keep only koura rows and needed variables.
+3. Clean missing values and obvious impossible values.
+4. Build a main scatterplot and a linear trend line.
+5. Compute summary statistics and correlations.
+6. Fit a linear model `minLength ~ waterTemperature`.
+7. Check model diagnostics using residual plots.
+8. Investigate unusual/influential points.
+9. Write a conclusion with statistical evidence, practical meaning, limitations, and improvement ideas.
+
+## Data
+
+```{r load-and-inspect}
+raw_dat <- read.csv("./data/nzffdms.csv")
+
+cat("Rows in raw file:", nrow(raw_dat), "\n")
+cat("Columns in raw file:", ncol(raw_dat), "\n")
+
+raw_dat %>%
+  select(taxonCommonName, waterTemperature, minLength) %>%
+  glimpse()
+```
+
+```{r clean-data}
+analysis_dat <- raw_dat %>%
+  filter(taxonCommonName == "Koura") %>%
+  mutate(
+    eventDate = as.Date(eventDate, format = "%d/%m/%Y"),
+    waterTemperature = as.numeric(waterTemperature),
+    minLength = as.numeric(minLength)
+  ) %>%
+  filter(
+    !is.na(waterTemperature),
+    !is.na(minLength),
+    waterTemperature >= 0,
+    minLength >= 0
+  ) %>%
+  select(
+    nzffdRecordNumber,
+    eventDate,
+    catchmentName,
+    waterBody,
+    waterTemperature,
+    minLength,
+    samplingMethod
+  )
+
+cat("Rows after cleaning:", nrow(analysis_dat), "\n")
+cat("Rows removed due to missing/invalid values:", nrow(raw_dat) - nrow(analysis_dat), "\n")
+
+summary(analysis_dat[, c("waterTemperature", "minLength")])
+```
+
+```{r export-for-nzgrapher, include=FALSE}
+write.csv(
+  analysis_dat %>%
+    select(
+      nzffdRecordNumber,
+      catchmentName,
+      waterBody,
+      waterTemperature,
+      minLength,
+      samplingMethod
+    ),
+  "./data/nzgrapher_koura_temp_length.csv",
+  row.names = FALSE
+)
+```
+
+### Data quality comment
+
+The biggest quality issue is missingness. The raw dataset has many koura rows, but only a much smaller subset has both temperature and minimum length recorded. This matters because our conclusions are about the subset with complete data, not necessarily all koura habitats in New Zealand.
+
+## How to Recreate This in NZGrapher
+
+NZGrapher is a good classroom tool for this investigation because it gives students a spreadsheet-style interface while still supporting the main visual and numerical ideas used in this report. The R code in this file handles the more complex cleaning, and the chunk above exports a student-ready file called `nzgrapher_koura_temp_length.csv` into the `data` folder.
+
+### What to use in NZGrapher
+
+- Dataset file: `data/nzgrapher_koura_temp_length.csv`
+- Explanatory variable: `waterTemperature`
+- Response variable: `minLength`
+
+### Recommended student workflow
+
+1. Render or run this report once so the cleaned NZGrapher CSV is created.
+2. Open NZGrapher in a browser.
+3. Start a new graph and import `nzgrapher_koura_temp_length.csv`.
+4. Check the imported columns and confirm that `waterTemperature` and `minLength` are recognised as numerical variables.
+5. Choose a scatterplot because both variables are numerical.
+6. Put `waterTemperature` on the x-axis.
+7. Put `minLength` on the y-axis.
+8. Give the graph a clear title such as `Koura minimum length vs water temperature`.
+9. Label axes clearly as `Water temperature (deg C)` and `Minimum observed length (mm)` if NZGrapher does not do this automatically.
+10. Turn on the least-squares or regression line option if available.
+11. If NZGrapher shows correlation or equation output, record those values beside the graph.
+12. Inspect the scatterplot for direction, form, strength, spread, clusters, and unusual points.
+
+### What students should look for
+
+Students should describe the same main features that appear in the R analysis.
+
+1. Direction: the trend is slightly positive overall.
+2. Form: a straight-line summary is possible, but the pattern is weak.
+3. Strength: the relationship is weak because points are widely scattered.
+4. Unusual features: some points sit well away from the main cloud.
+5. Context: temperature alone does not explain much of the variation in minimum koura length.
+
+### Suggested NZGrapher write-up structure
+
+Students can use NZGrapher outputs to write a solid bivariate discussion by following this structure.
+
+1. State the investigative question.
+2. Name the explanatory and response variables.
+3. Describe the scatterplot using direction, form, strength, and unusual features.
+4. Quote the correlation and regression line if NZGrapher provides them.
+5. Explain what the slope means in context: the predicted change in minimum length for each $1^\circ C$ increase in water temperature.
+6. Comment on whether the relationship is useful for prediction.
+7. Finish with a cautious contextual conclusion that association does not prove causation.
+
+### Important limitation when using NZGrapher
+
+NZGrapher can handle the graphing and basic bivariate summaries well, but it is not the best tool for the full cleaning and diagnostic workflow shown in this report. In particular:
+
+- the raw NZFFD file contains many missing values,
+- the complete-case filtering is easier and more transparent in R,
+- influence checks and residual diagnostics are stronger in R,
+- the NZGrapher graph should be treated as a classroom-friendly version of the same investigation, not a full replacement for the coded analysis.
+
+### Teacher note
+
+If you want students to work entirely inside NZGrapher, give them the exported file `nzgrapher_koura_temp_length.csv` rather than the original `nzffdms.csv`. That keeps the lesson focused on statistical interpretation instead of raw data wrangling.
+
+## Analysis
+
+### 1. Exploratory visualisation
+
+```{r fig-scatter-main, fig.cap="Scatterplot of minimum koura length (mm) against water temperature (°C), including a fitted linear trend and 95% confidence band."}
+ggplot(analysis_dat, aes(x = waterTemperature, y = minLength)) +
+  geom_point(alpha = 0.6, size = 2.4, color = "#1f3a5f") +
+  geom_smooth(method = "lm", se = TRUE, color = "#d7263d", linewidth = 1.1) +
+  labs(
+    title = "Koura Minimum Length vs Water Temperature",
+    subtitle = "NZFFD complete cases in this project dataset",
+    x = "Water temperature (°C)",
+    y = "Minimum observed length (mm)"
+  ) +
+  theme_minimal(base_size = 14)
+```
+
+The cloud of points is very spread out vertically, indicating large variation in lengths at similar temperatures. The fitted line slopes slightly upward, but visual slope alone is not enough evidence for a strong relationship.
+
+### 2. Numerical summaries and correlation
+
+```{r summaries-and-correlation}
+overall_summary <- analysis_dat %>%
+  summarise(
+    n = n(),
+    temp_mean = mean(waterTemperature),
+    temp_median = median(waterTemperature),
+    temp_sd = sd(waterTemperature),
+    length_mean = mean(minLength),
+    length_median = median(minLength),
+    length_sd = sd(minLength),
+    pearson_r = cor(waterTemperature, minLength, method = "pearson"),
+    spearman_rho = cor(waterTemperature, minLength, method = "spearman")
+  )
+
+overall_summary
+
+temp_band_summary <- analysis_dat %>%
+  mutate(temp_band = cut(
+    waterTemperature,
+    breaks = c(0, 10, 14, 18, 30),
+    include.lowest = TRUE,
+    right = FALSE
+  )) %>%
+  group_by(temp_band) %>%
+  summarise(
+    n = n(),
+    mean_length = mean(minLength),
+    median_length = median(minLength),
+    iqr_length = IQR(minLength),
+    .groups = "drop"
+  )
+
+temp_band_summary
+```
+
+Key early findings:
+
+- Pearson $r$ is close to zero (very weak linear association).
+- Spearman $\rho$ is also weak, suggesting only a weak monotonic pattern.
+- Grouped summaries by temperature bands do not show a smooth, consistent increase or decrease.
+
+This already suggests that if a relationship exists, it is small relative to overall variability in lengths.
+
+### 3. Linear model
+
+We fit:
+
+$$
+\widehat{\text{minLength}} = a + b\,(\text{waterTemperature})
+$$
+
+```{r fit-model}
+mod <- lm(minLength ~ waterTemperature, data = analysis_dat)
+
+model_coef <- tidy(mod, conf.int = TRUE)
+model_glance <- glance(mod)
+
+model_coef
+model_glance
+```
+
+Interpretation framework for Year 11:
+
+- Intercept $a$: predicted minimum length when temperature is $0^\circ C$. This is often outside the practical data center and may have limited biological meaning.
+- Slope $b$: predicted average change in minimum length (mm) per $1^\circ C$ increase.
+- $R^2$: proportion of variation in length explained by temperature in this model.
+
+In this dataset, the slope is positive but small, and $R^2$ is very low. That means temperature alone explains only a tiny share of variation in minimum koura length.
+
+### 4. Diagnostics and model assumptions
+
+```{r fig-lm-diagnostics, fig.width=10, fig.height=8, fig.cap="Standard linear model diagnostic plots (residuals, Q-Q, scale-location, leverage)."}
+par(mfrow = c(2, 2))
+plot(mod)
+par(mfrow = c(1, 1))
+```
+
+Diagnostic interpretation:
+
+1. Residuals vs fitted: spread is fairly wide with several large positive residuals.
+2. Q-Q plot: upper tail departs from the straight line, indicating heavy right-tail residuals/outliers.
+3. Scale-location: modest heteroscedasticity, with non-constant spread possible.
+4. Residuals vs leverage: a few potentially influential points exist.
+
+These are important because they warn us not to over-trust a single straight-line model as a complete description of the ecology.
+
+### 5. Outliers and influence check
+
+```{r influence-check}
+diag_dat <- augment(mod, data = analysis_dat) %>%
+  mutate(
+    abs_std_resid = abs(.std.resid),
+    cooks_d = cooks.distance(mod),
+    leverage = hatvalues(mod)
+  )
+
+top_influence <- diag_dat %>%
+  arrange(desc(cooks_d)) %>%
+  select(nzffdRecordNumber, waterTemperature, minLength, .std.resid, cooks_d, leverage) %>%
+  slice(1:8)
+
+top_influence
+
+influence_threshold <- 4 / nrow(analysis_dat)
+cat("Cook's distance threshold (4/n):", round(influence_threshold, 4), "\n")
+cat("Points above threshold:", sum(diag_dat$cooks_d > influence_threshold), "\n")
+```
+
+```{r sensitivity-model}
+sens_dat <- diag_dat %>%
+  filter(cooks_d <= influence_threshold)
+
+mod_sens <- lm(minLength ~ waterTemperature, data = sens_dat)
+
+tibble(
+  model = c("Main model", "Sensitivity model (reduced influence)"),
+  slope = c(coef(mod)[2], coef(mod_sens)[2]),
+  r_squared = c(summary(mod)$r.squared, summary(mod_sens)$r.squared),
+  p_value_slope = c(summary(mod)$coefficients[2, 4], summary(mod_sens)$coefficients[2, 4])
+) %>%
+  mutate(across(where(is.numeric), round, 4))
+```
+
+The sensitivity comparison checks whether the overall story depends heavily on a few unusual points. If conclusions stay similar, our interpretation is more stable.
+
+### 6. Additional graph for student interpretation
+
+```{r fig-box-by-band, fig.cap="Minimum koura length distributions across water-temperature bands."}
+analysis_dat %>%
+  mutate(temp_band = cut(
+    waterTemperature,
+    breaks = c(0, 10, 14, 18, 30),
+    include.lowest = TRUE,
+    right = FALSE
+  )) %>%
+  ggplot(aes(x = temp_band, y = minLength, fill = temp_band)) +
+  geom_boxplot(alpha = 0.75, outlier.alpha = 0.7) +
+  scale_fill_brewer(palette = "Blues") +
+  labs(
+    title = "Distribution of Koura Length by Temperature Band",
+    x = "Water temperature band (°C)",
+    y = "Minimum observed length (mm)",
+    fill = "Temp band"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "none")
+```
+
+This plot supports the same idea: within each temperature band there is substantial spread and overlap. That overlap shows temperature band alone is not a strong discriminator of short vs long observed lengths in this sample.
+
+## Conclusion and Discussion (Excellence Depth)
+
+### Direct answer to the investigative question
+
+Based on the complete-case NZFFD data used in this report, there is only weak evidence of a relationship between stream water temperature and minimum observed koura length. The fitted linear trend is slightly positive, but the relationship is small and explains very little of the total variation in observed minimum lengths.
+
+In practical terms, this means that knowing the temperature alone does not allow strong prediction of minimum koura length. Koura lengths at similar temperatures are often very different, and that variability dominates the pattern.
+
+### Evidence statement using multiple forms of statistical information
+
+An Excellence response should combine graph-based, numerical, and model-based evidence. Here is that combined evidence chain.
+
+1. Graphical evidence
+
+The scatterplot shows a broad vertical spread of points at almost all temperatures, with only a slight upward fitted trend. If there were a strong relationship, points would cluster more tightly around the fitted line. They do not.
+
+2. Correlation evidence
+
+Both Pearson and Spearman correlations are weak. This indicates the relationship is weak both as a straight-line pattern and as a general monotonic pattern.
+
+3. Model evidence
+
+The linear model slope is small, and the model $R^2$ is very low. Low $R^2$ means temperature explains only a small proportion of length variation. So even if the slope direction is positive, the predictive usefulness is limited.
+
+4. Diagnostic evidence
+
+Residual and Q-Q diagnostics show non-normal upper-tail behaviour and a few unusual observations. This suggests some data points are much larger than model expectations and that simple linear assumptions are only partly met. Therefore, interpretation should be cautious.
+
+5. Robustness evidence
+
+The sensitivity check removing high Cook's distance points is used to test stability. The core story remains weak-association rather than transforming into a strong trend. This improves confidence that our conclusion is not just caused by one or two extreme points.
+
+### Statistical interpretation in context (what the trend does and does not mean)
+
+It is tempting to interpret any positive slope as "warmer water makes koura larger." That would be too strong for this dataset. The correct interpretation is:
+
+- There is a slight positive association in this sample.
+- The association is weak and noisy.
+- This observational dataset does not support a strong causal claim.
+
+A Year 11 Excellence report must show this distinction clearly: association is not causation.
+
+### Why a weak relationship is still a useful finding
+
+A weak finding is still a valuable scientific result, especially in ecology. It tells us that a single-variable explanation is incomplete. In real stream systems, organisms respond to multiple factors simultaneously. A weak bivariate result often points to richer multivariable ecology rather than "no learning".
+
+For example, koura length may depend on:
+
+- age class and population structure,
+- habitat quality (substrate, shelter, riparian cover),
+- dissolved oxygen,
+- flow conditions and stream permanence,
+- catchment-level differences,
+- sampling method and effort,
+- seasonal timing,
+- predation and food availability.
+
+Temperature may still matter biologically, but its effect can be hidden or diluted when these other factors vary strongly.
+
+### Strengths of this enquiry
+
+1. Real, authentic secondary data
+
+Using NZFFD records gives realistic complexity rather than textbook-perfect data. This is strong practice for AS91946 because students must interpret information in context, not just perform procedures.
+
+2. Clear variable roles and question framing
+
+The explanatory and response variables are justified and aligned to ecological reasoning.
+
+3. Reproducible code
+
+The cleaning and analysis pipeline is fully scripted and can be rerun. Reproducibility is a major quality feature.
+
+4. Multi-evidence conclusion
+
+The conclusion is not based on one statistic. It uses plots, correlations, model output, diagnostics, and influence checks.
+
+5. Critical limitations discussion
+
+An Excellence-level report must critique data quality, method limits, and claims. This report explicitly addresses those points.
+
+### Limitations and possible sources of bias
+
+The most important limitations are below.
+
+1. Missing data and complete-case bias
+
+Many rows lack either temperature or length. Our final sample is a complete-case subset. If records with missing values differ systematically from complete records (for example different regions, years, or methods), results may be biased.
+
+2. Observational (non-experimental) design
+
+No random assignment or controlled treatment exists. Therefore confounding is expected.
+
+3. Measurement and protocol variation
+
+Data are collected across different years, people, sites, and methods. Inconsistent measurement conditions can increase noise.
+
+4. Variable choice: minimum length
+
+Using `minLength` can create extra sensitivity to how a sample is captured and what age classes were present. A site with many juveniles could drive very low minimum values even if older koura are also present.
+
+5. Temporal and spatial clustering
+
+Observations are not independent in a strict sense if many points come from related places or times. That can affect uncertainty calculations in simple models.
+
+### Improvement plan for a stronger future enquiry
+
+If this investigation were extended, the next steps would include:
+
+1. Add key covariates
+
+Build a multiple regression model including dissolved oxygen, water clarity, habitat substrate, and catchment indicators.
+
+2. Separate by region or catchment
+
+Plot and model within catchments to avoid mixing potentially very different ecological systems.
+
+3. Include time effects
+
+Add year/season to account for climate and life-cycle timing.
+
+4. Compare response definitions
+
+Try median or mean individual lengths (if available) rather than only minimum length.
+
+5. Use robust methods
+
+Fit robust regression or transformed/quantile models if residual assumptions remain poor.
+
+6. Pre-register cleaning rules
+
+State filtering and outlier rules before modelling to reduce analyst bias.
+
+### What this teaches a Year 11 statistics student
+
+This report demonstrates several Excellence-level habits.
+
+1. Ask a precise question in context
+
+The enquiry starts with a focused, testable question and clear variable roles.
+
+2. Treat data cleaning as part of statistics
+
+Cleaning is not separate "admin" work. It changes the sample and therefore affects conclusions.
+
+3. Use more than one representation
+
+Good conclusions use visual, numerical, and model evidence together.
+
+4. Distinguish signal from noise
+
+A small slope can exist while predictive value remains low if scatter is large.
+
+5. Be honest about uncertainty
+
+Statistical maturity means avoiding exaggerated claims when evidence is weak.
+
+6. Interpret in plain language
+
+Even advanced steps (diagnostics, influence checks) can be explained clearly for a school audience.
+
+### Final conclusion paragraph (assessment-ready)
+
+In this NZFFD-based enquiry, water temperature and minimum koura length show only a weak association in the cleaned complete-case sample. The fitted linear trend is slightly positive, but the point cloud is highly variable and model explanatory power is very low. Diagnostic plots indicate several unusual observations and imperfect model assumptions, which further support cautious interpretation. Therefore, the data do not support a strong claim that temperature alone is an effective predictor of minimum koura length. A more realistic ecological explanation is that koura size patterns are influenced by multiple interacting habitat and sampling factors, with temperature being only one part of a larger system. This is a useful and valid statistical conclusion because it is evidence-based, context-aware, and appropriately limited by data quality and study design.
+
+### Reflection on statistical validity and reliability
+
+Validity asks whether we measured what we intended. Here, the variable definitions are clear and relevant, so construct validity is reasonable; however, using minimum observed length as a proxy for "size in a habitat" has limitations. Reliability asks whether repeated measurement would give consistent results. Because methods, times, and field conditions likely vary, reliability is probably moderate rather than high. These limitations do not invalidate the analysis, but they reduce confidence in fine-detail inference and increase the need for cautious language.
+
+### Ethical and environmental significance
+
+A final Excellence feature is linking statistics to decision-making. Koura are culturally and ecologically significant. Even when a single-variable relationship is weak, that finding can still guide monitoring strategy. It suggests managers should avoid relying on temperature alone when assessing habitat condition for koura and instead use a broader indicator set. This is a statistically responsible and environmentally useful outcome.
+
+## Appendix: Key code outputs for quick marking checks
+
+```{r quick-check-values}
+list(
+  n_complete_cases = nrow(analysis_dat),
+  model_coefficients = coef(mod),
+  r_squared = summary(mod)$r.squared,
+  adj_r_squared = summary(mod)$adj.r.squared,
+  slope_p_value = summary(mod)$coefficients[2, 4]
+)
+```

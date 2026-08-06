@@ -1,0 +1,115 @@
+# Independent and Dependent Variables {#sec-dependent-independent}
+
+Correctly identifying variables is essential in both AS1.1 and AS1.3.
+If you mix them up, your graph choice, your analysis, and your conclusion can
+all become unclear.
+
+## Core idea
+
+- **Independent variable**: the variable used to form groups, or the
+  explanatory variable.
+- **Dependent variable**: the measured outcome, or the response variable.
+
+A quick check:
+
+- Ask: "What am I comparing or using to explain change?" -> independent.
+- Ask: "What value is being measured as the result?" -> dependent.
+
+::: {.callout-tip}
+## Memory trick
+- **I**ndependent = what **I** choose, change, or group by.
+- **D**ependent = the **D**ata that depends on that choice.
+:::
+
+## Where these appear in statistics tasks
+
+| Investigation type | Independent variable | Dependent variable |
+|---|---|---|
+| Comparison question | Usually categorical groups | Usually numerical measurement |
+| Relationship question | Explanatory numerical variable (x) | Response numerical variable (y) |
+
+## Variable roles and graph choice
+
+| Data structure | Independent variable appears as | Dependent variable appears as | Typical display |
+|---|---|---|---|
+| Group comparison | Group labels (categories) | Scale values (numbers) | Side-by-side box plots, dot plots |
+| Relationship | X-axis values | Y-axis values | Scatter plot |
+
+## Worked example 1: comparison context
+
+Question:
+
+> Do students who travel by bus, car, or bike have different daily study time?
+
+- Independent variable: **transport mode** (bus, car, bike)
+- Dependent variable: **daily study time (hours)**
+
+Why:
+
+- Transport mode forms the groups.
+- Study time is measured inside each group.
+
+## Worked example 2: relationship context
+
+Question:
+
+> Is there a relationship between hours of study and maths score?
+
+- Independent variable: **hours of study**
+- Dependent variable: **maths score**
+
+Why:
+
+- Study hours is the explanatory variable on the x-axis.
+- Score is the response measured on the y-axis.
+
+## Common mistakes to avoid
+
+1. Choosing two dependent variables and no clear explanatory variable.
+2. Treating labels (for example, class names) as if they were measured outcomes.
+3. Writing a conclusion without naming both variables in context.
+4. Putting variables on the wrong axes in scatter plots.
+
+## PPDAC link
+
+- **Problem**: write a clear question naming both variables and the population.
+- **Plan**: define how each variable will be measured or grouped.
+- **Data**: collect data with variables recorded consistently.
+- **Analysis**: display data using the correct variable roles.
+- **Conclusion**: make a claim in context about the relationship or comparison.
+
+## Practice set
+
+Identify the independent and dependent variable in each case.
+
+1. Comparing sleep hours across Year 10, Year 11, and Year 12.
+2. Relationship between time on social media and bedtime.
+3. Comparing sprint times for students in different sports teams.
+4. Relationship between number of practice questions completed and test score.
+
+::: {.callout-note .content-visible collapse="true" when-format="html"}
+## Answers
+1. Independent: year level. Dependent: sleep hours.
+2. Independent: time on social media. Dependent: bedtime.
+3. Independent: sports team. Dependent: sprint time.
+4. Independent: practice questions completed. Dependent: test score.
+:::
+
+## Exam sentence frame
+
+Use this in written responses:
+
+> The independent variable is ____, and the dependent variable is ____.
+> This means I should use ____ to compare/model how the outcome changes in
+> context.
+
+## Next step
+
+Now move to @sec-spread to strengthen your understanding of spread measures,
+then continue to @sec-graphs to choose and interpret graphs confidently.
+
+## Worksheet link
+
+Use the companion worksheet here:
+
+- [Worksheet: Independent vs Dependent Variables](../../homework_exits/worksheet_on_depend_indep_variables.html)

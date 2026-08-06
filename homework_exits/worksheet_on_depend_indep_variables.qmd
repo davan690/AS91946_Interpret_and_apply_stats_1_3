@@ -1,0 +1,67 @@
+---
+title: "Independent vs. Dependent Variables"
+subtitle: "Year 11 Mathematics & Statistics — AS 1.1 Exploring Data"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    embed-resources: true
+---
+
+## Core Definitions
+
+::: {.callout-tip}
+### Memory Trick
+* **I**ndependent = What **I** change or choose as the group/predictor.
+* **D**ependent = The **D**ata **I** measure as the outcome.
+:::
+
+::: {.columns}
+
+::: {.column width="50%"}
+### 🟢 Independent Variable
+*(Explanatory / Input)*
+
+* **What it is:** The variable that is changed, chosen, or used to divide data into groups.
+* **Role:** The **cause** or **predictor**.
+* **On a graph:** 
+  * **X-axis** (horizontal)
+  * **Group labels** on comparison plots
+:::
+
+::: {.column width="50%"}
+### 🔵 Dependent Variable
+*(Response / Outcome)*
+
+* **What it is:** The variable being measured to see if it changes.
+* **Role:** The **effect** or **outcome** (value *depends* on the independent variable).
+* **On a graph:**
+  * **Y-axis** (vertical)
+  * **Numerical scale** on box/dot plots
+:::
+
+:::
+
+---
+
+## Variables in Year 11 Investigations
+
+| Investigation Type | Independent Variable (Input / Group) | Dependent Variable (Measured Outcome) |
+| :--- | :--- | :--- |
+| **Comparison** *(e.g., Foot length by Gender)* | **Categorical Group:** Gender *(Male vs. Female)* | **Numerical Response:** Foot length ($\text{mm}$) |
+| **Relationship** *(e.g., Height vs. Arm Span)* | **Explanatory ($X$):** Height ($\text{cm}$) | **Response ($Y$):** Arm span ($\text{cm}$) |
+
+---
+
+## Mapping Variables to the PPDAC Cycle
+
+::: {.callout-note}
+### The PPDAC Enquiry Process
+
+* **[ P ] Problem:** Define both variables clearly in your investigative question.  
+  * *Example:* "I wonder if **Gender** (Independent) affects **Foot Length** (Dependent)?"
+* **[ P ] Plan:** Decide how to group the Independent variable and measure the Dependent variable accurately without bias.
+* **[ D ] Data:** Record data in paired structure: $(x, y) = (\text{Independent}, \text{Dependent})$.
+* **[ A ] Analysis:** Plot Independent on X-axis and Dependent on Y-axis to compare distributions or trends.
+* **[ C ] Conclusion:** Claim whether the Independent variable influences the Dependent variable in the wider population.
+:::

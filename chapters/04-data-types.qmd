@@ -180,3 +180,10 @@ Classify each variable as **categorical (nominal/ordinal)** or **numerical
 7. Categorical, ordinal (or numerical discrete depending on context)
 8. Numerical, continuous
 :::
+
+## Where to next
+
+- Continue to @sec-dependent-independent to learn how variables are assigned
+  explanatory and response roles in investigations.
+- Then use @sec-spread to strengthen your spread calculations before moving
+  into @sec-graphs.

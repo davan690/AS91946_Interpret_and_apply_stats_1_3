@@ -1,6 +1,6 @@
-# AS91946: Interpret and Apply Mathematical and Statistical Information
+# Learning Statistics for AS91944 & AS91946
 
-A Quarto + R textbook for **NCEA Level 1 Achievement Standard 91946** —
+A Quarto + R textbook for **NCEA Level 1 Achievement Standards 91944 & 91946** —
 *Interpret and apply mathematical and statistical information in context* (4
 credits, external exam). Designed for Year 11 students in New Zealand.
 
@@ -13,12 +13,14 @@ credits, external exam). Designed for Year 11 students in New Zealand.
 | 2 | What is Statistics? (statistical questions, context, core terms) |
 | 3 | The PPDAC enquiry cycle |
 | 4 | Types of Data and Variables (categorical, numerical, ordinal, etc.) |
-| 5 | Statistical Graphs and Displays (bar charts, histograms, box plots, scatter plots) |
-| 6 | Bivariate Data in Ecology (koura example) |
-| 7 | Measures of Centre and Spread (mean, median, IQR, standard deviation) |
-| 8 | Practice Questions and Exam Tips (Achieved / Merit / Excellence) |
-| 9 | Probability (classical, experimental, two-way tables, tree diagrams) |
-| 10 | Interpreting Statistical Information (bias, correlation vs causation, critical reading) |
+| 5 | Independent and Dependent Variables (explanatory vs response roles) |
+| 6 | Measures of Spread Study Notes (range, quartiles, IQR) |
+| 7 | Statistical Graphs and Displays (bar charts, histograms, box plots, scatter plots) |
+| 8 | Bivariate Data in Ecology (koura example) |
+| 9 | Measures of Centre and Spread (mean, median, IQR, standard deviation) |
+| 10 | Practice Questions and Exam Tips (Achieved / Merit / Excellence) |
+| 11 | Probability (classical, experimental, two-way tables, tree diagrams) |
+| 12 | Interpreting Statistical Information (bias, correlation vs causation, critical reading) |
 
 ## Rendering the book
 
@@ -68,6 +70,8 @@ quarto render --to pdf
 │   ├── 02-what-is-statistics.qmd
 │   ├── 03-ppdac.qmd
 │   ├── 04-data-types.qmd
+│   ├── 04-1-dependent-independent-variables.qmd
+│   ├── 04-2-measures-of-spread.qmd
 │   ├── 05-graphs.qmd
 │   ├── 06-1-koura-example.qmd
 │   ├── 07-measures.qmd

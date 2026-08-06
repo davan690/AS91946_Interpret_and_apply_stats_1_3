@@ -53,19 +53,25 @@ Follow this sequence from start to finish:
 | 2 | Statistical questions, context language, core terms | Chapter 2 - What is Statistics? | **[Both]** |
 | 3 | Statistical enquiry cycle and investigation flow | Chapter 3 - PPDAC | **[Both]** |
 | 4 | Variables and data types, choosing suitable displays | Chapter 4 - Data types | **[Both]** |
-| 5 | Graph interpretation and comparison language | Chapter 5 - Graphs | **[Both]** |
-| 6 | Centre and spread for comparison and conclusions | Chapter 6 - Measures | **[Both]** |
-| 7 | Applied tasks and mixed practice with response scaffolds | Chapter 7 - Practice | **[Both]** |
-| 8 | Probability tools and table-based reasoning | Part 2 - Probability | **[1.3]** |
-| 9 | Sampling quality, bias, inference, critique | Part 2 - Critical reading | **[Both]** |
-| 10 | Extension reading and source material | Resource Library | **[Both]** |
+| 5 | Independent and dependent variable roles in investigations | Chapter 5 - Independent and Dependent Variables | **[Both]** |
+| 6 | Spread-focused notes with quartiles and IQR worked examples | Chapter 6 - Measures of Spread Study Notes | **[Both]** |
+| 7 | Graph interpretation and comparison language | Chapter 7 - Graphs | **[Both]** |
+| 8 | Applied investigation example in context | Chapter 8 - Koura Example | **[Both]** |
+| 9 | Centre and spread for comparison and conclusions | Chapter 9 - Measures | **[Both]** |
+| 10 | Applied tasks and mixed practice with response scaffolds | Chapter 10 - Practice | **[Both]** |
+| 11 | Probability tools and table-based reasoning | Part 2 - Probability | **[1.3]** |
+| 12 | Sampling quality, bias, inference, critique | Part 2 - Critical reading | **[Both]** |
+| 13 | Extension reading and source material | Resource Library | **[Both]** |
 
 ## How to use this pathway for dual preparation
 
-1. Build investigation capability first (Chapters 1-4) for strong **AS1.1** evidence.
-2. Use the practice chapter to consolidate comparison and communication.
-3. Add the Part 2 extension chapters for explicit **AS1.3** preparation.
-4. In every written response, include context, comparison, and justification language.
+1. Build investigation capability first (Chapters 1-6) for strong **AS1.1** evidence.
+2. Add variable-role clarity with the independent/dependent chapter, then
+	consolidate spread ideas in the measures-of-spread notes chapter.
+3. Use the graphs, koura example, measures, and practice chapters to
+	consolidate comparison and communication.
+4. Add the Part 2 extension chapters for explicit **AS1.3** preparation.
+5. In every written response, include context, comparison, and justification language.
 
 ## What this standard is about
 

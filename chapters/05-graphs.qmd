@@ -4,6 +4,10 @@ A well-chosen graph makes patterns in data immediately visible. In this
 chapter you will learn to **create**, **read**, and **critically interpret**
 the most common statistical displays.
 
+Before this chapter, make sure you are confident with @sec-data-types,
+@sec-dependent-independent, and @sec-spread so your graph choices and
+interpretations are statistically valid.
+
 ## Setting up our data
 
 Throughout this chapter we use a simulated survey of 60 Year 11 students

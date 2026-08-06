@@ -1,0 +1,112 @@
+---
+title: "Exit Ticket: Explanatory vs. Response Variables"
+subtitle: "Year 11 Mathematics & Statistics — NCEA AS 1.1 Exploring Data"
+author: "Kaikorai Valley College Mathematics Department"
+date: "2026-08-05"
+format:
+  pdf:
+    documentclass: article
+    geometry:
+      - top=20mm
+      - bottom=20mm
+      - left=20mm
+      - right=20mm
+  html:
+    theme: cosmo
+    toc: false
+---
+
+## Student Information
+
+**Student Name:** `____________________________________`  
+**Class / Code:** `_________________`  
+**Date:** `_____ / _____ / ________`
+
+::: {.callout-note}
+### 💡 Core Rule: Explanatory vs. Response Variables
+* **Explanatory Variable ($X$):** The predictor or independent variable. Plotted on the **horizontal ($X$) axis**.
+* **Response Variable ($Y$):** The outcome or dependent variable being measured. Plotted on the **vertical ($Y$) axis**.
+* *Always include units of measurement where applicable!*
+:::
+
+---
+
+## Exit Ticket Questions
+
+### Question 1: Distance to School vs. Travel Time
+A student collects data to see if the distance a student lives from school ($\text{km}$) can predict how long it takes them to get to school in the morning ($\text{minutes}$).
+
+* **Explanatory Variable ($X$):** `__________________________________________________`
+* **Response Variable ($Y$):** `__________________________________________________`
+
+\vspace{0.5cm}
+
+### Question 2: Smartphone Age vs. Battery Health
+A technician records the age of smartphones ($\text{months}$) and measures their maximum remaining battery capacity ($\text{\%}$).
+
+* **Explanatory Variable ($X$):** `__________________________________________________`
+* **Response Variable ($Y$):** `__________________________________________________`
+
+\vspace{0.5cm}
+
+### Question 3: Sleep Duration vs. Reaction Speed
+A health study measures the hours of sleep a teenager gets the night before a cognitive test ($\text{hours}$) and their score on a digital reaction time test ($\text{milliseconds}$).
+
+* **Explanatory Variable ($X$):** `__________________________________________________`
+* **Response Variable ($Y$):** `__________________________________________________`
+
+\vspace{0.5cm}
+
+### Question 4: Physical Height vs. Vertical Jump
+A physical education teacher measures students' standing height ($\text{cm}$) to see how it relates to their maximum vertical jump height ($\text{cm}$).
+
+* **Explanatory Variable ($X$):** `__________________________________________________`
+* **Response Variable ($Y$):** `__________________________________________________`
+
+\vspace{0.5cm}
+
+### Question 5: Weekly Exercise vs. Resting Heart Rate
+An athlete tracks the number of hours spent training per week ($\text{hours}$) and records their resting heart rate each Sunday morning ($\text{beats per minute / bpm}$).
+
+* **Explanatory Variable ($X$):** `__________________________________________________`
+* **Response Variable ($Y$):** `__________________________________________________`
+
+---
+
+\newpage
+
+## Teacher Answer Key & Statistical Rationales
+
+::: {.callout-tip title="Answer Key for Teachers"}
+#### 1. Distance to School vs. Travel Time
+* **Explanatory ($X$):** Distance from school ($\text{km}$)
+* **Response ($Y$):** Travel time ($\text{minutes}$)
+* **Rationale:** Distance is fixed by home location; travel time responds to how far you have to travel.
+
+#### 2. Smartphone Age vs. Battery Health
+* **Explanatory ($X$):** Age of phone ($\text{months}$)
+* **Response ($Y$):** Battery capacity ($\text{\%}$)
+* **Rationale:** Time passing (age) causes chemical degradation, which reduces battery capacity.
+
+#### 3. Sleep Duration vs. Reaction Speed
+* **Explanatory ($X$):** Sleep duration ($\text{hours}$)
+* **Response ($Y$):** Reaction time ($\text{milliseconds}$)
+* **Rationale:** Amount of sleep explains the variation in reaction speed.
+
+#### 4. Physical Height vs. Vertical Jump
+* **Explanatory ($X$):** Standing height ($\text{cm}$)
+* **Response ($Y$):** Vertical jump height ($\text{cm}$)
+* **Rationale:** Height is used as the baseline physical characteristic to predict jump capability.
+
+#### 5. Weekly Exercise vs. Resting Heart Rate
+* **Explanatory ($X$):** Training time ($\text{hours per week}$)
+* **Response ($Y$):** Resting heart rate ($\text{bpm}$)
+* **Rationale:** Training volume improves cardiovascular fitness, which lowers resting heart rate.
+:::
+"""
+
+file_path = "exit_ticket_bivariate_variables.qmd"
+with open(file_path, "w", encoding="utf-8") as f:
+    f.write(qmd_content.strip())
+
+print(f"File created successfully: {file_path}")

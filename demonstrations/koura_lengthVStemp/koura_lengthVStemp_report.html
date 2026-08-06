@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Anthony Davidson: worked excellence example">
+<meta name="dcterms.date" content="2026-08-07">
+
+<title>Koura Length vs Water Temperature</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="koura_lengthVStemp_report_files/libs/clipboard/clipboard.min.js"></script>
+<script src="koura_lengthVStemp_report_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="koura_lengthVStemp_report_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="koura_lengthVStemp_report_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="koura_lengthVStemp_report_files/libs/quarto-html/popper.min.js"></script>
+<script src="koura_lengthVStemp_report_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="koura_lengthVStemp_report_files/libs/quarto-html/anchor.min.js"></script>
+<link href="koura_lengthVStemp_report_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="koura_lengthVStemp_report_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="koura_lengthVStemp_report_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="koura_lengthVStemp_report_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="koura_lengthVStemp_report_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Koura Length vs Water Temperature</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Anthony Davidson: worked excellence example </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 7, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="statistical-enquiry-report-ppdac" class="level1">
+<h1>Statistical Enquiry Report (PPDAC)</h1>
+<section id="context-and-purpose" class="level2">
+<h2 class="anchored" data-anchor-id="context-and-purpose">Context and Purpose</h2>
+<p>Freshwater crayfish (koura, <em>Paranephrops</em> spp.) are a taonga species in Aotearoa New Zealand and an important indicator of stream habitat quality. This enquiry uses a real secondary dataset downloaded from the New Zealand Freshwater Fish Database (NZFFD) records in this project folder. The report is written as a full Year 11 Level 1 statistical investigation that aims for Excellence by showing deep statistical thinking, careful critique, and clear communication in context.</p>
+<p>The specific context here is ecological monitoring: stream surveys have measured both water conditions and fish/crayfish biological measurements over many years and across many catchments. In this report, we focus on one question students can investigate with bivariate methods:</p>
+<p>“Is there evidence of a relationship between stream water temperature and minimum observed koura length in the NZFFD records we have available?”</p>
+<p>This is a meaningful question for two reasons.</p>
+<ol type="1">
+<li>Ecologically, temperature affects freshwater metabolism, oxygen levels, and habitat suitability.</li>
+<li>Statistically, both variables are numerical and continuous, so we can use scatterplots, correlation, and linear modelling.</li>
+</ol>
+<p>At the same time, a high-quality report must avoid overclaiming. This is observational secondary data, not a controlled experiment. That means we can discuss association patterns, but we cannot claim direct cause-and-effect from this dataset alone.</p>
+</section>
+<section id="context-images-and-attribution" class="level2">
+<h2 class="anchored" data-anchor-id="context-images-and-attribution">Context Images and Attribution</h2>
+<p>To support classroom presentation and report context, open-license image options are listed in <code>image_sources.md</code> in this same folder. These include koura close-up images and Otago/Kaikorai stream context images with licensing details and suggested captions.</p>
+</section>
+<section id="ppdac-cycle" class="level2">
+<h2 class="anchored" data-anchor-id="ppdac-cycle">PPDAC Cycle</h2>
+</section>
+<section id="problem" class="level2">
+<h2 class="anchored" data-anchor-id="problem">Problem</h2>
+<section id="investigative-question" class="level3">
+<h3 class="anchored" data-anchor-id="investigative-question">Investigative question</h3>
+<p>For koura records in this NZFFD dataset where both variables are available, what is the relationship between water temperature (<span class="math inline">\(^\circ C\)</span>) and minimum observed koura length (mm), and how strong is that relationship?</p>
+</section>
+<section id="population-and-sample" class="level3">
+<h3 class="anchored" data-anchor-id="population-and-sample">Population and sample</h3>
+<ul>
+<li>Population of interest: all potential koura observations in New Zealand freshwater habitats relevant to this monitoring context.</li>
+<li>Available sample: the NZFFD rows in this file, restricted to rows where both <code>waterTemperature</code> and <code>minLength</code> are present.</li>
+</ul>
+</section>
+<section id="variables" class="level3">
+<h3 class="anchored" data-anchor-id="variables">Variables</h3>
+<ul>
+<li>Explanatory variable: <code>waterTemperature</code> (<span class="math inline">\(^\circ C\)</span>)</li>
+<li>Response variable: <code>minLength</code> (mm)</li>
+</ul>
+<p>The explanatory/response direction is justified because stream temperature is an environmental condition and length is a biological outcome measured on the organisms. It is much more plausible to think temperature may influence size patterns than size influencing stream temperature.</p>
+</section>
+<section id="hypothesis-before-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="hypothesis-before-analysis">Hypothesis before analysis</h3>
+<p>A reasonable prior hypothesis is that temperature may show some relationship with length, but the direction may not be simple in real ecological data because age structure, habitat quality, predation, seasonal timing, and sampling method can all affect measured size. Therefore we expect either:</p>
+<ul>
+<li>a weak trend overall, or</li>
+<li>a trend that becomes clearer only when controlling for confounding variables.</li>
+</ul>
+</section>
+</section>
+<section id="plan" class="level2">
+<h2 class="anchored" data-anchor-id="plan">Plan</h2>
+<p>To answer the question, we will:</p>
+<ol type="1">
+<li>Import and inspect the raw data.</li>
+<li>Keep only koura rows and needed variables.</li>
+<li>Clean missing values and obvious impossible values.</li>
+<li>Build a main scatterplot and a linear trend line.</li>
+<li>Compute summary statistics and correlations.</li>
+<li>Fit a linear model <code>minLength ~ waterTemperature</code>.</li>
+<li>Check model diagnostics using residual plots.</li>
+<li>Investigate unusual/influential points.</li>
+<li>Write a conclusion with statistical evidence, practical meaning, limitations, and improvement ideas.</li>
+</ol>
+</section>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>raw_dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"./data/nzffdms.csv"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Rows in raw file:"</span>, <span class="fu">nrow</span>(raw_dat), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows in raw file: 9720 </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Columns in raw file:"</span>, <span class="fu">ncol</span>(raw_dat), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Columns in raw file: 69 </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>raw_dat <span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(taxonCommonName, waterTemperature, minLength) <span class="sc">%&gt;%</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">glimpse</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 9,720
+Columns: 3
+$ taxonCommonName  &lt;chr&gt; "Koura", "Koura", "Koura", "Koura", "Koura", "Koura",…
+$ waterTemperature &lt;dbl&gt; 15.0, 15.0, 18.0, 10.0, 19.0, NA, 8.0, 14.5, 18.0, 22…
+$ minLength        &lt;int&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>analysis_dat <span class="ot">&lt;-</span> raw_dat <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(taxonCommonName <span class="sc">==</span> <span class="st">"Koura"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">eventDate =</span> <span class="fu">as.Date</span>(eventDate, <span class="at">format =</span> <span class="st">"%d/%m/%Y"</span>),</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">waterTemperature =</span> <span class="fu">as.numeric</span>(waterTemperature),</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">minLength =</span> <span class="fu">as.numeric</span>(minLength)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="sc">!</span><span class="fu">is.na</span>(waterTemperature),</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="sc">!</span><span class="fu">is.na</span>(minLength),</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    waterTemperature <span class="sc">&gt;=</span> <span class="dv">0</span>,</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    minLength <span class="sc">&gt;=</span> <span class="dv">0</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    nzffdRecordNumber,</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    eventDate,</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    catchmentName,</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    waterBody,</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    waterTemperature,</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    minLength,</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    samplingMethod</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Rows after cleaning:"</span>, <span class="fu">nrow</span>(analysis_dat), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows after cleaning: 240 </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Rows removed due to missing/invalid values:"</span>, <span class="fu">nrow</span>(raw_dat) <span class="sc">-</span> <span class="fu">nrow</span>(analysis_dat), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows removed due to missing/invalid values: 9480 </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(analysis_dat[, <span class="fu">c</span>(<span class="st">"waterTemperature"</span>, <span class="st">"minLength"</span>)])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> waterTemperature   minLength     
+ Min.   : 2.00    Min.   :  5.00  
+ 1st Qu.:12.00    1st Qu.: 22.75  
+ Median :14.30    Median : 40.00  
+ Mean   :14.27    Mean   : 43.89  
+ 3rd Qu.:17.00    3rd Qu.: 59.25  
+ Max.   :24.10    Max.   :200.00  </code></pre>
+</div>
+</div>
+<section id="data-quality-comment" class="level3">
+<h3 class="anchored" data-anchor-id="data-quality-comment">Data quality comment</h3>
+<p>The biggest quality issue is missingness. The raw dataset has many koura rows, but only a much smaller subset has both temperature and minimum length recorded. This matters because our conclusions are about the subset with complete data, not necessarily all koura habitats in New Zealand.</p>
+</section>
+</section>
+<section id="how-to-recreate-this-in-nzgrapher" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-recreate-this-in-nzgrapher">How to Recreate This in NZGrapher</h2>
+<p>NZGrapher is a good classroom tool for this investigation because it gives students a spreadsheet-style interface while still supporting the main visual and numerical ideas used in this report. The R code in this file handles the more complex cleaning, and the chunk above exports a student-ready file called <code>nzgrapher_koura_temp_length.csv</code> into the <code>data</code> folder.</p>
+<section id="what-to-use-in-nzgrapher" class="level3">
+<h3 class="anchored" data-anchor-id="what-to-use-in-nzgrapher">What to use in NZGrapher</h3>
+<ul>
+<li>Dataset file: <code>data/nzgrapher_koura_temp_length.csv</code></li>
+<li>Explanatory variable: <code>waterTemperature</code></li>
+<li>Response variable: <code>minLength</code></li>
+</ul>
+</section>
+<section id="recommended-student-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="recommended-student-workflow">Recommended student workflow</h3>
+<ol type="1">
+<li>Render or run this report once so the cleaned NZGrapher CSV is created.</li>
+<li>Open NZGrapher in a browser.</li>
+<li>Start a new graph and import <code>nzgrapher_koura_temp_length.csv</code>.</li>
+<li>Check the imported columns and confirm that <code>waterTemperature</code> and <code>minLength</code> are recognised as numerical variables.</li>
+<li>Choose a scatterplot because both variables are numerical.</li>
+<li>Put <code>waterTemperature</code> on the x-axis.</li>
+<li>Put <code>minLength</code> on the y-axis.</li>
+<li>Give the graph a clear title such as <code>Koura minimum length vs water temperature</code>.</li>
+<li>Label axes clearly as <code>Water temperature (deg C)</code> and <code>Minimum observed length (mm)</code> if NZGrapher does not do this automatically.</li>
+<li>Turn on the least-squares or regression line option if available.</li>
+<li>If NZGrapher shows correlation or equation output, record those values beside the graph.</li>
+<li>Inspect the scatterplot for direction, form, strength, spread, clusters, and unusual points.</li>
+</ol>
+</section>
+<section id="what-students-should-look-for" class="level3">
+<h3 class="anchored" data-anchor-id="what-students-should-look-for">What students should look for</h3>
+<p>Students should describe the same main features that appear in the R analysis.</p>
+<ol type="1">
+<li>Direction: the trend is slightly positive overall.</li>
+<li>Form: a straight-line summary is possible, but the pattern is weak.</li>
+<li>Strength: the relationship is weak because points are widely scattered.</li>
+<li>Unusual features: some points sit well away from the main cloud.</li>
+<li>Context: temperature alone does not explain much of the variation in minimum koura length.</li>
+</ol>
+</section>
+<section id="suggested-nzgrapher-write-up-structure" class="level3">
+<h3 class="anchored" data-anchor-id="suggested-nzgrapher-write-up-structure">Suggested NZGrapher write-up structure</h3>
+<p>Students can use NZGrapher outputs to write a solid bivariate discussion by following this structure.</p>
+<ol type="1">
+<li>State the investigative question.</li>
+<li>Name the explanatory and response variables.</li>
+<li>Describe the scatterplot using direction, form, strength, and unusual features.</li>
+<li>Quote the correlation and regression line if NZGrapher provides them.</li>
+<li>Explain what the slope means in context: the predicted change in minimum length for each <span class="math inline">\(1^\circ C\)</span> increase in water temperature.</li>
+<li>Comment on whether the relationship is useful for prediction.</li>
+<li>Finish with a cautious contextual conclusion that association does not prove causation.</li>
+</ol>
+</section>
+<section id="important-limitation-when-using-nzgrapher" class="level3">
+<h3 class="anchored" data-anchor-id="important-limitation-when-using-nzgrapher">Important limitation when using NZGrapher</h3>
+<p>NZGrapher can handle the graphing and basic bivariate summaries well, but it is not the best tool for the full cleaning and diagnostic workflow shown in this report. In particular:</p>
+<ul>
+<li>the raw NZFFD file contains many missing values,</li>
+<li>the complete-case filtering is easier and more transparent in R,</li>
+<li>influence checks and residual diagnostics are stronger in R,</li>
+<li>the NZGrapher graph should be treated as a classroom-friendly version of the same investigation, not a full replacement for the coded analysis.</li>
+</ul>
+</section>
+<section id="teacher-note" class="level3">
+<h3 class="anchored" data-anchor-id="teacher-note">Teacher note</h3>
+<p>If you want students to work entirely inside NZGrapher, give them the exported file <code>nzgrapher_koura_temp_length.csv</code> rather than the original <code>nzffdms.csv</code>. That keeps the lesson focused on statistical interpretation instead of raw data wrangling.</p>
+</section>
+</section>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
+<section id="exploratory-visualisation" class="level3">
+<h3 class="anchored" data-anchor-id="exploratory-visualisation">1. Exploratory visualisation</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(analysis_dat, <span class="fu">aes</span>(<span class="at">x =</span> waterTemperature, <span class="at">y =</span> minLength)) <span class="sc">+</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.6</span>, <span class="at">size =</span> <span class="fl">2.4</span>, <span class="at">color =</span> <span class="st">"#1f3a5f"</span>) <span class="sc">+</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>, <span class="at">color =</span> <span class="st">"#d7263d"</span>, <span class="at">linewidth =</span> <span class="fl">1.1</span>) <span class="sc">+</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Koura Minimum Length vs Water Temperature"</span>,</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"NZFFD complete cases in this project dataset"</span>,</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Water temperature (°C)"</span>,</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Minimum observed length (mm)"</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-scatter-main" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-scatter-main-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="koura_lengthVStemp_report_files/figure-html/fig-scatter-main-1.png" class="img-fluid figure-img" width="864">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-scatter-main-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Scatterplot of minimum koura length (mm) against water temperature (°C), including a fitted linear trend and 95% confidence band.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The cloud of points is very spread out vertically, indicating large variation in lengths at similar temperatures. The fitted line slopes slightly upward, but visual slope alone is not enough evidence for a strong relationship.</p>
+</section>
+<section id="numerical-summaries-and-correlation" class="level3">
+<h3 class="anchored" data-anchor-id="numerical-summaries-and-correlation">2. Numerical summaries and correlation</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>overall_summary <span class="ot">&lt;-</span> analysis_dat <span class="sc">%&gt;%</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">temp_mean =</span> <span class="fu">mean</span>(waterTemperature),</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">temp_median =</span> <span class="fu">median</span>(waterTemperature),</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">temp_sd =</span> <span class="fu">sd</span>(waterTemperature),</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">length_mean =</span> <span class="fu">mean</span>(minLength),</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">length_median =</span> <span class="fu">median</span>(minLength),</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">length_sd =</span> <span class="fu">sd</span>(minLength),</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">pearson_r =</span> <span class="fu">cor</span>(waterTemperature, minLength, <span class="at">method =</span> <span class="st">"pearson"</span>),</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">spearman_rho =</span> <span class="fu">cor</span>(waterTemperature, minLength, <span class="at">method =</span> <span class="st">"spearman"</span>)</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>overall_summary</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    n temp_mean temp_median  temp_sd length_mean length_median length_sd
+1 240  14.27289        14.3 3.738611     43.8875            40  29.41749
+   pearson_r spearman_rho
+1 0.08257497    0.1519242</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>temp_band_summary <span class="ot">&lt;-</span> analysis_dat <span class="sc">%&gt;%</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">temp_band =</span> <span class="fu">cut</span>(</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    waterTemperature,</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">14</span>, <span class="dv">18</span>, <span class="dv">30</span>),</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">include.lowest =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">right =</span> <span class="cn">FALSE</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(temp_band) <span class="sc">%&gt;%</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean_length =</span> <span class="fu">mean</span>(minLength),</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">median_length =</span> <span class="fu">median</span>(minLength),</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">iqr_length =</span> <span class="fu">IQR</span>(minLength),</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>temp_band_summary</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 5
+  temp_band     n mean_length median_length iqr_length
+  &lt;fct&gt;     &lt;int&gt;       &lt;dbl&gt;         &lt;dbl&gt;      &lt;dbl&gt;
+1 [0,10)       28        38.1            30       41.2
+2 [10,14)      78        45.0            36       30  
+3 [14,18)      99        41.4            40       31  
+4 [18,30]      35        53.2            50       27.5</code></pre>
+</div>
+</div>
+<p>Key early findings:</p>
+<ul>
+<li>Pearson <span class="math inline">\(r\)</span> is close to zero (very weak linear association).</li>
+<li>Spearman <span class="math inline">\(\rho\)</span> is also weak, suggesting only a weak monotonic pattern.</li>
+<li>Grouped summaries by temperature bands do not show a smooth, consistent increase or decrease.</li>
+</ul>
+<p>This already suggests that if a relationship exists, it is small relative to overall variability in lengths.</p>
+</section>
+<section id="linear-model" class="level3">
+<h3 class="anchored" data-anchor-id="linear-model">3. Linear model</h3>
+<p>We fit:</p>
+<p><span class="math display">\[
+\widehat{\text{minLength}} = a + b\,(\text{waterTemperature})
+\]</span></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(minLength <span class="sc">~</span> waterTemperature, <span class="at">data =</span> analysis_dat)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>model_coef <span class="ot">&lt;-</span> <span class="fu">tidy</span>(mod, <span class="at">conf.int =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>model_glance <span class="ot">&lt;-</span> <span class="fu">glance</span>(mod)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>model_coef</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 7
+  term             estimate std.error statistic    p.value conf.low conf.high
+  &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+1 (Intercept)        34.6       7.50       4.62 0.00000640   19.8       49.4 
+2 waterTemperature    0.650     0.508      1.28 0.202        -0.352      1.65</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>model_glance</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC
+      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1   0.00682       0.00265  29.4      1.63   0.202     1 -1151. 2308. 2318.
+# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
+</div>
+</div>
+<p>Interpretation framework for Year 11:</p>
+<ul>
+<li>Intercept <span class="math inline">\(a\)</span>: predicted minimum length when temperature is <span class="math inline">\(0^\circ C\)</span>. This is often outside the practical data center and may have limited biological meaning.</li>
+<li>Slope <span class="math inline">\(b\)</span>: predicted average change in minimum length (mm) per <span class="math inline">\(1^\circ C\)</span> increase.</li>
+<li><span class="math inline">\(R^2\)</span>: proportion of variation in length explained by temperature in this model.</li>
+</ul>
+<p>In this dataset, the slope is positive but small, and <span class="math inline">\(R^2\)</span> is very low. That means temperature alone explains only a tiny share of variation in minimum koura length.</p>
+</section>
+<section id="diagnostics-and-model-assumptions" class="level3">
+<h3 class="anchored" data-anchor-id="diagnostics-and-model-assumptions">4. Diagnostics and model assumptions</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>))</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mod)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-lm-diagnostics" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lm-diagnostics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="koura_lengthVStemp_report_files/figure-html/fig-lm-diagnostics-1.png" class="img-fluid figure-img" width="960">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lm-diagnostics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Standard linear model diagnostic plots (residuals, Q-Q, scale-location, leverage).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Diagnostic interpretation:</p>
+<ol type="1">
+<li>Residuals vs fitted: spread is fairly wide with several large positive residuals.</li>
+<li>Q-Q plot: upper tail departs from the straight line, indicating heavy right-tail residuals/outliers.</li>
+<li>Scale-location: modest heteroscedasticity, with non-constant spread possible.</li>
+<li>Residuals vs leverage: a few potentially influential points exist.</li>
+</ol>
+<p>These are important because they warn us not to over-trust a single straight-line model as a complete description of the ecology.</p>
+</section>
+<section id="outliers-and-influence-check" class="level3">
+<h3 class="anchored" data-anchor-id="outliers-and-influence-check">5. Outliers and influence check</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>diag_dat <span class="ot">&lt;-</span> <span class="fu">augment</span>(mod, <span class="at">data =</span> analysis_dat) <span class="sc">%&gt;%</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">abs_std_resid =</span> <span class="fu">abs</span>(.std.resid),</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">cooks_d =</span> <span class="fu">cooks.distance</span>(mod),</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">leverage =</span> <span class="fu">hatvalues</span>(mod)</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>top_influence <span class="ot">&lt;-</span> diag_dat <span class="sc">%&gt;%</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(cooks_d)) <span class="sc">%&gt;%</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(nzffdRecordNumber, waterTemperature, minLength, .std.resid, cooks_d, leverage) <span class="sc">%&gt;%</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>)</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>top_influence</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8 × 6
+  nzffdRecordNumber waterTemperature minLength .std.resid cooks_d leverage
+              &lt;int&gt;            &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;
+1              9961              8         150       3.78  0.116   0.0159 
+2             26567              2          86       1.75  0.0792  0.0493 
+3             11129             12.2       200       5.37  0.0792  0.00545
+4             15708             16         180       4.61  0.0540  0.00506
+5             25356             11.5       150       3.69  0.0442  0.00647
+6             33128             24.1        90       1.38  0.0323  0.0331 
+7             22962             21.6       100       1.77  0.0322  0.0202 
+8             25361             10.5       110       2.34  0.0233  0.00843</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>influence_threshold <span class="ot">&lt;-</span> <span class="dv">4</span> <span class="sc">/</span> <span class="fu">nrow</span>(analysis_dat)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Cook's distance threshold (4/n):"</span>, <span class="fu">round</span>(influence_threshold, <span class="dv">4</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Cook's distance threshold (4/n): 0.0167 </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Points above threshold:"</span>, <span class="fu">sum</span>(diag_dat<span class="sc">$</span>cooks_d <span class="sc">&gt;</span> influence_threshold), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Points above threshold: 10 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>sens_dat <span class="ot">&lt;-</span> diag_dat <span class="sc">%&gt;%</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(cooks_d <span class="sc">&lt;=</span> influence_threshold)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>mod_sens <span class="ot">&lt;-</span> <span class="fu">lm</span>(minLength <span class="sc">~</span> waterTemperature, <span class="at">data =</span> sens_dat)</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">model =</span> <span class="fu">c</span>(<span class="st">"Main model"</span>, <span class="st">"Sensitivity model (reduced influence)"</span>),</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">slope =</span> <span class="fu">c</span>(<span class="fu">coef</span>(mod)[<span class="dv">2</span>], <span class="fu">coef</span>(mod_sens)[<span class="dv">2</span>]),</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">r_squared =</span> <span class="fu">c</span>(<span class="fu">summary</span>(mod)<span class="sc">$</span>r.squared, <span class="fu">summary</span>(mod_sens)<span class="sc">$</span>r.squared),</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">p_value_slope =</span> <span class="fu">c</span>(<span class="fu">summary</span>(mod)<span class="sc">$</span>coefficients[<span class="dv">2</span>, <span class="dv">4</span>], <span class="fu">summary</span>(mod_sens)<span class="sc">$</span>coefficients[<span class="dv">2</span>, <span class="dv">4</span>])</span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), round, <span class="dv">4</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 4
+  model                                 slope r_squared p_value_slope
+  &lt;chr&gt;                                 &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;
+1 Main model                            0.650    0.0068        0.202 
+2 Sensitivity model (reduced influence) 1.04     0.0267        0.0131</code></pre>
+</div>
+</div>
+<p>The sensitivity comparison checks whether the overall story depends heavily on a few unusual points. If conclusions stay similar, our interpretation is more stable.</p>
+</section>
+<section id="additional-graph-for-student-interpretation" class="level3">
+<h3 class="anchored" data-anchor-id="additional-graph-for-student-interpretation">6. Additional graph for student interpretation</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>analysis_dat <span class="sc">%&gt;%</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">temp_band =</span> <span class="fu">cut</span>(</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>    waterTemperature,</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">14</span>, <span class="dv">18</span>, <span class="dv">30</span>),</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">include.lowest =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">right =</span> <span class="cn">FALSE</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> temp_band, <span class="at">y =</span> minLength, <span class="at">fill =</span> temp_band)) <span class="sc">+</span></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">alpha =</span> <span class="fl">0.75</span>, <span class="at">outlier.alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">"Blues"</span>) <span class="sc">+</span></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Distribution of Koura Length by Temperature Band"</span>,</span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Water temperature band (°C)"</span>,</span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Minimum observed length (mm)"</span>,</span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Temp band"</span></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>) <span class="sc">+</span></span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-box-by-band" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-box-by-band-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="koura_lengthVStemp_report_files/figure-html/fig-box-by-band-1.png" class="img-fluid figure-img" width="864">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-box-by-band-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Minimum koura length distributions across water-temperature bands.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>This plot supports the same idea: within each temperature band there is substantial spread and overlap. That overlap shows temperature band alone is not a strong discriminator of short vs long observed lengths in this sample.</p>
+</section>
+</section>
+<section id="conclusion-and-discussion-excellence-depth" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-and-discussion-excellence-depth">Conclusion and Discussion (Excellence Depth)</h2>
+<section id="direct-answer-to-the-investigative-question" class="level3">
+<h3 class="anchored" data-anchor-id="direct-answer-to-the-investigative-question">Direct answer to the investigative question</h3>
+<p>Based on the complete-case NZFFD data used in this report, there is only weak evidence of a relationship between stream water temperature and minimum observed koura length. The fitted linear trend is slightly positive, but the relationship is small and explains very little of the total variation in observed minimum lengths.</p>
+<p>In practical terms, this means that knowing the temperature alone does not allow strong prediction of minimum koura length. Koura lengths at similar temperatures are often very different, and that variability dominates the pattern.</p>
+</section>
+<section id="evidence-statement-using-multiple-forms-of-statistical-information" class="level3">
+<h3 class="anchored" data-anchor-id="evidence-statement-using-multiple-forms-of-statistical-information">Evidence statement using multiple forms of statistical information</h3>
+<p>An Excellence response should combine graph-based, numerical, and model-based evidence. Here is that combined evidence chain.</p>
+<ol type="1">
+<li>Graphical evidence</li>
+</ol>
+<p>The scatterplot shows a broad vertical spread of points at almost all temperatures, with only a slight upward fitted trend. If there were a strong relationship, points would cluster more tightly around the fitted line. They do not.</p>
+<ol start="2" type="1">
+<li>Correlation evidence</li>
+</ol>
+<p>Both Pearson and Spearman correlations are weak. This indicates the relationship is weak both as a straight-line pattern and as a general monotonic pattern.</p>
+<ol start="3" type="1">
+<li>Model evidence</li>
+</ol>
+<p>The linear model slope is small, and the model <span class="math inline">\(R^2\)</span> is very low. Low <span class="math inline">\(R^2\)</span> means temperature explains only a small proportion of length variation. So even if the slope direction is positive, the predictive usefulness is limited.</p>
+<ol start="4" type="1">
+<li>Diagnostic evidence</li>
+</ol>
+<p>Residual and Q-Q diagnostics show non-normal upper-tail behaviour and a few unusual observations. This suggests some data points are much larger than model expectations and that simple linear assumptions are only partly met. Therefore, interpretation should be cautious.</p>
+<ol start="5" type="1">
+<li>Robustness evidence</li>
+</ol>
+<p>The sensitivity check removing high Cook’s distance points is used to test stability. The core story remains weak-association rather than transforming into a strong trend. This improves confidence that our conclusion is not just caused by one or two extreme points.</p>
+</section>
+<section id="statistical-interpretation-in-context-what-the-trend-does-and-does-not-mean" class="level3">
+<h3 class="anchored" data-anchor-id="statistical-interpretation-in-context-what-the-trend-does-and-does-not-mean">Statistical interpretation in context (what the trend does and does not mean)</h3>
+<p>It is tempting to interpret any positive slope as “warmer water makes koura larger.” That would be too strong for this dataset. The correct interpretation is:</p>
+<ul>
+<li>There is a slight positive association in this sample.</li>
+<li>The association is weak and noisy.</li>
+<li>This observational dataset does not support a strong causal claim.</li>
+</ul>
+<p>A Year 11 Excellence report must show this distinction clearly: association is not causation.</p>
+</section>
+<section id="why-a-weak-relationship-is-still-a-useful-finding" class="level3">
+<h3 class="anchored" data-anchor-id="why-a-weak-relationship-is-still-a-useful-finding">Why a weak relationship is still a useful finding</h3>
+<p>A weak finding is still a valuable scientific result, especially in ecology. It tells us that a single-variable explanation is incomplete. In real stream systems, organisms respond to multiple factors simultaneously. A weak bivariate result often points to richer multivariable ecology rather than “no learning”.</p>
+<p>For example, koura length may depend on:</p>
+<ul>
+<li>age class and population structure,</li>
+<li>habitat quality (substrate, shelter, riparian cover),</li>
+<li>dissolved oxygen,</li>
+<li>flow conditions and stream permanence,</li>
+<li>catchment-level differences,</li>
+<li>sampling method and effort,</li>
+<li>seasonal timing,</li>
+<li>predation and food availability.</li>
+</ul>
+<p>Temperature may still matter biologically, but its effect can be hidden or diluted when these other factors vary strongly.</p>
+</section>
+<section id="strengths-of-this-enquiry" class="level3">
+<h3 class="anchored" data-anchor-id="strengths-of-this-enquiry">Strengths of this enquiry</h3>
+<ol type="1">
+<li>Real, authentic secondary data</li>
+</ol>
+<p>Using NZFFD records gives realistic complexity rather than textbook-perfect data. This is strong practice for AS91946 because students must interpret information in context, not just perform procedures.</p>
+<ol start="2" type="1">
+<li>Clear variable roles and question framing</li>
+</ol>
+<p>The explanatory and response variables are justified and aligned to ecological reasoning.</p>
+<ol start="3" type="1">
+<li>Reproducible code</li>
+</ol>
+<p>The cleaning and analysis pipeline is fully scripted and can be rerun. Reproducibility is a major quality feature.</p>
+<ol start="4" type="1">
+<li>Multi-evidence conclusion</li>
+</ol>
+<p>The conclusion is not based on one statistic. It uses plots, correlations, model output, diagnostics, and influence checks.</p>
+<ol start="5" type="1">
+<li>Critical limitations discussion</li>
+</ol>
+<p>An Excellence-level report must critique data quality, method limits, and claims. This report explicitly addresses those points.</p>
+</section>
+<section id="limitations-and-possible-sources-of-bias" class="level3">
+<h3 class="anchored" data-anchor-id="limitations-and-possible-sources-of-bias">Limitations and possible sources of bias</h3>
+<p>The most important limitations are below.</p>
+<ol type="1">
+<li>Missing data and complete-case bias</li>
+</ol>
+<p>Many rows lack either temperature or length. Our final sample is a complete-case subset. If records with missing values differ systematically from complete records (for example different regions, years, or methods), results may be biased.</p>
+<ol start="2" type="1">
+<li>Observational (non-experimental) design</li>
+</ol>
+<p>No random assignment or controlled treatment exists. Therefore confounding is expected.</p>
+<ol start="3" type="1">
+<li>Measurement and protocol variation</li>
+</ol>
+<p>Data are collected across different years, people, sites, and methods. Inconsistent measurement conditions can increase noise.</p>
+<ol start="4" type="1">
+<li>Variable choice: minimum length</li>
+</ol>
+<p>Using <code>minLength</code> can create extra sensitivity to how a sample is captured and what age classes were present. A site with many juveniles could drive very low minimum values even if older koura are also present.</p>
+<ol start="5" type="1">
+<li>Temporal and spatial clustering</li>
+</ol>
+<p>Observations are not independent in a strict sense if many points come from related places or times. That can affect uncertainty calculations in simple models.</p>
+</section>
+<section id="improvement-plan-for-a-stronger-future-enquiry" class="level3">
+<h3 class="anchored" data-anchor-id="improvement-plan-for-a-stronger-future-enquiry">Improvement plan for a stronger future enquiry</h3>
+<p>If this investigation were extended, the next steps would include:</p>
+<ol type="1">
+<li>Add key covariates</li>
+</ol>
+<p>Build a multiple regression model including dissolved oxygen, water clarity, habitat substrate, and catchment indicators.</p>
+<ol start="2" type="1">
+<li>Separate by region or catchment</li>
+</ol>
+<p>Plot and model within catchments to avoid mixing potentially very different ecological systems.</p>
+<ol start="3" type="1">
+<li>Include time effects</li>
+</ol>
+<p>Add year/season to account for climate and life-cycle timing.</p>
+<ol start="4" type="1">
+<li>Compare response definitions</li>
+</ol>
+<p>Try median or mean individual lengths (if available) rather than only minimum length.</p>
+<ol start="5" type="1">
+<li>Use robust methods</li>
+</ol>
+<p>Fit robust regression or transformed/quantile models if residual assumptions remain poor.</p>
+<ol start="6" type="1">
+<li>Pre-register cleaning rules</li>
+</ol>
+<p>State filtering and outlier rules before modelling to reduce analyst bias.</p>
+</section>
+<section id="what-this-teaches-a-year-11-statistics-student" class="level3">
+<h3 class="anchored" data-anchor-id="what-this-teaches-a-year-11-statistics-student">What this teaches a Year 11 statistics student</h3>
+<p>This report demonstrates several Excellence-level habits.</p>
+<ol type="1">
+<li>Ask a precise question in context</li>
+</ol>
+<p>The enquiry starts with a focused, testable question and clear variable roles.</p>
+<ol start="2" type="1">
+<li>Treat data cleaning as part of statistics</li>
+</ol>
+<p>Cleaning is not separate “admin” work. It changes the sample and therefore affects conclusions.</p>
+<ol start="3" type="1">
+<li>Use more than one representation</li>
+</ol>
+<p>Good conclusions use visual, numerical, and model evidence together.</p>
+<ol start="4" type="1">
+<li>Distinguish signal from noise</li>
+</ol>
+<p>A small slope can exist while predictive value remains low if scatter is large.</p>
+<ol start="5" type="1">
+<li>Be honest about uncertainty</li>
+</ol>
+<p>Statistical maturity means avoiding exaggerated claims when evidence is weak.</p>
+<ol start="6" type="1">
+<li>Interpret in plain language</li>
+</ol>
+<p>Even advanced steps (diagnostics, influence checks) can be explained clearly for a school audience.</p>
+</section>
+<section id="final-conclusion-paragraph-assessment-ready" class="level3">
+<h3 class="anchored" data-anchor-id="final-conclusion-paragraph-assessment-ready">Final conclusion paragraph (assessment-ready)</h3>
+<p>In this NZFFD-based enquiry, water temperature and minimum koura length show only a weak association in the cleaned complete-case sample. The fitted linear trend is slightly positive, but the point cloud is highly variable and model explanatory power is very low. Diagnostic plots indicate several unusual observations and imperfect model assumptions, which further support cautious interpretation. Therefore, the data do not support a strong claim that temperature alone is an effective predictor of minimum koura length. A more realistic ecological explanation is that koura size patterns are influenced by multiple interacting habitat and sampling factors, with temperature being only one part of a larger system. This is a useful and valid statistical conclusion because it is evidence-based, context-aware, and appropriately limited by data quality and study design.</p>
+</section>
+<section id="reflection-on-statistical-validity-and-reliability" class="level3">
+<h3 class="anchored" data-anchor-id="reflection-on-statistical-validity-and-reliability">Reflection on statistical validity and reliability</h3>
+<p>Validity asks whether we measured what we intended. Here, the variable definitions are clear and relevant, so construct validity is reasonable; however, using minimum observed length as a proxy for “size in a habitat” has limitations. Reliability asks whether repeated measurement would give consistent results. Because methods, times, and field conditions likely vary, reliability is probably moderate rather than high. These limitations do not invalidate the analysis, but they reduce confidence in fine-detail inference and increase the need for cautious language.</p>
+</section>
+<section id="ethical-and-environmental-significance" class="level3">
+<h3 class="anchored" data-anchor-id="ethical-and-environmental-significance">Ethical and environmental significance</h3>
+<p>A final Excellence feature is linking statistics to decision-making. Koura are culturally and ecologically significant. Even when a single-variable relationship is weak, that finding can still guide monitoring strategy. It suggests managers should avoid relying on temperature alone when assessing habitat condition for koura and instead use a broader indicator set. This is a statistically responsible and environmentally useful outcome.</p>
+</section>
+</section>
+<section id="appendix-key-code-outputs-for-quick-marking-checks" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-key-code-outputs-for-quick-marking-checks">Appendix: Key code outputs for quick marking checks</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">n_complete_cases =</span> <span class="fu">nrow</span>(analysis_dat),</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">model_coefficients =</span> <span class="fu">coef</span>(mod),</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">r_squared =</span> <span class="fu">summary</span>(mod)<span class="sc">$</span>r.squared,</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">adj_r_squared =</span> <span class="fu">summary</span>(mod)<span class="sc">$</span>adj.r.squared,</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">slope_p_value =</span> <span class="fu">summary</span>(mod)<span class="sc">$</span>coefficients[<span class="dv">2</span>, <span class="dv">4</span>]</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$n_complete_cases
+[1] 240
+
+$model_coefficients
+     (Intercept) waterTemperature 
+      34.6137406        0.6497464 
+
+$r_squared
+[1] 0.006818625
+
+$adj_r_squared
+[1] 0.002645594
+
+$slope_p_value
+[1] 0.2023994</code></pre>
+</div>
+</div>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

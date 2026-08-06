@@ -1,0 +1,125 @@
+# Measures of Spread Study Notes {#sec-spread}
+
+Spread describes how consistent or variable a data set is.
+Two groups can have similar centres (like medians) but very different spread.
+
+## Why spread matters
+
+When you compare groups, spread tells you whether outcomes are tightly clustered
+(consistency) or widely scattered (variability).
+
+- Smaller spread -> more consistent performance.
+- Larger spread -> less consistent performance.
+
+## Key terms
+
+| Term | Meaning |
+|---|---|
+| Minimum | Smallest value in the data set |
+| Maximum | Largest value in the data set |
+| Range | Maximum - Minimum |
+| Median ($Q_2$) | Middle value of ordered data |
+| Lower quartile ($Q_1$) | Middle of lower half |
+| Upper quartile ($Q_3$) | Middle of upper half |
+| Interquartile range (IQR) | $Q_3 - Q_1$, spread of middle 50% |
+
+## Core formulas
+
+$$\text{Range} = \text{Maximum} - \text{Minimum}$$
+
+$$\text{IQR} = Q_3 - Q_1$$
+
+## Step-by-step method
+
+1. Put data in ascending order.
+2. Find minimum and maximum, then calculate range.
+3. Find the median ($Q_2$).
+4. Split data into lower and upper halves.
+5. Find $Q_1$ and $Q_3$ from those halves.
+6. Calculate IQR.
+
+## Worked example A (odd number of values)
+
+Data: $[3, 5, 6, 8, 10, 12, 15]$
+
+- Minimum = $3$
+- Maximum = $15$
+- Range = $15 - 3 = 12$
+- Median ($Q_2$) = $8$
+- Lower half: $[3, 5, 6]$ so $Q_1 = 5$
+- Upper half: $[10, 12, 15]$ so $Q_3 = 12$
+- IQR = $12 - 5 = 7$
+
+## Worked example B (even number of values)
+
+Data: $[2, 4, 7, 9, 12, 15, 18, 42]$
+
+- Minimum = $2$
+- Maximum = $42$
+- Range = $42 - 2 = 40$
+- Median ($Q_2$) = $(9 + 12)/2 = 10.5$
+- Lower half: $[2, 4, 7, 9]$ so $Q_1 = (4 + 7)/2 = 5.5$
+- Upper half: $[12, 15, 18, 42]$ so $Q_3 = (15 + 18)/2 = 16.5$
+- IQR = $16.5 - 5.5 = 11$
+
+## Outliers and robust measures
+
+An outlier can inflate the range heavily. The IQR is usually more stable because
+it ignores the lowest 25% and highest 25% of values.
+
+In example B, the value 42 increases the range a lot, but the IQR still reflects
+where the middle 50% of scores sit.
+
+::: {.callout-tip}
+## Good comparison language
+- "Group A has a smaller IQR, so it is more consistent."
+- "Group B has a larger range, suggesting more variability overall."
+- "Because of an outlier, the range may overstate spread compared with IQR."
+:::
+
+## Comparison example
+
+Group A: $[12, 14, 15, 16, 18, 20, 22]$
+
+Group B: $[4, 8, 15, 16, 18, 28, 35]$
+
+- Group A range: $22 - 12 = 10$
+- Group B range: $35 - 4 = 31$
+- Group A $Q_1 = 14$, $Q_3 = 20$ so IQR $= 6$
+- Group B $Q_1 = 8$, $Q_3 = 28$ so IQR $= 20$
+
+Conclusion sentence:
+
+> Group A is much more consistent than Group B because both the range (10 vs
+> 31) and IQR (6 vs 20) are smaller.
+
+## Practice questions
+
+1. For $[1, 2, 5, 6, 7, 10, 11]$, find range and IQR.
+2. For $[4, 6, 7, 8, 10, 12, 16, 20]$, find range and IQR.
+3. Explain why IQR is often preferred to range when outliers are present.
+
+::: {.callout-note .content-visible collapse="true" when-format="html"}
+## Answers
+1. Range $= 10$, IQR $= 8$.
+2. Range $= 16$, IQR $= 7.5$.
+3. IQR focuses on the middle 50% and is less affected by extreme values.
+:::
+
+## Connection to worksheet tasks
+
+These notes align directly with the worksheet practice in
+homework_exits/worksheet_measures_of_spread.qmd and are intended as
+preparation before independent completion.
+
+## Worksheet link
+
+Use the companion worksheet here:
+
+- [Worksheet: Measures of Spread](../../homework_exits/worksheet_measures_of_spread.html)
+
+## Next step
+
+Continue to @sec-graphs to represent these distributions visually, and then to
+@sec-measures for a broader chapter that combines centre and spread in formal
+comparison writing.
