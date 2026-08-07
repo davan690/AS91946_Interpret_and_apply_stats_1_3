@@ -4,6 +4,10 @@
 
 In this chapter, we apply the PPDAC (Problem, Plan, Data, Analysis, Conclusion) statistical enquiry cycle to a real-world ecological context. Understanding how two numerical variables interact is a core component of NCEA Level 1 Statistics.
 
+## Type of enquiry
+
+This is the first step we need to take in the PPDAC cycle. The students are investigating a **relationship** between two numerical variables: stream temperature and kōura carapace length. They want to know if the physical environment of the stream affects the growth of the kōura.
+
 ## Exercise: Project Kōura
 
 **Context:** 

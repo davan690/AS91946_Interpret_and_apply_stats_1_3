@@ -1,0 +1,91 @@
+# Measures of Central Tendency {#sec-central-tendency}
+
+Measures of central tendency describe the typical or central value in a data set.
+In AS91946, you should choose the centre measure that best matches the shape of
+the data and the context of the question.
+
+## Why centre matters
+
+When you compare groups or interpret a distribution, centre tells you where most
+values sit. A good statistical description usually includes both:
+
+- centre (what is typical), and
+- spread (how variable values are).
+
+## Key terms
+
+| Term | Meaning |
+|---|---|
+| Mean | Sum of values divided by the number of values |
+| Median | Middle value of ordered data |
+| Mode | Most frequent value |
+
+## Core formulas
+
+$$\bar{x} = \frac{\sum x_i}{n}$$
+
+For an even number of values, the median is the average of the two middle
+ordered values.
+
+## Worked example
+
+Data: $[12, 14, 16, 17, 18, 21, 24, 60]$
+
+1. Mean
+
+$$\bar{x} = \frac{12+14+16+17+18+21+24+60}{8} = \frac{182}{8} = 22.75$$
+
+2. Median
+
+Ordered middle two values are $17$ and $18$, so:
+
+$$\text{Median} = \frac{17+18}{2} = 17.5$$
+
+3. Mode
+
+No repeated values, so this data set has no mode.
+
+Interpretation: the high value $60$ pulls the mean upward, so the median gives a
+better description of the typical value.
+
+## Choosing the right measure
+
+| Situation | Better centre measure | Reason |
+|---|---|---|
+| Roughly symmetric distribution, no outliers | Mean | Uses all values |
+| Skewed distribution or outliers present | Median | Resistant to extreme values |
+| Categorical data or most common value needed | Mode | Identifies most frequent category/value |
+
+::: {.callout-tip}
+## Exam language frame
+"The median is a better measure of centre here because the distribution is
+right-skewed and includes high outliers, which would pull the mean upward."
+:::
+
+## Quick R check (optional)
+
+```{r}
+example_data <- c(12, 14, 16, 17, 18, 21, 24, 60)
+
+cat("Mean:", mean(example_data), "\n")
+cat("Median:", median(example_data), "\n")
+cat("Mode: none (all values unique)", "\n")
+```
+
+## Practice questions
+
+1. Find the mean and median of $[7, 8, 8, 9, 10, 11, 12]$.
+2. Find the mean and median of $[5, 6, 7, 8, 9, 30]$.
+3. For question 2, explain which measure of centre is more appropriate and why.
+
+::: {.callout-note .content-visible collapse="true" when-format="html"}
+## Answers
+1. Mean $= 65/7 \approx 9.29$, median $= 9$.
+2. Mean $= 65/6 \approx 10.83$, median $= (7+8)/2 = 7.5$.
+3. Median is more appropriate because the outlier $30$ inflates the mean.
+:::
+
+## Next step
+
+Continue to @sec-spread to pair centre with variability measures (range,
+quartiles, and IQR) for stronger comparison statements.

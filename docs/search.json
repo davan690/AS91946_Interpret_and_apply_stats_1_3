@@ -54,7 +54,7 @@
     "href": "index.html#suggested-learning-pathway",
     "title": "AS91946: Interpret and Apply Mathematical and Statistical Information",
     "section": "1.5 Suggested learning pathway",
-    "text": "1.5 Suggested learning pathway\nFollow this sequence from start to finish:\n\n\n\n\n\n\n\n\n\nOrder\nLearning focus\nWhere in this book\nTested in\n\n\n\n\n1\nCombined overview of AS1.1 and AS1.3 expectations\nChapter 1 - Combined approach\n[Both]\n\n\n2\nStatistical questions, context language, core terms\nChapter 2 - What is Statistics?\n[Both]\n\n\n3\nStatistical enquiry cycle and investigation flow\nChapter 3 - PPDAC\n[Both]\n\n\n4\nVariables and data types, choosing suitable displays\nChapter 4 - Data types\n[Both]\n\n\n5\nIndependent and dependent variable roles in investigations\nChapter 5 - Independent and Dependent Variables\n[Both]\n\n\n6\nSpread-focused notes with quartiles and IQR worked examples\nChapter 6 - Measures of Spread Study Notes\n[Both]\n\n\n7\nGraph interpretation and comparison language\nChapter 7 - Graphs\n[Both]\n\n\n8\nApplied investigation example in context\nChapter 8 - Koura Example\n[Both]\n\n\n9\nCentre and spread for comparison and conclusions\nChapter 9 - Measures\n[Both]\n\n\n10\nApplied tasks and mixed practice with response scaffolds\nChapter 10 - Practice\n[Both]\n\n\n11\nProbability tools and table-based reasoning\nPart 2 - Probability\n[1.3]\n\n\n12\nSampling quality, bias, inference, critique\nPart 2 - Critical reading\n[Both]\n\n\n13\nExtension reading and source material\nResource Library\n[Both]",
+    "text": "1.5 Suggested learning pathway\nFollow this sequence from start to finish:\n\n\n\n\n\n\n\n\n\nOrder\nLearning focus\nWhere in this book\nTested in\n\n\n\n\n1\nCombined overview of AS1.1 and AS1.3 expectations\nChapter 1 - Combined approach\n[Both]\n\n\n2\nStatistical questions, context language, core terms\nChapter 2 - What is Statistics?\n[Both]\n\n\n3\nStatistical enquiry cycle and investigation flow\nChapter 3 - PPDAC\n[Both]\n\n\n4\nVariables and data types, choosing suitable displays\nChapter 4 - Data types\n[Both]\n\n\n5\nIndependent and dependent variable roles in investigations\nChapter 5 - Independent and Dependent Variables\n[Both]\n\n\n6\nCentral tendency (mean, median, mode) and choosing suitable centre\nChapter 6 - Measures of Central Tendency\n[Both]\n\n\n7\nSpread-focused notes with quartiles and IQR worked examples\nChapter 7 - Measures of Spread Study Notes\n[Both]\n\n\n8\nGraph interpretation and comparison language\nChapter 8 - Graphs\n[Both]\n\n\n9\nApplied investigation example in context\nChapter 9 - Koura Example\n[Both]\n\n\n10\nCentre and spread for comparison and conclusions\nChapter 10 - Measures\n[Both]\n\n\n11\nApplied tasks and mixed practice with response scaffolds\nChapter 11 - Practice\n[Both]\n\n\n12\nProbability tools and table-based reasoning\nPart 2 - Probability\n[1.3]\n\n\n13\nSampling quality, bias, inference, critique\nPart 2 - Critical reading\n[Both]\n\n\n14\nExtension reading and source material\nResource Library\n[Both]",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
     ]
@@ -64,7 +64,7 @@
     "href": "index.html#how-to-use-this-pathway-for-dual-preparation",
     "title": "AS91946: Interpret and Apply Mathematical and Statistical Information",
     "section": "1.6 How to use this pathway for dual preparation",
-    "text": "1.6 How to use this pathway for dual preparation\n\nBuild investigation capability first (Chapters 1-6) for strong AS1.1 evidence.\nAdd variable-role clarity with the independent/dependent chapter, then consolidate spread ideas in the measures-of-spread notes chapter.\nUse the graphs, koura example, measures, and practice chapters to consolidate comparison and communication.\nAdd the Part 2 extension chapters for explicit AS1.3 preparation.\nIn every written response, include context, comparison, and justification language.",
+    "text": "1.6 How to use this pathway for dual preparation\n\nBuild investigation capability first (Chapters 1-7) for strong AS1.1 evidence.\nAdd variable-role clarity with the independent/dependent chapter, then build centre ideas in the central-tendency chapter before consolidating spread ideas in the measures-of-spread notes chapter.\nUse the graphs, koura example, measures, and practice chapters to consolidate comparison and communication.\nAdd the Part 2 extension chapters for explicit AS1.3 preparation.\nIn every written response, include context, comparison, and justification language.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
     ]
@@ -157,7 +157,7 @@
     "href": "chapters/01-intro.html#links-to-the-rest-of-this-text",
     "title": "2  Combined AS1.1 and AS1.3 Approach",
     "section": "2.3 Links to the rest of this text",
-    "text": "2.3 Links to the rest of this text\nUse this chapter as the map for what each section contributes to dual preparation:\n\n\n\n\n\n\n\n\nSection\nMain learning link\nStandards link\n\n\n\n\nChapter 3\nGeneral foundations: statistical language, context, population/sample/variable\nBoth\n\n\nChapter 4\nStatistical enquiry cycle and investigation logic\nBoth (especially AS1.1 process)\n\n\nChapter 5\nVariable classification and choosing appropriate displays\nBoth\n\n\nChapter 6\nIndependent/dependent variable roles in comparison and relationship tasks\nBoth\n\n\nChapter 7\nQuartiles, range, and IQR foundations for spread-focused reasoning\nBoth\n\n\nChapter 8\nInterpreting and comparing displays in context\nBoth\n\n\nChapter 10\nCentre, spread, and comparison statements\nBoth\n\n\nPart 2 chapters\nProbability and critical reading under assessment-style conditions\nMostly 1.3",
+    "text": "2.3 Links to the rest of this text\nUse this chapter as the map for what each section contributes to dual preparation:\n\n\n\n\n\n\n\n\nSection\nMain learning link\nStandards link\n\n\n\n\nChapter 3\nGeneral foundations: statistical language, context, population/sample/variable\nBoth\n\n\nChapter 4\nStatistical enquiry cycle and investigation logic\nBoth (especially AS1.1 process)\n\n\nChapter 5\nVariable classification and choosing appropriate displays\nBoth\n\n\nChapter 6\nIndependent/dependent variable roles in comparison and relationship tasks\nBoth\n\n\nChapter 7\nMean, median, mode, and choosing suitable centre measures\nBoth\n\n\nChapter 8\nQuartiles, range, and IQR foundations for spread-focused reasoning\nBoth\n\n\nChapter 9\nInterpreting and comparing displays in context\nBoth\n\n\nChapter 11\nCentre, spread, and comparison statements\nBoth\n\n\nPart 2 chapters\nProbability and critical reading under assessment-style conditions\nMostly 1.3",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Combined AS1.1 and AS1.3 Approach</span>"
@@ -168,7 +168,7 @@
     "href": "chapters/01-intro.html#getting-started",
     "title": "2  Combined AS1.1 and AS1.3 Approach",
     "section": "2.4 Getting started",
-    "text": "2.4 Getting started\nContinue to Chapter 3 for the general introduction to statistics, then move to Chapter 4 for the dedicated enquiry-cycle chapter.\n\n2.4.1 Suggested learning pathway\n\nBuild statistical language and context first (Chapter 3).\nLearn the enquiry process (Chapter 4) before writing conclusions.\nStrengthen representation by understanding data types (Chapter 5).\nClarify explanatory and response roles with independent/dependent variables (Chapter 6).\nBuild spread reasoning with quartiles and IQR (Chapter 7).\nChoose and interpret appropriate displays (Chapter 8).\nUse measures of centre and spread to compare distributions and justify findings (Chapter 10).\nConsolidate all core skills with mixed practice questions (Chapter 11).\nExtend to probability tools (Chapter 12) and critical reading of statistical claims (Chapter 13) for explicit AS1.3 preparation.\n\n\n\n\n\n\n\nNoteInternal and external connection\n\n\n\nIf you can explain findings from your own investigation clearly and in context (AS1.1), you are building the same reasoning needed for interpretation and justification in AS1.3.",
+    "text": "2.4 Getting started\nContinue to Chapter 3 for the general introduction to statistics, then move to Chapter 4 for the dedicated enquiry-cycle chapter.\n\n2.4.1 Suggested learning pathway\n\nBuild statistical language and context first (Chapter 3).\nLearn the enquiry process (Chapter 4) before writing conclusions.\nStrengthen representation by understanding data types (Chapter 5).\nClarify explanatory and response roles with independent/dependent variables (Chapter 6).\nBuild centre reasoning with mean, median, and mode (Chapter 7).\nBuild spread reasoning with quartiles and IQR (Chapter 8).\nChoose and interpret appropriate displays (Chapter 9).\nUse measures of centre and spread to compare distributions and justify findings (Chapter 11).\nConsolidate all core skills with mixed practice questions (Chapter 12).\nExtend to probability tools (Chapter 13) and critical reading of statistical claims (Chapter 14) for explicit AS1.3 preparation.\n\n\n\n\n\n\n\nNoteInternal and external connection\n\n\n\nIf you can explain findings from your own investigation clearly and in context (AS1.1), you are building the same reasoning needed for interpretation and justification in AS1.3.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Combined AS1.1 and AS1.3 Approach</span>"
@@ -377,7 +377,7 @@
     "href": "chapters/04-data-types.html#where-to-next",
     "title": "5  Types of Data and Variables",
     "section": "5.8 Where to next",
-    "text": "5.8 Where to next\n\nContinue to Chapter 6 to learn how variables are assigned explanatory and response roles in investigations.\nThen use Chapter 7 to strengthen your spread calculations before moving into Chapter 8.",
+    "text": "5.8 Where to next\n\nContinue to Chapter 6 to learn how variables are assigned explanatory and response roles in investigations.\nThen use Chapter 7 to strengthen your centre calculations, and after that use Chapter 8 to strengthen spread calculations before moving into Chapter 9.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Types of Data and Variables</span>"
@@ -498,751 +498,872 @@
     "href": "chapters/04-1-dependent-independent-variables.html#next-step",
     "title": "6  Independent and Dependent Variables",
     "section": "6.10 Next step",
-    "text": "6.10 Next step\nNow move to Chapter 7 to strengthen your understanding of spread measures, then continue to Chapter 8 to choose and interpret graphs confidently.",
+    "text": "6.10 Next step\nNow move to Chapter 7 to strengthen your understanding of centre measures, then continue to Chapter 8 and Chapter 9 to choose and interpret graphs confidently.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Independent and Dependent Variables</span>"
     ]
   },
   {
-    "objectID": "chapters/04-2-measures-of-spread.html",
-    "href": "chapters/04-2-measures-of-spread.html",
-    "title": "7  Measures of Spread Study Notes",
-    "section": "",
-    "text": "7.1 Why spread matters\nSpread describes how consistent or variable a data set is. Two groups can have similar centres (like medians) but very different spread.\nWhen you compare groups, spread tells you whether outcomes are tightly clustered (consistency) or widely scattered (variability).",
+    "objectID": "chapters/04-1-dependent-independent-variables.html#worksheet-link",
+    "href": "chapters/04-1-dependent-independent-variables.html#worksheet-link",
+    "title": "6  Independent and Dependent Variables",
+    "section": "6.11 Worksheet link",
+    "text": "6.11 Worksheet link\nUse the companion worksheet here:\n\nWorksheet: Independent vs Dependent Variables",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Independent and Dependent Variables</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-2-measures-of-central-tendency.html",
+    "href": "chapters/04-2-measures-of-central-tendency.html",
+    "title": "7  Measures of Central Tendency",
+    "section": "",
+    "text": "7.1 Why centre matters\nMeasures of central tendency describe the typical or central value in a data set. In AS91946, you should choose the centre measure that best matches the shape of the data and the context of the question.\nWhen you compare groups or interpret a distribution, centre tells you where most values sit. A good statistical description usually includes both:",
+    "crumbs": [
+      "Part 1: Core Statistical Thinking",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Measures of Central Tendency</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-2-measures-of-central-tendency.html#why-centre-matters",
+    "href": "chapters/04-2-measures-of-central-tendency.html#why-centre-matters",
+    "title": "7  Measures of Central Tendency",
+    "section": "",
+    "text": "centre (what is typical), and\nspread (how variable values are).",
+    "crumbs": [
+      "Part 1: Core Statistical Thinking",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Measures of Central Tendency</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-2-measures-of-central-tendency.html#key-terms",
+    "href": "chapters/04-2-measures-of-central-tendency.html#key-terms",
+    "title": "7  Measures of Central Tendency",
+    "section": "7.2 Key terms",
+    "text": "7.2 Key terms\n\n\n\nTerm\nMeaning\n\n\n\n\nMean\nSum of values divided by the number of values\n\n\nMedian\nMiddle value of ordered data\n\n\nMode\nMost frequent value",
+    "crumbs": [
+      "Part 1: Core Statistical Thinking",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Measures of Central Tendency</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-2-measures-of-central-tendency.html#core-formulas",
+    "href": "chapters/04-2-measures-of-central-tendency.html#core-formulas",
+    "title": "7  Measures of Central Tendency",
+    "section": "7.3 Core formulas",
+    "text": "7.3 Core formulas\n\\[\\bar{x} = \\frac{\\sum x_i}{n}\\]\nFor an even number of values, the median is the average of the two middle ordered values.",
+    "crumbs": [
+      "Part 1: Core Statistical Thinking",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Measures of Central Tendency</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-2-measures-of-central-tendency.html#worked-example",
+    "href": "chapters/04-2-measures-of-central-tendency.html#worked-example",
+    "title": "7  Measures of Central Tendency",
+    "section": "7.4 Worked example",
+    "text": "7.4 Worked example\nData: \\([12, 14, 16, 17, 18, 21, 24, 60]\\)\n\nMean\n\n\\[\\bar{x} = \\frac{12+14+16+17+18+21+24+60}{8} = \\frac{182}{8} = 22.75\\]\n\nMedian\n\nOrdered middle two values are \\(17\\) and \\(18\\), so:\n\\[\\text{Median} = \\frac{17+18}{2} = 17.5\\]\n\nMode\n\nNo repeated values, so this data set has no mode.\nInterpretation: the high value \\(60\\) pulls the mean upward, so the median gives a better description of the typical value.",
+    "crumbs": [
+      "Part 1: Core Statistical Thinking",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Measures of Central Tendency</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-2-measures-of-central-tendency.html#choosing-the-right-measure",
+    "href": "chapters/04-2-measures-of-central-tendency.html#choosing-the-right-measure",
+    "title": "7  Measures of Central Tendency",
+    "section": "7.5 Choosing the right measure",
+    "text": "7.5 Choosing the right measure\n\n\n\n\n\n\n\n\nSituation\nBetter centre measure\nReason\n\n\n\n\nRoughly symmetric distribution, no outliers\nMean\nUses all values\n\n\nSkewed distribution or outliers present\nMedian\nResistant to extreme values\n\n\nCategorical data or most common value needed\nMode\nIdentifies most frequent category/value\n\n\n\n\n\n\n\n\n\nTipExam language frame\n\n\n\n“The median is a better measure of centre here because the distribution is right-skewed and includes high outliers, which would pull the mean upward.”",
+    "crumbs": [
+      "Part 1: Core Statistical Thinking",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Measures of Central Tendency</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-2-measures-of-central-tendency.html#quick-r-check-optional",
+    "href": "chapters/04-2-measures-of-central-tendency.html#quick-r-check-optional",
+    "title": "7  Measures of Central Tendency",
+    "section": "7.6 Quick R check (optional)",
+    "text": "7.6 Quick R check (optional)\n\n\nShow R code\nexample_data &lt;- c(12, 14, 16, 17, 18, 21, 24, 60)\n\ncat(\"Mean:\", mean(example_data), \"\\n\")\n#&gt; Mean: 22.75\ncat(\"Median:\", median(example_data), \"\\n\")\n#&gt; Median: 17.5\ncat(\"Mode: none (all values unique)\", \"\\n\")\n#&gt; Mode: none (all values unique)",
+    "crumbs": [
+      "Part 1: Core Statistical Thinking",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Measures of Central Tendency</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-2-measures-of-central-tendency.html#practice-questions",
+    "href": "chapters/04-2-measures-of-central-tendency.html#practice-questions",
+    "title": "7  Measures of Central Tendency",
+    "section": "7.7 Practice questions",
+    "text": "7.7 Practice questions\n\nFind the mean and median of \\([7, 8, 8, 9, 10, 11, 12]\\).\nFind the mean and median of \\([5, 6, 7, 8, 9, 30]\\).\nFor question 2, explain which measure of centre is more appropriate and why.\n\n\n\n\n\n\n\nNoteAnswers\n\n\n\n\n\n\nMean \\(= 65/7 \\approx 9.29\\), median \\(= 9\\).\nMean \\(= 65/6 \\approx 10.83\\), median \\(= (7+8)/2 = 7.5\\).\nMedian is more appropriate because the outlier \\(30\\) inflates the mean.",
+    "crumbs": [
+      "Part 1: Core Statistical Thinking",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Measures of Central Tendency</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-2-measures-of-central-tendency.html#next-step",
+    "href": "chapters/04-2-measures-of-central-tendency.html#next-step",
+    "title": "7  Measures of Central Tendency",
+    "section": "7.8 Next step",
+    "text": "7.8 Next step\nContinue to Chapter 8 to pair centre with variability measures (range, quartiles, and IQR) for stronger comparison statements.",
+    "crumbs": [
+      "Part 1: Core Statistical Thinking",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Measures of Central Tendency</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-2-measures-of-spread.html",
+    "href": "chapters/04-2-measures-of-spread.html",
+    "title": "8  Measures of Spread Study Notes",
+    "section": "",
+    "text": "8.1 Why spread matters\nSpread describes how consistent or variable a data set is. Two groups can have similar centres (like medians) but very different spread.\nWhen you compare groups, spread tells you whether outcomes are tightly clustered (consistency) or widely scattered (variability).",
+    "crumbs": [
+      "Part 1: Core Statistical Thinking",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
     ]
   },
   {
     "objectID": "chapters/04-2-measures-of-spread.html#why-spread-matters",
     "href": "chapters/04-2-measures-of-spread.html#why-spread-matters",
-    "title": "7  Measures of Spread Study Notes",
+    "title": "8  Measures of Spread Study Notes",
     "section": "",
     "text": "Smaller spread -&gt; more consistent performance.\nLarger spread -&gt; less consistent performance.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
     ]
   },
   {
     "objectID": "chapters/04-2-measures-of-spread.html#key-terms",
     "href": "chapters/04-2-measures-of-spread.html#key-terms",
-    "title": "7  Measures of Spread Study Notes",
-    "section": "7.2 Key terms",
-    "text": "7.2 Key terms\n\n\n\nTerm\nMeaning\n\n\n\n\nMinimum\nSmallest value in the data set\n\n\nMaximum\nLargest value in the data set\n\n\nRange\nMaximum - Minimum\n\n\nMedian (\\(Q_2\\))\nMiddle value of ordered data\n\n\nLower quartile (\\(Q_1\\))\nMiddle of lower half\n\n\nUpper quartile (\\(Q_3\\))\nMiddle of upper half\n\n\nInterquartile range (IQR)\n\\(Q_3 - Q_1\\), spread of middle 50%",
+    "title": "8  Measures of Spread Study Notes",
+    "section": "8.2 Key terms",
+    "text": "8.2 Key terms\n\n\n\nTerm\nMeaning\n\n\n\n\nMinimum\nSmallest value in the data set\n\n\nMaximum\nLargest value in the data set\n\n\nRange\nMaximum - Minimum\n\n\nMedian (\\(Q_2\\))\nMiddle value of ordered data\n\n\nLower quartile (\\(Q_1\\))\nMiddle of lower half\n\n\nUpper quartile (\\(Q_3\\))\nMiddle of upper half\n\n\nInterquartile range (IQR)\n\\(Q_3 - Q_1\\), spread of middle 50%",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
     ]
   },
   {
     "objectID": "chapters/04-2-measures-of-spread.html#core-formulas",
     "href": "chapters/04-2-measures-of-spread.html#core-formulas",
-    "title": "7  Measures of Spread Study Notes",
-    "section": "7.3 Core formulas",
-    "text": "7.3 Core formulas\n\\[\\text{Range} = \\text{Maximum} - \\text{Minimum}\\]\n\\[\\text{IQR} = Q_3 - Q_1\\]",
+    "title": "8  Measures of Spread Study Notes",
+    "section": "8.3 Core formulas",
+    "text": "8.3 Core formulas\n\\[\\text{Range} = \\text{Maximum} - \\text{Minimum}\\]\n\\[\\text{IQR} = Q_3 - Q_1\\]",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
     ]
   },
   {
     "objectID": "chapters/04-2-measures-of-spread.html#step-by-step-method",
     "href": "chapters/04-2-measures-of-spread.html#step-by-step-method",
-    "title": "7  Measures of Spread Study Notes",
-    "section": "7.4 Step-by-step method",
-    "text": "7.4 Step-by-step method\n\nPut data in ascending order.\nFind minimum and maximum, then calculate range.\nFind the median (\\(Q_2\\)).\nSplit data into lower and upper halves.\nFind \\(Q_1\\) and \\(Q_3\\) from those halves.\nCalculate IQR.",
+    "title": "8  Measures of Spread Study Notes",
+    "section": "8.4 Step-by-step method",
+    "text": "8.4 Step-by-step method\n\nPut data in ascending order.\nFind minimum and maximum, then calculate range.\nFind the median (\\(Q_2\\)).\nSplit data into lower and upper halves.\nFind \\(Q_1\\) and \\(Q_3\\) from those halves.\nCalculate IQR.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
     ]
   },
   {
     "objectID": "chapters/04-2-measures-of-spread.html#worked-example-a-odd-number-of-values",
     "href": "chapters/04-2-measures-of-spread.html#worked-example-a-odd-number-of-values",
-    "title": "7  Measures of Spread Study Notes",
-    "section": "7.5 Worked example A (odd number of values)",
-    "text": "7.5 Worked example A (odd number of values)\nData: \\([3, 5, 6, 8, 10, 12, 15]\\)\n\nMinimum = \\(3\\)\nMaximum = \\(15\\)\nRange = \\(15 - 3 = 12\\)\nMedian (\\(Q_2\\)) = \\(8\\)\nLower half: \\([3, 5, 6]\\) so \\(Q_1 = 5\\)\nUpper half: \\([10, 12, 15]\\) so \\(Q_3 = 12\\)\nIQR = \\(12 - 5 = 7\\)",
+    "title": "8  Measures of Spread Study Notes",
+    "section": "8.5 Worked example A (odd number of values)",
+    "text": "8.5 Worked example A (odd number of values)\nData: \\([3, 5, 6, 8, 10, 12, 15]\\)\n\nMinimum = \\(3\\)\nMaximum = \\(15\\)\nRange = \\(15 - 3 = 12\\)\nMedian (\\(Q_2\\)) = \\(8\\)\nLower half: \\([3, 5, 6]\\) so \\(Q_1 = 5\\)\nUpper half: \\([10, 12, 15]\\) so \\(Q_3 = 12\\)\nIQR = \\(12 - 5 = 7\\)",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
     ]
   },
   {
     "objectID": "chapters/04-2-measures-of-spread.html#worked-example-b-even-number-of-values",
     "href": "chapters/04-2-measures-of-spread.html#worked-example-b-even-number-of-values",
-    "title": "7  Measures of Spread Study Notes",
-    "section": "7.6 Worked example B (even number of values)",
-    "text": "7.6 Worked example B (even number of values)\nData: \\([2, 4, 7, 9, 12, 15, 18, 42]\\)\n\nMinimum = \\(2\\)\nMaximum = \\(42\\)\nRange = \\(42 - 2 = 40\\)\nMedian (\\(Q_2\\)) = \\((9 + 12)/2 = 10.5\\)\nLower half: \\([2, 4, 7, 9]\\) so \\(Q_1 = (4 + 7)/2 = 5.5\\)\nUpper half: \\([12, 15, 18, 42]\\) so \\(Q_3 = (15 + 18)/2 = 16.5\\)\nIQR = \\(16.5 - 5.5 = 11\\)",
+    "title": "8  Measures of Spread Study Notes",
+    "section": "8.6 Worked example B (even number of values)",
+    "text": "8.6 Worked example B (even number of values)\nData: \\([2, 4, 7, 9, 12, 15, 18, 42]\\)\n\nMinimum = \\(2\\)\nMaximum = \\(42\\)\nRange = \\(42 - 2 = 40\\)\nMedian (\\(Q_2\\)) = \\((9 + 12)/2 = 10.5\\)\nLower half: \\([2, 4, 7, 9]\\) so \\(Q_1 = (4 + 7)/2 = 5.5\\)\nUpper half: \\([12, 15, 18, 42]\\) so \\(Q_3 = (15 + 18)/2 = 16.5\\)\nIQR = \\(16.5 - 5.5 = 11\\)",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
     ]
   },
   {
     "objectID": "chapters/04-2-measures-of-spread.html#outliers-and-robust-measures",
     "href": "chapters/04-2-measures-of-spread.html#outliers-and-robust-measures",
-    "title": "7  Measures of Spread Study Notes",
-    "section": "7.7 Outliers and robust measures",
-    "text": "7.7 Outliers and robust measures\nAn outlier can inflate the range heavily. The IQR is usually more stable because it ignores the lowest 25% and highest 25% of values.\nIn example B, the value 42 increases the range a lot, but the IQR still reflects where the middle 50% of scores sit.\n\n\n\n\n\n\nTipGood comparison language\n\n\n\n\n“Group A has a smaller IQR, so it is more consistent.”\n“Group B has a larger range, suggesting more variability overall.”\n“Because of an outlier, the range may overstate spread compared with IQR.”",
+    "title": "8  Measures of Spread Study Notes",
+    "section": "8.7 Outliers and robust measures",
+    "text": "8.7 Outliers and robust measures\nAn outlier can inflate the range heavily. The IQR is usually more stable because it ignores the lowest 25% and highest 25% of values.\nIn example B, the value 42 increases the range a lot, but the IQR still reflects where the middle 50% of scores sit.\n\n\n\n\n\n\nTipGood comparison language\n\n\n\n\n“Group A has a smaller IQR, so it is more consistent.”\n“Group B has a larger range, suggesting more variability overall.”\n“Because of an outlier, the range may overstate spread compared with IQR.”",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
     ]
   },
   {
     "objectID": "chapters/04-2-measures-of-spread.html#comparison-example",
     "href": "chapters/04-2-measures-of-spread.html#comparison-example",
-    "title": "7  Measures of Spread Study Notes",
-    "section": "7.8 Comparison example",
-    "text": "7.8 Comparison example\nGroup A: \\([12, 14, 15, 16, 18, 20, 22]\\)\nGroup B: \\([4, 8, 15, 16, 18, 28, 35]\\)\n\nGroup A range: \\(22 - 12 = 10\\)\nGroup B range: \\(35 - 4 = 31\\)\nGroup A \\(Q_1 = 14\\), \\(Q_3 = 20\\) so IQR \\(= 6\\)\nGroup B \\(Q_1 = 8\\), \\(Q_3 = 28\\) so IQR \\(= 20\\)\n\nConclusion sentence:\n\nGroup A is much more consistent than Group B because both the range (10 vs 31) and IQR (6 vs 20) are smaller.",
+    "title": "8  Measures of Spread Study Notes",
+    "section": "8.8 Comparison example",
+    "text": "8.8 Comparison example\nGroup A: \\([12, 14, 15, 16, 18, 20, 22]\\)\nGroup B: \\([4, 8, 15, 16, 18, 28, 35]\\)\n\nGroup A range: \\(22 - 12 = 10\\)\nGroup B range: \\(35 - 4 = 31\\)\nGroup A \\(Q_1 = 14\\), \\(Q_3 = 20\\) so IQR \\(= 6\\)\nGroup B \\(Q_1 = 8\\), \\(Q_3 = 28\\) so IQR \\(= 20\\)\n\nConclusion sentence:\n\nGroup A is much more consistent than Group B because both the range (10 vs 31) and IQR (6 vs 20) are smaller.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
     ]
   },
   {
     "objectID": "chapters/04-2-measures-of-spread.html#practice-questions",
     "href": "chapters/04-2-measures-of-spread.html#practice-questions",
-    "title": "7  Measures of Spread Study Notes",
-    "section": "7.9 Practice questions",
-    "text": "7.9 Practice questions\n\nFor \\([1, 2, 5, 6, 7, 10, 11]\\), find range and IQR.\nFor \\([4, 6, 7, 8, 10, 12, 16, 20]\\), find range and IQR.\nExplain why IQR is often preferred to range when outliers are present.\n\n\n\n\n\n\n\nNoteAnswers\n\n\n\n\n\n\nRange \\(= 10\\), IQR \\(= 8\\).\nRange \\(= 16\\), IQR \\(= 7.5\\).\nIQR focuses on the middle 50% and is less affected by extreme values.",
+    "title": "8  Measures of Spread Study Notes",
+    "section": "8.9 Practice questions",
+    "text": "8.9 Practice questions\n\nFor \\([1, 2, 5, 6, 7, 10, 11]\\), find range and IQR.\nFor \\([4, 6, 7, 8, 10, 12, 16, 20]\\), find range and IQR.\nExplain why IQR is often preferred to range when outliers are present.\n\n\n\n\n\n\n\nNoteAnswers\n\n\n\n\n\n\nRange \\(= 10\\), IQR \\(= 8\\).\nRange \\(= 16\\), IQR \\(= 7.5\\).\nIQR focuses on the middle 50% and is less affected by extreme values.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
     ]
   },
   {
     "objectID": "chapters/04-2-measures-of-spread.html#connection-to-worksheet-tasks",
     "href": "chapters/04-2-measures-of-spread.html#connection-to-worksheet-tasks",
-    "title": "7  Measures of Spread Study Notes",
-    "section": "7.10 Connection to worksheet tasks",
-    "text": "7.10 Connection to worksheet tasks\nThese notes align directly with the worksheet practice in homework_exits/worksheet_measures_of_spread.qmd and are intended as preparation before independent completion.",
+    "title": "8  Measures of Spread Study Notes",
+    "section": "8.10 Connection to worksheet tasks",
+    "text": "8.10 Connection to worksheet tasks\nThese notes align directly with the worksheet practice in homework_exits/worksheet_measures_of_spread.qmd and are intended as preparation before independent completion.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-2-measures-of-spread.html#worksheet-link",
+    "href": "chapters/04-2-measures-of-spread.html#worksheet-link",
+    "title": "8  Measures of Spread Study Notes",
+    "section": "8.11 Worksheet link",
+    "text": "8.11 Worksheet link\nUse the companion worksheet here:\n\nWorksheet: Measures of Spread",
+    "crumbs": [
+      "Part 1: Core Statistical Thinking",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
     ]
   },
   {
     "objectID": "chapters/04-2-measures-of-spread.html#next-step",
     "href": "chapters/04-2-measures-of-spread.html#next-step",
-    "title": "7  Measures of Spread Study Notes",
-    "section": "7.11 Next step",
-    "text": "7.11 Next step\nContinue to Chapter 8 to represent these distributions visually, and then to Chapter 10 for a broader chapter that combines centre and spread in formal comparison writing.",
+    "title": "8  Measures of Spread Study Notes",
+    "section": "8.12 Next step",
+    "text": "8.12 Next step\nContinue to Chapter 9 to represent these distributions visually, and then to Chapter 11 for a broader chapter that combines centre and spread in formal comparison writing.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Measures of Spread Study Notes</span>"
     ]
   },
   {
     "objectID": "chapters/05-graphs.html",
     "href": "chapters/05-graphs.html",
-    "title": "8  Statistical Graphs and Displays",
+    "title": "9  Statistical Graphs and Displays",
     "section": "",
-    "text": "8.1 Setting up our data\nA well-chosen graph makes patterns in data immediately visible. In this chapter you will learn to create, read, and critically interpret the most common statistical displays.\nBefore this chapter, make sure you are confident with Chapter 5, Chapter 6, and Chapter 7 so your graph choices and interpretations are statistically valid.\nThroughout this chapter we use a simulated survey of 60 Year 11 students across a New Zealand school. The data includes variables on transport, height, study time, and maths scores.\nShow R code\nset.seed(2024)\nn &lt;- 60\n\nstudents &lt;- data.frame(\n  transport  = sample(c(\"Bus\", \"Car\", \"Walk\", \"Bike\"), n,\n                      replace = TRUE, prob = c(0.4, 0.25, 0.25, 0.1)),\n  height_cm  = round(rnorm(n, mean = 167, sd = 9), 1),\n  study_hrs  = round(pmax(0, rnorm(n, mean = 2.5, sd = 1.2)), 1),\n  maths_score = round(pmin(100, pmax(0, rnorm(n, mean = 65, sd = 15))))\n)",
+    "text": "9.1 Setting up our data\nA well-chosen graph makes patterns in data immediately visible. In this chapter you will learn to create, read, and critically interpret the most common statistical displays.\nBefore this chapter, make sure you are confident with Chapter 5, Chapter 6, Chapter 7, and Chapter 8 so your graph choices and interpretations are statistically valid.\nThroughout this chapter we use a simulated survey of 60 Year 11 students across a New Zealand school. The data includes variables on transport, height, study time, and maths scores.\nShow R code\nset.seed(2024)\nn &lt;- 60\n\nstudents &lt;- data.frame(\n  transport  = sample(c(\"Bus\", \"Car\", \"Walk\", \"Bike\"), n,\n                      replace = TRUE, prob = c(0.4, 0.25, 0.25, 0.1)),\n  height_cm  = round(rnorm(n, mean = 167, sd = 9), 1),\n  study_hrs  = round(pmax(0, rnorm(n, mean = 2.5, sd = 1.2)), 1),\n  maths_score = round(pmin(100, pmax(0, rnorm(n, mean = 65, sd = 15))))\n)",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical Graphs and Displays</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Statistical Graphs and Displays</span>"
     ]
   },
   {
     "objectID": "chapters/05-graphs.html#bar-charts",
     "href": "chapters/05-graphs.html#bar-charts",
-    "title": "8  Statistical Graphs and Displays",
-    "section": "8.2 Bar charts",
-    "text": "8.2 Bar charts\nBar charts display the frequency (count) or relative frequency (proportion) of categorical data.\n\n\nShow R code\ntransport_counts &lt;- table(students$transport)\n\nbarplot(\n  sort(transport_counts, decreasing = TRUE),\n  col  = c(\"#4dac26\", \"#b8e186\", \"#f1b6da\", \"#d7191c\"),\n  main = \"How Year 11 Students Travel to School\",\n  xlab = \"Mode of Transport\",\n  ylab = \"Number of Students\",\n  border = \"white\",\n  las = 1\n)\n\n\n\n\n\n\n\n\nFigure 8.1: Bar chart showing how Year 11 students travel to school.\n\n\n\n\n\n\n8.2.1 Reading a bar chart\n\n\n\n\n\n\nTip\n\n\n\nWhen describing a bar chart, always comment on:\n\nThe most and least common categories\nThe overall pattern (are categories roughly equal, or is one dominant?)\nThe context — what does this tell us about the group?\n\n\n\nSample answer: “Bus is the most common way students travel to school, with over 20 students using this method. Bike is the least common. More students use public or active transport (bus, walk, bike) than passive transport (car).”",
+    "title": "9  Statistical Graphs and Displays",
+    "section": "9.2 Bar charts",
+    "text": "9.2 Bar charts\nBar charts display the frequency (count) or relative frequency (proportion) of categorical data.\n\n\nShow R code\ntransport_counts &lt;- table(students$transport)\n\nbarplot(\n  sort(transport_counts, decreasing = TRUE),\n  col  = c(\"#4dac26\", \"#b8e186\", \"#f1b6da\", \"#d7191c\"),\n  main = \"How Year 11 Students Travel to School\",\n  xlab = \"Mode of Transport\",\n  ylab = \"Number of Students\",\n  border = \"white\",\n  las = 1\n)\n\n\n\n\n\n\n\n\nFigure 9.1: Bar chart showing how Year 11 students travel to school.\n\n\n\n\n\n\n9.2.1 Reading a bar chart\n\n\n\n\n\n\nTip\n\n\n\nWhen describing a bar chart, always comment on:\n\nThe most and least common categories\nThe overall pattern (are categories roughly equal, or is one dominant?)\nThe context — what does this tell us about the group?\n\n\n\nSample answer: “Bus is the most common way students travel to school, with over 20 students using this method. Bike is the least common. More students use public or active transport (bus, walk, bike) than passive transport (car).”",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical Graphs and Displays</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Statistical Graphs and Displays</span>"
     ]
   },
   {
     "objectID": "chapters/05-graphs.html#dot-plots",
     "href": "chapters/05-graphs.html#dot-plots",
-    "title": "8  Statistical Graphs and Displays",
-    "section": "8.3 Dot plots",
-    "text": "8.3 Dot plots\nDot plots are useful for small numerical datasets. Each data point is shown as a dot above a number line.\n\n\nShow R code\n# Rounded to nearest 0.5 for clearer dot plot\nstudy_rounded &lt;- round(students$study_hrs * 2) / 2\n\nstripchart(\n  study_rounded,\n  method = \"stack\",\n  pch    = 19,\n  col    = \"#0571b0\",\n  cex    = 1.4,\n  xlab   = \"Daily Study Hours\",\n  main   = \"Daily Study Hours — Year 11 Students\",\n  offset = 0.4\n)\n\n\n\n\n\n\n\n\nFigure 8.2: Dot plot of daily study hours for Year 11 students.",
+    "title": "9  Statistical Graphs and Displays",
+    "section": "9.3 Dot plots",
+    "text": "9.3 Dot plots\nDot plots are useful for small numerical datasets. Each data point is shown as a dot above a number line.\n\n\nShow R code\n# Rounded to nearest 0.5 for clearer dot plot\nstudy_rounded &lt;- round(students$study_hrs * 2) / 2\n\nstripchart(\n  study_rounded,\n  method = \"stack\",\n  pch    = 19,\n  col    = \"#0571b0\",\n  cex    = 1.4,\n  xlab   = \"Daily Study Hours\",\n  main   = \"Daily Study Hours — Year 11 Students\",\n  offset = 0.4\n)\n\n\n\n\n\n\n\n\nFigure 9.2: Dot plot of daily study hours for Year 11 students.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical Graphs and Displays</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Statistical Graphs and Displays</span>"
     ]
   },
   {
     "objectID": "chapters/05-graphs.html#histograms",
     "href": "chapters/05-graphs.html#histograms",
-    "title": "8  Statistical Graphs and Displays",
-    "section": "8.4 Histograms",
-    "text": "8.4 Histograms\nA histogram shows the distribution of continuous numerical data by grouping values into intervals (bins).\n\n\nShow R code\nhist(\n  students$height_cm,\n  breaks = 10,\n  col    = \"#2c7bb6\",\n  border = \"white\",\n  main   = \"Distribution of Student Heights\",\n  xlab   = \"Height (cm)\",\n  ylab   = \"Frequency\",\n  las    = 1\n)\n\n\n\n\n\n\n\n\nFigure 8.3: Histogram of student heights (cm).\n\n\n\n\n\n\n8.4.1 Describing a histogram — SOCS\nUse SOCS to describe a distribution:\n\n\n\n\n\n\n\nLetter\nWhat to describe\n\n\n\n\nShape\nSymmetric, skewed left, skewed right, uniform, bimodal\n\n\nOutliers\nAny unusual values far from the main group\n\n\nCentre\nWhere the middle of the data is (mean or median)\n\n\nSpread\nHow variable the data is (range, IQR, standard deviation)\n\n\n\n\n\nShow R code\npar(mfrow = c(1, 3))\n\n# Symmetric\nset.seed(1)\nhist(rnorm(500, 50, 10), breaks = 15, col = \"#4dac26\", border = \"white\",\n     main = \"Symmetric\", xlab = \"\", ylab = \"Frequency\", las = 1)\n\n# Right-skewed\nhist(rexp(500, 0.1), breaks = 15, col = \"#f4a582\", border = \"white\",\n     main = \"Right (positive) skew\", xlab = \"\", ylab = \"\", las = 1)\n\n# Left-skewed\nhist(100 - rexp(500, 0.1), breaks = 15, col = \"#92c5de\", border = \"white\",\n     main = \"Left (negative) skew\", xlab = \"\", ylab = \"\", las = 1)\n\npar(mfrow = c(1, 1))\n\n\n\n\n\n\n\n\nFigure 8.4: Examples of different distribution shapes.",
+    "title": "9  Statistical Graphs and Displays",
+    "section": "9.4 Histograms",
+    "text": "9.4 Histograms\nA histogram shows the distribution of continuous numerical data by grouping values into intervals (bins).\n\n\nShow R code\nhist(\n  students$height_cm,\n  breaks = 10,\n  col    = \"#2c7bb6\",\n  border = \"white\",\n  main   = \"Distribution of Student Heights\",\n  xlab   = \"Height (cm)\",\n  ylab   = \"Frequency\",\n  las    = 1\n)\n\n\n\n\n\n\n\n\nFigure 9.3: Histogram of student heights (cm).\n\n\n\n\n\n\n9.4.1 Describing a histogram — SOCS\nUse SOCS to describe a distribution:\n\n\n\n\n\n\n\nLetter\nWhat to describe\n\n\n\n\nShape\nSymmetric, skewed left, skewed right, uniform, bimodal\n\n\nOutliers\nAny unusual values far from the main group\n\n\nCentre\nWhere the middle of the data is (mean or median)\n\n\nSpread\nHow variable the data is (range, IQR, standard deviation)\n\n\n\n\n\nShow R code\npar(mfrow = c(1, 3))\n\n# Symmetric\nset.seed(1)\nhist(rnorm(500, 50, 10), breaks = 15, col = \"#4dac26\", border = \"white\",\n     main = \"Symmetric\", xlab = \"\", ylab = \"Frequency\", las = 1)\n\n# Right-skewed\nhist(rexp(500, 0.1), breaks = 15, col = \"#f4a582\", border = \"white\",\n     main = \"Right (positive) skew\", xlab = \"\", ylab = \"\", las = 1)\n\n# Left-skewed\nhist(100 - rexp(500, 0.1), breaks = 15, col = \"#92c5de\", border = \"white\",\n     main = \"Left (negative) skew\", xlab = \"\", ylab = \"\", las = 1)\n\npar(mfrow = c(1, 1))\n\n\n\n\n\n\n\n\nFigure 9.4: Examples of different distribution shapes.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical Graphs and Displays</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Statistical Graphs and Displays</span>"
     ]
   },
   {
     "objectID": "chapters/05-graphs.html#box-plots-box-and-whisker-plots",
     "href": "chapters/05-graphs.html#box-plots-box-and-whisker-plots",
-    "title": "8  Statistical Graphs and Displays",
-    "section": "8.5 Box plots (box-and-whisker plots)",
-    "text": "8.5 Box plots (box-and-whisker plots)\nA box plot summarises a five-number summary: Minimum, Q1, Median, Q3, Maximum.\n\n\nShow R code\nboxplot(\n  maths_score ~ transport,\n  data   = students,\n  col    = c(\"#4dac26\", \"#f4a582\", \"#92c5de\", \"#d7191c\"),\n  border = \"#333333\",\n  main   = \"Maths Scores by Transport Mode\",\n  xlab   = \"Mode of Transport\",\n  ylab   = \"Maths Score\",\n  las    = 1\n)\n\n\n\n\n\n\n\n\nFigure 8.5: Box plot of maths scores by transport type.\n\n\n\n\n\n\n8.5.1 Parts of a box plot\n\n\n\n\n\n\n\n\nFigure 8.6: Anatomy of a box plot.",
+    "title": "9  Statistical Graphs and Displays",
+    "section": "9.5 Box plots (box-and-whisker plots)",
+    "text": "9.5 Box plots (box-and-whisker plots)\nA box plot summarises a five-number summary: Minimum, Q1, Median, Q3, Maximum.\n\n\nShow R code\nboxplot(\n  maths_score ~ transport,\n  data   = students,\n  col    = c(\"#4dac26\", \"#f4a582\", \"#92c5de\", \"#d7191c\"),\n  border = \"#333333\",\n  main   = \"Maths Scores by Transport Mode\",\n  xlab   = \"Mode of Transport\",\n  ylab   = \"Maths Score\",\n  las    = 1\n)\n\n\n\n\n\n\n\n\nFigure 9.5: Box plot of maths scores by transport type.\n\n\n\n\n\n\n9.5.1 Parts of a box plot\n\n\n\n\n\n\n\n\nFigure 9.6: Anatomy of a box plot.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical Graphs and Displays</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Statistical Graphs and Displays</span>"
     ]
   },
   {
     "objectID": "chapters/05-graphs.html#stem-and-leaf-plots",
     "href": "chapters/05-graphs.html#stem-and-leaf-plots",
-    "title": "8  Statistical Graphs and Displays",
-    "section": "8.6 Stem-and-leaf plots",
-    "text": "8.6 Stem-and-leaf plots\nStem-and-leaf plots show the actual data values and the shape of the distribution simultaneously. They work well for small datasets (up to ~50 values).\n\n\nShow R code\n# Show a stem-and-leaf for a subset of maths scores\ncat(\"Stem-and-leaf plot of maths scores (first 30 students):\\n\\n\")\n#&gt; Stem-and-leaf plot of maths scores (first 30 students):\nstem(students$maths_score[1:30])\n#&gt; \n#&gt;   The decimal point is 1 digit(s) to the right of the |\n#&gt; \n#&gt;    2 | 1\n#&gt;    3 | 9\n#&gt;    4 | 8\n#&gt;    5 | 3468999\n#&gt;    6 | 04557789\n#&gt;    7 | 0169\n#&gt;    8 | 23448\n#&gt;    9 | 18\n#&gt;   10 | 0",
+    "title": "9  Statistical Graphs and Displays",
+    "section": "9.6 Stem-and-leaf plots",
+    "text": "9.6 Stem-and-leaf plots\nStem-and-leaf plots show the actual data values and the shape of the distribution simultaneously. They work well for small datasets (up to ~50 values).\n\n\nShow R code\n# Show a stem-and-leaf for a subset of maths scores\ncat(\"Stem-and-leaf plot of maths scores (first 30 students):\\n\\n\")\n#&gt; Stem-and-leaf plot of maths scores (first 30 students):\nstem(students$maths_score[1:30])\n#&gt; \n#&gt;   The decimal point is 1 digit(s) to the right of the |\n#&gt; \n#&gt;    2 | 1\n#&gt;    3 | 9\n#&gt;    4 | 8\n#&gt;    5 | 3468999\n#&gt;    6 | 04557789\n#&gt;    7 | 0169\n#&gt;    8 | 23448\n#&gt;    9 | 18\n#&gt;   10 | 0",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical Graphs and Displays</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Statistical Graphs and Displays</span>"
     ]
   },
   {
     "objectID": "chapters/05-graphs.html#scatter-plots",
     "href": "chapters/05-graphs.html#scatter-plots",
-    "title": "8  Statistical Graphs and Displays",
-    "section": "8.7 Scatter plots",
-    "text": "8.7 Scatter plots\nScatter plots show the relationship between two numerical variables.\n\n\nShow R code\nplot(\n  students$study_hrs, students$maths_score,\n  pch  = 19,\n  col  = adjustcolor(\"#0571b0\", alpha.f = 0.7),\n  xlab = \"Daily Study Hours\",\n  ylab = \"Maths Score\",\n  main = \"Study Hours vs Maths Score — Year 11 Students\"\n)\nabline(lm(maths_score ~ study_hrs, data = students),\n       col = \"#d7191c\", lwd = 2)\n\n\n\n\n\n\n\n\nFigure 8.7: Scatter plot of study hours vs maths score.\n\n\n\n\n\n\n8.7.1 Describing a scatter plot\nComment on:\n\nDirection — positive, negative, or no association\nForm — linear or non-linear\nStrength — strong, moderate, or weak\nOutliers — any unusual points\n\n\n\n\n\n\n\nWarningCorrelation ≠ Causation\n\n\n\nJust because two variables are related does not mean one causes the other. Always think about whether an association makes sense in context.",
+    "title": "9  Statistical Graphs and Displays",
+    "section": "9.7 Scatter plots",
+    "text": "9.7 Scatter plots\nScatter plots show the relationship between two numerical variables.\n\n\nShow R code\nplot(\n  students$study_hrs, students$maths_score,\n  pch  = 19,\n  col  = adjustcolor(\"#0571b0\", alpha.f = 0.7),\n  xlab = \"Daily Study Hours\",\n  ylab = \"Maths Score\",\n  main = \"Study Hours vs Maths Score — Year 11 Students\"\n)\nabline(lm(maths_score ~ study_hrs, data = students),\n       col = \"#d7191c\", lwd = 2)\n\n\n\n\n\n\n\n\nFigure 9.7: Scatter plot of study hours vs maths score.\n\n\n\n\n\n\n9.7.1 Describing a scatter plot\nComment on:\n\nDirection — positive, negative, or no association\nForm — linear or non-linear\nStrength — strong, moderate, or weak\nOutliers — any unusual points\n\n\n\n\n\n\n\nWarningCorrelation ≠ Causation\n\n\n\nJust because two variables are related does not mean one causes the other. Always think about whether an association makes sense in context.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical Graphs and Displays</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Statistical Graphs and Displays</span>"
     ]
   },
   {
     "objectID": "chapters/05-graphs.html#pie-charts",
     "href": "chapters/05-graphs.html#pie-charts",
-    "title": "8  Statistical Graphs and Displays",
-    "section": "8.8 Pie charts",
-    "text": "8.8 Pie charts\nPie charts show proportions of categorical data. Use them carefully — bar charts are usually easier to read precisely.\n\n\nShow R code\npie(\n  transport_counts,\n  col    = c(\"#4dac26\", \"#f4a582\", \"#92c5de\", \"#d7191c\"),\n  main   = \"Transport Modes — Year 11 Students\",\n  labels = paste0(names(transport_counts), \"\\n(\",\n                  round(100 * transport_counts / sum(transport_counts)), \"%)\")\n)\n\n\n\n\n\n\n\n\nFigure 8.8: Pie chart of transport modes.",
+    "title": "9  Statistical Graphs and Displays",
+    "section": "9.8 Pie charts",
+    "text": "9.8 Pie charts\nPie charts show proportions of categorical data. Use them carefully — bar charts are usually easier to read precisely.\n\n\nShow R code\npie(\n  transport_counts,\n  col    = c(\"#4dac26\", \"#f4a582\", \"#92c5de\", \"#d7191c\"),\n  main   = \"Transport Modes — Year 11 Students\",\n  labels = paste0(names(transport_counts), \"\\n(\",\n                  round(100 * transport_counts / sum(transport_counts)), \"%)\")\n)\n\n\n\n\n\n\n\n\nFigure 9.8: Pie chart of transport modes.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical Graphs and Displays</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Statistical Graphs and Displays</span>"
     ]
   },
   {
     "objectID": "chapters/05-graphs.html#choosing-the-right-graph",
     "href": "chapters/05-graphs.html#choosing-the-right-graph",
-    "title": "8  Statistical Graphs and Displays",
-    "section": "8.9 Choosing the right graph",
-    "text": "8.9 Choosing the right graph\n\n\n\n\n\n\n\nSituation\nBest graph\n\n\n\n\nOne categorical variable\nBar chart, pie chart\n\n\nOne numerical variable (small n)\nDot plot, stem-and-leaf\n\n\nOne numerical variable (large n)\nHistogram, box plot\n\n\nComparing groups numerically\nSide-by-side box plots, back-to-back stem-and-leaf\n\n\nTwo numerical variables\nScatter plot",
+    "title": "9  Statistical Graphs and Displays",
+    "section": "9.9 Choosing the right graph",
+    "text": "9.9 Choosing the right graph\n\n\n\n\n\n\n\nSituation\nBest graph\n\n\n\n\nOne categorical variable\nBar chart, pie chart\n\n\nOne numerical variable (small n)\nDot plot, stem-and-leaf\n\n\nOne numerical variable (large n)\nHistogram, box plot\n\n\nComparing groups numerically\nSide-by-side box plots, back-to-back stem-and-leaf\n\n\nTwo numerical variables\nScatter plot",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical Graphs and Displays</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Statistical Graphs and Displays</span>"
     ]
   },
   {
     "objectID": "chapters/05-graphs.html#check-your-understanding",
     "href": "chapters/05-graphs.html#check-your-understanding",
-    "title": "8  Statistical Graphs and Displays",
-    "section": "8.10 Check your understanding",
-    "text": "8.10 Check your understanding\n\nA student recorded the heights of 25 classmates. Which graph type is most appropriate to display this data? Explain your choice.\nDescribe the scatter plot in Figure 8.7 using the four features (direction, form, strength, outliers).\nA bar chart shows the following transport counts: Bus = 24, Car = 15, Walk = 15, Bike = 6. What percentage of students walk to school?\nTrue or false: “A right-skewed distribution has a longer tail on the left.” Explain.\n\n\n\n\n\n\n\nNoteAnswers\n\n\n\n\n\n\nA histogram or dot plot — height is numerical and continuous.\nPositive direction (more study → higher score), roughly linear form, moderate strength, possibly one or two outliers.\nWalk = 15/60 = 25%.\nFalse — a right-skewed (positively skewed) distribution has a longer tail on the RIGHT.",
+    "title": "9  Statistical Graphs and Displays",
+    "section": "9.10 Check your understanding",
+    "text": "9.10 Check your understanding\n\nA student recorded the heights of 25 classmates. Which graph type is most appropriate to display this data? Explain your choice.\nDescribe the scatter plot in Figure 9.7 using the four features (direction, form, strength, outliers).\nA bar chart shows the following transport counts: Bus = 24, Car = 15, Walk = 15, Bike = 6. What percentage of students walk to school?\nTrue or false: “A right-skewed distribution has a longer tail on the left.” Explain.\n\n\n\n\n\n\n\nNoteAnswers\n\n\n\n\n\n\nA histogram or dot plot — height is numerical and continuous.\nPositive direction (more study → higher score), roughly linear form, moderate strength, possibly one or two outliers.\nWalk = 15/60 = 25%.\nFalse — a right-skewed (positively skewed) distribution has a longer tail on the RIGHT.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical Graphs and Displays</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Statistical Graphs and Displays</span>"
     ]
   },
   {
     "objectID": "chapters/06-1-koura-example.html",
     "href": "chapters/06-1-koura-example.html",
-    "title": "9  Bivariate Data in Ecology",
+    "title": "10  Bivariate Data in Ecology",
     "section": "",
-    "text": "9.1 Exercise: Project Kōura\nInvestigating koura habitats using the PPDAC cycle\nIn this chapter, we apply the PPDAC (Problem, Plan, Data, Analysis, Conclusion) statistical enquiry cycle to a real-world ecological context. Understanding how two numerical variables interact is a core component of NCEA Level 1 Statistics.\nContext: A group of students—Jack, Trishav, and Levi—are conducting a local ecological survey, which they have named “Project Kōura”. They are investigating the populations of native freshwater crayfish (kōura) across several local catchments, including the Kaikorai Stream and the Water of Leith. They want to know if the physical environment of the stream affects the growth of the kōura. They have accessed an open dataset from the New Zealand Freshwater Fish Database (NZFFD) containing recent survey results.",
+    "text": "10.1 Type of enquiry\nInvestigating koura habitats using the PPDAC cycle\nIn this chapter, we apply the PPDAC (Problem, Plan, Data, Analysis, Conclusion) statistical enquiry cycle to a real-world ecological context. Understanding how two numerical variables interact is a core component of NCEA Level 1 Statistics.\nThis is the first step we need to take in the PPDAC cycle. The students are investigating a relationship between two numerical variables: stream temperature and kōura carapace length. They want to know if the physical environment of the stream affects the growth of the kōura.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Bivariate Data in Ecology</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Bivariate Data in Ecology</span>"
     ]
   },
   {
     "objectID": "chapters/06-1-koura-example.html#exercise-project-kōura",
     "href": "chapters/06-1-koura-example.html#exercise-project-kōura",
-    "title": "9  Bivariate Data in Ecology",
-    "section": "",
-    "text": "9.1.1 1. Problem\nBefore looking at the data, the group needs to define a clear investigative question. Jack suggests they look at the relationship between the water temperature of the stream and the size of the kōura.\nTask A: Write a suitable investigative question for this survey. Ensure you specify the variables, the population, and the direction of your investigation.\nTask B: Write a hypothesis. Based on what you know about freshwater biology, what kind of relationship do you expect to see between water temperature and kōura carapace length?\n\n\n9.1.2 2. Plan\nThe students isolate two numerical variables from the NZFFD dataset:\n\nExplanatory Variable: Stream Temperature (°C)\nResponse Variable: Carapace Length (mm)\n\nTask C: Why is Stream Temperature the explanatory variable and Carapace Length the response variable, rather than the other way around?\n\n\n9.1.3 3. Data\nWe will simulate importing the NZFFD dataset directly into R to prepare it for analysis.\n\n\nShow R code\n# Load necessary libraries\nlibrary(tidyverse)\n\n# Simulate importing the NZFFD dataset \n# In a real scenario, you would use: read_csv(\"koura_data.csv\")\nset.seed(123)\nkoura_data &lt;- tibble(\n  catchment = sample(c(\"Water of Leith\", \"Kaikorai Stream\", \"Taieri River\"), 100, replace = TRUE),\n  temp_c = runif(100, 8, 16),\n  # Simulating a negative correlation: cooler water tends to support larger kōura\n  carapace_length_mm = 60 - (1.5 * temp_c) + rnorm(100, mean = 0, sd = 4) \n)\n\n# Preview the data structure\nhead(koura_data)\n#&gt; # A tibble: 6 × 3\n#&gt;   catchment       temp_c carapace_length_mm\n#&gt;   &lt;chr&gt;            &lt;dbl&gt;              &lt;dbl&gt;\n#&gt; 1 Taieri River     11.0                37.1\n#&gt; 2 Taieri River     15.9                36.0\n#&gt; 3 Taieri River      9.23               48.2\n#&gt; 4 Kaikorai Stream   8.73               48.1\n#&gt; 5 Taieri River      9.14               46.7\n#&gt; 6 Kaikorai Stream  13.5                37.2",
+    "title": "10  Bivariate Data in Ecology",
+    "section": "10.2 Exercise: Project Kōura",
+    "text": "10.2 Exercise: Project Kōura\nContext: A group of students—Jack, Trishav, and Levi—are conducting a local ecological survey, which they have named “Project Kōura”. They are investigating the populations of native freshwater crayfish (kōura) across several local catchments, including the Kaikorai Stream and the Water of Leith. They want to know if the physical environment of the stream affects the growth of the kōura. They have accessed an open dataset from the New Zealand Freshwater Fish Database (NZFFD) containing recent survey results.\n\n10.2.1 1. Problem\nBefore looking at the data, the group needs to define a clear investigative question. Jack suggests they look at the relationship between the water temperature of the stream and the size of the kōura.\nTask A: Write a suitable investigative question for this survey. Ensure you specify the variables, the population, and the direction of your investigation.\nTask B: Write a hypothesis. Based on what you know about freshwater biology, what kind of relationship do you expect to see between water temperature and kōura carapace length?\n\n\n10.2.2 2. Plan\nThe students isolate two numerical variables from the NZFFD dataset:\n\nExplanatory Variable: Stream Temperature (°C)\nResponse Variable: Carapace Length (mm)\n\nTask C: Why is Stream Temperature the explanatory variable and Carapace Length the response variable, rather than the other way around?\n\n\n10.2.3 3. Data\nWe will simulate importing the NZFFD dataset directly into R to prepare it for analysis.\n\n\nShow R code\n# Load necessary libraries\nlibrary(tidyverse)\n\n# Simulate importing the NZFFD dataset \n# In a real scenario, you would use: read_csv(\"koura_data.csv\")\nset.seed(123)\nkoura_data &lt;- tibble(\n  catchment = sample(c(\"Water of Leith\", \"Kaikorai Stream\", \"Taieri River\"), 100, replace = TRUE),\n  temp_c = runif(100, 8, 16),\n  # Simulating a negative correlation: cooler water tends to support larger kōura\n  carapace_length_mm = 60 - (1.5 * temp_c) + rnorm(100, mean = 0, sd = 4) \n)\n\n# Preview the data structure\nhead(koura_data)\n#&gt; # A tibble: 6 × 3\n#&gt;   catchment       temp_c carapace_length_mm\n#&gt;   &lt;chr&gt;            &lt;dbl&gt;              &lt;dbl&gt;\n#&gt; 1 Taieri River     11.0                37.1\n#&gt; 2 Taieri River     15.9                36.0\n#&gt; 3 Taieri River      9.23               48.2\n#&gt; 4 Kaikorai Stream   8.73               48.1\n#&gt; 5 Taieri River      9.14               46.7\n#&gt; 6 Kaikorai Stream  13.5                37.2",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Bivariate Data in Ecology</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Bivariate Data in Ecology</span>"
     ]
   },
   {
     "objectID": "chapters/07-measures.html",
     "href": "chapters/07-measures.html",
-    "title": "10  Measures of Centre and Spread",
+    "title": "11  Measures of Centre and Spread",
     "section": "",
-    "text": "10.1 Measures of centre\nOnce you have a graph, you need numerical summaries to describe and compare distributions precisely. The two key things to describe are:",
+    "text": "11.1 Measures of centre\nOnce you have a graph, you need numerical summaries to describe and compare distributions precisely. The two key things to describe are:",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Measures of Centre and Spread</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Measures of Centre and Spread</span>"
     ]
   },
   {
     "objectID": "chapters/07-measures.html#measures-of-centre",
     "href": "chapters/07-measures.html#measures-of-centre",
-    "title": "10  Measures of Centre and Spread",
+    "title": "11  Measures of Centre and Spread",
     "section": "",
-    "text": "10.1.1 The mean\nThe mean (average) is calculated by adding all values and dividing by the number of values:\n\\[\\bar{x} = \\frac{\\sum x_i}{n}\\]\n\n\nShow R code\nset.seed(2024)\nscores &lt;- c(55, 62, 68, 70, 72, 75, 78, 80, 83, 85,\n            88, 60, 91, 74, 66, 79, 52, 95, 73, 71)\nn &lt;- length(scores)\n\ncat(\"Scores:\", sort(scores), \"\\n\")\n#&gt; Scores: 52 55 60 62 66 68 70 71 72 73 74 75 78 79 80 83 85 88 91 95\ncat(\"Mean:  \", round(mean(scores), 2), \"\\n\")\n#&gt; Mean:   73.85\ncat(\"n =    \", n, \"\\n\")\n#&gt; n =     20\n\n\n\n\n10.1.2 The median\nThe median is the middle value when data is sorted from smallest to largest. It is not affected by outliers.\n\nIf n is odd: median = middle value\nIf n is even: median = average of the two middle values\n\n\n\nShow R code\nsorted_scores &lt;- sort(scores)\ncat(\"Sorted scores:\\n\", sorted_scores, \"\\n\\n\")\n#&gt; Sorted scores:\n#&gt;  52 55 60 62 66 68 70 71 72 73 74 75 78 79 80 83 85 88 91 95\ncat(\"n = 20 (even) → median = mean of 10th and 11th values\\n\")\n#&gt; n = 20 (even) → median = mean of 10th and 11th values\ncat(\"10th value:\", sorted_scores[10], \"\\n\")\n#&gt; 10th value: 73\ncat(\"11th value:\", sorted_scores[11], \"\\n\")\n#&gt; 11th value: 74\ncat(\"Median =\", median(scores), \"\\n\")\n#&gt; Median = 73.5\n\n\n\n\n10.1.3 The mode\nThe mode is the most frequently occurring value. Data can have: - No mode (all values appear once) - One mode (unimodal) - Two modes (bimodal) - More than two modes (multimodal)\n\n\nShow R code\n# Custom mode function (base R has no built-in mode for numeric)\nstat_mode &lt;- function(x) {\n  tbl &lt;- table(x)\n  as.numeric(names(tbl)[tbl == max(tbl)])\n}\n\ntest_data &lt;- c(4, 7, 2, 7, 9, 7, 3, 4, 5, 4)\ncat(\"Data:\", test_data, \"\\n\")\n#&gt; Data: 4 7 2 7 9 7 3 4 5 4\ncat(\"Mode(s):\", stat_mode(test_data), \"\\n\")\n#&gt; Mode(s): 4 7\n\n\n\n\n10.1.4 When to use each measure of centre\n\n\n\nMeasure\nBest used when…\nAffected by outliers?\n\n\n\n\nMean\nData is roughly symmetric, no outliers\nYes\n\n\nMedian\nData is skewed or has outliers\nNo\n\n\nMode\nData is categorical; or finding most common value\nNo\n\n\n\n\n\nShow R code\npar(mfrow = c(1, 2))\n\n# Without outlier\nx1 &lt;- c(10, 12, 13, 14, 15, 16, 17, 18, 19, 20)\nhist(x1, col = \"#4dac26\", border = \"white\", main = \"No Outlier\",\n     xlab = \"Value\", ylab = \"Frequency\", xlim = c(0, 80), breaks = 5)\nabline(v = mean(x1),   col = \"#d7191c\", lwd = 2, lty = 1)\nabline(v = median(x1), col = \"#0571b0\", lwd = 2, lty = 2)\nlegend(\"topright\", c(paste(\"Mean =\", mean(x1)),\n                     paste(\"Median =\", median(x1))),\n       col = c(\"#d7191c\", \"#0571b0\"), lwd = 2, lty = c(1, 2), bty = \"n\")\n\n# With outlier\nx2 &lt;- c(x1, 75)\nhist(x2, col = \"#f4a582\", border = \"white\", main = \"With Outlier (75)\",\n     xlab = \"Value\", ylab = \"\", xlim = c(0, 80), breaks = 8)\nabline(v = mean(x2),   col = \"#d7191c\", lwd = 2, lty = 1)\nabline(v = median(x2), col = \"#0571b0\", lwd = 2, lty = 2)\nlegend(\"topright\", c(paste(\"Mean =\", round(mean(x2), 1)),\n                     paste(\"Median =\", median(x2))),\n       col = c(\"#d7191c\", \"#0571b0\"), lwd = 2, lty = c(1, 2), bty = \"n\")\n\npar(mfrow = c(1, 1))\n\n\n\n\n\n\n\n\nFigure 10.1: Effect of outliers on mean vs median.",
+    "text": "11.1.1 The mean\nThe mean (average) is calculated by adding all values and dividing by the number of values:\n\\[\\bar{x} = \\frac{\\sum x_i}{n}\\]\n\n\nShow R code\nset.seed(2024)\nscores &lt;- c(55, 62, 68, 70, 72, 75, 78, 80, 83, 85,\n            88, 60, 91, 74, 66, 79, 52, 95, 73, 71)\nn &lt;- length(scores)\n\ncat(\"Scores:\", sort(scores), \"\\n\")\n#&gt; Scores: 52 55 60 62 66 68 70 71 72 73 74 75 78 79 80 83 85 88 91 95\ncat(\"Mean:  \", round(mean(scores), 2), \"\\n\")\n#&gt; Mean:   73.85\ncat(\"n =    \", n, \"\\n\")\n#&gt; n =     20\n\n\n\n\n11.1.2 The median\nThe median is the middle value when data is sorted from smallest to largest. It is not affected by outliers.\n\nIf n is odd: median = middle value\nIf n is even: median = average of the two middle values\n\n\n\nShow R code\nsorted_scores &lt;- sort(scores)\ncat(\"Sorted scores:\\n\", sorted_scores, \"\\n\\n\")\n#&gt; Sorted scores:\n#&gt;  52 55 60 62 66 68 70 71 72 73 74 75 78 79 80 83 85 88 91 95\ncat(\"n = 20 (even) → median = mean of 10th and 11th values\\n\")\n#&gt; n = 20 (even) → median = mean of 10th and 11th values\ncat(\"10th value:\", sorted_scores[10], \"\\n\")\n#&gt; 10th value: 73\ncat(\"11th value:\", sorted_scores[11], \"\\n\")\n#&gt; 11th value: 74\ncat(\"Median =\", median(scores), \"\\n\")\n#&gt; Median = 73.5\n\n\n\n\n11.1.3 The mode\nThe mode is the most frequently occurring value. Data can have: - No mode (all values appear once) - One mode (unimodal) - Two modes (bimodal) - More than two modes (multimodal)\n\n\nShow R code\n# Custom mode function (base R has no built-in mode for numeric)\nstat_mode &lt;- function(x) {\n  tbl &lt;- table(x)\n  as.numeric(names(tbl)[tbl == max(tbl)])\n}\n\ntest_data &lt;- c(4, 7, 2, 7, 9, 7, 3, 4, 5, 4)\ncat(\"Data:\", test_data, \"\\n\")\n#&gt; Data: 4 7 2 7 9 7 3 4 5 4\ncat(\"Mode(s):\", stat_mode(test_data), \"\\n\")\n#&gt; Mode(s): 4 7\n\n\n\n\n11.1.4 When to use each measure of centre\n\n\n\nMeasure\nBest used when…\nAffected by outliers?\n\n\n\n\nMean\nData is roughly symmetric, no outliers\nYes\n\n\nMedian\nData is skewed or has outliers\nNo\n\n\nMode\nData is categorical; or finding most common value\nNo\n\n\n\n\n\nShow R code\npar(mfrow = c(1, 2))\n\n# Without outlier\nx1 &lt;- c(10, 12, 13, 14, 15, 16, 17, 18, 19, 20)\nhist(x1, col = \"#4dac26\", border = \"white\", main = \"No Outlier\",\n     xlab = \"Value\", ylab = \"Frequency\", xlim = c(0, 80), breaks = 5)\nabline(v = mean(x1),   col = \"#d7191c\", lwd = 2, lty = 1)\nabline(v = median(x1), col = \"#0571b0\", lwd = 2, lty = 2)\nlegend(\"topright\", c(paste(\"Mean =\", mean(x1)),\n                     paste(\"Median =\", median(x1))),\n       col = c(\"#d7191c\", \"#0571b0\"), lwd = 2, lty = c(1, 2), bty = \"n\")\n\n# With outlier\nx2 &lt;- c(x1, 75)\nhist(x2, col = \"#f4a582\", border = \"white\", main = \"With Outlier (75)\",\n     xlab = \"Value\", ylab = \"\", xlim = c(0, 80), breaks = 8)\nabline(v = mean(x2),   col = \"#d7191c\", lwd = 2, lty = 1)\nabline(v = median(x2), col = \"#0571b0\", lwd = 2, lty = 2)\nlegend(\"topright\", c(paste(\"Mean =\", round(mean(x2), 1)),\n                     paste(\"Median =\", median(x2))),\n       col = c(\"#d7191c\", \"#0571b0\"), lwd = 2, lty = c(1, 2), bty = \"n\")\n\npar(mfrow = c(1, 1))\n\n\n\n\n\n\n\n\nFigure 11.1: Effect of outliers on mean vs median.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Measures of Centre and Spread</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Measures of Centre and Spread</span>"
     ]
   },
   {
     "objectID": "chapters/07-measures.html#measures-of-spread",
     "href": "chapters/07-measures.html#measures-of-spread",
-    "title": "10  Measures of Centre and Spread",
-    "section": "10.2 Measures of spread",
-    "text": "10.2 Measures of spread\n\n10.2.1 Range\nThe range is the simplest measure of spread:\n\\[\\text{Range} = \\text{Maximum} - \\text{Minimum}\\]\n\n\nShow R code\ncat(\"Range of scores:\", max(scores) - min(scores), \"\\n\")\n#&gt; Range of scores: 43\ncat(\"  (Max =\", max(scores), \", Min =\", min(scores), \")\\n\")\n#&gt;   (Max = 95 , Min = 52 )\n\n\n\n\n10.2.2 Quartiles and the interquartile range (IQR)\nQuartiles divide sorted data into four equal groups:\n\n\n\nQuartile\nDescription\n\n\n\n\nQ1 (lower quartile)\n25% of data falls below this value\n\n\nQ2 (median)\n50% of data falls below this value\n\n\nQ3 (upper quartile)\n75% of data falls below this value\n\n\n\nThe interquartile range (IQR) is the spread of the middle 50% of data:\n\\[\\text{IQR} = Q3 - Q1\\]\n\n\nShow R code\nq &lt;- quantile(scores)\ncat(\"Five-number summary:\\n\")\n#&gt; Five-number summary:\ncat(\"  Minimum:\", q[1], \"\\n\")\n#&gt;   Minimum: 52\ncat(\"  Q1:     \", q[2], \"\\n\")\n#&gt;   Q1:      67.5\ncat(\"  Median: \", q[3], \"\\n\")\n#&gt;   Median:  73.5\ncat(\"  Q3:     \", q[4], \"\\n\")\n#&gt;   Q3:      80.75\ncat(\"  Maximum:\", q[5], \"\\n\")\n#&gt;   Maximum: 95\ncat(\"  IQR =\", q[4] - q[2], \"\\n\")\n#&gt;   IQR = 13.25\n\n\n\n\n10.2.3 Standard deviation\nThe standard deviation measures how spread out data values are from the mean. A larger standard deviation means more variability.\n\\[s = \\sqrt{\\frac{\\sum (x_i - \\bar{x})^2}{n - 1}}\\]\n\n\nShow R code\ncat(\"Mean:\", round(mean(scores), 2), \"\\n\")\n#&gt; Mean: 73.85\ncat(\"Standard deviation:\", round(sd(scores), 2), \"\\n\")\n#&gt; Standard deviation: 11.52\n\n\n\n\n\n\n\n\nTipRule of thumb\n\n\n\nFor roughly symmetric distributions, about 68% of data falls within one standard deviation of the mean, and 95% falls within two standard deviations (the empirical rule / 68-95-99.7 rule).\n\n\n\n\n10.2.4 Choosing the right measure of spread\n\n\n\n\n\n\n\n\nMeasure\nUse with…\nAdvantage\n\n\n\n\nRange\nQuick overview\nEasy to calculate\n\n\nIQR\nSkewed data or when outliers present\nResistant to outliers\n\n\nStandard deviation\nSymmetric data, no outliers\nUses all data values",
+    "title": "11  Measures of Centre and Spread",
+    "section": "11.2 Measures of spread",
+    "text": "11.2 Measures of spread\n\n11.2.1 Range\nThe range is the simplest measure of spread:\n\\[\\text{Range} = \\text{Maximum} - \\text{Minimum}\\]\n\n\nShow R code\ncat(\"Range of scores:\", max(scores) - min(scores), \"\\n\")\n#&gt; Range of scores: 43\ncat(\"  (Max =\", max(scores), \", Min =\", min(scores), \")\\n\")\n#&gt;   (Max = 95 , Min = 52 )\n\n\n\n\n11.2.2 Quartiles and the interquartile range (IQR)\nQuartiles divide sorted data into four equal groups:\n\n\n\nQuartile\nDescription\n\n\n\n\nQ1 (lower quartile)\n25% of data falls below this value\n\n\nQ2 (median)\n50% of data falls below this value\n\n\nQ3 (upper quartile)\n75% of data falls below this value\n\n\n\nThe interquartile range (IQR) is the spread of the middle 50% of data:\n\\[\\text{IQR} = Q3 - Q1\\]\n\n\nShow R code\nq &lt;- quantile(scores)\ncat(\"Five-number summary:\\n\")\n#&gt; Five-number summary:\ncat(\"  Minimum:\", q[1], \"\\n\")\n#&gt;   Minimum: 52\ncat(\"  Q1:     \", q[2], \"\\n\")\n#&gt;   Q1:      67.5\ncat(\"  Median: \", q[3], \"\\n\")\n#&gt;   Median:  73.5\ncat(\"  Q3:     \", q[4], \"\\n\")\n#&gt;   Q3:      80.75\ncat(\"  Maximum:\", q[5], \"\\n\")\n#&gt;   Maximum: 95\ncat(\"  IQR =\", q[4] - q[2], \"\\n\")\n#&gt;   IQR = 13.25\n\n\n\n\n11.2.3 Standard deviation\nThe standard deviation measures how spread out data values are from the mean. A larger standard deviation means more variability.\n\\[s = \\sqrt{\\frac{\\sum (x_i - \\bar{x})^2}{n - 1}}\\]\n\n\nShow R code\ncat(\"Mean:\", round(mean(scores), 2), \"\\n\")\n#&gt; Mean: 73.85\ncat(\"Standard deviation:\", round(sd(scores), 2), \"\\n\")\n#&gt; Standard deviation: 11.52\n\n\n\n\n\n\n\n\nTipRule of thumb\n\n\n\nFor roughly symmetric distributions, about 68% of data falls within one standard deviation of the mean, and 95% falls within two standard deviations (the empirical rule / 68-95-99.7 rule).\n\n\n\n\n11.2.4 Choosing the right measure of spread\n\n\n\n\n\n\n\n\nMeasure\nUse with…\nAdvantage\n\n\n\n\nRange\nQuick overview\nEasy to calculate\n\n\nIQR\nSkewed data or when outliers present\nResistant to outliers\n\n\nStandard deviation\nSymmetric data, no outliers\nUses all data values",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Measures of Centre and Spread</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Measures of Centre and Spread</span>"
     ]
   },
   {
     "objectID": "chapters/07-measures.html#comparing-groups",
     "href": "chapters/07-measures.html#comparing-groups",
-    "title": "10  Measures of Centre and Spread",
-    "section": "10.3 Comparing groups",
-    "text": "10.3 Comparing groups\nA common task in AS91946 is to compare two or more groups. Always compare both centre AND spread.\n\n\nShow R code\nset.seed(42)\ngroup_a &lt;- round(rnorm(30, mean = 65, sd = 10))\ngroup_b &lt;- round(rnorm(30, mean = 72, sd = 15))\n\n\n\n\nShow R code\nboxplot(\n  list(\"Group A\" = group_a, \"Group B\" = group_b),\n  col    = c(\"#4dac26\", \"#0571b0\"),\n  border = \"#333333\",\n  main   = \"Maths Scores: Group A vs Group B\",\n  ylab   = \"Score\",\n  las    = 1\n)\n\n\n\n\n\n\n\n\nFigure 10.2: Comparing maths scores between Group A and Group B.\n\n\n\n\n\n\n\nShow R code\nsummary_stats &lt;- data.frame(\n  Group    = c(\"Group A\", \"Group B\"),\n  n        = c(length(group_a), length(group_b)),\n  Mean     = round(c(mean(group_a), mean(group_b)), 1),\n  Median   = c(median(group_a), median(group_b)),\n  SD       = round(c(sd(group_a), sd(group_b)), 1),\n  IQR      = c(IQR(group_a), IQR(group_b)),\n  Min      = c(min(group_a), min(group_b)),\n  Max      = c(max(group_a), max(group_b))\n)\n\nknitr::kable(summary_stats, caption = \"Summary statistics for Groups A and B\")\n\n\n\nSummary statistics for Groups A and B\n\n\nGroup\nn\nMean\nMedian\nSD\nIQR\nMin\nMax\n\n\n\n\nGroup A\n30\n65.6\n64\n12.6\n14.25\n38\n88\n\n\nGroup B\n30\n70.2\n74\n15.8\n21.25\n27\n96\n\n\n\n\n\n\n10.3.1 Model comparison paragraph (Merit level)\n\n“Group B has a higher median score (72) than Group A (65), suggesting that Group B performed better overall. However, Group B also has a larger IQR (approximately 20 vs 14) and standard deviation (15.1 vs 9.8), indicating their scores were more variable. Group A’s performance was more consistent. Both groups appear to have roughly symmetric distributions with no obvious outliers.”",
+    "title": "11  Measures of Centre and Spread",
+    "section": "11.3 Comparing groups",
+    "text": "11.3 Comparing groups\nA common task in AS91946 is to compare two or more groups. Always compare both centre AND spread.\n\n\nShow R code\nset.seed(42)\ngroup_a &lt;- round(rnorm(30, mean = 65, sd = 10))\ngroup_b &lt;- round(rnorm(30, mean = 72, sd = 15))\n\n\n\n\nShow R code\nboxplot(\n  list(\"Group A\" = group_a, \"Group B\" = group_b),\n  col    = c(\"#4dac26\", \"#0571b0\"),\n  border = \"#333333\",\n  main   = \"Maths Scores: Group A vs Group B\",\n  ylab   = \"Score\",\n  las    = 1\n)\n\n\n\n\n\n\n\n\nFigure 11.2: Comparing maths scores between Group A and Group B.\n\n\n\n\n\n\n\nShow R code\nsummary_stats &lt;- data.frame(\n  Group    = c(\"Group A\", \"Group B\"),\n  n        = c(length(group_a), length(group_b)),\n  Mean     = round(c(mean(group_a), mean(group_b)), 1),\n  Median   = c(median(group_a), median(group_b)),\n  SD       = round(c(sd(group_a), sd(group_b)), 1),\n  IQR      = c(IQR(group_a), IQR(group_b)),\n  Min      = c(min(group_a), min(group_b)),\n  Max      = c(max(group_a), max(group_b))\n)\n\nknitr::kable(summary_stats, caption = \"Summary statistics for Groups A and B\")\n\n\n\nSummary statistics for Groups A and B\n\n\nGroup\nn\nMean\nMedian\nSD\nIQR\nMin\nMax\n\n\n\n\nGroup A\n30\n65.6\n64\n12.6\n14.25\n38\n88\n\n\nGroup B\n30\n70.2\n74\n15.8\n21.25\n27\n96\n\n\n\n\n\n\n11.3.1 Model comparison paragraph (Merit level)\n\n“Group B has a higher median score (72) than Group A (65), suggesting that Group B performed better overall. However, Group B also has a larger IQR (approximately 20 vs 14) and standard deviation (15.1 vs 9.8), indicating their scores were more variable. Group A’s performance was more consistent. Both groups appear to have roughly symmetric distributions with no obvious outliers.”",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Measures of Centre and Spread</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Measures of Centre and Spread</span>"
     ]
   },
   {
     "objectID": "chapters/07-measures.html#identifying-outliers",
     "href": "chapters/07-measures.html#identifying-outliers",
-    "title": "10  Measures of Centre and Spread",
-    "section": "10.4 Identifying outliers",
-    "text": "10.4 Identifying outliers\nA value is often flagged as an outlier if it falls more than 1.5 × IQR below Q1 or above Q3:\n\\[\\text{Lower fence} = Q1 - 1.5 \\times \\text{IQR}\\] \\[\\text{Upper fence} = Q3 + 1.5 \\times \\text{IQR}\\]\n\n\nShow R code\nQ1  &lt;- quantile(scores, 0.25)\nQ3  &lt;- quantile(scores, 0.75)\niqr &lt;- Q3 - Q1\n\nlower_fence &lt;- Q1 - 1.5 * iqr\nupper_fence &lt;- Q3 + 1.5 * iqr\n\ncat(\"Q1 =\", Q1, \"\\n\")\n#&gt; Q1 = 67.5\ncat(\"Q3 =\", Q3, \"\\n\")\n#&gt; Q3 = 80.75\ncat(\"IQR =\", iqr, \"\\n\")\n#&gt; IQR = 13.25\ncat(\"Lower fence:\", lower_fence, \"\\n\")\n#&gt; Lower fence: 47.625\ncat(\"Upper fence:\", upper_fence, \"\\n\")\n#&gt; Upper fence: 100.625\ncat(\"Outliers:\", scores[scores &lt; lower_fence | scores &gt; upper_fence], \"\\n\")\n#&gt; Outliers:",
+    "title": "11  Measures of Centre and Spread",
+    "section": "11.4 Identifying outliers",
+    "text": "11.4 Identifying outliers\nA value is often flagged as an outlier if it falls more than 1.5 × IQR below Q1 or above Q3:\n\\[\\text{Lower fence} = Q1 - 1.5 \\times \\text{IQR}\\] \\[\\text{Upper fence} = Q3 + 1.5 \\times \\text{IQR}\\]\n\n\nShow R code\nQ1  &lt;- quantile(scores, 0.25)\nQ3  &lt;- quantile(scores, 0.75)\niqr &lt;- Q3 - Q1\n\nlower_fence &lt;- Q1 - 1.5 * iqr\nupper_fence &lt;- Q3 + 1.5 * iqr\n\ncat(\"Q1 =\", Q1, \"\\n\")\n#&gt; Q1 = 67.5\ncat(\"Q3 =\", Q3, \"\\n\")\n#&gt; Q3 = 80.75\ncat(\"IQR =\", iqr, \"\\n\")\n#&gt; IQR = 13.25\ncat(\"Lower fence:\", lower_fence, \"\\n\")\n#&gt; Lower fence: 47.625\ncat(\"Upper fence:\", upper_fence, \"\\n\")\n#&gt; Upper fence: 100.625\ncat(\"Outliers:\", scores[scores &lt; lower_fence | scores &gt; upper_fence], \"\\n\")\n#&gt; Outliers:",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Measures of Centre and Spread</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Measures of Centre and Spread</span>"
     ]
   },
   {
     "objectID": "chapters/07-measures.html#glossary",
     "href": "chapters/07-measures.html#glossary",
-    "title": "10  Measures of Centre and Spread",
-    "section": "10.5 Glossary",
-    "text": "10.5 Glossary\n\n\n\nTerm\nMeaning\n\n\n\n\nMean\nSum of all values divided by the count\n\n\nMedian\nMiddle value when data is sorted\n\n\nMode\nMost frequently occurring value\n\n\nRange\nMaximum − Minimum\n\n\nIQR\nQ3 − Q1; spread of the middle 50%\n\n\nStandard deviation\nAverage distance of values from the mean\n\n\nOutlier\nA value that lies far from the rest of the data\n\n\nFive-number summary\nMin, Q1, Median, Q3, Max",
+    "title": "11  Measures of Centre and Spread",
+    "section": "11.5 Glossary",
+    "text": "11.5 Glossary\n\n\n\nTerm\nMeaning\n\n\n\n\nMean\nSum of all values divided by the count\n\n\nMedian\nMiddle value when data is sorted\n\n\nMode\nMost frequently occurring value\n\n\nRange\nMaximum − Minimum\n\n\nIQR\nQ3 − Q1; spread of the middle 50%\n\n\nStandard deviation\nAverage distance of values from the mean\n\n\nOutlier\nA value that lies far from the rest of the data\n\n\nFive-number summary\nMin, Q1, Median, Q3, Max",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Measures of Centre and Spread</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Measures of Centre and Spread</span>"
     ]
   },
   {
     "objectID": "chapters/07-measures.html#check-your-understanding",
     "href": "chapters/07-measures.html#check-your-understanding",
-    "title": "10  Measures of Centre and Spread",
-    "section": "10.6 Check your understanding",
-    "text": "10.6 Check your understanding\nUse the dataset: 12, 15, 18, 18, 20, 22, 25, 25, 28, 100\n\nCalculate the mean and median. Which is more appropriate as a measure of centre for this data? Why?\nFind Q1, Q3, and the IQR.\nCalculate the range.\nIs 100 an outlier? Use the 1.5 × IQR rule to justify your answer.\nSketch a box plot of this data.\n\n\n\n\n\n\n\nNoteAnswers\n\n\n\n\n\n\nMean = (12+15+18+18+20+22+25+25+28+100)/10 = 283/10 = 28.3; Median = (20+22)/2 = 21. The median is more appropriate because of the outlier (100) which pulls the mean up.\nQ1 = 18, Q3 = 25, IQR = 7.\nRange = 100 − 12 = 88.\nUpper fence = 25 + 1.5 × 7 = 25 + 10.5 = 35.5. Since 100 &gt; 35.5, yes, 100 is an outlier.\nSketch: whiskers from 12 to 35.5, box from 18 to 25, median line at 21, and a dot at 100 representing the outlier.",
+    "title": "11  Measures of Centre and Spread",
+    "section": "11.6 Check your understanding",
+    "text": "11.6 Check your understanding\nUse the dataset: 12, 15, 18, 18, 20, 22, 25, 25, 28, 100\n\nCalculate the mean and median. Which is more appropriate as a measure of centre for this data? Why?\nFind Q1, Q3, and the IQR.\nCalculate the range.\nIs 100 an outlier? Use the 1.5 × IQR rule to justify your answer.\nSketch a box plot of this data.\n\n\n\n\n\n\n\nNoteAnswers\n\n\n\n\n\n\nMean = (12+15+18+18+20+22+25+25+28+100)/10 = 283/10 = 28.3; Median = (20+22)/2 = 21. The median is more appropriate because of the outlier (100) which pulls the mean up.\nQ1 = 18, Q3 = 25, IQR = 7.\nRange = 100 − 12 = 88.\nUpper fence = 25 + 1.5 × 7 = 25 + 10.5 = 35.5. Since 100 &gt; 35.5, yes, 100 is an outlier.\nSketch: whiskers from 12 to 35.5, box from 18 to 25, median line at 21, and a dot at 100 representing the outlier.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Measures of Centre and Spread</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Measures of Centre and Spread</span>"
     ]
   },
   {
     "objectID": "chapters/08-practice.html",
     "href": "chapters/08-practice.html",
-    "title": "11  Practice Questions and Achievement Standard Tips",
+    "title": "12  Practice Questions and Achievement Standard Tips",
     "section": "",
-    "text": "11.1 About the achievement standard\nThis chapter brings everything together with practice questions at each grade level, and advice on how to approach the AS91946 assessment.",
+    "text": "12.1 About the achievement standard\nThis chapter brings everything together with practice questions at each grade level, and advice on how to approach the AS91946 assessment.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Practice Questions and Achievement Standard Tips</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Practice Questions and Achievement Standard Tips</span>"
     ]
   },
   {
     "objectID": "chapters/08-practice.html#about-the-achievement-standard",
     "href": "chapters/08-practice.html#about-the-achievement-standard",
-    "title": "11  Practice Questions and Achievement Standard Tips",
+    "title": "12  Practice Questions and Achievement Standard Tips",
     "section": "",
     "text": "Detail\nInformation\n\n\n\n\nStandard number\nAS91946\n\n\nTitle\nInterpret and apply mathematical and statistical information in context\n\n\nLevel\nNCEA Level 1\n\n\nCredits\n4\n\n\nAssessment\nExternal (end-of-year exam)\n\n\nStrands\nStatistics and Probability",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Practice Questions and Achievement Standard Tips</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Practice Questions and Achievement Standard Tips</span>"
     ]
   },
   {
     "objectID": "chapters/08-practice.html#what-each-grade-requires",
     "href": "chapters/08-practice.html#what-each-grade-requires",
-    "title": "11  Practice Questions and Achievement Standard Tips",
-    "section": "11.2 What each grade requires",
-    "text": "11.2 What each grade requires\n\n11.2.1 Achieved\n\nCorrectly read values from graphs and tables\nCalculate basic statistics (mean, median, mode, range)\nState probabilities from given information\nIdentify variable types\nMake simple statements about data in context\n\n\n\n11.2.2 Merit\n\nJustify your answers with reasons\nCompare and contrast groups using both centre AND spread\nIdentify potential sources of bias\nExplain the difference between correlation and causation\nInterpret probabilities and relate them to real-world context\n\n\n\n11.2.3 Excellence\n\nShow statistical insight — go beyond the obvious\nConsider alternative explanations or limitations\nMake connections between different parts of the data\nCritically evaluate statistical claims\nUse appropriate statistical language precisely",
+    "title": "12  Practice Questions and Achievement Standard Tips",
+    "section": "12.2 What each grade requires",
+    "text": "12.2 What each grade requires\n\n12.2.1 Achieved\n\nCorrectly read values from graphs and tables\nCalculate basic statistics (mean, median, mode, range)\nState probabilities from given information\nIdentify variable types\nMake simple statements about data in context\n\n\n\n12.2.2 Merit\n\nJustify your answers with reasons\nCompare and contrast groups using both centre AND spread\nIdentify potential sources of bias\nExplain the difference between correlation and causation\nInterpret probabilities and relate them to real-world context\n\n\n\n12.2.3 Excellence\n\nShow statistical insight — go beyond the obvious\nConsider alternative explanations or limitations\nMake connections between different parts of the data\nCritically evaluate statistical claims\nUse appropriate statistical language precisely",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Practice Questions and Achievement Standard Tips</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Practice Questions and Achievement Standard Tips</span>"
     ]
   },
   {
     "objectID": "chapters/08-practice.html#writing-tips-for-the-exam",
     "href": "chapters/08-practice.html#writing-tips-for-the-exam",
-    "title": "11  Practice Questions and Achievement Standard Tips",
-    "section": "11.3 Writing tips for the exam",
-    "text": "11.3 Writing tips for the exam\n\n\n\n\n\n\nTipThe golden rule\n\n\n\nAlways refer back to the context. Every answer should mention: - The variable being described - The units of measurement - The group being described (population/sample)\n❌ “The mean is 65.”\n✅ “The mean maths score for Year 11 students was 65 out of 100.”\n\n\n\n11.3.1 Comparison sentence starters\n\n\n\n\n\n\n\nPurpose\nSentence starters\n\n\n\n\nCentre\n“On average…”; “The typical…”; “The median…is higher/lower than…”\n\n\nSpread\n“The scores are more/less variable…”; “The IQR is larger, suggesting…”\n\n\nShape\n“The distribution is roughly symmetric / right-skewed…”\n\n\nOutliers\n“There appears to be an outlier at…which may indicate…”\n\n\nCausation\n“However, this may be due to…rather than a direct causal relationship”",
+    "title": "12  Practice Questions and Achievement Standard Tips",
+    "section": "12.3 Writing tips for the exam",
+    "text": "12.3 Writing tips for the exam\n\n\n\n\n\n\nTipThe golden rule\n\n\n\nAlways refer back to the context. Every answer should mention: - The variable being described - The units of measurement - The group being described (population/sample)\n❌ “The mean is 65.”\n✅ “The mean maths score for Year 11 students was 65 out of 100.”\n\n\n\n12.3.1 Comparison sentence starters\n\n\n\n\n\n\n\nPurpose\nSentence starters\n\n\n\n\nCentre\n“On average…”; “The typical…”; “The median…is higher/lower than…”\n\n\nSpread\n“The scores are more/less variable…”; “The IQR is larger, suggesting…”\n\n\nShape\n“The distribution is roughly symmetric / right-skewed…”\n\n\nOutliers\n“There appears to be an outlier at…which may indicate…”\n\n\nCausation\n“However, this may be due to…rather than a direct causal relationship”",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Practice Questions and Achievement Standard Tips</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Practice Questions and Achievement Standard Tips</span>"
     ]
   },
   {
     "objectID": "chapters/08-practice.html#practice-set-1-achieved-level",
     "href": "chapters/08-practice.html#practice-set-1-achieved-level",
-    "title": "11  Practice Questions and Achievement Standard Tips",
-    "section": "11.4 Practice set 1 — Achieved level",
-    "text": "11.4 Practice set 1 — Achieved level\n\n#&gt; Heights (cm) of 20 Year 11 students:\n#&gt; 147.3 153.9 154.5 157.3 158.9 159.5 163.6 164.3 164.8 165 165.2 166.4 166.5 167.2 169.3 170.1 171.3 171.5 175.2 184.6\n\nQuestions:\n\nWhat type of data is height? Give a reason.\nCalculate the mean height. Round to one decimal place.\nFind the median height.\nFind the range.\nA student drew a histogram of this data. Circle the most appropriate description: symmetric / right-skewed / left-skewed\n\n\n\n\n\n\n\nNoteWorked solutions\n\n\n\n\n\n\nNumerical, continuous — height can take any value within a range.\nMean: 164.8 cm\nMedian: 165.1 cm\nRange: 37.3 cm\nLikely symmetric (heights tend to be normally distributed).",
+    "title": "12  Practice Questions and Achievement Standard Tips",
+    "section": "12.4 Practice set 1 — Achieved level",
+    "text": "12.4 Practice set 1 — Achieved level\n\n#&gt; Heights (cm) of 20 Year 11 students:\n#&gt; 147.3 153.9 154.5 157.3 158.9 159.5 163.6 164.3 164.8 165 165.2 166.4 166.5 167.2 169.3 170.1 171.3 171.5 175.2 184.6\n\nQuestions:\n\nWhat type of data is height? Give a reason.\nCalculate the mean height. Round to one decimal place.\nFind the median height.\nFind the range.\nA student drew a histogram of this data. Circle the most appropriate description: symmetric / right-skewed / left-skewed\n\n\n\n\n\n\n\nNoteWorked solutions\n\n\n\n\n\n\nNumerical, continuous — height can take any value within a range.\nMean: 164.8 cm\nMedian: 165.1 cm\nRange: 37.3 cm\nLikely symmetric (heights tend to be normally distributed).",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Practice Questions and Achievement Standard Tips</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Practice Questions and Achievement Standard Tips</span>"
     ]
   },
   {
     "objectID": "chapters/08-practice.html#practice-set-2-merit-level",
     "href": "chapters/08-practice.html#practice-set-2-merit-level",
-    "title": "11  Practice Questions and Achievement Standard Tips",
-    "section": "11.5 Practice set 2 — Merit level",
-    "text": "11.5 Practice set 2 — Merit level\nA local council surveyed 80 residents about their weekly exercise hours. The results were:\n\n\nShow R code\nset.seed(222)\nadults    &lt;- round(pmax(0, rnorm(40, mean = 4.5, sd = 2.2)), 1)\nteenagers &lt;- round(pmax(0, rnorm(40, mean = 6.2, sd = 3.1)), 1)\n\nsummary_tbl &lt;- data.frame(\n  Group      = c(\"Adults\", \"Teenagers\"),\n  n          = 40,\n  Mean       = round(c(mean(adults), mean(teenagers)), 2),\n  Median     = c(median(adults), median(teenagers)),\n  SD         = round(c(sd(adults), sd(teenagers)), 2),\n  IQR        = round(c(IQR(adults), IQR(teenagers)), 2),\n  Min        = c(min(adults), min(teenagers)),\n  Max        = c(max(adults), max(teenagers))\n)\n\nknitr::kable(summary_tbl, caption = \"Weekly exercise hours: adults vs teenagers\")\n\n\n\nWeekly exercise hours: adults vs teenagers\n\n\nGroup\nn\nMean\nMedian\nSD\nIQR\nMin\nMax\n\n\n\n\nAdults\n40\n4.45\n4.35\n2.07\n2.85\n0\n7.9\n\n\nTeenagers\n40\n6.58\n7.10\n2.85\n3.58\n0\n13.0\n\n\n\n\n\n\n\nShow R code\nexercise_df &lt;- data.frame(\n   group = rep(c(\"Adults\", \"Teenagers\"), each = 40),\n   hours = c(adults, teenagers)\n)\n\nboxplot(\n   hours ~ group,\n   data   = exercise_df,\n   col    = c(\"#4dac26\", \"#0571b0\"),\n   border = \"#333333\",\n   main   = \"Weekly Exercise Hours\",\n   ylab   = \"Hours per week\",\n   las    = 1\n)\n\n\n\n\n\n\n\n\nFigure 11.1: Weekly exercise hours for adults and teenagers.\n\n\n\n\n\nQuestions:\n\nCompare the centre of the two distributions. What does this tell us about exercise habits in context?\nCompare the spread. What does this tell us?\nThe council used a telephone survey conducted at 2 pm on weekdays. Identify one source of bias and explain how it might affect the results.\nCan we conclude from this data that teenagers exercise more because they are younger? Explain.\n\n\n\n\n\n\n\nNoteModel answers\n\n\n\n\n\n1. Centre: The median exercise hours for teenagers (approx. 7.1 hrs) is higher than for adults (4.35 hrs). This suggests teenagers in this sample tend to do more weekly exercise than adults.\n2. Spread: The IQR and standard deviation are larger for teenagers (3.6 hrs vs 2.9 hrs). This means teenagers’ exercise habits are more variable — some exercise a lot while others exercise very little. Adults’ exercise habits are more consistent.\n3. Bias: Calling at 2 pm on weekdays means working adults are unlikely to answer (they are at work). This leads to non-response bias — the adult sample may over-represent retired or part-time workers, who may exercise more than the general adult population.\n4. Causation: No — we cannot conclude that age causes the difference in exercise. Teenagers may exercise more because they participate in school sport, not because of their age per se. Age and exercise are correlated in this sample, but there may be confounding variables such as school PE requirements, free time, or lifestyle factors.",
+    "title": "12  Practice Questions and Achievement Standard Tips",
+    "section": "12.5 Practice set 2 — Merit level",
+    "text": "12.5 Practice set 2 — Merit level\nA local council surveyed 80 residents about their weekly exercise hours. The results were:\n\n\nShow R code\nset.seed(222)\nadults    &lt;- round(pmax(0, rnorm(40, mean = 4.5, sd = 2.2)), 1)\nteenagers &lt;- round(pmax(0, rnorm(40, mean = 6.2, sd = 3.1)), 1)\n\nsummary_tbl &lt;- data.frame(\n  Group      = c(\"Adults\", \"Teenagers\"),\n  n          = 40,\n  Mean       = round(c(mean(adults), mean(teenagers)), 2),\n  Median     = c(median(adults), median(teenagers)),\n  SD         = round(c(sd(adults), sd(teenagers)), 2),\n  IQR        = round(c(IQR(adults), IQR(teenagers)), 2),\n  Min        = c(min(adults), min(teenagers)),\n  Max        = c(max(adults), max(teenagers))\n)\n\nknitr::kable(summary_tbl, caption = \"Weekly exercise hours: adults vs teenagers\")\n\n\n\nWeekly exercise hours: adults vs teenagers\n\n\nGroup\nn\nMean\nMedian\nSD\nIQR\nMin\nMax\n\n\n\n\nAdults\n40\n4.45\n4.35\n2.07\n2.85\n0\n7.9\n\n\nTeenagers\n40\n6.58\n7.10\n2.85\n3.58\n0\n13.0\n\n\n\n\n\n\n\nShow R code\nexercise_df &lt;- data.frame(\n   group = rep(c(\"Adults\", \"Teenagers\"), each = 40),\n   hours = c(adults, teenagers)\n)\n\nboxplot(\n   hours ~ group,\n   data   = exercise_df,\n   col    = c(\"#4dac26\", \"#0571b0\"),\n   border = \"#333333\",\n   main   = \"Weekly Exercise Hours\",\n   ylab   = \"Hours per week\",\n   las    = 1\n)\n\n\n\n\n\n\n\n\nFigure 12.1: Weekly exercise hours for adults and teenagers.\n\n\n\n\n\nQuestions:\n\nCompare the centre of the two distributions. What does this tell us about exercise habits in context?\nCompare the spread. What does this tell us?\nThe council used a telephone survey conducted at 2 pm on weekdays. Identify one source of bias and explain how it might affect the results.\nCan we conclude from this data that teenagers exercise more because they are younger? Explain.\n\n\n\n\n\n\n\nNoteModel answers\n\n\n\n\n\n1. Centre: The median exercise hours for teenagers (approx. 7.1 hrs) is higher than for adults (4.35 hrs). This suggests teenagers in this sample tend to do more weekly exercise than adults.\n2. Spread: The IQR and standard deviation are larger for teenagers (3.6 hrs vs 2.9 hrs). This means teenagers’ exercise habits are more variable — some exercise a lot while others exercise very little. Adults’ exercise habits are more consistent.\n3. Bias: Calling at 2 pm on weekdays means working adults are unlikely to answer (they are at work). This leads to non-response bias — the adult sample may over-represent retired or part-time workers, who may exercise more than the general adult population.\n4. Causation: No — we cannot conclude that age causes the difference in exercise. Teenagers may exercise more because they participate in school sport, not because of their age per se. Age and exercise are correlated in this sample, but there may be confounding variables such as school PE requirements, free time, or lifestyle factors.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Practice Questions and Achievement Standard Tips</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Practice Questions and Achievement Standard Tips</span>"
     ]
   },
   {
     "objectID": "chapters/08-practice.html#practice-set-3-excellence-level",
     "href": "chapters/08-practice.html#practice-set-3-excellence-level",
-    "title": "11  Practice Questions and Achievement Standard Tips",
-    "section": "11.6 Practice set 3 — Excellence level",
-    "text": "11.6 Practice set 3 — Excellence level\nA researcher claims: “A study of 50 Auckland households found that households with more bookshelves have higher household income. Therefore, buying more bookshelves will increase your income.”\nQuestions:\n\nIdentify the two variables and their types.\nExplain why this conclusion is flawed. Use statistical language.\nSuggest one confounding variable that could explain the relationship.\nWhat would the researcher need to do to properly establish causation?\nThe sample was 50 Auckland households selected by going door-to-door in Remuera (a wealthy suburb). Evaluate the reliability of generalising these findings to all New Zealand households.\n\n\n\n\n\n\n\nNoteModel answers\n\n\n\n\n\n1. Number of bookshelves: numerical, discrete. Household income: numerical, continuous.\n2. The conclusion confuses correlation with causation. Even if the two variables are positively correlated, this does not mean bookshelves cause higher income. The relationship could be due to a third variable, and correlation studies cannot establish cause-and-effect without experimental control.\n3. Wealth/education level — wealthier, more educated households are more likely to own books/bookshelves AND to have higher income. Both variables are driven by a common factor.\n4. To establish causation, the researcher would need a controlled experiment — randomly assigning households to receive bookshelves or not, holding all other variables constant, and measuring income change over time. This would be impractical.\n5. The sample has significant sampling bias. Remuera is one of Auckland’s wealthiest suburbs. The sample does not represent the diversity of New Zealand households in terms of income, region, or ethnicity. Results cannot be reliably generalised to all New Zealand households. A stratified random sample from across New Zealand would be needed.",
+    "title": "12  Practice Questions and Achievement Standard Tips",
+    "section": "12.6 Practice set 3 — Excellence level",
+    "text": "12.6 Practice set 3 — Excellence level\nA researcher claims: “A study of 50 Auckland households found that households with more bookshelves have higher household income. Therefore, buying more bookshelves will increase your income.”\nQuestions:\n\nIdentify the two variables and their types.\nExplain why this conclusion is flawed. Use statistical language.\nSuggest one confounding variable that could explain the relationship.\nWhat would the researcher need to do to properly establish causation?\nThe sample was 50 Auckland households selected by going door-to-door in Remuera (a wealthy suburb). Evaluate the reliability of generalising these findings to all New Zealand households.\n\n\n\n\n\n\n\nNoteModel answers\n\n\n\n\n\n1. Number of bookshelves: numerical, discrete. Household income: numerical, continuous.\n2. The conclusion confuses correlation with causation. Even if the two variables are positively correlated, this does not mean bookshelves cause higher income. The relationship could be due to a third variable, and correlation studies cannot establish cause-and-effect without experimental control.\n3. Wealth/education level — wealthier, more educated households are more likely to own books/bookshelves AND to have higher income. Both variables are driven by a common factor.\n4. To establish causation, the researcher would need a controlled experiment — randomly assigning households to receive bookshelves or not, holding all other variables constant, and measuring income change over time. This would be impractical.\n5. The sample has significant sampling bias. Remuera is one of Auckland’s wealthiest suburbs. The sample does not represent the diversity of New Zealand households in terms of income, region, or ethnicity. Results cannot be reliably generalised to all New Zealand households. A stratified random sample from across New Zealand would be needed.",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Practice Questions and Achievement Standard Tips</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Practice Questions and Achievement Standard Tips</span>"
     ]
   },
   {
     "objectID": "chapters/08-practice.html#key-formulas-summary",
     "href": "chapters/08-practice.html#key-formulas-summary",
-    "title": "11  Practice Questions and Achievement Standard Tips",
-    "section": "11.7 Key formulas summary",
-    "text": "11.7 Key formulas summary\n\n\n\n\n\nMeasure\nFormula\n\n\n\n\nMean\nx̄ = Σxᵢ / n\n\n\nRange\nMax − Min\n\n\nIQR\nQ3 − Q1\n\n\nProbability\nP(A) = favourable outcomes / total outcomes\n\n\nComplement\nP(A’) = 1 − P(A)\n\n\nLower outlier fence\nQ1 − 1.5 × IQR\n\n\nUpper outlier fence\nQ3 + 1.5 × IQR",
+    "title": "12  Practice Questions and Achievement Standard Tips",
+    "section": "12.7 Key formulas summary",
+    "text": "12.7 Key formulas summary\n\n\n\n\n\nMeasure\nFormula\n\n\n\n\nMean\nx̄ = Σxᵢ / n\n\n\nRange\nMax − Min\n\n\nIQR\nQ3 − Q1\n\n\nProbability\nP(A) = favourable outcomes / total outcomes\n\n\nComplement\nP(A’) = 1 − P(A)\n\n\nLower outlier fence\nQ1 − 1.5 × IQR\n\n\nUpper outlier fence\nQ3 + 1.5 × IQR",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Practice Questions and Achievement Standard Tips</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Practice Questions and Achievement Standard Tips</span>"
     ]
   },
   {
     "objectID": "chapters/08-practice.html#exam-strategy-checklist",
     "href": "chapters/08-practice.html#exam-strategy-checklist",
-    "title": "11  Practice Questions and Achievement Standard Tips",
-    "section": "11.8 Exam strategy checklist",
-    "text": "11.8 Exam strategy checklist\nBefore the exam, make sure you can:\n\nIdentify variable types (categorical/numerical, nominal/ordinal, discrete/continuous)\nRead values accurately from bar charts, histograms, box plots, and scatter plots\nCalculate mean, median, mode, range, IQR\nDescribe distributions using SOCS (Shape, Outliers, Centre, Spread)\nCompare two groups using both centre and spread in context\nCalculate simple probabilities and use complementary events\nRead and calculate from two-way tables\nIdentify bias in data collection methods\nDistinguish correlation from causation\nCritically evaluate statistical claims in media",
+    "title": "12  Practice Questions and Achievement Standard Tips",
+    "section": "12.8 Exam strategy checklist",
+    "text": "12.8 Exam strategy checklist\nBefore the exam, make sure you can:\n\nIdentify variable types (categorical/numerical, nominal/ordinal, discrete/continuous)\nRead values accurately from bar charts, histograms, box plots, and scatter plots\nCalculate mean, median, mode, range, IQR\nDescribe distributions using SOCS (Shape, Outliers, Centre, Spread)\nCompare two groups using both centre and spread in context\nCalculate simple probabilities and use complementary events\nRead and calculate from two-way tables\nIdentify bias in data collection methods\nDistinguish correlation from causation\nCritically evaluate statistical claims in media",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Practice Questions and Achievement Standard Tips</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Practice Questions and Achievement Standard Tips</span>"
     ]
   },
   {
     "objectID": "chapters/08-practice.html#useful-resources",
     "href": "chapters/08-practice.html#useful-resources",
-    "title": "11  Practice Questions and Achievement Standard Tips",
-    "section": "11.9 Useful resources",
-    "text": "11.9 Useful resources\n\n\n\nResource\nDescription\nURL\n\n\n\n\nNZQA\nOfficial achievement standard information\nnzqa.govt.nz\n\n\nCensusAtSchool\nReal NZ student data for practice\nnew.censusatschool.org.nz\n\n\niNZight\nFree NZ-made statistics software\ninzight.nz\n\n\nStats NZ\nOfficial NZ statistics and data\nstats.govt.nz\n\n\nKhan Academy\nFree video lessons on statistics\nkhanacademy.org",
+    "title": "12  Practice Questions and Achievement Standard Tips",
+    "section": "12.9 Useful resources",
+    "text": "12.9 Useful resources\n\n\n\nResource\nDescription\nURL\n\n\n\n\nNZQA\nOfficial achievement standard information\nnzqa.govt.nz\n\n\nCensusAtSchool\nReal NZ student data for practice\nnew.censusatschool.org.nz\n\n\niNZight\nFree NZ-made statistics software\ninzight.nz\n\n\nStats NZ\nOfficial NZ statistics and data\nstats.govt.nz\n\n\nKhan Academy\nFree video lessons on statistics\nkhanacademy.org",
     "crumbs": [
       "Part 1: Core Statistical Thinking",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Practice Questions and Achievement Standard Tips</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Practice Questions and Achievement Standard Tips</span>"
     ]
   },
   {
     "objectID": "chapters/09-probability.html",
     "href": "chapters/09-probability.html",
-    "title": "12  Probability",
+    "title": "13  Probability",
     "section": "",
-    "text": "12.1 Probability scale\nProbability is a measure of how likely an event is to occur. It is expressed as a number between 0 (impossible) and 1 (certain), or as a percentage.\n\\[P(\\text{event}) = \\frac{\\text{number of favourable outcomes}}{\\text{total number of possible outcomes}}\\]\nFigure 12.1: The probability scale from impossible (0) to certain (1).",
+    "text": "13.1 Probability scale\nProbability is a measure of how likely an event is to occur. It is expressed as a number between 0 (impossible) and 1 (certain), or as a percentage.\n\\[P(\\text{event}) = \\frac{\\text{number of favourable outcomes}}{\\text{total number of possible outcomes}}\\]\nFigure 13.1: The probability scale from impossible (0) to certain (1).",
     "crumbs": [
       "Part 2: Probability and Critical Reading",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Probability</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Probability</span>"
     ]
   },
   {
     "objectID": "chapters/09-probability.html#key-vocabulary",
     "href": "chapters/09-probability.html#key-vocabulary",
-    "title": "12  Probability",
-    "section": "12.2 Key vocabulary",
-    "text": "12.2 Key vocabulary\n\n\n\nTerm\nDefinition\n\n\n\n\nExperiment\nA process with uncertain outcomes\n\n\nOutcome\nA single possible result\n\n\nEvent\nOne or more outcomes grouped together\n\n\nSample space\nThe set of all possible outcomes\n\n\nComplementary event\nAll outcomes that are NOT in the event",
+    "title": "13  Probability",
+    "section": "13.2 Key vocabulary",
+    "text": "13.2 Key vocabulary\n\n\n\nTerm\nDefinition\n\n\n\n\nExperiment\nA process with uncertain outcomes\n\n\nOutcome\nA single possible result\n\n\nEvent\nOne or more outcomes grouped together\n\n\nSample space\nThe set of all possible outcomes\n\n\nComplementary event\nAll outcomes that are NOT in the event",
     "crumbs": [
       "Part 2: Probability and Critical Reading",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Probability</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Probability</span>"
     ]
   },
   {
     "objectID": "chapters/09-probability.html#simple-probability-equally-likely-outcomes",
     "href": "chapters/09-probability.html#simple-probability-equally-likely-outcomes",
-    "title": "12  Probability",
-    "section": "12.3 Simple probability — equally likely outcomes",
-    "text": "12.3 Simple probability — equally likely outcomes\nWhen all outcomes are equally likely, we can use the classical definition.\n\n12.3.1 Example: rolling a die\n\n\nShow R code\nsample_space &lt;- 1:6\ncat(\"Sample space:\", sample_space, \"\\n\")\n#&gt; Sample space: 1 2 3 4 5 6\n\n# P(rolling a 4)\np_four &lt;- sum(sample_space == 4) / length(sample_space)\ncat(\"P(rolling a 4) =\", p_four, \"\\n\")\n#&gt; P(rolling a 4) = 0.1666667\n\n# P(rolling an even number)\np_even &lt;- sum(sample_space %% 2 == 0) / length(sample_space)\ncat(\"P(even number) =\", p_even, \"\\n\")\n#&gt; P(even number) = 0.5\n\n# P(rolling &gt; 4)\np_gt4 &lt;- sum(sample_space &gt; 4) / length(sample_space)\ncat(\"P(&gt; 4) =\", p_gt4, \"\\n\")\n#&gt; P(&gt; 4) = 0.3333333",
+    "title": "13  Probability",
+    "section": "13.3 Simple probability — equally likely outcomes",
+    "text": "13.3 Simple probability — equally likely outcomes\nWhen all outcomes are equally likely, we can use the classical definition.\n\n13.3.1 Example: rolling a die\n\n\nShow R code\nsample_space &lt;- 1:6\ncat(\"Sample space:\", sample_space, \"\\n\")\n#&gt; Sample space: 1 2 3 4 5 6\n\n# P(rolling a 4)\np_four &lt;- sum(sample_space == 4) / length(sample_space)\ncat(\"P(rolling a 4) =\", p_four, \"\\n\")\n#&gt; P(rolling a 4) = 0.1666667\n\n# P(rolling an even number)\np_even &lt;- sum(sample_space %% 2 == 0) / length(sample_space)\ncat(\"P(even number) =\", p_even, \"\\n\")\n#&gt; P(even number) = 0.5\n\n# P(rolling &gt; 4)\np_gt4 &lt;- sum(sample_space &gt; 4) / length(sample_space)\ncat(\"P(&gt; 4) =\", p_gt4, \"\\n\")\n#&gt; P(&gt; 4) = 0.3333333",
     "crumbs": [
       "Part 2: Probability and Critical Reading",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Probability</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Probability</span>"
     ]
   },
   {
     "objectID": "chapters/09-probability.html#complementary-events",
     "href": "chapters/09-probability.html#complementary-events",
-    "title": "12  Probability",
-    "section": "12.4 Complementary events",
-    "text": "12.4 Complementary events\nThe complement of event A (written A’ or \\(\\bar{A}\\)) contains all outcomes NOT in A.\n\\[P(A') = 1 - P(A)\\]\nExample: If the probability of rain tomorrow is 0.3, then:\n\\[P(\\text{no rain}) = 1 - 0.3 = 0.7\\]\n\n\nShow R code\np_rain &lt;- 0.3\np_no_rain &lt;- 1 - p_rain\ncat(\"P(rain) =\", p_rain, \"\\n\")\n#&gt; P(rain) = 0.3\ncat(\"P(no rain) = 1 -\", p_rain, \"=\", p_no_rain, \"\\n\")\n#&gt; P(no rain) = 1 - 0.3 = 0.7",
+    "title": "13  Probability",
+    "section": "13.4 Complementary events",
+    "text": "13.4 Complementary events\nThe complement of event A (written A’ or \\(\\bar{A}\\)) contains all outcomes NOT in A.\n\\[P(A') = 1 - P(A)\\]\nExample: If the probability of rain tomorrow is 0.3, then:\n\\[P(\\text{no rain}) = 1 - 0.3 = 0.7\\]\n\n\nShow R code\np_rain &lt;- 0.3\np_no_rain &lt;- 1 - p_rain\ncat(\"P(rain) =\", p_rain, \"\\n\")\n#&gt; P(rain) = 0.3\ncat(\"P(no rain) = 1 -\", p_rain, \"=\", p_no_rain, \"\\n\")\n#&gt; P(no rain) = 1 - 0.3 = 0.7",
     "crumbs": [
       "Part 2: Probability and Critical Reading",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Probability</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Probability</span>"
     ]
   },
   {
     "objectID": "chapters/09-probability.html#experimental-relative-frequency-probability",
     "href": "chapters/09-probability.html#experimental-relative-frequency-probability",
-    "title": "12  Probability",
-    "section": "12.5 Experimental (relative frequency) probability",
-    "text": "12.5 Experimental (relative frequency) probability\nWhen we cannot calculate probability theoretically, we estimate it by repeating an experiment many times:\n\\[P(\\text{event}) \\approx \\frac{\\text{number of times event occurred}}{\\text{total number of trials}}\\]\n\n12.5.1 Simulating coin flips\n\n\nShow R code\nset.seed(99)\nflips  &lt;- sample(c(\"Heads\", \"Tails\"), 1000, replace = TRUE)\ncumulative_heads &lt;- cumsum(flips == \"Heads\") / seq_along(flips)\n\nplot(\n  cumulative_heads,\n  type = \"l\",\n  col  = \"#0571b0\",\n  lwd  = 1.5,\n  xlab = \"Number of Flips\",\n  ylab = \"Relative Frequency of Heads\",\n  main = \"Simulated Coin Flips\",\n  ylim = c(0, 1),\n  las  = 1\n)\nabline(h = 0.5, col = \"#d7191c\", lwd = 2, lty = 2)\nlegend(\"topright\", c(\"Relative frequency\", \"True probability (0.5)\"),\n       col = c(\"#0571b0\", \"#d7191c\"), lwd = 2, lty = c(1, 2), bty = \"n\")\n\n\n\n\n\n\n\n\nFigure 12.2: Relative frequency of heads approaches 0.5 as the number of flips increases (the law of large numbers).\n\n\n\n\n\n\n\n\n\n\n\nNoteLaw of Large Numbers\n\n\n\nAs the number of trials increases, the relative frequency (experimental probability) gets closer and closer to the true probability. This is why surveys and experiments need large samples.",
+    "title": "13  Probability",
+    "section": "13.5 Experimental (relative frequency) probability",
+    "text": "13.5 Experimental (relative frequency) probability\nWhen we cannot calculate probability theoretically, we estimate it by repeating an experiment many times:\n\\[P(\\text{event}) \\approx \\frac{\\text{number of times event occurred}}{\\text{total number of trials}}\\]\n\n13.5.1 Simulating coin flips\n\n\nShow R code\nset.seed(99)\nflips  &lt;- sample(c(\"Heads\", \"Tails\"), 1000, replace = TRUE)\ncumulative_heads &lt;- cumsum(flips == \"Heads\") / seq_along(flips)\n\nplot(\n  cumulative_heads,\n  type = \"l\",\n  col  = \"#0571b0\",\n  lwd  = 1.5,\n  xlab = \"Number of Flips\",\n  ylab = \"Relative Frequency of Heads\",\n  main = \"Simulated Coin Flips\",\n  ylim = c(0, 1),\n  las  = 1\n)\nabline(h = 0.5, col = \"#d7191c\", lwd = 2, lty = 2)\nlegend(\"topright\", c(\"Relative frequency\", \"True probability (0.5)\"),\n       col = c(\"#0571b0\", \"#d7191c\"), lwd = 2, lty = c(1, 2), bty = \"n\")\n\n\n\n\n\n\n\n\nFigure 13.2: Relative frequency of heads approaches 0.5 as the number of flips increases (the law of large numbers).\n\n\n\n\n\n\n\n\n\n\n\nNoteLaw of Large Numbers\n\n\n\nAs the number of trials increases, the relative frequency (experimental probability) gets closer and closer to the true probability. This is why surveys and experiments need large samples.",
     "crumbs": [
       "Part 2: Probability and Critical Reading",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Probability</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Probability</span>"
     ]
   },
   {
     "objectID": "chapters/09-probability.html#two-way-tables",
     "href": "chapters/09-probability.html#two-way-tables",
-    "title": "12  Probability",
-    "section": "12.6 Two-way tables",
-    "text": "12.6 Two-way tables\nA two-way table (contingency table) organises data by two categorical variables and is very useful for calculating probabilities.\n\n\nShow R code\n# Simulated data: 120 students, sport preference by gender\nset.seed(7)\nn_students &lt;- 120\nsport_data &lt;- data.frame(\n  Gender = sample(c(\"Male\", \"Female\"), n_students, replace = TRUE,\n                  prob = c(0.5, 0.5)),\n  Sport  = sample(c(\"Rugby\", \"Netball\", \"Football\", \"Basketball\"),\n                  n_students, replace = TRUE, prob = c(0.3, 0.25, 0.25, 0.2))\n)\n\ntbl &lt;- table(sport_data$Sport, sport_data$Gender)\ntbl_with_total &lt;- addmargins(tbl)\nknitr::kable(tbl_with_total, caption = \"Sport preference by gender (n = 120)\")\n\n\n\nSport preference by gender (n = 120)\n\n\n\nFemale\nMale\nSum\n\n\n\n\nBasketball\n16\n11\n27\n\n\nFootball\n13\n17\n30\n\n\nNetball\n18\n17\n35\n\n\nRugby\n16\n12\n28\n\n\nSum\n63\n57\n120\n\n\n\n\n\n\n12.6.1 Reading probabilities from a two-way table\nUsing the table above:\n\n\nShow R code\ntotal &lt;- sum(tbl)\n\ncat(\"P(Male) =\", sum(tbl[, \"Male\"]), \"/\", total, \"=\",\n    round(sum(tbl[, \"Male\"]) / total, 3), \"\\n\")\n#&gt; P(Male) = 57 / 120 = 0.475\n\ncat(\"P(Rugby) =\", sum(tbl[\"Rugby\", ]), \"/\", total, \"=\",\n    round(sum(tbl[\"Rugby\", ]) / total, 3), \"\\n\")\n#&gt; P(Rugby) = 28 / 120 = 0.233\n\ncat(\"P(Male AND Rugby) =\", tbl[\"Rugby\", \"Male\"], \"/\", total, \"=\",\n    round(tbl[\"Rugby\", \"Male\"] / total, 3), \"\\n\")\n#&gt; P(Male AND Rugby) = 12 / 120 = 0.1\n\ncat(\"P(Rugby | Male) =\", tbl[\"Rugby\", \"Male\"], \"/\",\n    sum(tbl[, \"Male\"]), \"=\",\n    round(tbl[\"Rugby\", \"Male\"] / sum(tbl[, \"Male\"]), 3), \"\\n\")\n#&gt; P(Rugby | Male) = 12 / 57 = 0.211\n\n\nThe last probability — P(Rugby | Male) — is a conditional probability: the probability of preferring rugby, given the student is male.",
+    "title": "13  Probability",
+    "section": "13.6 Two-way tables",
+    "text": "13.6 Two-way tables\nA two-way table (contingency table) organises data by two categorical variables and is very useful for calculating probabilities.\n\n\nShow R code\n# Simulated data: 120 students, sport preference by gender\nset.seed(7)\nn_students &lt;- 120\nsport_data &lt;- data.frame(\n  Gender = sample(c(\"Male\", \"Female\"), n_students, replace = TRUE,\n                  prob = c(0.5, 0.5)),\n  Sport  = sample(c(\"Rugby\", \"Netball\", \"Football\", \"Basketball\"),\n                  n_students, replace = TRUE, prob = c(0.3, 0.25, 0.25, 0.2))\n)\n\ntbl &lt;- table(sport_data$Sport, sport_data$Gender)\ntbl_with_total &lt;- addmargins(tbl)\nknitr::kable(tbl_with_total, caption = \"Sport preference by gender (n = 120)\")\n\n\n\nSport preference by gender (n = 120)\n\n\n\nFemale\nMale\nSum\n\n\n\n\nBasketball\n16\n11\n27\n\n\nFootball\n13\n17\n30\n\n\nNetball\n18\n17\n35\n\n\nRugby\n16\n12\n28\n\n\nSum\n63\n57\n120\n\n\n\n\n\n\n13.6.1 Reading probabilities from a two-way table\nUsing the table above:\n\n\nShow R code\ntotal &lt;- sum(tbl)\n\ncat(\"P(Male) =\", sum(tbl[, \"Male\"]), \"/\", total, \"=\",\n    round(sum(tbl[, \"Male\"]) / total, 3), \"\\n\")\n#&gt; P(Male) = 57 / 120 = 0.475\n\ncat(\"P(Rugby) =\", sum(tbl[\"Rugby\", ]), \"/\", total, \"=\",\n    round(sum(tbl[\"Rugby\", ]) / total, 3), \"\\n\")\n#&gt; P(Rugby) = 28 / 120 = 0.233\n\ncat(\"P(Male AND Rugby) =\", tbl[\"Rugby\", \"Male\"], \"/\", total, \"=\",\n    round(tbl[\"Rugby\", \"Male\"] / total, 3), \"\\n\")\n#&gt; P(Male AND Rugby) = 12 / 120 = 0.1\n\ncat(\"P(Rugby | Male) =\", tbl[\"Rugby\", \"Male\"], \"/\",\n    sum(tbl[, \"Male\"]), \"=\",\n    round(tbl[\"Rugby\", \"Male\"] / sum(tbl[, \"Male\"]), 3), \"\\n\")\n#&gt; P(Rugby | Male) = 12 / 57 = 0.211\n\n\nThe last probability — P(Rugby | Male) — is a conditional probability: the probability of preferring rugby, given the student is male.",
     "crumbs": [
       "Part 2: Probability and Critical Reading",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Probability</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Probability</span>"
     ]
   },
   {
     "objectID": "chapters/09-probability.html#tree-diagrams",
     "href": "chapters/09-probability.html#tree-diagrams",
-    "title": "12  Probability",
-    "section": "12.7 Tree diagrams",
-    "text": "12.7 Tree diagrams\nTree diagrams help calculate probabilities for sequential events.\n\n\n\n\n\n\n\n\nFigure 12.3: Tree diagram for drawing two balls from a bag (with replacement).\n\n\n\n\n\nKey rule: Multiply probabilities along each branch, add probabilities for different paths leading to the same outcome.",
+    "title": "13  Probability",
+    "section": "13.7 Tree diagrams",
+    "text": "13.7 Tree diagrams\nTree diagrams help calculate probabilities for sequential events.\n\n\n\n\n\n\n\n\nFigure 13.3: Tree diagram for drawing two balls from a bag (with replacement).\n\n\n\n\n\nKey rule: Multiply probabilities along each branch, add probabilities for different paths leading to the same outcome.",
     "crumbs": [
       "Part 2: Probability and Critical Reading",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Probability</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Probability</span>"
     ]
   },
   {
     "objectID": "chapters/09-probability.html#expected-value-extension",
     "href": "chapters/09-probability.html#expected-value-extension",
-    "title": "12  Probability",
-    "section": "12.8 Expected value (extension)",
-    "text": "12.8 Expected value (extension)\nFor a simple scenario, the expected value is the long-run average outcome:\n\\[E(X) = \\sum x \\cdot P(x)\\]\nExample: A raffle has 200 tickets at $2 each. First prize is $100, second prize is $50. What is the expected gain per ticket?\n\n\nShow R code\noutcomes  &lt;- c(100, 50, 0)         # winnings\nprobs     &lt;- c(1/200, 1/200, 198/200)\ncost      &lt;- 2\n\nexpected_win  &lt;- sum(outcomes * probs)\nexpected_gain &lt;- expected_win - cost\n\ncat(\"Expected winnings:\", expected_win, \"\\n\")\n#&gt; Expected winnings: 0.75\ncat(\"Ticket cost:      \", cost, \"\\n\")\n#&gt; Ticket cost:       2\ncat(\"Expected net gain:\", expected_gain, \"\\n\")\n#&gt; Expected net gain: -1.25\ncat(\"(A negative expected gain means this is not a good investment!)\\n\")\n#&gt; (A negative expected gain means this is not a good investment!)",
+    "title": "13  Probability",
+    "section": "13.8 Expected value (extension)",
+    "text": "13.8 Expected value (extension)\nFor a simple scenario, the expected value is the long-run average outcome:\n\\[E(X) = \\sum x \\cdot P(x)\\]\nExample: A raffle has 200 tickets at $2 each. First prize is $100, second prize is $50. What is the expected gain per ticket?\n\n\nShow R code\noutcomes  &lt;- c(100, 50, 0)         # winnings\nprobs     &lt;- c(1/200, 1/200, 198/200)\ncost      &lt;- 2\n\nexpected_win  &lt;- sum(outcomes * probs)\nexpected_gain &lt;- expected_win - cost\n\ncat(\"Expected winnings:\", expected_win, \"\\n\")\n#&gt; Expected winnings: 0.75\ncat(\"Ticket cost:      \", cost, \"\\n\")\n#&gt; Ticket cost:       2\ncat(\"Expected net gain:\", expected_gain, \"\\n\")\n#&gt; Expected net gain: -1.25\ncat(\"(A negative expected gain means this is not a good investment!)\\n\")\n#&gt; (A negative expected gain means this is not a good investment!)",
     "crumbs": [
       "Part 2: Probability and Critical Reading",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Probability</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Probability</span>"
     ]
   },
   {
     "objectID": "chapters/09-probability.html#glossary",
     "href": "chapters/09-probability.html#glossary",
-    "title": "12  Probability",
-    "section": "12.9 Glossary",
-    "text": "12.9 Glossary\n\n\n\n\n\n\n\nTerm\nDefinition\n\n\n\n\nProbability\nLikelihood of an event, from 0 to 1\n\n\nSample space\nAll possible outcomes\n\n\nEvent\nOne or more outcomes\n\n\nComplement\nAll outcomes NOT in the event\n\n\nRelative frequency\nExperimental estimate of probability\n\n\nConditional probability\nP(A given B): probability of A given B occurred\n\n\nTwo-way table\nTable showing two categorical variables together\n\n\nTree diagram\nDiagram showing sequential outcomes and probabilities",
+    "title": "13  Probability",
+    "section": "13.9 Glossary",
+    "text": "13.9 Glossary\n\n\n\n\n\n\n\nTerm\nDefinition\n\n\n\n\nProbability\nLikelihood of an event, from 0 to 1\n\n\nSample space\nAll possible outcomes\n\n\nEvent\nOne or more outcomes\n\n\nComplement\nAll outcomes NOT in the event\n\n\nRelative frequency\nExperimental estimate of probability\n\n\nConditional probability\nP(A given B): probability of A given B occurred\n\n\nTwo-way table\nTable showing two categorical variables together\n\n\nTree diagram\nDiagram showing sequential outcomes and probabilities",
     "crumbs": [
       "Part 2: Probability and Critical Reading",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Probability</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Probability</span>"
     ]
   },
   {
     "objectID": "chapters/09-probability.html#check-your-understanding",
     "href": "chapters/09-probability.html#check-your-understanding",
-    "title": "12  Probability",
-    "section": "12.10 Check your understanding",
-    "text": "12.10 Check your understanding\n\nA bag contains 4 red, 3 blue, and 3 yellow marbles. A marble is drawn at random. Find:\n\nP(red)\nP(not red)\nP(blue or yellow)\n\nA class of 30 students was surveyed: 18 play sport, 12 play an instrument, and 6 do both.\n\nDraw a Venn diagram.\nFind P(plays sport but not instrument).\nFind P(neither sport nor instrument).\n\nIf P(A) = 0.4 and P(B) = 0.3 and A and B are independent, find P(A and B).\n\n\n\n\n\n\n\nNoteAnswers\n\n\n\n\n\n\n\n4/10 = 0.4; b. 6/10 = 0.6; c. 6/10 = 0.6\n\n\n12/30 = 0.4; c. (30 − 18 − 12 + 6)/30 = 6/30 = 0.2\n\nP(A and B) = 0.4 × 0.3 = 0.12 (for independent events)",
+    "title": "13  Probability",
+    "section": "13.10 Check your understanding",
+    "text": "13.10 Check your understanding\n\nA bag contains 4 red, 3 blue, and 3 yellow marbles. A marble is drawn at random. Find:\n\nP(red)\nP(not red)\nP(blue or yellow)\n\nA class of 30 students was surveyed: 18 play sport, 12 play an instrument, and 6 do both.\n\nDraw a Venn diagram.\nFind P(plays sport but not instrument).\nFind P(neither sport nor instrument).\n\nIf P(A) = 0.4 and P(B) = 0.3 and A and B are independent, find P(A and B).\n\n\n\n\n\n\n\nNoteAnswers\n\n\n\n\n\n\n\n4/10 = 0.4; b. 6/10 = 0.6; c. 6/10 = 0.6\n\n\n12/30 = 0.4; c. (30 − 18 − 12 + 6)/30 = 6/30 = 0.2\n\nP(A and B) = 0.4 × 0.3 = 0.12 (for independent events)",
     "crumbs": [
       "Part 2: Probability and Critical Reading",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Probability</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Probability</span>"
     ]
   },
   {
     "objectID": "chapters/10-inference.html",
     "href": "chapters/10-inference.html",
-    "title": "13  Interpreting Statistical Information",
+    "title": "14  Interpreting Statistical Information",
     "section": "",
-    "text": "13.1 Reading statistical claims\nA major focus of AS91946 is the ability to critically read and interpret statistical information from a variety of sources — including newspapers, websites, government reports, and scientific studies.\nStatistical claims appear everywhere in everyday life. As a critical consumer of information, you need to ask:",
+    "text": "14.1 Reading statistical claims\nA major focus of AS91946 is the ability to critically read and interpret statistical information from a variety of sources — including newspapers, websites, government reports, and scientific studies.\nStatistical claims appear everywhere in everyday life. As a critical consumer of information, you need to ask:",
     "crumbs": [
       "Part 2: Probability and Critical Reading",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Interpreting Statistical Information</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Interpreting Statistical Information</span>"
     ]
   },
   {
     "objectID": "chapters/10-inference.html#reading-statistical-claims",
     "href": "chapters/10-inference.html#reading-statistical-claims",
-    "title": "13  Interpreting Statistical Information",
+    "title": "14  Interpreting Statistical Information",
     "section": "",
     "text": "Who collected the data and why?\nHow was the data collected (survey, experiment, census)?\nHow many people or things were measured (sample size)?\nWho was sampled — does the sample represent the population?\nWhat do the numbers actually mean in context?",
     "crumbs": [
       "Part 2: Probability and Critical Reading",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Interpreting Statistical Information</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Interpreting Statistical Information</span>"
     ]
   },
   {
     "objectID": "chapters/10-inference.html#sources-of-bias",
     "href": "chapters/10-inference.html#sources-of-bias",
-    "title": "13  Interpreting Statistical Information",
-    "section": "13.2 Sources of bias",
-    "text": "13.2 Sources of bias\nBias is a systematic error that causes results to be unrepresentative.\n\n\n\n\n\n\n\n\nType of bias\nDescription\nExample\n\n\n\n\nSampling bias\nSample does not represent population\nSurveying only Year 11s about a school-wide issue\n\n\nResponse bias\nPeople don’t answer truthfully\n“Do you cheat on tests?”\n\n\nNon-response bias\nCertain groups are less likely to respond\nOnline survey misses those without internet\n\n\nLeading question bias\nQuestion wording influences the answer\n“Don’t you agree that homework is too much?”\n\n\nVolunteer bias\nOnly motivated people respond\nSelf-selected online polls\n\n\n\n\n\n\n\n\n\n\n\nFigure 13.1: Different types of bias and how they affect results.",
+    "title": "14  Interpreting Statistical Information",
+    "section": "14.2 Sources of bias",
+    "text": "14.2 Sources of bias\nBias is a systematic error that causes results to be unrepresentative.\n\n\n\n\n\n\n\n\nType of bias\nDescription\nExample\n\n\n\n\nSampling bias\nSample does not represent population\nSurveying only Year 11s about a school-wide issue\n\n\nResponse bias\nPeople don’t answer truthfully\n“Do you cheat on tests?”\n\n\nNon-response bias\nCertain groups are less likely to respond\nOnline survey misses those without internet\n\n\nLeading question bias\nQuestion wording influences the answer\n“Don’t you agree that homework is too much?”\n\n\nVolunteer bias\nOnly motivated people respond\nSelf-selected online polls\n\n\n\n\n\n\n\n\n\n\n\nFigure 14.1: Different types of bias and how they affect results.",
     "crumbs": [
       "Part 2: Probability and Critical Reading",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Interpreting Statistical Information</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Interpreting Statistical Information</span>"
     ]
   },
   {
     "objectID": "chapters/10-inference.html#sample-size-and-reliability",
     "href": "chapters/10-inference.html#sample-size-and-reliability",
-    "title": "13  Interpreting Statistical Information",
-    "section": "13.3 Sample size and reliability",
-    "text": "13.3 Sample size and reliability\nLarger samples generally give more reliable results — but size alone is not enough if the sample is biased.\n\n\nShow R code\nset.seed(42)\ntrue_prop &lt;- 0.55  # True proportion in population\nsample_sizes &lt;- c(10, 30, 50, 100, 200, 500, 1000)\nn_simulations &lt;- 1000\n\nset.seed(321)\nvariability &lt;- sapply(sample_sizes, function(n) {\n  estimates &lt;- replicate(n_simulations, mean(sample(c(TRUE, FALSE), n,\n                                                    replace = TRUE,\n                                                    prob = c(true_prop,\n                                                             1 - true_prop))))\n  sd(estimates)\n})\n\nplot(\n  sample_sizes, variability,\n  type = \"b\",\n  pch  = 19,\n  col  = \"#0571b0\",\n  lwd  = 2,\n  xlab = \"Sample Size (n)\",\n  ylab = \"Standard Deviation of Estimates\",\n  main = \"Sample Size vs Variability of Estimates\",\n  las  = 1\n)\nabline(h = 0, col = \"#d7191c\", lty = 2)\n\n\n\n\n\n\n\n\nFigure 13.2: Variability in sample estimates decreases as sample size increases.",
+    "title": "14  Interpreting Statistical Information",
+    "section": "14.3 Sample size and reliability",
+    "text": "14.3 Sample size and reliability\nLarger samples generally give more reliable results — but size alone is not enough if the sample is biased.\n\n\nShow R code\nset.seed(42)\ntrue_prop &lt;- 0.55  # True proportion in population\nsample_sizes &lt;- c(10, 30, 50, 100, 200, 500, 1000)\nn_simulations &lt;- 1000\n\nset.seed(321)\nvariability &lt;- sapply(sample_sizes, function(n) {\n  estimates &lt;- replicate(n_simulations, mean(sample(c(TRUE, FALSE), n,\n                                                    replace = TRUE,\n                                                    prob = c(true_prop,\n                                                             1 - true_prop))))\n  sd(estimates)\n})\n\nplot(\n  sample_sizes, variability,\n  type = \"b\",\n  pch  = 19,\n  col  = \"#0571b0\",\n  lwd  = 2,\n  xlab = \"Sample Size (n)\",\n  ylab = \"Standard Deviation of Estimates\",\n  main = \"Sample Size vs Variability of Estimates\",\n  las  = 1\n)\nabline(h = 0, col = \"#d7191c\", lty = 2)\n\n\n\n\n\n\n\n\nFigure 14.2: Variability in sample estimates decreases as sample size increases.",
     "crumbs": [
       "Part 2: Probability and Critical Reading",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Interpreting Statistical Information</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Interpreting Statistical Information</span>"
     ]
   },
   {
     "objectID": "chapters/10-inference.html#correlation-and-causation",
     "href": "chapters/10-inference.html#correlation-and-causation",
-    "title": "13  Interpreting Statistical Information",
-    "section": "13.4 Correlation and causation",
-    "text": "13.4 Correlation and causation\nOne of the most important concepts in statistical literacy is understanding the difference between correlation and causation.\n\n\n\n\n\n\nWarningCorrelation ≠ Causation\n\n\n\nTwo variables can be correlated (move together) without one causing the other. There may be a confounding variable responsible for both.\n\n\n\n13.4.1 Famous spurious correlations\n\nIce cream sales and shark attacks both increase in summer → they are both caused by hot weather, not each other.\nCountries with more TVs have longer life expectancy → both are driven by wealth, not TVs causing people to live longer.\n\n\n\n\n\n\n\n\n\nFigure 13.3: A spurious correlation: ice cream sales and drownings both increase in summer.",
+    "title": "14  Interpreting Statistical Information",
+    "section": "14.4 Correlation and causation",
+    "text": "14.4 Correlation and causation\nOne of the most important concepts in statistical literacy is understanding the difference between correlation and causation.\n\n\n\n\n\n\nWarningCorrelation ≠ Causation\n\n\n\nTwo variables can be correlated (move together) without one causing the other. There may be a confounding variable responsible for both.\n\n\n\n14.4.1 Famous spurious correlations\n\nIce cream sales and shark attacks both increase in summer → they are both caused by hot weather, not each other.\nCountries with more TVs have longer life expectancy → both are driven by wealth, not TVs causing people to live longer.\n\n\n\n\n\n\n\n\n\nFigure 14.3: A spurious correlation: ice cream sales and drownings both increase in summer.",
     "crumbs": [
       "Part 2: Probability and Critical Reading",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Interpreting Statistical Information</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Interpreting Statistical Information</span>"
     ]
   },
   {
     "objectID": "chapters/10-inference.html#interpreting-graphs-critically",
     "href": "chapters/10-inference.html#interpreting-graphs-critically",
-    "title": "13  Interpreting Statistical Information",
-    "section": "13.5 Interpreting graphs critically",
-    "text": "13.5 Interpreting graphs critically\nWhen reading statistical graphs, watch out for:\n\n13.5.1 Misleading y-axis\nA y-axis that doesn’t start at zero can make small differences look huge.\n\n\nShow R code\npar(mfrow = c(1, 2))\n\nyears   &lt;- 2020:2024\nrevenue &lt;- c(980, 990, 995, 1005, 1010)\n\n# Misleading\nplot(years, revenue, type = \"b\", pch = 19, col = \"#d7191c\", lwd = 2,\n     ylim = c(975, 1015), xlab = \"Year\", ylab = \"Revenue ($M)\",\n     main = \"Misleading: Truncated Axis\", las = 1)\n\n# Honest\nplot(years, revenue, type = \"b\", pch = 19, col = \"#4dac26\", lwd = 2,\n     ylim = c(0, 1100), xlab = \"Year\", ylab = \"Revenue ($M)\",\n     main = \"Honest: Starting at Zero\", las = 1)\n\npar(mfrow = c(1, 1))\n\n\n\n\n\n\n\n\nFigure 13.4: The same data displayed with a truncated y-axis (left) vs starting at zero (right).\n\n\n\n\n\n\n\n13.5.2 Percentage vs absolute numbers\n\n\n\n\n\n\nTipBe careful with percentages\n\n\n\n“Crime increased by 100%” sounds alarming — but if there were only 2 crimes last year and 4 this year, the absolute increase is tiny.\nAlways ask: 100% of what?\n\n\n\n\n13.5.3 Averages without context\nThe mean can be pulled by extreme values, making it misleading if used alone. Always ask what measure of centre was used and whether it is appropriate.",
+    "title": "14  Interpreting Statistical Information",
+    "section": "14.5 Interpreting graphs critically",
+    "text": "14.5 Interpreting graphs critically\nWhen reading statistical graphs, watch out for:\n\n14.5.1 Misleading y-axis\nA y-axis that doesn’t start at zero can make small differences look huge.\n\n\nShow R code\npar(mfrow = c(1, 2))\n\nyears   &lt;- 2020:2024\nrevenue &lt;- c(980, 990, 995, 1005, 1010)\n\n# Misleading\nplot(years, revenue, type = \"b\", pch = 19, col = \"#d7191c\", lwd = 2,\n     ylim = c(975, 1015), xlab = \"Year\", ylab = \"Revenue ($M)\",\n     main = \"Misleading: Truncated Axis\", las = 1)\n\n# Honest\nplot(years, revenue, type = \"b\", pch = 19, col = \"#4dac26\", lwd = 2,\n     ylim = c(0, 1100), xlab = \"Year\", ylab = \"Revenue ($M)\",\n     main = \"Honest: Starting at Zero\", las = 1)\n\npar(mfrow = c(1, 1))\n\n\n\n\n\n\n\n\nFigure 14.4: The same data displayed with a truncated y-axis (left) vs starting at zero (right).\n\n\n\n\n\n\n\n14.5.2 Percentage vs absolute numbers\n\n\n\n\n\n\nTipBe careful with percentages\n\n\n\n“Crime increased by 100%” sounds alarming — but if there were only 2 crimes last year and 4 this year, the absolute increase is tiny.\nAlways ask: 100% of what?\n\n\n\n\n14.5.3 Averages without context\nThe mean can be pulled by extreme values, making it misleading if used alone. Always ask what measure of centre was used and whether it is appropriate.",
     "crumbs": [
       "Part 2: Probability and Critical Reading",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Interpreting Statistical Information</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Interpreting Statistical Information</span>"
     ]
   },
   {
     "objectID": "chapters/10-inference.html#reading-media-reports-a-framework",
     "href": "chapters/10-inference.html#reading-media-reports-a-framework",
-    "title": "13  Interpreting Statistical Information",
-    "section": "13.6 Reading media reports — a framework",
-    "text": "13.6 Reading media reports — a framework\nUse these questions when evaluating a statistical claim in the media:\n\nWhat is being measured? (the variable and its units)\nWho was studied? (the population and sample)\nHow was data collected? (method and potential biases)\nHow large was the sample?\nWhat is the source? (government, independent researcher, company with a vested interest?)\nAre conclusions supported by the evidence? Or is the claim overstated?\nAre comparisons fair? Are groups being compared actually comparable?",
+    "title": "14  Interpreting Statistical Information",
+    "section": "14.6 Reading media reports — a framework",
+    "text": "14.6 Reading media reports — a framework\nUse these questions when evaluating a statistical claim in the media:\n\nWhat is being measured? (the variable and its units)\nWho was studied? (the population and sample)\nHow was data collected? (method and potential biases)\nHow large was the sample?\nWhat is the source? (government, independent researcher, company with a vested interest?)\nAre conclusions supported by the evidence? Or is the claim overstated?\nAre comparisons fair? Are groups being compared actually comparable?",
     "crumbs": [
       "Part 2: Probability and Critical Reading",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Interpreting Statistical Information</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Interpreting Statistical Information</span>"
     ]
   },
   {
     "objectID": "chapters/10-inference.html#a-worked-example",
     "href": "chapters/10-inference.html#a-worked-example",
-    "title": "13  Interpreting Statistical Information",
-    "section": "13.7 A worked example",
-    "text": "13.7 A worked example\n\n\n\n\n\n\nNoteNews headline\n\n\n\n“Study shows eating chocolate improves exam scores by 15%”\n\n\nCritical analysis:\n\nWhat was measured? Exam scores before and after eating chocolate.\nWho was studied? Not stated — red flag!\nSample size? Not given — could be only 10 students.\nConfounding variables? Students who eat chocolate may be from wealthier families with better study resources.\nCausation or correlation? This is a correlational study; chocolate doesn’t necessarily cause better scores.\nWho funded it? If a chocolate company funded it, there is a conflict of interest.\n\nConclusion: The headline is likely exaggerated or misleading. We would need much more information before accepting this claim.",
+    "title": "14  Interpreting Statistical Information",
+    "section": "14.7 A worked example",
+    "text": "14.7 A worked example\n\n\n\n\n\n\nNoteNews headline\n\n\n\n“Study shows eating chocolate improves exam scores by 15%”\n\n\nCritical analysis:\n\nWhat was measured? Exam scores before and after eating chocolate.\nWho was studied? Not stated — red flag!\nSample size? Not given — could be only 10 students.\nConfounding variables? Students who eat chocolate may be from wealthier families with better study resources.\nCausation or correlation? This is a correlational study; chocolate doesn’t necessarily cause better scores.\nWho funded it? If a chocolate company funded it, there is a conflict of interest.\n\nConclusion: The headline is likely exaggerated or misleading. We would need much more information before accepting this claim.",
     "crumbs": [
       "Part 2: Probability and Critical Reading",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Interpreting Statistical Information</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Interpreting Statistical Information</span>"
     ]
   },
   {
     "objectID": "chapters/10-inference.html#glossary",
     "href": "chapters/10-inference.html#glossary",
-    "title": "13  Interpreting Statistical Information",
-    "section": "13.8 Glossary",
-    "text": "13.8 Glossary\n\n\n\n\n\n\n\nTerm\nDefinition\n\n\n\n\nBias\nSystematic error that distorts results\n\n\nConfounding variable\nA hidden variable that explains an apparent relationship\n\n\nCorrelation\nA statistical relationship between two variables\n\n\nCausation\nOne variable directly causes a change in another\n\n\nReliable\nConsistent results if repeated\n\n\nValid\nMeasuring what it claims to measure\n\n\nPopulation\nThe full group of interest\n\n\nSample\nA subset of the population",
+    "title": "14  Interpreting Statistical Information",
+    "section": "14.8 Glossary",
+    "text": "14.8 Glossary\n\n\n\n\n\n\n\nTerm\nDefinition\n\n\n\n\nBias\nSystematic error that distorts results\n\n\nConfounding variable\nA hidden variable that explains an apparent relationship\n\n\nCorrelation\nA statistical relationship between two variables\n\n\nCausation\nOne variable directly causes a change in another\n\n\nReliable\nConsistent results if repeated\n\n\nValid\nMeasuring what it claims to measure\n\n\nPopulation\nThe full group of interest\n\n\nSample\nA subset of the population",
     "crumbs": [
       "Part 2: Probability and Critical Reading",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Interpreting Statistical Information</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Interpreting Statistical Information</span>"
     ]
   },
   {
     "objectID": "chapters/10-inference.html#check-your-understanding",
     "href": "chapters/10-inference.html#check-your-understanding",
-    "title": "13  Interpreting Statistical Information",
-    "section": "13.9 Check your understanding",
-    "text": "13.9 Check your understanding\n\nA newspaper article claims: “People who eat breakfast earn more money than those who skip it.” Identify a possible confounding variable.\nA survey found that 80% of students support a longer lunch break. The survey was conducted by standing outside the school canteen. What type of bias is this? How might it affect results?\nA graph shows the number of electric vehicles sold in New Zealand, with the y-axis starting at 45,000 rather than 0. Sales increased from 47,000 to 51,000. On the graph, this looks like a 400% increase. Calculate the true percentage increase.\nExplain the difference between correlation and causation using your own example.\n\n\n\n\n\n\n\nNoteAnswers\n\n\n\n\n\n\nWealthier people are more likely to eat breakfast (they can afford food) and also earn more — wealth is the confounding variable.\nSampling bias / volunteer bias — students near the canteen are more likely to want a longer lunch break. Results will overestimate support.\nTrue % increase = (51,000 − 47,000) / 47,000 × 100 ≈ 8.5%.\nAccept any reasonable example, e.g., “Countries with more hospitals have higher death rates — hospitals don’t cause death; both are linked to population size.”",
+    "title": "14  Interpreting Statistical Information",
+    "section": "14.9 Check your understanding",
+    "text": "14.9 Check your understanding\n\nA newspaper article claims: “People who eat breakfast earn more money than those who skip it.” Identify a possible confounding variable.\nA survey found that 80% of students support a longer lunch break. The survey was conducted by standing outside the school canteen. What type of bias is this? How might it affect results?\nA graph shows the number of electric vehicles sold in New Zealand, with the y-axis starting at 45,000 rather than 0. Sales increased from 47,000 to 51,000. On the graph, this looks like a 400% increase. Calculate the true percentage increase.\nExplain the difference between correlation and causation using your own example.\n\n\n\n\n\n\n\nNoteAnswers\n\n\n\n\n\n\nWealthier people are more likely to eat breakfast (they can afford food) and also earn more — wealth is the confounding variable.\nSampling bias / volunteer bias — students near the canteen are more likely to want a longer lunch break. Results will overestimate support.\nTrue % increase = (51,000 − 47,000) / 47,000 × 100 ≈ 8.5%.\nAccept any reasonable example, e.g., “Countries with more hospitals have higher death rates — hospitals don’t cause death; both are linked to population size.”",
     "crumbs": [
       "Part 2: Probability and Critical Reading",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Interpreting Statistical Information</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Interpreting Statistical Information</span>"
     ]
   },
   {
     "objectID": "resources/resource-library.html",
     "href": "resources/resource-library.html",
-    "title": "14  Resource Library",
+    "title": "15  Resource Library",
     "section": "",
-    "text": "14.1 Assessment And Standard Documents\nThis section consolidates the most valuable external resources used across this book. Each item includes a direct link and its bibliography citation key.",
+    "text": "15.1 Assessment And Standard Documents\nThis section consolidates the most valuable external resources used across this book. Each item includes a direct link and its bibliography citation key.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Resource Library</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Resource Library</span>"
     ]
   },
   {
     "objectID": "resources/resource-library.html#assessment-and-standard-documents",
     "href": "resources/resource-library.html#assessment-and-standard-documents",
-    "title": "14  Resource Library",
+    "title": "15  Resource Library",
     "section": "",
     "text": "Achievement Standard 91946 (NZQA PDF) (New Zealand Qualifications Authority 2024a)\nNZQA Main Site (New Zealand Qualifications Authority 2024b)",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Resource Library</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Resource Library</span>"
     ]
   },
   {
     "objectID": "resources/resource-library.html#new-zealand-curriculum-resources",
     "href": "resources/resource-library.html#new-zealand-curriculum-resources",
-    "title": "14  Resource Library",
-    "section": "14.2 New Zealand Curriculum Resources",
-    "text": "14.2 New Zealand Curriculum Resources\n\nThe New Zealand Curriculum (Ministry of Education New Zealand 2007)\nMathematics And Statistics Achievement Objectives (Ministry of Education New Zealand 2023)",
+    "title": "15  Resource Library",
+    "section": "15.2 New Zealand Curriculum Resources",
+    "text": "15.2 New Zealand Curriculum Resources\n\nThe New Zealand Curriculum (Ministry of Education New Zealand 2007)\nMathematics And Statistics Achievement Objectives (Ministry of Education New Zealand 2023)",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Resource Library</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Resource Library</span>"
     ]
   },
   {
     "objectID": "resources/resource-library.html#official-data-sources",
     "href": "resources/resource-library.html#official-data-sources",
-    "title": "14  Resource Library",
-    "section": "14.3 Official Data Sources",
-    "text": "14.3 Official Data Sources\n\nStats NZ (Statistics New Zealand 2024)\nCensusAtSchool New Zealand (University of Auckland 2024)",
+    "title": "15  Resource Library",
+    "section": "15.3 Official Data Sources",
+    "text": "15.3 Official Data Sources\n\nStats NZ (Statistics New Zealand 2024)\nCensusAtSchool New Zealand (University of Auckland 2024)",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Resource Library</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Resource Library</span>"
     ]
   },
   {
     "objectID": "resources/resource-library.html#software-and-technical-resources",
     "href": "resources/resource-library.html#software-and-technical-resources",
-    "title": "14  Resource Library",
-    "section": "14.4 Software And Technical Resources",
-    "text": "14.4 Software And Technical Resources\n\nR Project (R Core Team 2024)\nQuarto (Allaire et al. 2024)\nggplot2 Book (Wickham, Navarro, and Pedersen 2023)",
+    "title": "15  Resource Library",
+    "section": "15.4 Software And Technical Resources",
+    "text": "15.4 Software And Technical Resources\n\nR Project (R Core Team 2024)\nQuarto (Allaire et al. 2024)\nggplot2 Book (Wickham, Navarro, and Pedersen 2023)",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Resource Library</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Resource Library</span>"
     ]
   },
   {
     "objectID": "resources/resource-library.html#statistical-thinking-and-literacy-texts",
     "href": "resources/resource-library.html#statistical-thinking-and-literacy-texts",
-    "title": "14  Resource Library",
-    "section": "14.5 Statistical Thinking And Literacy Texts",
-    "text": "14.5 Statistical Thinking And Literacy Texts\n\nChance Encounters: A First Course in Data Analysis and Inference (Wild and Seber 2000)\nTowards an understanding of statistical thinking (Pfannkuch and Wild 2004)\nHow to Lie with Statistics (Huff 1954)\nNaked Statistics: Stripping the Dread from the Data (Wheelan 2013)",
+    "title": "15  Resource Library",
+    "section": "15.5 Statistical Thinking And Literacy Texts",
+    "text": "15.5 Statistical Thinking And Literacy Texts\n\nChance Encounters: A First Course in Data Analysis and Inference (Wild and Seber 2000)\nTowards an understanding of statistical thinking (Pfannkuch and Wild 2004)\nHow to Lie with Statistics (Huff 1954)\nNaked Statistics: Stripping the Dread from the Data (Wheelan 2013)",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Resource Library</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Resource Library</span>"
     ]
   },
   {
     "objectID": "resources/resource-library.html#citation-notes",
     "href": "resources/resource-library.html#citation-notes",
-    "title": "14  Resource Library",
-    "section": "14.6 Citation Notes",
-    "text": "14.6 Citation Notes\nThe full bibliographic records for this section are maintained in references.bib.\n\n\n\n\nAllaire, J. J., C. Teague, C. Scheidegger, Y. Xie, and C. Dervieux. 2024. “Quarto.” https://quarto.org.\n\n\nHuff, Darrell. 1954. How to Lie with Statistics. New York: W. W. Norton & Company.\n\n\nMinistry of Education New Zealand. 2007. “The New Zealand Curriculum.” Learning Media. https://nzcurriculum.tki.org.nz.\n\n\n———. 2023. “Mathematics and Statistics - Achievement Objectives.” https://nzcurriculum.tki.org.nz/The-New-Zealand-Curriculum/Mathematics-and-statistics.\n\n\nNew Zealand Qualifications Authority. 2024a. “Achievement Standard 91946 (Official PDF).” NZQA. https://www.nzqa.govt.nz/nqfdocs/ncea-resource/achievements/2024/as91946.pdf.\n\n\n———. 2024b. “Achievement Standard 91946: Interpret and Apply Mathematical and Statistical Information in Context.” NZQA. https://www.nzqa.govt.nz.\n\n\nPfannkuch, M., and C. J. Wild. 2004. “Towards an Understanding of Statistical Thinking.” In The Challenge of Developing Statistical Literacy, Reasoning and Thinking, edited by D. Ben-Zvi and J. Garfield, 17–46. Dordrecht: Kluwer Academic.\n\n\nR Core Team. 2024. R: A Language and Environment for Statistical Computing. Vienna, Austria: R Foundation for Statistical Computing. https://www.r-project.org.\n\n\nStatistics New Zealand. 2024. “Stats NZ — Official Statistics.” https://www.stats.govt.nz.\n\n\nUniversity of Auckland. 2024. “CensusAtSchool New Zealand.” https://new.censusatschool.org.nz.\n\n\nWheelan, Charles. 2013. Naked Statistics: Stripping the Dread from the Data. New York: W. W. Norton & Company.\n\n\nWickham, Hadley, Danielle Navarro, and Thomas Lin Pedersen. 2023. Ggplot2: Elegant Graphics for Data Analysis. 3rd ed. Springer. https://ggplot2-book.org.\n\n\nWild, C. J., and G. A. F. Seber. 2000. Chance Encounters: A First Course in Data Analysis and Inference. New York: Wiley.",
+    "title": "15  Resource Library",
+    "section": "15.6 Citation Notes",
+    "text": "15.6 Citation Notes\nThe full bibliographic records for this section are maintained in references.bib.\n\n\n\n\nAllaire, J. J., C. Teague, C. Scheidegger, Y. Xie, and C. Dervieux. 2024. “Quarto.” https://quarto.org.\n\n\nHuff, Darrell. 1954. How to Lie with Statistics. New York: W. W. Norton & Company.\n\n\nMinistry of Education New Zealand. 2007. “The New Zealand Curriculum.” Learning Media. https://nzcurriculum.tki.org.nz.\n\n\n———. 2023. “Mathematics and Statistics - Achievement Objectives.” https://nzcurriculum.tki.org.nz/The-New-Zealand-Curriculum/Mathematics-and-statistics.\n\n\nNew Zealand Qualifications Authority. 2024a. “Achievement Standard 91946 (Official PDF).” NZQA. https://www.nzqa.govt.nz/nqfdocs/ncea-resource/achievements/2024/as91946.pdf.\n\n\n———. 2024b. “Achievement Standard 91946: Interpret and Apply Mathematical and Statistical Information in Context.” NZQA. https://www.nzqa.govt.nz.\n\n\nPfannkuch, M., and C. J. Wild. 2004. “Towards an Understanding of Statistical Thinking.” In The Challenge of Developing Statistical Literacy, Reasoning and Thinking, edited by D. Ben-Zvi and J. Garfield, 17–46. Dordrecht: Kluwer Academic.\n\n\nR Core Team. 2024. R: A Language and Environment for Statistical Computing. Vienna, Austria: R Foundation for Statistical Computing. https://www.r-project.org.\n\n\nStatistics New Zealand. 2024. “Stats NZ — Official Statistics.” https://www.stats.govt.nz.\n\n\nUniversity of Auckland. 2024. “CensusAtSchool New Zealand.” https://new.censusatschool.org.nz.\n\n\nWheelan, Charles. 2013. Naked Statistics: Stripping the Dread from the Data. New York: W. W. Norton & Company.\n\n\nWickham, Hadley, Danielle Navarro, and Thomas Lin Pedersen. 2023. Ggplot2: Elegant Graphics for Data Analysis. 3rd ed. Springer. https://ggplot2-book.org.\n\n\nWild, C. J., and G. A. F. Seber. 2000. Chance Encounters: A First Course in Data Analysis and Inference. New York: Wiley.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Resource Library</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Resource Library</span>"
     ]
   },
   {

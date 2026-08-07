@@ -23,6 +23,7 @@ book:
         - chapters/03-ppdac.qmd
         - chapters/04-data-types.qmd
         - chapters/04-1-dependent-independent-variables.qmd
+        - chapters/04-2-measures-of-central-tendency.qmd
         - chapters/04-2-measures-of-spread.qmd
         - chapters/05-graphs.qmd
         - chapters/06-1-koura-example.qmd

@@ -56,6 +56,7 @@ preparation:
 | @sec-ppdac | Statistical enquiry cycle and investigation logic | **Both** (especially AS1.1 process) |
 | @sec-data-types | Variable classification and choosing appropriate displays | **Both** |
 | @sec-dependent-independent | Independent/dependent variable roles in comparison and relationship tasks | **Both** |
+| @sec-central-tendency | Mean, median, mode, and choosing suitable centre measures | **Both** |
 | @sec-spread | Quartiles, range, and IQR foundations for spread-focused reasoning | **Both** |
 | @sec-graphs | Interpreting and comparing displays in context | **Both** |
 | @sec-measures | Centre, spread, and comparison statements | **Both** |
@@ -72,11 +73,12 @@ to @sec-ppdac for the dedicated enquiry-cycle chapter.
 2.  Learn the enquiry process (@sec-ppdac) before writing conclusions.
 3.  Strengthen representation by understanding data types (@sec-data-types).
 4.  Clarify explanatory and response roles with independent/dependent variables (@sec-dependent-independent).
-5.  Build spread reasoning with quartiles and IQR (@sec-spread).
-6.  Choose and interpret appropriate displays (@sec-graphs).
-7.  Use measures of centre and spread to compare distributions and justify findings (@sec-measures).
-8.  Consolidate all core skills with mixed practice questions (@sec-practice).
-9.  Extend to probability tools (@sec-probability) and critical reading of statistical claims (@sec-inference) for explicit AS1.3 preparation.
+5.  Build centre reasoning with mean, median, and mode (@sec-central-tendency).
+6.  Build spread reasoning with quartiles and IQR (@sec-spread).
+7.  Choose and interpret appropriate displays (@sec-graphs).
+8.  Use measures of centre and spread to compare distributions and justify findings (@sec-measures).
+9.  Consolidate all core skills with mixed practice questions (@sec-practice).
+10. Extend to probability tools (@sec-probability) and critical reading of statistical claims (@sec-inference) for explicit AS1.3 preparation.
 
 ::: {.callout-note}
 ## Internal and external connection

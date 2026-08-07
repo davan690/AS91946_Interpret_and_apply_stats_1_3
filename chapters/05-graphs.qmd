@@ -5,8 +5,8 @@ chapter you will learn to **create**, **read**, and **critically interpret**
 the most common statistical displays.
 
 Before this chapter, make sure you are confident with @sec-data-types,
-@sec-dependent-independent, and @sec-spread so your graph choices and
-interpretations are statistically valid.
+@sec-dependent-independent, @sec-central-tendency, and @sec-spread so your
+graph choices and interpretations are statistically valid.
 
 ## Setting up our data
 

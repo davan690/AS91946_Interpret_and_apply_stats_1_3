@@ -105,8 +105,9 @@ Use this in written responses:
 
 ## Next step
 
-Now move to @sec-spread to strengthen your understanding of spread measures,
-then continue to @sec-graphs to choose and interpret graphs confidently.
+Now move to @sec-central-tendency to strengthen your understanding of centre
+measures, then continue to @sec-spread and @sec-graphs to choose and
+interpret graphs confidently.
 
 ## Worksheet link
 

@@ -185,5 +185,6 @@ Classify each variable as **categorical (nominal/ordinal)** or **numerical
 
 - Continue to @sec-dependent-independent to learn how variables are assigned
   explanatory and response roles in investigations.
-- Then use @sec-spread to strengthen your spread calculations before moving
+- Then use @sec-central-tendency to strengthen your centre calculations, and
+  after that use @sec-spread to strengthen spread calculations before moving
   into @sec-graphs.

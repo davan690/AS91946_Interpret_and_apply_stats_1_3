@@ -8,7 +8,7 @@
 
 <meta name="description" content="A comprehensive resource for the New Zealand Achievement Standard 91946 (Level 1, 4 credits). This book covers interpreting and applying mathematical and statistical information in real-world contexts.">
 
-<title>2&nbsp; Combined AS1.1 and AS1.3 Approach – AS91946: Interpret and Apply Mathematical and Statistical Information</title>
+<title>7&nbsp; Measures of Central Tendency – AS91946: Interpret and Apply Mathematical and Statistical Information</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -31,8 +66,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/02-what-is-statistics.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../chapters/04-2-measures-of-spread.html" rel="next">
+<link href="../chapters/04-1-dependent-independent-variables.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -76,6 +111,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -250,7 +314,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/01-intro.html">Part 1: Core Statistical Thinking</a></li><li class="breadcrumb-item"><a href="../chapters/01-intro.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Combined AS1.1 and AS1.3 Approach</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/01-intro.html">Part 1: Core Statistical Thinking</a></li><li class="breadcrumb-item"><a href="../chapters/04-2-measures-of-central-tendency.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Measures of Central Tendency</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -295,7 +359,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/01-intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="../chapters/01-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Combined AS1.1 and AS1.3 Approach</span></span></a>
   </div>
 </li>
@@ -325,7 +389,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/04-2-measures-of-central-tendency.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/04-2-measures-of-central-tendency.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Measures of Central Tendency</span></span></a>
   </div>
 </li>
@@ -406,13 +470,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#one-toolkit-two-assessments" id="toc-one-toolkit-two-assessments" class="nav-link active" data-scroll-target="#one-toolkit-two-assessments"><span class="header-section-number">2.1</span> One toolkit, two assessments</a></li>
-  <li><a href="#where-the-standards-overlap" id="toc-where-the-standards-overlap" class="nav-link" data-scroll-target="#where-the-standards-overlap"><span class="header-section-number">2.2</span> Where the standards overlap</a></li>
-  <li><a href="#links-to-the-rest-of-this-text" id="toc-links-to-the-rest-of-this-text" class="nav-link" data-scroll-target="#links-to-the-rest-of-this-text"><span class="header-section-number">2.3</span> Links to the rest of this text</a></li>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started"><span class="header-section-number">2.4</span> Getting started</a>
-  <ul class="collapse">
-  <li><a href="#suggested-learning-pathway" id="toc-suggested-learning-pathway" class="nav-link" data-scroll-target="#suggested-learning-pathway"><span class="header-section-number">2.4.1</span> Suggested learning pathway</a></li>
-  </ul></li>
+  <li><a href="#why-centre-matters" id="toc-why-centre-matters" class="nav-link active" data-scroll-target="#why-centre-matters"><span class="header-section-number">7.1</span> Why centre matters</a></li>
+  <li><a href="#key-terms" id="toc-key-terms" class="nav-link" data-scroll-target="#key-terms"><span class="header-section-number">7.2</span> Key terms</a></li>
+  <li><a href="#core-formulas" id="toc-core-formulas" class="nav-link" data-scroll-target="#core-formulas"><span class="header-section-number">7.3</span> Core formulas</a></li>
+  <li><a href="#worked-example" id="toc-worked-example" class="nav-link" data-scroll-target="#worked-example"><span class="header-section-number">7.4</span> Worked example</a></li>
+  <li><a href="#choosing-the-right-measure" id="toc-choosing-the-right-measure" class="nav-link" data-scroll-target="#choosing-the-right-measure"><span class="header-section-number">7.5</span> Choosing the right measure</a></li>
+  <li><a href="#quick-r-check-optional" id="toc-quick-r-check-optional" class="nav-link" data-scroll-target="#quick-r-check-optional"><span class="header-section-number">7.6</span> Quick R check (optional)</a></li>
+  <li><a href="#practice-questions" id="toc-practice-questions" class="nav-link" data-scroll-target="#practice-questions"><span class="header-section-number">7.7</span> Practice questions</a></li>
+  <li><a href="#next-step" id="toc-next-step" class="nav-link" data-scroll-target="#next-step"><span class="header-section-number">7.8</span> Next step</a></li>
   </ul>
 </nav>
     </div>
@@ -420,9 +485,9 @@ ul.task-list li input[type="checkbox"] {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/01-intro.html">Part 1: Core Statistical Thinking</a></li><li class="breadcrumb-item"><a href="../chapters/01-intro.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Combined AS1.1 and AS1.3 Approach</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/01-intro.html">Part 1: Core Statistical Thinking</a></li><li class="breadcrumb-item"><a href="../chapters/04-2-measures-of-central-tendency.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Measures of Central Tendency</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-combined" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Combined AS1.1 and AS1.3 Approach</span></span></h1>
+<h1 class="title"><span id="sec-central-tendency" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Measures of Central Tendency</span></span></h1>
 </div>
 
 
@@ -439,244 +504,159 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This chapter explains how this book combines the shared teaching for <strong>AS91944/1.1 (Internal)</strong>—<em>Explore data using a statistical enquiry process</em>—and <strong>AS91946/1.3 (External)</strong>—<em>Interpret and apply mathematical and statistical information</em>.</p>
-<p>The aim is to make overlap explicit, reduce duplication, and show how one set of statistical ideas supports both assessments.</p>
-<section id="one-toolkit-two-assessments" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="one-toolkit-two-assessments"><span class="header-section-number">2.1</span> One toolkit, two assessments</h2>
-<p>You are not learning two separate subjects. The same toolkit appears in both courses:</p>
+<p>Measures of central tendency describe the typical or central value in a data set. In AS91946, you should choose the centre measure that best matches the shape of the data and the context of the question.</p>
+<section id="why-centre-matters" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="why-centre-matters"><span class="header-section-number">7.1</span> Why centre matters</h2>
+<p>When you compare groups or interpret a distribution, centre tells you where most values sit. A good statistical description usually includes both:</p>
 <ul>
-<li><strong>AS91944/1.1 (Internal)</strong></li>
+<li>centre (what is typical), and</li>
+<li>spread (how variable values are).</li>
 </ul>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 14%">
-<col style="width: 85%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Grade</th>
-<th>What you need to do</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Achieved</td>
-<td>Explore data using a statistical enquiry process.</td>
-</tr>
-<tr class="even">
-<td>Merit</td>
-<td>Explore data using a statistical enquiry process, with justification.</td>
-</tr>
-<tr class="odd">
-<td>Excellence</td>
-<td>Explore data using a statistical enquiry process, with statistical insight.</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><strong>AS91946/1.3 (External)</strong></li>
-</ul>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 15%">
-<col style="width: 84%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Grade</th>
-<th>What you need to do</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Achieved</td>
-<td>Interpret and apply statistical information.</td>
-</tr>
-<tr class="even">
-<td>Merit</td>
-<td>Interpret and apply statistical information with justification.</td>
-</tr>
-<tr class="odd">
-<td>Excellence</td>
-<td>Interpret and apply statistical information with statistical insight.</td>
-</tr>
-</tbody>
-</table>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In AS1.1, you use that toolkit to plan an investigation, collect data, analyse it, and write a conclusion. In AS1.3, you use the same ideas to read graphs, interpret tables, question claims, and justify reasoning under exam conditions.</p>
-</div>
-</div>
 </section>
-<section id="where-the-standards-overlap" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="where-the-standards-overlap"><span class="header-section-number">2.2</span> Where the standards overlap</h2>
+<section id="key-terms" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="key-terms"><span class="header-section-number">7.2</span> Key terms</h2>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 10%">
-<col style="width: 28%">
-<col style="width: 42%">
-<col style="width: 17%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Area</th>
-<th>AS1.1 Internal</th>
-<th>AS1.3 External (91946)</th>
-<th>Overlap?</th>
+<th>Term</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Statistical enquiry cycle (PPDAC)</td>
-<td>Core assessed process</td>
-<td>Used for interpretation and critique</td>
-<td><strong>Both</strong></td>
+<td>Mean</td>
+<td>Sum of values divided by the number of values</td>
 </tr>
 <tr class="even">
-<td>Designing and carrying out an investigation</td>
-<td>Strong focus</td>
-<td>Not the primary assessment focus</td>
-<td><strong>Mostly 1.1</strong></td>
+<td>Median</td>
+<td>Middle value of ordered data</td>
 </tr>
 <tr class="odd">
-<td>Reading graphs/tables in context</td>
-<td>Required</td>
-<td>Required</td>
-<td><strong>Both</strong></td>
-</tr>
-<tr class="even">
-<td>Numerical summaries (mean, median, IQR, spread)</td>
-<td>Used for evidence in investigation</td>
-<td>Directly assessed in interpretation questions</td>
-<td><strong>Both</strong></td>
-</tr>
-<tr class="odd">
-<td>Probability, two-way tables, expected value</td>
-<td>Limited or indirect</td>
-<td>Directly assessed</td>
-<td><strong>Mostly 1.3</strong></td>
-</tr>
-<tr class="even">
-<td>Justification and statistical reasoning</td>
-<td>Required in conclusion and evaluation</td>
-<td>Required in written responses</td>
-<td><strong>Both</strong></td>
-</tr>
-<tr class="odd">
-<td>Exam-style interpretation under time pressure</td>
-<td>Not the main format</td>
-<td>Core format</td>
-<td><strong>Mostly 1.3</strong></td>
+<td>Mode</td>
+<td>Most frequent value</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="links-to-the-rest-of-this-text" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="links-to-the-rest-of-this-text"><span class="header-section-number">2.3</span> Links to the rest of this text</h2>
-<p>Use this chapter as the map for what each section contributes to dual preparation:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 44%">
-<col style="width: 35%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Section</th>
-<th>Main learning link</th>
-<th>Standards link</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="02-what-is-statistics.html" class="quarto-xref"><span>Chapter 3</span></a></td>
-<td>General foundations: statistical language, context, population/sample/variable</td>
-<td><strong>Both</strong></td>
-</tr>
-<tr class="even">
-<td><a href="03-ppdac.html" class="quarto-xref"><span>Chapter 4</span></a></td>
-<td>Statistical enquiry cycle and investigation logic</td>
-<td><strong>Both</strong> (especially AS1.1 process)</td>
-</tr>
-<tr class="odd">
-<td><a href="04-data-types.html" class="quarto-xref"><span>Chapter 5</span></a></td>
-<td>Variable classification and choosing appropriate displays</td>
-<td><strong>Both</strong></td>
-</tr>
-<tr class="even">
-<td><a href="04-1-dependent-independent-variables.html" class="quarto-xref"><span>Chapter 6</span></a></td>
-<td>Independent/dependent variable roles in comparison and relationship tasks</td>
-<td><strong>Both</strong></td>
-</tr>
-<tr class="odd">
-<td><a href="04-2-measures-of-central-tendency.html" class="quarto-xref"><span>Chapter 7</span></a></td>
-<td>Mean, median, mode, and choosing suitable centre measures</td>
-<td><strong>Both</strong></td>
-</tr>
-<tr class="even">
-<td><a href="04-2-measures-of-spread.html" class="quarto-xref"><span>Chapter 8</span></a></td>
-<td>Quartiles, range, and IQR foundations for spread-focused reasoning</td>
-<td><strong>Both</strong></td>
-</tr>
-<tr class="odd">
-<td><a href="05-graphs.html" class="quarto-xref"><span>Chapter 9</span></a></td>
-<td>Interpreting and comparing displays in context</td>
-<td><strong>Both</strong></td>
-</tr>
-<tr class="even">
-<td><a href="07-measures.html" class="quarto-xref"><span>Chapter 11</span></a></td>
-<td>Centre, spread, and comparison statements</td>
-<td><strong>Both</strong></td>
-</tr>
-<tr class="odd">
-<td>Part 2 chapters</td>
-<td>Probability and critical reading under assessment-style conditions</td>
-<td><strong>Mostly 1.3</strong></td>
-</tr>
-</tbody>
-</table>
+<section id="core-formulas" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="core-formulas"><span class="header-section-number">7.3</span> Core formulas</h2>
+<p><span class="math display">\[\bar{x} = \frac{\sum x_i}{n}\]</span></p>
+<p>For an even number of values, the median is the average of the two middle ordered values.</p>
 </section>
-<section id="getting-started" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="getting-started"><span class="header-section-number">2.4</span> Getting started</h2>
-<p>Continue to <a href="02-what-is-statistics.html" class="quarto-xref"><span>Chapter 3</span></a> for the general introduction to statistics, then move to <a href="03-ppdac.html" class="quarto-xref"><span>Chapter 4</span></a> for the dedicated enquiry-cycle chapter.</p>
-<section id="suggested-learning-pathway" class="level3" data-number="2.4.1">
-<h3 data-number="2.4.1" class="anchored" data-anchor-id="suggested-learning-pathway"><span class="header-section-number">2.4.1</span> Suggested learning pathway</h3>
+<section id="worked-example" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="worked-example"><span class="header-section-number">7.4</span> Worked example</h2>
+<p>Data: <span class="math inline">\([12, 14, 16, 17, 18, 21, 24, 60]\)</span></p>
 <ol type="1">
-<li>Build statistical language and context first (<a href="02-what-is-statistics.html" class="quarto-xref"><span>Chapter 3</span></a>).</li>
-<li>Learn the enquiry process (<a href="03-ppdac.html" class="quarto-xref"><span>Chapter 4</span></a>) before writing conclusions.</li>
-<li>Strengthen representation by understanding data types (<a href="04-data-types.html" class="quarto-xref"><span>Chapter 5</span></a>).</li>
-<li>Clarify explanatory and response roles with independent/dependent variables (<a href="04-1-dependent-independent-variables.html" class="quarto-xref"><span>Chapter 6</span></a>).</li>
-<li>Build centre reasoning with mean, median, and mode (<a href="04-2-measures-of-central-tendency.html" class="quarto-xref"><span>Chapter 7</span></a>).</li>
-<li>Build spread reasoning with quartiles and IQR (<a href="04-2-measures-of-spread.html" class="quarto-xref"><span>Chapter 8</span></a>).</li>
-<li>Choose and interpret appropriate displays (<a href="05-graphs.html" class="quarto-xref"><span>Chapter 9</span></a>).</li>
-<li>Use measures of centre and spread to compare distributions and justify findings (<a href="07-measures.html" class="quarto-xref"><span>Chapter 11</span></a>).</li>
-<li>Consolidate all core skills with mixed practice questions (<a href="08-practice.html" class="quarto-xref"><span>Chapter 12</span></a>).</li>
-<li>Extend to probability tools (<a href="09-probability.html" class="quarto-xref"><span>Chapter 13</span></a>) and critical reading of statistical claims (<a href="10-inference.html" class="quarto-xref"><span>Chapter 14</span></a>) for explicit AS1.3 preparation.</li>
+<li>Mean</li>
 </ol>
-<div class="callout callout-style-default callout-note callout-titled">
+<p><span class="math display">\[\bar{x} = \frac{12+14+16+17+18+21+24+60}{8} = \frac{182}{8} = 22.75\]</span></p>
+<ol start="2" type="1">
+<li>Median</li>
+</ol>
+<p>Ordered middle two values are <span class="math inline">\(17\)</span> and <span class="math inline">\(18\)</span>, so:</p>
+<p><span class="math display">\[\text{Median} = \frac{17+18}{2} = 17.5\]</span></p>
+<ol start="3" type="1">
+<li>Mode</li>
+</ol>
+<p>No repeated values, so this data set has no mode.</p>
+<p>Interpretation: the high value <span class="math inline">\(60\)</span> pulls the mean upward, so the median gives a better description of the typical value.</p>
+</section>
+<section id="choosing-the-right-measure" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="choosing-the-right-measure"><span class="header-section-number">7.5</span> Choosing the right measure</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Situation</th>
+<th>Better centre measure</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Roughly symmetric distribution, no outliers</td>
+<td>Mean</td>
+<td>Uses all values</td>
+</tr>
+<tr class="even">
+<td>Skewed distribution or outliers present</td>
+<td>Median</td>
+<td>Resistant to extreme values</td>
+</tr>
+<tr class="odd">
+<td>Categorical data or most common value needed</td>
+<td>Mode</td>
+<td>Identifies most frequent category/value</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Internal and external connection
+<span class="screen-reader-only">Tip</span>Exam language frame
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you can explain findings from your own investigation clearly and in context (AS1.1), you are building the same reasoning needed for interpretation and justification in AS1.3.</p>
+<p>“The median is a better measure of centre here because the distribution is right-skewed and includes high outliers, which would pull the mean upward.”</p>
 </div>
 </div>
-
-
 </section>
+<section id="quick-r-check-optional" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="quick-r-check-optional"><span class="header-section-number">7.6</span> Quick R check (optional)</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Show R code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>example_data <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">12</span>, <span class="dv">14</span>, <span class="dv">16</span>, <span class="dv">17</span>, <span class="dv">18</span>, <span class="dv">21</span>, <span class="dv">24</span>, <span class="dv">60</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Mean:"</span>, <span class="fu">mean</span>(example_data), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Mean: 22.75</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Median:"</span>, <span class="fu">median</span>(example_data), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Median: 17.5</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Mode: none (all values unique)"</span>, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Mode: none (all values unique)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section id="practice-questions" class="level2" data-number="7.7">
+<h2 data-number="7.7" class="anchored" data-anchor-id="practice-questions"><span class="header-section-number">7.7</span> Practice questions</h2>
+<ol type="1">
+<li>Find the mean and median of <span class="math inline">\([7, 8, 8, 9, 10, 11, 12]\)</span>.</li>
+<li>Find the mean and median of <span class="math inline">\([5, 6, 7, 8, 9, 30]\)</span>.</li>
+<li>For question 2, explain which measure of centre is more appropriate and why.</li>
+</ol>
+<div class="content-visible callout callout-style-default callout-note callout-titled" data-when-format="html">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Mean <span class="math inline">\(= 65/7 \approx 9.29\)</span>, median <span class="math inline">\(= 9\)</span>.</li>
+<li>Mean <span class="math inline">\(= 65/6 \approx 10.83\)</span>, median <span class="math inline">\(= (7+8)/2 = 7.5\)</span>.</li>
+<li>Median is more appropriate because the outlier <span class="math inline">\(30\)</span> inflates the mean.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="next-step" class="level2" data-number="7.8">
+<h2 data-number="7.8" class="anchored" data-anchor-id="next-step"><span class="header-section-number">7.8</span> Next step</h2>
+<p>Continue to <a href="04-2-measures-of-spread.html" class="quarto-xref"><span>Chapter 8</span></a> to pair centre with variability measures (range, quartiles, and IQR) for stronger comparison statements.</p>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -1095,13 +1075,13 @@ Note
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Welcome">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome</span></span>
+      <a href="../chapters/04-1-dependent-independent-variables.html" class="pagination-link" aria-label="Independent and Dependent Variables">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Independent and Dependent Variables</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/02-what-is-statistics.html" class="pagination-link" aria-label="What is Statistics?">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">What is Statistics?</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/04-2-measures-of-spread.html" class="pagination-link" aria-label="Measures of Spread Study Notes">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Measures of Spread Study Notes</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
